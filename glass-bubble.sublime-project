@@ -1,0 +1,57 @@
+{
+	"folders":
+	[
+		{
+			"path": "Assets",
+			"file_exclude_patterns":
+			[
+				"*.asset",
+				"*.meta"
+			]
+		}
+	],
+	"settings":
+	{
+		"AStyleFormatter":
+		{
+			"options_default":
+			{
+				"style":"otbs",
+				"indent": "tab",
+				"indent-spaces": 4,
+				"attach-namespaces": false,
+				"attach-classes": false,
+				"indent-switches": true,
+				"indent-cases": false,
+				"indent-namespaces": true,
+				"indent-labels": true,
+				"indent-preproc-cond": false,
+				"indent-col1-comments": true,
+				"min-conditional-indent": 0,
+				"max-instatement-indent": 40,
+				"break-blocks": "",
+				"pad-oper": true,
+				"pad-paren": false,
+				"pad-first-paren-out": false,
+				"pad-paren-in": false,
+				"pad-header": true,
+				"unpad-paren": false,
+				"delete-empty-lines": false,
+				"fill-empty-lines": false,
+				"align-pointer": "type",
+				"align-reference": "type",
+				"break-closing-brackets": false,
+				"break-elseifs": false,
+				"add-brackets": true,
+				"add-one-line-brackets": false,
+				"remove-brackets": false,
+				"keep-one-line-blocks": false,
+				"keep-one-line-statements": false,
+				"convert-tabs": true,
+				"remove-comment-prefix": false,
+				"max-code-length": 80,
+				"break-after-logical": false
+			}
+		}
+	}
+}
