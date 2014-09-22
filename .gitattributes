@@ -1,0 +1,7 @@
+*.boo text
+*.cs text
+*.js text
+*.shader text
+*.asset text eol=lf
+*.meta text eol=lf
+
