@@ -48,8 +48,7 @@ namespace DPek.Raconteur.RenPy.Parser
 					new RenPyComment(ref scanner);
 					return null;
 				case "image":
-					new RenPyImage(ref scanner);
-					return null;
+					return new RenPyImage(ref scanner);
 				case "define":
 					return new RenPyCharacter(ref scanner);
 				case "label":

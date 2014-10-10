@@ -114,6 +114,8 @@ namespace DPek.Raconteur.RenPy.Editor
 			// Find supported assets for the RenPyScriptAsset
 			List<string> audioKeys = new List<string>();
 			List<AudioClip> audioValues = new List<AudioClip>();
+			List<string> imageKeys = new List<string>();
+			List<Texture2D> imageValues = new List<Texture2D>();
 			foreach (string filePath in filePaths) {
 				string assetPath = filePath.Substring(dataPath.Length - 6);
 				string filename = Path.GetFileName(filePath);
@@ -129,12 +131,19 @@ namespace DPek.Raconteur.RenPy.Editor
 					audioValues.Add(obj as AudioClip);
 				}
 
-				// TODO: Add support for images
+				if (obj.GetType() == typeof(Texture2D)) {
+					imageKeys.Add(filename);
+					imageValues.Add(obj as Texture2D);
+				}
 			}
 
 			// Save assets to the RenPyScriptAsset
 			script.audioKeys = audioKeys.ToArray();
 			script.audioValues = audioValues.ToArray();
+			script.imageKeys = imageKeys.ToArray();
+			script.imageValues = imageValues.ToArray();
+
+			UnityEngine.Debug.Log(script.imageKeys.Length);
 
 			// Create or update the RenPyScriptAsset
 			Object asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
