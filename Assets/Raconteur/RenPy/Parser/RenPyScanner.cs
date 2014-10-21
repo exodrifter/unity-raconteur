@@ -62,16 +62,24 @@ namespace DPek.Raconteur.RenPy.Parser
 
 		public string Seek(string[] tokens)
 		{
+			string temp;
+			return Seek(tokens, out temp);
+		}
+
+		public string Seek(string[] tokens, out string match)
+		{
 			string skipped = "";
 			while (HasNext()) {
 				foreach (string token in tokens) {
 					if (m_node.Value == token) {
+						match = token;
 						return skipped;
 					}
 				}
 				skipped += m_node.Value;
 				m_node = m_node.Next;
 			}
+			match = null;
 			return skipped;
 		}
 

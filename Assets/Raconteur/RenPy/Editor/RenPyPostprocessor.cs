@@ -143,8 +143,6 @@ namespace DPek.Raconteur.RenPy.Editor
 			script.imageKeys = imageKeys.ToArray();
 			script.imageValues = imageValues.ToArray();
 
-			UnityEngine.Debug.Log(script.imageKeys.Length);
-
 			// Create or update the RenPyScriptAsset
 			Object asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
 			RenPyScriptAsset outputScript = asset as RenPyScriptAsset;

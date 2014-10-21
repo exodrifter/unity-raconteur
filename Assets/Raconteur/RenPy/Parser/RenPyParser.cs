@@ -72,7 +72,7 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "return":
 					return new RenPyReturn(ref scanner);
 				default:
-					return new RenPySpeech(ref scanner);
+					return new RenPySay(ref scanner);
 			}
 		}
 	}

@@ -27,7 +27,7 @@ namespace DPek.Raconteur.RenPy
 			RenPyLineType mode = m_display.State.CurrentLine.Type;
 
 			switch (mode) {
-				case RenPyLineType.SPEECH:
+				case RenPyLineType.SAY:
 					// Check for input to go to next line
 					if (Input.GetMouseButtonDown(0)) {
 						m_display.State.NextLine(m_display);
@@ -58,8 +58,8 @@ namespace DPek.Raconteur.RenPy
 			style.wordWrap = true;
 
 			switch (mode) {
-				case RenPyLineType.SPEECH:
-					var speech = m_display.State.CurrentLine as RenPySpeech;
+				case RenPyLineType.SAY:
+					var speech = m_display.State.CurrentLine as RenPySay;
 					if (speech == null) {
 						Debug.LogError("Type mismatch!");
 						m_display.State.NextLine(m_display);
