@@ -33,6 +33,13 @@ namespace DPek.Raconteur.RenPy
 						m_display.State.NextLine(m_display);
 					}
 					break;
+				case RenPyStatementType.PAUSE:
+					// Check for input to go to next line
+					var pause = m_display.State.CurrentLine as RenPyPause;
+					if (pause.WaitForInput && Input.GetMouseButtonDown(0)) {
+						m_display.State.NextLine(m_display);
+					}
+					break;
 				case RenPyStatementType.RETURN:
 					// Stop the dialog
 					if (mode == RenPyStatementType.RETURN) {
@@ -147,6 +154,10 @@ namespace DPek.Raconteur.RenPy
 
 						rect.y += 30;
 					}
+					break;
+
+				case RenPyStatementType.PAUSE:
+					// Do nothing
 					break;
 
 				default:
