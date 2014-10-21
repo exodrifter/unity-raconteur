@@ -57,6 +57,56 @@ namespace DPek.Raconteur.RenPy
 			style.fontSize = 15;
 			style.wordWrap = true;
 
+			// Draw images
+			var imageNames = m_display.State.GetImages();
+			foreach (Dialog.RenPyDialogImage image in imageNames) {
+				float screenWidth = Screen.width;
+				float screenHeight = Screen.height;
+				float texWidth = image.Texture.width;
+				float texHeight = image.Texture.height;
+				var pos = new Rect(0, 0, texWidth, texHeight);
+				switch(image.Alignment) {
+					case Util.RenPyAlignment.BottomCenter:
+						pos.x = screenWidth / 2 - texWidth / 2;
+						pos.y = screenHeight - texHeight;
+						break;
+					case Util.RenPyAlignment.BottomLeft:
+						pos.x = 0;
+						pos.y = screenHeight - texHeight;
+						break;
+					case Util.RenPyAlignment.BottomRight:
+						pos.x = screenWidth - texWidth;
+						pos.y = screenHeight - texHeight;
+						break;
+					case Util.RenPyAlignment.Center:
+						pos.x = screenWidth / 2 - texWidth / 2;
+						pos.y = screenHeight / 2 - texHeight / 2;
+						break;
+					case Util.RenPyAlignment.LeftCenter:
+						pos.x = 0;
+						pos.y = screenHeight / 2 - texHeight / 2;
+						break;
+					case Util.RenPyAlignment.RightCenter:
+						pos.x = screenHeight - texWidth;
+						pos.y = screenHeight / 2 - texHeight / 2;
+						break;
+					case Util.RenPyAlignment.TopCenter:
+						pos.x = screenWidth / 2 - texWidth / 2;
+						pos.y = 0;
+						break;
+					case Util.RenPyAlignment.TopLeft:
+						pos.x = 0;
+						pos.y = 0;
+						break;
+					case Util.RenPyAlignment.TopRight:
+						pos.x = screenHeight - texWidth;
+						pos.y = 0;
+						break;
+				}
+				GUI.DrawTexture(pos, image.Texture, ScaleMode.ScaleToFit);
+			}
+
+			// Draw text
 			switch (mode) {
 				case RenPyLineType.SAY:
 					var speech = m_display.State.CurrentLine as RenPySay;

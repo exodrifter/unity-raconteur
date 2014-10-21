@@ -27,6 +27,17 @@ namespace DPek.Raconteur.RenPy.Dialog
 		private Dictionary<string, RenPyCharacter> m_characters;
 
 		/// <summary>
+		/// A map of image names to image filenames.
+		/// </summary>
+		private Dictionary<string, string> m_imageFilenames;
+
+		/// <summary>
+		/// A list of images that should be visible as a result of show and hide 
+		/// commands.
+		/// </summary>
+		private Dictionary<string, RenPyDialogImage> m_images;
+
+		/// <summary>
 		/// A map of label names to the line index that label is on.
 		/// </summary>
 		private Dictionary<string, int> m_labels;
@@ -84,6 +95,8 @@ namespace DPek.Raconteur.RenPy.Dialog
 		public void Reset()
 		{
 			this.m_characters = new Dictionary<string, RenPyCharacter>();
+			this.m_images = new Dictionary<string,RenPyDialogImage>();
+			this.m_imageFilenames = new Dictionary<string, string>();
 
 			this.m_labels = new Dictionary<string, int>();
 			for (int i = 0; i < m_lines.Length; i++) {
@@ -146,6 +159,59 @@ namespace DPek.Raconteur.RenPy.Dialog
 		public void AddCharacter(RenPyCharacter character)
 		{
 			m_characters.Add(character.VarName, character);
+		}
+
+		/// <summary>
+		/// Returns a list of images that should be visible as a result of show
+		/// and hide commands.
+		/// </summary>
+		/// <returns>
+		/// A list of images that should be visible as a result of show and hide
+		/// commands.
+		/// </returns>
+		public Dictionary<string, RenPyDialogImage>.ValueCollection GetImages()
+		{
+			return m_images.Values;
+		}
+
+		/// <summary>
+		/// Adds the image with the specified variable.
+		/// </summary>
+		/// <param name="imageName">
+		/// The image variable name.
+		/// </param>
+		public void AddImage(string imageName, ref RenPyDialogImage image)
+		{
+			string tag = imageName.Split(' ')[0];
+			m_images[tag] = image;
+		}
+
+		/// <summary>
+		/// Adds an image name definition.
+		/// </summary>
+		/// <param name="imageName">
+		/// The image variable name.
+		/// </param>
+		/// <param name="filename">
+		/// The image filename.
+		/// </param>
+		public void AddImageFilename(string imageName, string filename)
+		{
+			m_imageFilenames[imageName] = filename;
+		}
+
+		/// <summary>
+		/// Returns the filename associated with an image name.
+		/// </summary>
+		/// <param name="imageName">
+		/// The image variable name.
+		/// </param>
+		/// <returns>
+		/// The image filename.
+		/// </returns>
+		internal string GetImageFilename(string imageName)
+		{
+			return m_imageFilenames[imageName];
 		}
 
 		/// <summary>

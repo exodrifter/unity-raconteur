@@ -51,7 +51,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public override void Execute(RenPyDisplayState display)
 		{
-			// Nothing to do
+			string imageName = m_imageTag + " " + m_imageName;
+			display.State.AddImageFilename(imageName, m_filename);
 		}
 
 		public override string ToString()

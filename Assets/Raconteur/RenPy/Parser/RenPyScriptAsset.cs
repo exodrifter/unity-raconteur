@@ -29,10 +29,11 @@ namespace DPek.Raconteur.RenPy.Parser
 			return false;
 		}
 
-		public AudioClip GetAudioClip(string str)
+		public AudioClip GetAudioClip(string filename)
 		{
 			for (int i = 0; i < audioKeys.Length; i++) {
-				if (audioKeys[i] == str) {
+				if (audioKeys[i] == filename)
+				{
 					return audioValues[i];
 				}
 			}
@@ -50,10 +51,11 @@ namespace DPek.Raconteur.RenPy.Parser
 			return false;
 		}
 
-		public Texture2D GetImage(string str)
+		public Texture2D GetImage(string filename)
 		{
 			for (int i = 0; i < imageKeys.Length; i++) {
-				if (imageKeys[i] == str) {
+				if (imageKeys[i] == filename)
+				{
 					return imageValues[i];
 				}
 			}
