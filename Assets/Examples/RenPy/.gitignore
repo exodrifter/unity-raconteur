@@ -1,0 +1,12 @@
+*.txt*
+*.bak*
+*.rpyb*
+*.rpyc*
+saves/
+tmp/
+saves.meta
+tmp.meta
+log.txt*
+README.html*
+project.json*
+
