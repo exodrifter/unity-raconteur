@@ -186,6 +186,12 @@ namespace DPek.Raconteur.RenPy.Dialog
 			m_images[tag] = image;
 		}
 
+		internal void RemoveImage(string imageName)
+		{
+			string tag = imageName.Split(' ')[0];
+			m_images.Remove(tag);
+		}
+
 		/// <summary>
 		/// Adds an image name definition.
 		/// </summary>

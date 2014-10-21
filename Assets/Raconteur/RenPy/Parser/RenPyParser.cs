@@ -51,6 +51,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return new RenPyImage(ref scanner);
 				case "define":
 					return new RenPyCharacter(ref scanner);
+				case "hide":
+					return new RenPyHide(ref scanner);
 				case "label":
 					return new RenPyLabel(ref scanner);
 				case "if":
@@ -58,7 +60,7 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "jump":
 					return new RenPyJump(ref scanner);
 				case "show":
-					return new RenPyShow(ref scanner);;
+					return new RenPyShow(ref scanner);
 				case "scene":
 					new RenPyScene(ref scanner);
 					return null;
