@@ -96,7 +96,16 @@ namespace DPek.Raconteur.RenPy.Dialog
 		public void NextLine(RenPyDisplayState display, bool execute = true)
 		{
 			m_index++;
-			if (execute && CurrentLine != null) {
+
+			// Check if we reached the end of the script
+			if (CurrentLine == null) {
+				Static.Log("Reached end of script; stopping dialog");
+				display.StopDialog();
+				return;
+			}
+
+			// Execute the statement
+			else if (execute) {
 				Static.Log(CurrentLine.ToString());
 				CurrentLine.Execute(display);
 			}
