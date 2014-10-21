@@ -57,6 +57,13 @@ namespace DPek.Raconteur.RenPy
 			style.fontSize = 15;
 			style.wordWrap = true;
 
+			// Draw background
+			var bg = m_display.State.BackgroundImage;
+			if (bg != null) {
+				var pos = new Rect(0, 0, Screen.width, Screen.height);
+				GUI.DrawTexture(pos, bg.Texture, ScaleMode.ScaleAndCrop);
+			}
+
 			// Draw images
 			var imageNames = m_display.State.GetImages();
 			foreach (Dialog.RenPyDialogImage image in imageNames) {

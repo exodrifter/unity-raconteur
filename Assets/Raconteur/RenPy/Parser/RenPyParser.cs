@@ -66,8 +66,7 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "return":
 					return new RenPyReturn(ref scanner);
 				case "scene":
-					new RenPyScene(ref scanner);
-					return null;
+					return new RenPyScene(ref scanner);
 				case "show":
 					return new RenPyShow(ref scanner);
 				case "stop":

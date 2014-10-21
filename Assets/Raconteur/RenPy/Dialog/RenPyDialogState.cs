@@ -32,6 +32,19 @@ namespace DPek.Raconteur.RenPy.Dialog
 		private Dictionary<string, string> m_imageFilenames;
 
 		/// <summary>
+		/// The current background image.
+		/// </summary>
+		public RenPyDialogImage m_bgImage;
+		public RenPyDialogImage BackgroundImage {
+			get {
+				return m_bgImage;
+			}
+			set{
+				m_bgImage = value;
+			}
+		}
+
+		/// <summary>
 		/// A list of images that should be visible as a result of show and hide 
 		/// commands.
 		/// </summary>
@@ -186,10 +199,24 @@ namespace DPek.Raconteur.RenPy.Dialog
 			m_images[tag] = image;
 		}
 
-		internal void RemoveImage(string imageName)
+		/// <summary>
+		/// Removes the image with the specified image name.
+		/// </summary>
+		/// <param name="imageName">
+		/// The image variable name.
+		/// </param>
+		public void RemoveImage(string imageName)
 		{
 			string tag = imageName.Split(' ')[0];
 			m_images.Remove(tag);
+		}
+
+		/// <summary>
+		/// Removes all images from the state.
+		/// </summary>
+		public void RemoveAllImages()
+		{
+			m_images.Clear();
 		}
 
 		/// <summary>
