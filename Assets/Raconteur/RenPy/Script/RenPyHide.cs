@@ -5,11 +5,11 @@ using DPek.Raconteur.RenPy.Util;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyHide : RenPyLine
+	public class RenPyHide : RenPyStatement
 	{
 		private string m_imageName;
 
-		public RenPyHide(ref RenPyScanner tokens) : base(RenPyLineType.HIDE)
+		public RenPyHide(ref RenPyScanner tokens) : base(RenPyStatementType.HIDE)
 		{
 			tokens.Seek("hide");
 			tokens.Next();

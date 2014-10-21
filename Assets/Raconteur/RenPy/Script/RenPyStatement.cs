@@ -1,15 +1,15 @@
 ﻿namespace DPek.Raconteur.RenPy.Script
 {
 	/// <summary>
-	/// Represents a line in RenPy.
+	/// Represents a statement in RenPy.
 	/// </summary>
-	public abstract class RenPyLine
+	public abstract class RenPyStatement
 	{
 		/// <summary>
-		/// The type of this line.
+		/// The type of this statement.
 		/// </summary>
-		private RenPyLineType m_type;
-		public RenPyLineType Type
+		private RenPyStatementType m_type;
+		public RenPyStatementType Type
 		{
 			get {
 				return m_type;
@@ -17,12 +17,12 @@
 		}
 
 		/// <summary>
-		/// Creates a new RenPyLine of the specified type.
+		/// Creates a new RenPyStatement of the specified type.
 		/// </summary>
 		/// <param name="type">
-		/// The type of this RenPyLine.
+		/// The type of this RenPyStatement.
 		/// </param>
-		protected RenPyLine(RenPyLineType type)
+		protected RenPyStatement(RenPyStatementType type)
 		{
 			this.m_type = type;
 		}

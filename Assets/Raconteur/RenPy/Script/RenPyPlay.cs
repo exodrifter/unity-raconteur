@@ -6,7 +6,7 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyPlay : RenPyLine
+	public class RenPyPlay : RenPyStatement
 	{
 		private string m_channel;
 		private string m_file;
@@ -14,7 +14,7 @@ namespace DPek.Raconteur.RenPy.Script
 		private float m_fadein;
 		private float m_fadeout;
 
-		public RenPyPlay(ref RenPyScanner tokens) : base(RenPyLineType.PLAY)
+		public RenPyPlay(ref RenPyScanner tokens) : base(RenPyStatementType.PLAY)
 		{
 			tokens.Seek("play");
 			tokens.Next();

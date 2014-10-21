@@ -5,7 +5,7 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPySay : RenPyLine
+	public class RenPySay : RenPyStatement
 	{
 		/// <summary>
 		/// The variable or string of the speaker saying this line. Null when
@@ -41,7 +41,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPySay(ref RenPyScanner tokens) : base(RenPyLineType.SAY)
+		public RenPySay(ref RenPyScanner tokens) : base(RenPyStatementType.SAY)
 		{
 			string[] quotes = new string[] {"\"","'"};
 

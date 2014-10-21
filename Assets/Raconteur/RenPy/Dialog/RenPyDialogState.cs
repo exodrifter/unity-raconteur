@@ -19,7 +19,7 @@ namespace DPek.Raconteur.RenPy.Dialog
 		/// <summary>
 		/// The Ren'Py lines of this dialog.
 		/// </summary>
-		private readonly RenPyLine[] m_lines;
+		private readonly RenPyStatement[] m_statements;
 
 		/// <summary>
 		/// A map of character names to RenPyCharacter objects.
@@ -46,13 +46,13 @@ namespace DPek.Raconteur.RenPy.Dialog
 		/// Returns the current line of the Ren'Py dialog. Returns null if the
 		/// current line index is invalid.
 		/// </summary>
-		public RenPyLine CurrentLine
+		public RenPyStatement CurrentLine
 		{
 			get {
-				if (m_index >= m_lines.Length || m_index < 0) {
+				if (m_index >= m_statements.Length || m_index < 0) {
 					return null;
 				}
-				return m_lines[m_index];
+				return m_statements[m_index];
 			}
 		}
 
@@ -64,9 +64,9 @@ namespace DPek.Raconteur.RenPy.Dialog
 		/// <param name="lines">
 		/// The Ren'Py script as an array of RenPyLine objects.
 		/// <param>
-		public RenPyDialogState(RenPyLine[] lines)
+		public RenPyDialogState(RenPyStatement[] statements)
 		{
-			this.m_lines = lines;
+			this.m_statements = statements;
 			Reset();
 		}
 
@@ -99,8 +99,8 @@ namespace DPek.Raconteur.RenPy.Dialog
 			this.m_imageFilenames = new Dictionary<string, string>();
 
 			this.m_labels = new Dictionary<string, int>();
-			for (int i = 0; i < m_lines.Length; i++) {
-				RenPyLabel label = m_lines[i] as RenPyLabel;
+			for (int i = 0; i < m_statements.Length; i++) {
+				RenPyLabel label = m_statements[i] as RenPyLabel;
 				if (label == null) {
 					continue;
 				} else {

@@ -2,11 +2,11 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyScene : RenPyLine
+	public class RenPyScene : RenPyStatement
 	{
 		private string m_imageVarName;
 
-		public RenPyScene(ref RenPyScanner tokens) : base(RenPyLineType.SCENE)
+		public RenPyScene(ref RenPyScanner tokens) : base(RenPyStatementType.SCENE)
 		{
 			tokens.Seek("scene");
 			tokens.Next();

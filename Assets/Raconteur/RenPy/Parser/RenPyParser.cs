@@ -24,22 +24,22 @@ namespace DPek.Raconteur.RenPy.Parser
 			RenPyScanner scanner = new RenPyScanner(ref tokens);
 			scanner.SkipWhitespace(true, true, true);
 
-			// Parse the lines
-			List<RenPyLine> lines = new List<RenPyLine>();
+			// Parse the statements
+			List<RenPyStatement> statements = new List<RenPyStatement>();
 			while (scanner.HasNext()) {
 
-				RenPyLine line = ParseLine(ref scanner);
-				if (line != null) {
-					lines.Add(line);
+				RenPyStatement statement = ParseStatement(ref scanner);
+				if (statement != null) {
+					statements.Add(statement);
 				}
 
 				scanner.SkipWhitespace(true, true, true);
 			}
 
-			return new RenPyDialogState(lines.ToArray());
+			return new RenPyDialogState(statements.ToArray());
 		}
 
-		private static RenPyLine ParseLine(ref RenPyScanner scanner)
+		private static RenPyStatement ParseStatement(ref RenPyScanner scanner)
 		{
 			switch (scanner.Peek()) {
 				case "$":
@@ -47,31 +47,31 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "#":
 					new RenPyComment(ref scanner);
 					return null;
+				case "if":
+					return new RenPyIf(ref scanner);
 				case "image":
 					return new RenPyImage(ref scanner);
+				case "jump":
+					return new RenPyJump(ref scanner);
 				case "define":
 					return new RenPyCharacter(ref scanner);
 				case "hide":
 					return new RenPyHide(ref scanner);
 				case "label":
 					return new RenPyLabel(ref scanner);
-				case "if":
-					return new RenPyIf(ref scanner);
-				case "jump":
-					return new RenPyJump(ref scanner);
-				case "show":
-					return new RenPyShow(ref scanner);
+				case "menu":
+					return new RenPyMenu(ref scanner);
+				case "play":
+					return new RenPyPlay(ref scanner);
+				case "return":
+					return new RenPyReturn(ref scanner);
 				case "scene":
 					new RenPyScene(ref scanner);
 					return null;
-				case "play":
-					return new RenPyPlay(ref scanner);
+				case "show":
+					return new RenPyShow(ref scanner);
 				case "stop":
 					return new RenPyStop(ref scanner);
-				case "menu":
-					return new RenPyMenu(ref scanner);
-				case "return":
-					return new RenPyReturn(ref scanner);
 				default:
 					return new RenPySay(ref scanner);
 			}

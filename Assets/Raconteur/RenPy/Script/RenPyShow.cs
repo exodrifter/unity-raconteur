@@ -5,12 +5,12 @@ using DPek.Raconteur.RenPy.Util;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyShow : RenPyLine
+	public class RenPyShow : RenPyStatement
 	{
 		private string m_imageName;
 		private RenPyAlignment m_alignment;
 
-		public RenPyShow(ref RenPyScanner tokens) : base(RenPyLineType.SHOW)
+		public RenPyShow(ref RenPyScanner tokens) : base(RenPyStatementType.SHOW)
 		{
 			tokens.Seek("show");
 			tokens.Next();

@@ -2,7 +2,7 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyVariable : RenPyLine
+	public class RenPyVariable : RenPyStatement
 	{
 		private string m_varName;
 		public string VarName
@@ -22,7 +22,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 		private Assignment m_assignment;
 
-		public RenPyVariable(ref RenPyScanner tokens) : base(RenPyLineType.VARIABLE)
+		public RenPyVariable(ref RenPyScanner tokens) : base(RenPyStatementType.VARIABLE)
 		{
 			tokens.Seek("$");
 			tokens.Next();

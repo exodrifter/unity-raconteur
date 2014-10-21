@@ -6,13 +6,13 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyStop : RenPyLine
+	public class RenPyStop : RenPyStatement
 	{
 		private string m_channel;
 
 		private float m_fadeout;
 
-		public RenPyStop(ref RenPyScanner tokens) : base(RenPyLineType.STOP)
+		public RenPyStop(ref RenPyScanner tokens) : base(RenPyStatementType.STOP)
 		{
 			tokens.Seek("stop");
 			tokens.Next();

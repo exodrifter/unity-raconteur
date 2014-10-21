@@ -2,7 +2,7 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyLabel : RenPyLine
+	public class RenPyLabel : RenPyStatement
 	{
 		private string m_name;
 		public string Name
@@ -12,7 +12,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyLabel(ref RenPyScanner tokens) : base(RenPyLineType.LABEL)
+		public RenPyLabel(ref RenPyScanner tokens) : base(RenPyStatementType.LABEL)
 		{
 			tokens.Seek("label");
 			tokens.Next();

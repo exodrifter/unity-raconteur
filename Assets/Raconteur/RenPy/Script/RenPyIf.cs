@@ -2,7 +2,7 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyIf : RenPyLine
+	public class RenPyIf : RenPyStatement
 	{
 		private string m_varName;
 		public string Name
@@ -22,7 +22,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 		private Evaluator m_evaluator;
 
-		public RenPyIf(ref RenPyScanner tokens) : base(RenPyLineType.IF)
+		public RenPyIf(ref RenPyScanner tokens) : base(RenPyStatementType.IF)
 		{
 			tokens.Seek("if");
 			tokens.Next();

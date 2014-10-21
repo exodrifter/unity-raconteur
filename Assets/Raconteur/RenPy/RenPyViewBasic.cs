@@ -24,18 +24,18 @@ namespace DPek.Raconteur.RenPy
 				return;
 			}
 
-			RenPyLineType mode = m_display.State.CurrentLine.Type;
+			RenPyStatementType mode = m_display.State.CurrentLine.Type;
 
 			switch (mode) {
-				case RenPyLineType.SAY:
+				case RenPyStatementType.SAY:
 					// Check for input to go to next line
 					if (Input.GetMouseButtonDown(0)) {
 						m_display.State.NextLine(m_display);
 					}
 					break;
-				case RenPyLineType.RETURN:
+				case RenPyStatementType.RETURN:
 					// Stop the dialog
-					if (mode == RenPyLineType.RETURN) {
+					if (mode == RenPyStatementType.RETURN) {
 						m_display.StopDialog();
 					}
 					break;
@@ -48,7 +48,7 @@ namespace DPek.Raconteur.RenPy
 				return;
 			}
 
-			RenPyLineType mode = m_display.State.CurrentLine.Type;
+			RenPyStatementType mode = m_display.State.CurrentLine.Type;
 
 			Rect rect;
 			GUIStyle style = new GUIStyle();
@@ -108,7 +108,7 @@ namespace DPek.Raconteur.RenPy
 
 			// Draw text
 			switch (mode) {
-				case RenPyLineType.SAY:
+				case RenPyStatementType.SAY:
 					var speech = m_display.State.CurrentLine as RenPySay;
 					if (speech == null) {
 						Debug.LogError("Type mismatch!");
@@ -122,7 +122,7 @@ namespace DPek.Raconteur.RenPy
 					GUI.Label(rect, speech.Text, style);
 					break;
 
-				case RenPyLineType.MENU:
+				case RenPyStatementType.MENU:
 					var menu = m_display.State.CurrentLine as RenPyMenu;
 					if (menu == null) {
 						Debug.LogError("Type mismatch!");

@@ -4,7 +4,7 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyCharacter : RenPyLine
+	public class RenPyCharacter : RenPyStatement
 	{
 		private string m_varName;
 		public string VarName
@@ -22,7 +22,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyCharacter(ref RenPyScanner tokens) : base(RenPyLineType.CHARACTER)
+		public RenPyCharacter(ref RenPyScanner tokens) : base(RenPyStatementType.CHARACTER)
 		{
 			tokens.Seek("define");
 			tokens.Next();

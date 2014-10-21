@@ -4,11 +4,11 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyMenu : RenPyLine
+	public class RenPyMenu : RenPyStatement
 	{
 		public Dictionary<string, string> m_choices;
 
-		public RenPyMenu(ref RenPyScanner tokens) : base(RenPyLineType.MENU)
+		public RenPyMenu(ref RenPyScanner tokens) : base(RenPyStatementType.MENU)
 		{
 			m_choices = new Dictionary<string, string>();
 

@@ -2,7 +2,7 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyComment : RenPyLine
+	public class RenPyComment : RenPyStatement
 	{
 		private string m_comment;
 		public string Comment
@@ -12,7 +12,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyComment(ref RenPyScanner tokens) : base(RenPyLineType.COMMENT)
+		public RenPyComment(ref RenPyScanner tokens) : base(RenPyStatementType.COMMENT)
 		{
 			tokens.Seek("#");
 			tokens.Next();

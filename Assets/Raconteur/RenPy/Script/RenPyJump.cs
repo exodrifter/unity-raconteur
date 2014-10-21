@@ -4,11 +4,11 @@ using DPek.Raconteur.RenPy.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyJump : RenPyLine
+	public class RenPyJump : RenPyStatement
 	{
 		private string m_target;
 
-		public RenPyJump(ref RenPyScanner tokens) : base(RenPyLineType.JUMP)
+		public RenPyJump(ref RenPyScanner tokens) : base(RenPyStatementType.JUMP)
 		{
 			tokens.Seek("jump");
 			tokens.Next();

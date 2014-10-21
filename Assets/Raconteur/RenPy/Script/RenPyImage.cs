@@ -2,7 +2,7 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyImage : RenPyLine
+	public class RenPyImage : RenPyStatement
 	{
 		private string m_imageName;
 		public string ImageName
@@ -28,7 +28,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyImage(ref RenPyScanner tokens) : base(RenPyLineType.IMAGE)
+		public RenPyImage(ref RenPyScanner tokens) : base(RenPyStatementType.IMAGE)
 		{
 			tokens.Seek("image");
 			tokens.Next();

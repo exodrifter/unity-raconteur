@@ -2,9 +2,9 @@
 
 namespace DPek.Raconteur.RenPy.Script
 {
-	public class RenPyReturn : RenPyLine
+	public class RenPyReturn : RenPyStatement
 	{
-		public RenPyReturn(ref RenPyScanner tokens) : base(RenPyLineType.RETURN)
+		public RenPyReturn(ref RenPyScanner tokens) : base(RenPyStatementType.RETURN)
 		{
 			tokens.Seek("return");
 			tokens.Next();
