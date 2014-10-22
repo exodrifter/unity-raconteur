@@ -17,7 +17,6 @@ namespace DPek.Raconteur.RenPy.Script
 
 			string[] arr = new string[] { "\n", "with", "at"};
 			m_imageName = tokens.Seek(arr).Trim();
-			tokens.SkipWhitespace(true, true, true);
 
 			bool foundToken = true;
 			while (foundToken)
@@ -25,16 +24,18 @@ namespace DPek.Raconteur.RenPy.Script
 				foundToken = false;
 
 				// Check if there is a "with" argument
-				if (tokens.Peek() == "with")
+				if (tokens.PeekIgnoreWhitespace(true, true, true) == "with")
 				{
+					tokens.SkipWhitespace(true, true, true);
 					tokens.Next();
 					tokens.SkipWhitespace();
 					tokens.Next(); // TODO: Don't ignore the with argument
 					foundToken = true;
 				}
 				// Check if there is an "at" argument
-				else if (tokens.Peek() == "at")
+				else if (tokens.PeekIgnoreWhitespace(true, true, true) == "at")
 				{
+					tokens.SkipWhitespace(true, true, true);
 					tokens.Next();
 					tokens.SkipWhitespace();
 					string alignment = tokens.Next();
@@ -42,9 +43,6 @@ namespace DPek.Raconteur.RenPy.Script
 					foundToken = true;
 				}
 				// TODO: Check for other arguments
-
-				// Skip following whitespace
-				tokens.SkipWhitespace(true, true, true);
 			}
 		}
 

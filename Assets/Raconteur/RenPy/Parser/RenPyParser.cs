@@ -10,10 +10,10 @@ namespace DPek.Raconteur.RenPy.Parser
 	{
 		public static RenPyDialogState Parse(ref RenPyScriptAsset script)
 		{
-			Tokenizer tokenizer = new Tokenizer();
+			var tokenizer = new Tokenizer();
 
 			// Create the scanner
-			LinkedList<string> tokens = new LinkedList<string>();
+			var tokens = new LinkedList<string>();
 			for (int line = 0; line < script.Lines.Length; line++) {
 				string[] arr = tokenizer.Tokenize(ref script.Lines[line]);
 				for (int i = 0; i < arr.Length; i++) {
@@ -21,19 +21,22 @@ namespace DPek.Raconteur.RenPy.Parser
 				}
 				tokens.AddLast("\n");
 			}
-			RenPyScanner scanner = new RenPyScanner(ref tokens);
-			scanner.SkipWhitespace(true, true, true);
+			var scanner = new RenPyScanner(ref tokens);
 
 			// Parse the statements
 			List<RenPyStatement> statements = new List<RenPyStatement>();
+			scanner.SkipEmptyLines();
 			while (scanner.HasNext()) {
+
+				int level = scanner.SkipWhitespace();
 
 				RenPyStatement statement = ParseStatement(ref scanner);
 				if (statement != null) {
 					statements.Add(statement);
+					Debug.Log(level + " " + statement);
 				}
 
-				scanner.SkipWhitespace(true, true, true);
+				scanner.SkipEmptyLines();
 			}
 
 			return new RenPyDialogState(statements.ToArray());

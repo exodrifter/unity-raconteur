@@ -24,8 +24,9 @@ namespace DPek.Raconteur.RenPy.Script
 				foundToken = false;
 
 				// Check if there is a "with" argument
-				if (tokens.Peek() == "with")
+				if (tokens.PeekIgnoreWhitespace(true, true, true) == "with")
 				{
+					tokens.SkipWhitespace(true, true, true);
 					tokens.Next();
 					tokens.SkipWhitespace();
 					tokens.Next(); // TODO: Don't ignore the with argument
@@ -33,9 +34,6 @@ namespace DPek.Raconteur.RenPy.Script
 				}
 
 				// TODO: Check for other arguments
-
-				// Skip following whitespace
-				tokens.SkipWhitespace(true, true, true);
 			}
 		}
 
