@@ -54,12 +54,6 @@ namespace DPek.Raconteur.RenPy
 						StartCoroutine(WaitNextStatement(pause.WaitTime));
 					}
 					break;
-				case RenPyStatementType.RETURN:
-					// Stop the dialog
-					if (mode == RenPyStatementType.RETURN) {
-						m_display.StopDialog();
-					}
-					break;
 				default:
 					// Show nothing for this line, proceed to the next one.
 					NextStatement();
