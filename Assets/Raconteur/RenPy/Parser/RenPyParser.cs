@@ -93,16 +93,18 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "#":
 					new RenPyComment(ref scanner);
 					return null;
+				case "call":
+					return new RenPyCall(ref scanner);
+				case "define":
+					return new RenPyCharacter(ref scanner);
+				case "hide":
+					return new RenPyHide(ref scanner);
 				case "if":
 					return new RenPyIf(ref scanner);
 				case "image":
 					return new RenPyImage(ref scanner);
 				case "jump":
 					return new RenPyJump(ref scanner);
-				case "define":
-					return new RenPyCharacter(ref scanner);
-				case "hide":
-					return new RenPyHide(ref scanner);
 				case "label":
 					return new RenPyLabel(ref scanner);
 				case "menu":

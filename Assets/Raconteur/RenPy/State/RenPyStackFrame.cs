@@ -14,6 +14,12 @@ namespace DPek.Raconteur.RenPy.State
 		/// The blocks in this stack.
 		/// </summary>
 		private readonly List<RenPyBlock> m_blocks;
+		public List<RenPyBlock> Blocks
+		{
+			get {
+				return m_blocks;
+			}
+		}
 
 		/// <summary>
 		/// The index of the statement.
@@ -90,7 +96,6 @@ namespace DPek.Raconteur.RenPy.State
 			return statement;
 		}
 
-
 		/// <summary>
 		/// Moves the stack frame to the statement right before the specified
 		/// label.
@@ -99,7 +104,7 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			Duple<int, int> index = m_labelIndices[label];
 			m_blockIndex = index.First;
-			m_statementIndex = index.Second;
+			m_statementIndex = index.Second - 1;
 		}
 	}
 }

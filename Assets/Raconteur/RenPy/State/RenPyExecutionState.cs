@@ -15,11 +15,30 @@ namespace DPek.Raconteur.RenPy.State
 		/// The initial stack frame.
 		/// </summary>
 		private readonly RenPyStackFrame m_initialStackFrame;
+		public RenPyStackFrame InitialStackFrame
+		{
+			get {
+				return m_initialStackFrame;
+			}
+		}
 
 		/// <summary>
 		/// The Ren'Py call stack.
 		/// </summary>
 		private readonly Stack<RenPyStackFrame> m_stack;
+
+		/// <summary>
+		/// A boolean that indicates whether or not the execution has stack
+		/// frames.
+		/// </summary>
+		/// <value>
+		/// <c>true</c> if running; otherwise, <c>false</c>.
+		/// </value>
+		public bool Running {
+			get {
+				return m_stack.Count > 0;
+			}
+		}
 
 		#endregion
 
@@ -48,15 +67,32 @@ namespace DPek.Raconteur.RenPy.State
 		/// </returns>
 		public RenPyStatement NextStatement(RenPyState state)
 		{
-			var statement = m_stack.Peek().NextStatement(state);
+			RenPyStatement statement = null;
+			if(m_stack.Count > 0) {
+				 statement = m_stack.Peek().NextStatement(state);
+			}
 
 			// If there are no more statements, dispose of that stack frame
 			while(statement == null) {
-				m_stack.Pop();
-				statement = m_stack.Peek().NextStatement(state);
+				if(m_stack.Count > 0) {
+					m_stack.Pop();
+				} else {
+					break;
+				}
+				
+				// Check if there are any more frames
+				if(m_stack.Count > 0) {
+					statement = m_stack.Peek().NextStatement(state);
+				} else {
+					break;
+				}
 			}
 
-			Static.Log(statement.ToString());
+			if(statement != null) {
+				Static.Log(statement.ToString());
+			} else {
+				Static.Log("Execution state reached end of script");
+			}
 			return statement;
 		}
 
@@ -70,7 +106,7 @@ namespace DPek.Raconteur.RenPy.State
 			m_stack.Clear();
 			m_stack.Push(m_initialStackFrame);
 		}
-
+		
 		/// <summary>
 		/// Goes to the specified label in the Ren'Py script.
 		/// </summary>
@@ -81,7 +117,7 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			m_stack.Peek().GoToLabel(label);
 		}
-
+		
 		/// <summary>
 		/// Pushes a new stack frame onto the call stack with the passed list of
 		/// RenPyBlocks.

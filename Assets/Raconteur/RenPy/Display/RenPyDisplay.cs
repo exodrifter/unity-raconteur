@@ -31,9 +31,8 @@ namespace DPek.Raconteur.RenPy.Display
 		private bool running = false;
 		public bool Running
 		{
-			get
-			{
-				return running;
+			get {
+				return running && State.Execution.Running;
 			}
 		}
 
