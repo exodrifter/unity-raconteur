@@ -5,6 +5,7 @@ using DPek.Raconteur.RenPy.Display;
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.Script;
 using DPek.Raconteur.RenPy.State;
+using System.Collections;
 
 namespace DPek.Raconteur.RenPy
 {
@@ -40,6 +41,17 @@ namespace DPek.Raconteur.RenPy
 					// Check for input to go to next line
 					if (Input.GetMouseButtonDown(0)) {
 						NextStatement();
+					}
+					break;
+				case RenPyStatementType.PAUSE:
+					// Check for input to go to next line
+					var pause = m_currentStatement as RenPyPause;
+					if (pause.WaitForInput && Input.GetMouseButtonDown(0)) {
+						NextStatement();
+					}
+					// Or wait until we can go to the next line
+					else {
+						StartCoroutine(WaitNextStatement(pause.WaitTime));
 					}
 					break;
 				case RenPyStatementType.RETURN:
@@ -161,6 +173,17 @@ namespace DPek.Raconteur.RenPy
 						rect.y += 30;
 					}
 					break;
+			}
+		}
+
+		bool waiting = false;
+		private IEnumerator WaitNextStatement(float time)
+		{
+			if (!waiting) {
+				waiting = true;
+				yield return new WaitForSeconds(time);
+				NextStatement();
+				waiting = false;
 			}
 		}
 

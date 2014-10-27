@@ -107,6 +107,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return new RenPyLabel(ref scanner);
 				case "menu":
 					return new RenPyMenu(ref scanner);
+				case "pause":
+					return new RenPyPause(ref scanner);
 				case "play":
 					return new RenPyPlay(ref scanner);
 				case "return":
