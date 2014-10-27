@@ -1,7 +1,11 @@
 ﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py if statement.
+	/// </summary>
 	public class RenPyIf : RenPyStatement
 	{
 		private string m_varName;
@@ -67,26 +71,23 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			// If evaluation succeeds, go to the next line
-			if (m_evaluator.Evaluate(display, m_varName, m_value)) {
+			// If evaluation succeeds, push back this block
+			if (m_evaluator.Evaluate(state, m_varName, m_value)) {
 				string msg = "if " + m_varName + m_evaluator.GetOp() + m_value;
 				msg += " evaluated to true (" + m_varName + "=";
-				msg += display.State.GetVariable(m_varName) + ")";
+				msg += state.GetVariable(m_varName) + ")";
 				Static.Log(msg);
 
-				display.State.NextLine(display);
+				state.Execution.PushStackFrame(NestedBlocks);
 			}
-			// If evaluation fails, skip the next line
+			// If evaluation fails, skip this block
 			else {
 				string msg = "if " + m_varName + m_evaluator.GetOp() + m_value;
 				msg += " evaluated to false (" + m_varName + "=";
-				msg += display.State.GetVariable(m_varName) + ")";
+				msg += state.GetVariable(m_varName) + ")";
 				Static.Log(msg);
-
-				display.State.NextLine(display, false);
-				display.State.NextLine(display);
 			}
 		}
 
@@ -103,17 +104,17 @@ namespace DPek.Raconteur.RenPy.Script
 
 	abstract class Evaluator
 	{
-		public abstract bool Evaluate(RenPyDisplayState display, string variable,
+		public abstract bool Evaluate(RenPyState state, string variable,
 		                              string value);
 		public abstract string GetOp();
 	}
 
 	class TrueEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 			return current == "True";
 		}
 
@@ -125,10 +126,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class GreaterThanEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
@@ -161,10 +162,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class GreaterEqualEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
@@ -197,10 +198,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class LessThanEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
@@ -233,10 +234,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class LessEqualEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
@@ -269,10 +270,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class EqualEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 			return current == value;
 		}
 
@@ -284,10 +285,10 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class NotEqualEvaluator : Evaluator
 	{
-		public override bool Evaluate(RenPyDisplayState display, string variable,
+		public override bool Evaluate(RenPyState state, string variable,
 		                              string value)
 		{
-			string current = display.State.GetVariable(variable);
+			string current = state.GetVariable(variable);
 			return current != value;
 		}
 

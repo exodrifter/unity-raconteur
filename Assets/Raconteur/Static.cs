@@ -1,31 +1,24 @@
-﻿#if UNITY_EDITOR
-using UnityEditor;
-#endif
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
+#if UNITY_EDITOR
+using UnityEditor;
 namespace DPek.Raconteur
 {
 	/// <summary>
 	/// Static Raconteur data.
 	/// </summary>
-#if UNITY_EDITOR
 	[InitializeOnLoad]
 	public class Static : EditorWindow
-#else
-	public class Static
-#endif
 	{
 		#region Static Debug Variables
-
-#if UNITY_EDITOR
 
 		private static bool m_debug;
 		private static bool m_skipDialog;
 		private static bool m_debugLines;
 
 		/// <summary>
-		/// Whether or not to show debugging information
+		/// Whether or not to show debugging information.
 		/// </summary>
 		public static bool DebugMode
 		{
@@ -35,7 +28,7 @@ namespace DPek.Raconteur
 		}
 
 		/// <summary>
-		/// Whether or not to skip the dialog and go straight to the choices
+		/// Whether or not to skip the dialog and go straight to the choices.
 		/// </summary>
 		public static bool SkipDialog
 		{
@@ -45,7 +38,7 @@ namespace DPek.Raconteur
 		}
 
 		/// <summary>
-		/// Whether or not to print debugging information for each line
+		/// Whether or not to print debugging information for each line.
 		/// </summary>
 		private static bool DebugLines
 		{
@@ -53,38 +46,15 @@ namespace DPek.Raconteur
 				return m_debug && m_debugLines;
 			}
 		}
-
-#else
-
-		public static bool DebugMode
-		{
-			get {
-				return false;
-			}
-		}
-
-		public static bool SkipDialog
-		{
-			get {
-				return false;
-			}
-		}
-
-		public static bool DebugLines
-		{
-			get {
-				return false;
-			}
-		}
-
-#endif
-
+		
 		#endregion
 
 		#region Static Variables
 
+		/// <summary>
+		/// The variables in the game.
+		/// </summary>
 		private static Dictionary<string, string> m_variables;
-
 		public static Dictionary<string, string> Vars
 		{
 			get {
@@ -96,8 +66,6 @@ namespace DPek.Raconteur
 		#endregion
 
 		#region Unity UI
-
-#if UNITY_EDITOR
 
 		[MenuItem("Window/Raconteur")]
 		public static void ShowWindow()
@@ -145,13 +113,9 @@ namespace DPek.Raconteur
 			this.Repaint();
 		}
 
-#endif
-
 		#endregion
 
 		#region Unity Editor Prefs
-
-#if UNITY_EDITOR
 
 		/// <summary>
 		/// Load this window's preferences when Unity is loaded.
@@ -201,17 +165,64 @@ namespace DPek.Raconteur
 			}
 		}
 
-#endif
-
 		#endregion
 
+		/// <summary>
+		/// Logs a string using the debugger if DebugLines is true.
+		/// </summary>
+		/// <param name="str">
+		/// The string to log.
+		/// </param>
 		public static void Log(string str)
 		{
-#if UNITY_EDITOR
 			if (DebugLines) {
 				Debug.Log(str);
 			}
-#endif
 		}
 	}
 }
+
+#else
+
+namespace DPek.Raconteur
+{
+	public class Static
+	{
+		public static bool DebugMode
+		{
+			get {
+				return false;
+			}
+		}
+
+		public static bool SkipDialog
+		{
+			get {
+				return false;
+			}
+		}
+
+		public static bool DebugLines
+		{
+			get {
+				return false;
+			}
+		}
+
+		private static Dictionary<string, string> m_variables;
+		public static Dictionary<string, string> Vars
+		{
+			get {
+				m_variables = m_variables ?? new Dictionary<string, string>();
+				return m_variables;
+			}
+		}
+
+		public static void Log(string str)
+		{
+			// Do nothing
+		}
+	}
+}
+
+#endif

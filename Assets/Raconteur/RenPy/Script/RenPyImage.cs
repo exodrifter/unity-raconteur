@@ -1,7 +1,11 @@
 ﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py image statement.
+	/// </summary>
 	public class RenPyImage : RenPyStatement
 	{
 		private string m_imageName;
@@ -28,7 +32,8 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyImage(ref RenPyScanner tokens) : base(RenPyStatementType.IMAGE)
+		public RenPyImage(ref RenPyScanner tokens)
+			: base(RenPyStatementType.IMAGE)
 		{
 			tokens.Seek("image");
 			tokens.Next();
@@ -49,10 +54,10 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			string imageName = m_imageTag + " " + m_imageName;
-			display.State.AddImageFilename(imageName, m_filename);
+			state.AddImageFilename(imageName, m_filename);
 		}
 
 		public override string ToString()

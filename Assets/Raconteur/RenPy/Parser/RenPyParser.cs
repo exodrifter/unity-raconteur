@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-using DPek.Raconteur.RenPy.Dialog;
 using DPek.Raconteur.RenPy.Script;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Parser
 {
 	public class RenPyParser
 	{
-		public static RenPyDialogState Parse(ref RenPyScriptAsset script)
+		public static RenPyState Parse(ref RenPyScriptAsset script)
 		{
 			var tokenizer = new Tokenizer();
 
@@ -24,7 +24,8 @@ namespace DPek.Raconteur.RenPy.Parser
 			var scanner = new RenPyScanner(ref tokens);
 
 			// Parse the statements
-			List<RenPyStatement> statements = new List<RenPyStatement>();
+			var statements = new List<RenPyStatement>();
+			var levels = new List<int>();
 			scanner.SkipEmptyLines();
 			while (scanner.HasNext()) {
 
@@ -33,13 +34,55 @@ namespace DPek.Raconteur.RenPy.Parser
 				RenPyStatement statement = ParseStatement(ref scanner);
 				if (statement != null) {
 					statements.Add(statement);
-					Debug.Log(level + " " + statement);
+					levels.Add(level);
 				}
 
 				scanner.SkipEmptyLines();
 			}
 
-			return new RenPyDialogState(statements.ToArray());
+			// Create blocks out of the statements
+			int startIndex = 0;
+			var blocks = ParseBlocks(ref statements, ref levels, ref startIndex);
+
+			return new RenPyState(ref script, ref blocks);
+		}
+
+		private static List<RenPyBlock> ParseBlocks(ref List<RenPyStatement> statements,
+		                                            ref List<int> levels,
+		                                            ref int index)
+		{
+			var blocks = new List<RenPyBlock>();
+			int currentLevel = levels[index];
+			var statementBlock = new List<RenPyStatement>();
+
+			for (; index < statements.Count; ++index)
+			{
+				// Belongs to this block
+				if (levels[index] == currentLevel) {
+					statementBlock.Add(statements[index]);
+				}
+
+				// Reached the end of this block
+				else if (levels[index] < currentLevel) {
+					if (statementBlock.Count > 0) {
+						blocks.Add(new RenPyBlock(statementBlock));
+					}
+					--index;
+					return blocks;
+				}
+
+				// Belongs to a nested block
+				else {
+					var previousStatement = statementBlock[statementBlock.Count - 1];
+					var nestedBlocks = ParseBlocks(ref statements, ref levels, ref index);
+					previousStatement.NestedBlocks = nestedBlocks;
+				}
+			}
+
+			if (statementBlock.Count > 0) {
+				blocks.Add(new RenPyBlock(statementBlock));
+			}
+			return blocks;
 		}
 
 		private static RenPyStatement ParseStatement(ref RenPyScanner scanner)

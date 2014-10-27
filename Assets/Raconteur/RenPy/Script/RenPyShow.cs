@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
-using DPek.Raconteur.RenPy.Dialog;
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.RenPy.Util;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py show statement.
+	/// </summary>
 	public class RenPyShow : RenPyStatement
 	{
 		private string m_imageName;
@@ -46,13 +49,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			string filename = display.State.GetImageFilename(m_imageName);
-			Texture2D tex = display.RenPyScript.GetImage(filename);
-			var image = new RenPyDialogImage(ref tex, m_alignment);
+			string filename = state.GetImageFilename(m_imageName);
+			Texture2D tex = state.Data.GetImage(filename);
+			var image = new RenPyImageData(ref tex, m_alignment);
 
-			display.State.AddImage(m_imageName, ref image);
+			state.Visual.AddImage(m_imageName, ref image);
 		}
 
 		public override string ToString()

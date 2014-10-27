@@ -1,10 +1,13 @@
-﻿using UnityEngine;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py say statement.
+	/// </summary>
 	public class RenPySay : RenPyStatement
 	{
 		/// <summary>
@@ -90,11 +93,11 @@ namespace DPek.Raconteur.RenPy.Script
 			return text;
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			// Go to the next line if we are skipping the dialog
 			if (Static.SkipDialog) {
-				display.State.NextLine(display);
+				state.Execution.NextStatement(state);
 			}
 		}
 

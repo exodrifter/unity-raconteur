@@ -3,21 +3,25 @@ using System.Collections;
 using System.IO;
 
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py stop command.
+	/// </summary>
 	public class RenPyStop : RenPyStatement
 	{
 		private string m_channel;
 
-		private float m_fadeout;
+		private float m_fadeoutTime;
 
 		public RenPyStop(ref RenPyScanner tokens) : base(RenPyStatementType.STOP)
 		{
 			tokens.Seek("stop");
 			tokens.Next();
 
-			tokens.Seek(new string [] {"music", "sound"});
+			tokens.Seek(new string[] { "music", "sound", "voice" });
 			m_channel = tokens.Next();
 
 			// Parse any recognized clauses
@@ -29,8 +33,8 @@ namespace DPek.Raconteur.RenPy.Script
 						tokens.Seek("fadeout");
 						tokens.Next();
 						tokens.SkipWhitespace();
-						m_fadeout = float.Parse(tokens.Next());
-						m_fadeout = m_fadeout < 0 ? 0 : m_fadeout;
+						m_fadeoutTime = float.Parse(tokens.Next());
+						m_fadeoutTime = m_fadeoutTime < 0 ? 0 : m_fadeoutTime;
 						break;
 					default:
 						nothing = true;
@@ -39,43 +43,15 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			string msg = "stop " + m_channel;
-			msg += (m_fadeout > 0 ? " fadeout:" + m_fadeout : "");
-			Static.Log(msg);
+			var transition = new AudioChannelTransition();
+			transition.FadeTo = 0;
+			transition.TransitionTime = m_fadeoutTime;
+			transition.ElapsedTime = 0;
 
-			// Stop the audio
-			display.BeginPlayCoroutine(m_channel, StopAudio(display));
-		}
-
-		private IEnumerator StopAudio(RenPyDisplayState display)
-		{
-			AudioSource channel =  GetChannel(display);
-
-			// Fade out
-			float time = 0;
-			while (time < m_fadeout) {
-				yield return new WaitForFixedUpdate();
-				time += Time.fixedDeltaTime;
-				channel.volume = Mathf.Lerp(1, 0, time / m_fadeout);
-			}
-
-			// Change the audio
-			channel.volume = 0;
-			channel.clip = null;
-			channel.Stop();
-		}
-
-		private AudioSource GetChannel(RenPyDisplayState display)
-		{
-			switch (m_channel) {
-				case "music":
-					return display.Music;
-				case "sound":
-					return display.Sound;
-			}
-			return null;
+			AudioChannel channel = state.Aural.GetChannel(m_channel);
+			channel.Transition = transition;
 		}
 
 		public override string ToString()

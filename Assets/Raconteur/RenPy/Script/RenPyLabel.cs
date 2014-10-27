@@ -1,7 +1,11 @@
 ﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py label statement.
+	/// </summary>
 	public class RenPyLabel : RenPyStatement
 	{
 		private string m_name;
@@ -12,7 +16,8 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyLabel(ref RenPyScanner tokens) : base(RenPyStatementType.LABEL)
+		public RenPyLabel(ref RenPyScanner tokens)
+			: base(RenPyStatementType.LABEL)
 		{
 			tokens.Seek("label");
 			tokens.Next();
@@ -20,9 +25,9 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			// Nothing to do
+			state.Execution.PushStackFrame(NestedBlocks);
 		}
 
 		public override string ToString()

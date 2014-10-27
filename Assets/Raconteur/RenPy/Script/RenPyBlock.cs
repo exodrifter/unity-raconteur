@@ -16,7 +16,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The number of statements in this RenPyBlock.
 		/// </summary>
-		public int Count
+		public int StatementCount
 		{
 			get {
 				return m_statements.Count;
@@ -29,7 +29,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="statements">
 		/// A list of statements that belong to this RenPyBlock.
 		/// </param>
-		public RenPyBlock(ref List<RenPyStatement> statements)
+		public RenPyBlock(List<RenPyStatement> statements)
 		{
 			m_statements = statements;
 		}

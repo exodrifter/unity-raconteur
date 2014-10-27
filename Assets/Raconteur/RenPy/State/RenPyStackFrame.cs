@@ -1,0 +1,105 @@
+﻿using System.Collections.Generic;
+
+using DPek.Raconteur.Util;
+using DPek.Raconteur.RenPy.Script;
+
+namespace DPek.Raconteur.RenPy.State
+{
+	/// <summary>
+	/// Stores the state of a Ren'Py stack frame.
+	/// </summary>
+	public class RenPyStackFrame
+	{
+		/// <summary>
+		/// The blocks in this stack.
+		/// </summary>
+		private readonly List<RenPyBlock> m_blocks;
+
+		/// <summary>
+		/// The index of the statement.
+		/// </summary>
+		private int m_statementIndex;
+
+		/// <summary>
+		/// The index of the current block.
+		/// </summary>
+		private int m_blockIndex;
+
+		/// <summary>
+		/// A dictionary of labels to the corresponding block and statement
+		/// indices.
+		/// </summary>
+		private Dictionary<string, Duple<int,int>> m_labelIndices;
+
+		/// <summary>
+		/// Creates a new RenPyStackFrame with the passed list of RenPyBlocks.
+		/// </summary>
+		/// <param name="blocks"></param>
+		public RenPyStackFrame(List<RenPyBlock> blocks)
+		{
+			m_blocks = blocks;
+			m_statementIndex = -1;
+			m_blockIndex = 0;
+
+			m_labelIndices = new Dictionary<string, Duple<int,int>>();
+			for(int i = 0; i < m_blocks.Count; ++i) {
+				for(int j = 0; j < m_blocks[i].StatementCount; ++j) {
+					if (m_blocks[i][j] is RenPyLabel) {
+						var name = (m_blocks[i][j] as RenPyLabel).Name;
+						var index = new Duple<int, int>(i, j);
+						m_labelIndices.Add(name, index);
+					}
+				}
+			}
+		}
+
+		public void Reset()
+		{
+			m_statementIndex = -1;
+			m_blockIndex = 0;
+		}
+
+		/// <summary>
+		/// Moves the stack frame to the next statement, executes that
+		/// statement, and returns that statement.
+		/// </summary>
+		/// <param name="state">
+		/// The state to execute the statement with.
+		/// </param>
+		/// <returns>
+		/// The next statement or null if there is no next statement.
+		/// </returns>
+		public RenPyStatement NextStatement(RenPyState state)
+		{
+			++m_statementIndex;
+
+			// Check if we need to go to the next block
+			if (m_statementIndex >= m_blocks[m_blockIndex].StatementCount) {
+				m_statementIndex = 0;
+				++m_blockIndex;
+			}
+
+			// Check if we are any more statements left
+			if (m_blockIndex >= m_blocks.Count) {
+				return null;
+			}
+
+			var statement = m_blocks[m_blockIndex][m_statementIndex];
+			statement.Execute(state);
+
+			return statement;
+		}
+
+
+		/// <summary>
+		/// Moves the stack frame to the statement right before the specified
+		/// label.
+		/// </summary>
+		public void GoToLabel(string label)
+		{
+			Duple<int, int> index = m_labelIndices[label];
+			m_blockIndex = index.First;
+			m_statementIndex = index.Second;
+		}
+	}
+}

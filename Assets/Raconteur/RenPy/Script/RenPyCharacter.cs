@@ -1,11 +1,16 @@
-﻿using System.Collections.Generic;
-
-using DPek.Raconteur.RenPy.Parser;
+﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py character statement.
+	/// </summary>
 	public class RenPyCharacter : RenPyStatement
 	{
+		/// <summary>
+		/// The name of the variable that stores this character.
+		/// </summary>
 		private string m_varName;
 		public string VarName
 		{
@@ -14,6 +19,9 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
+		/// <summary>
+		/// The name of this character.
+		/// </summary>
 		private string m_name;
 		public string Name
 		{
@@ -22,7 +30,8 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyCharacter(ref RenPyScanner tokens) : base(RenPyStatementType.CHARACTER)
+		public RenPyCharacter(ref RenPyScanner tokens)
+			: base(RenPyStatementType.CHARACTER)
 		{
 			tokens.Seek("define");
 			tokens.Next();
@@ -48,9 +57,9 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			display.State.AddCharacter(this);
+			state.AddCharacter(this);
 		}
 
 		public override string ToString()

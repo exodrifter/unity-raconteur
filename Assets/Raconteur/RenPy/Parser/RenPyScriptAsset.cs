@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace DPek.Raconteur.RenPy.Parser
 {
 	/// <summary>
-	/// Stores information about a Ren'Py script.
+	/// Stores and serializes information about a Ren'Py script.
 	/// </summary>
 	[Serializable]
 	public class RenPyScriptAsset : ScriptableObject

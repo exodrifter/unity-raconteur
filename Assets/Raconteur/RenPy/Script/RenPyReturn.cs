@@ -1,18 +1,23 @@
 ﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py return statement.
+	/// </summary>
 	public class RenPyReturn : RenPyStatement
 	{
-		public RenPyReturn(ref RenPyScanner tokens) : base(RenPyStatementType.RETURN)
+		public RenPyReturn(ref RenPyScanner tokens)
+			: base(RenPyStatementType.RETURN)
 		{
 			tokens.Seek("return");
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState display)
 		{
-			display.StopDialog();
+			display.Execution.PopStackFrame();
 		}
 
 		public override string ToString()

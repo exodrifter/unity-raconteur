@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+using DPek.Raconteur.RenPy.Display;
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.Script;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy
 {
 	public class RenPyViewBasic : MonoBehaviour
 	{
 		public bool m_autoStart;
-		public RenPyDisplayState m_display;
+		public RenPyDisplay m_display;
+
+		private RenPyStatement m_currentStatement;
 
 		void Start()
 		{
@@ -24,13 +28,18 @@ namespace DPek.Raconteur.RenPy
 				return;
 			}
 
-			RenPyStatementType mode = m_display.State.CurrentLine.Type;
+			if (m_currentStatement == null)
+			{
+				NextStatement();
+			}
+
+			RenPyStatementType mode = m_currentStatement.Type;
 
 			switch (mode) {
 				case RenPyStatementType.SAY:
 					// Check for input to go to next line
 					if (Input.GetMouseButtonDown(0)) {
-						m_display.State.NextLine(m_display);
+						NextStatement();
 					}
 					break;
 				case RenPyStatementType.RETURN:
@@ -39,16 +48,20 @@ namespace DPek.Raconteur.RenPy
 						m_display.StopDialog();
 					}
 					break;
+				default:
+					// Show nothing for this line, proceed to the next one.
+					NextStatement();
+					break;
 			}
 		}
 
 		void OnGUI()
 		{
-			if (!m_display.Running) {
+			if (!m_display.Running || m_currentStatement == null) {
 				return;
 			}
 
-			RenPyStatementType mode = m_display.State.CurrentLine.Type;
+			RenPyStatementType mode = m_currentStatement.Type;
 
 			Rect rect;
 			GUIStyle style = new GUIStyle();
@@ -58,15 +71,15 @@ namespace DPek.Raconteur.RenPy
 			style.wordWrap = true;
 
 			// Draw background
-			var bg = m_display.State.BackgroundImage;
+			var bg = m_display.State.Visual.GetBackgroundImage();
 			if (bg != null) {
 				var pos = new Rect(0, 0, Screen.width, Screen.height);
 				GUI.DrawTexture(pos, bg.Texture, ScaleMode.ScaleAndCrop);
 			}
 
 			// Draw images
-			var imageNames = m_display.State.GetImages();
-			foreach (Dialog.RenPyDialogImage image in imageNames) {
+			var imageNames = m_display.State.Visual.GetImages();
+			foreach (RenPyImageData image in imageNames) {
 				float screenWidth = Screen.width;
 				float screenHeight = Screen.height;
 				float texWidth = image.Texture.width;
@@ -116,10 +129,10 @@ namespace DPek.Raconteur.RenPy
 			// Draw text
 			switch (mode) {
 				case RenPyStatementType.SAY:
-					var speech = m_display.State.CurrentLine as RenPySay;
+					var speech = m_currentStatement as RenPySay;
 					if (speech == null) {
 						Debug.LogError("Type mismatch!");
-						m_display.State.NextLine(m_display);
+						NextStatement();
 					}
 
 					// Render the speech
@@ -130,10 +143,10 @@ namespace DPek.Raconteur.RenPy
 					break;
 
 				case RenPyStatementType.MENU:
-					var menu = m_display.State.CurrentLine as RenPyMenu;
+					var menu = m_currentStatement as RenPyMenu;
 					if (menu == null) {
 						Debug.LogError("Type mismatch!");
-						m_display.State.NextLine(m_display);
+						NextStatement();
 					}
 
 					// Display the choices
@@ -142,18 +155,19 @@ namespace DPek.Raconteur.RenPy
 
 						// Check if a choice was selected
 						if (GUI.Button(rect, choice.Key, style)) {
-							m_display.State.GoToLabel(m_display, choice.Value);
+							m_display.State.Execution.GoToLabel(choice.Value);
 						}
 
 						rect.y += 30;
 					}
 					break;
-
-				default:
-					// Show nothing for this line, proceed to the next one.
-					m_display.State.NextLine(m_display);
-					break;
 			}
+		}
+
+		private void NextStatement()
+		{
+			RenPyState state = m_display.State;
+			m_currentStatement = state.Execution.NextStatement(state);
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -53,9 +54,9 @@ namespace DPek.Raconteur.RenPy.Script
 			m_value = tokens.Seek("\n").Trim();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			m_assignment.Assign(display, m_varName, m_value);
+			m_assignment.Assign(state, m_varName, m_value);
 		}
 
 		public override string ToString()
@@ -71,15 +72,15 @@ namespace DPek.Raconteur.RenPy.Script
 
 	abstract class Assignment
 	{
-		public abstract void Assign(RenPyDisplayState display, string varName, string value);
+		public abstract void Assign(RenPyState state, string varName, string value);
 		public abstract string GetOp();
 	}
 
 	class NormalAssignment : Assignment
 	{
-		public override void Assign(RenPyDisplayState display, string varName, string value)
+		public override void Assign(RenPyState state, string varName, string value)
 		{
-			display.State.SetVariable(varName, value);
+			state.SetVariable(varName, value);
 		}
 
 		public override string GetOp()
@@ -90,29 +91,29 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class PlusAssignment : Assignment
 	{
-		public override void Assign(RenPyDisplayState display, string varName, string value)
+		public override void Assign(RenPyState state, string varName, string value)
 		{
-			string current = display.State.GetVariable(varName);
+			string current = state.GetVariable(varName);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (iLeft + iRight).ToString());
+					state.SetVariable(varName, (iLeft + iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (iLeft + fRight).ToString());
+					state.SetVariable(varName, (iLeft + fRight).ToString());
 				}
 			} else {
 				float fLeft = float.Parse(current);
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (fLeft + iRight).ToString());
+					state.SetVariable(varName, (fLeft + iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (fLeft + fRight).ToString());
+					state.SetVariable(varName, (fLeft + fRight).ToString());
 				}
 			}
 		}
@@ -125,29 +126,29 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class MinusAssignment : Assignment
 	{
-		public override void Assign(RenPyDisplayState display, string varName, string value)
+		public override void Assign(RenPyState state, string varName, string value)
 		{
-			string current = display.State.GetVariable(varName);
+			string current = state.GetVariable(varName);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (iLeft - iRight).ToString());
+					state.SetVariable(varName, (iLeft - iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (iLeft - fRight).ToString());
+					state.SetVariable(varName, (iLeft - fRight).ToString());
 				}
 			} else {
 				float fLeft = float.Parse(current);
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (fLeft - iRight).ToString());
+					state.SetVariable(varName, (fLeft - iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (fLeft - fRight).ToString());
+					state.SetVariable(varName, (fLeft - fRight).ToString());
 				}
 			}
 		}
@@ -160,29 +161,29 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class TimesAssignment : Assignment
 	{
-		public override void Assign(RenPyDisplayState display, string varName, string value)
+		public override void Assign(RenPyState state, string varName, string value)
 		{
-			string current = display.State.GetVariable(varName);
+			string current = state.GetVariable(varName);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (iLeft * iRight).ToString());
+					state.SetVariable(varName, (iLeft * iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (iLeft * fRight).ToString());
+					state.SetVariable(varName, (iLeft * fRight).ToString());
 				}
 			} else {
 				float fLeft = float.Parse(current);
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (fLeft * iRight).ToString());
+					state.SetVariable(varName, (fLeft * iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (fLeft * fRight).ToString());
+					state.SetVariable(varName, (fLeft * fRight).ToString());
 				}
 			}
 		}
@@ -195,29 +196,29 @@ namespace DPek.Raconteur.RenPy.Script
 
 	class DivideAssignment : Assignment
 	{
-		public override void Assign(RenPyDisplayState display, string varName, string value)
+		public override void Assign(RenPyState state, string varName, string value)
 		{
-			string current = display.State.GetVariable(varName);
+			string current = state.GetVariable(varName);
 
 			int iLeft;
 			if (int.TryParse(current, out iLeft)) {
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (iLeft / iRight).ToString());
+					state.SetVariable(varName, (iLeft / iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (iLeft / fRight).ToString());
+					state.SetVariable(varName, (iLeft / fRight).ToString());
 				}
 			} else {
 				float fLeft = float.Parse(current);
 				int iRight;
 				if (int.TryParse(value, out iRight)) {
-					display.State.SetVariable(varName, (fLeft / iRight).ToString());
+					state.SetVariable(varName, (fLeft / iRight).ToString());
 				} else {
 					float fRight;
 					fRight = float.Parse(value);
-					display.State.SetVariable(varName, (fLeft / fRight).ToString());
+					state.SetVariable(varName, (fLeft / fRight).ToString());
 				}
 			}
 		}

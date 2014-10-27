@@ -1,15 +1,20 @@
-﻿using UnityEngine;
-using DPek.Raconteur.RenPy.Dialog;
-using DPek.Raconteur.RenPy.Parser;
-using DPek.Raconteur.RenPy.Util;
+﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py hide statement.
+	/// </summary>
 	public class RenPyHide : RenPyStatement
 	{
+		/// <summary>
+		/// The name of the image to hide
+		/// </summary>
 		private string m_imageName;
 
-		public RenPyHide(ref RenPyScanner tokens) : base(RenPyStatementType.HIDE)
+		public RenPyHide(ref RenPyScanner tokens)
+			: base(RenPyStatementType.HIDE)
 		{
 			tokens.Seek("hide");
 			tokens.Next();
@@ -37,9 +42,9 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
-			display.State.RemoveImage(m_imageName);
+			state.Visual.RemoveImage(m_imageName);
 		}
 
 		public override string ToString()

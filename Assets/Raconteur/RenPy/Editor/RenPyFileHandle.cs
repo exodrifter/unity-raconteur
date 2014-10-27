@@ -3,7 +3,7 @@
 namespace DPek.Raconteur.RenPy.Editor
 {
 	/// <summary>
-	/// Class that stores information about a Ren'Py script.
+	/// Class that stores information about a Ren'Py script file.
 	/// </summary>
 	public class RenPyFile
 	{

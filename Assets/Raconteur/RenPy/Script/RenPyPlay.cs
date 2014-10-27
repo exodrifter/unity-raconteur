@@ -3,18 +3,23 @@ using System.Collections;
 using System.IO;
 
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py play statement.
+	/// </summary>
 	public class RenPyPlay : RenPyStatement
 	{
 		private string m_channel;
 		private string m_file;
 		private bool m_loop;
-		private float m_fadein;
-		private float m_fadeout;
+		private float m_fadeinTime;
+		private float m_fadeoutTime;
 
-		public RenPyPlay(ref RenPyScanner tokens) : base(RenPyStatementType.PLAY)
+		public RenPyPlay(ref RenPyScanner tokens)
+			: base(RenPyStatementType.PLAY)
 		{
 			tokens.Seek("play");
 			tokens.Next();
@@ -54,15 +59,15 @@ namespace DPek.Raconteur.RenPy.Script
 						tokens.Seek("fadein");
 						tokens.Next();
 						tokens.SkipWhitespace();
-						m_fadein = float.Parse(tokens.Next());
-						m_fadein = m_fadein < 0 ? 0 : m_fadein;
+						m_fadeinTime = float.Parse(tokens.Next());
+						m_fadeinTime = m_fadeinTime < 0 ? 0 : m_fadeinTime;
 						break;
 					case "fadeout":
 						tokens.Seek("fadeout");
 						tokens.Next();
 						tokens.SkipWhitespace();
-						m_fadeout = float.Parse(tokens.Next());
-						m_fadeout = m_fadeout < 0 ? 0 : m_fadeout;
+						m_fadeoutTime = float.Parse(tokens.Next());
+						m_fadeoutTime = m_fadeoutTime < 0 ? 0 : m_fadeoutTime;
 						break;
 					default:
 						nothing = true;
@@ -71,60 +76,30 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			// Get the audio file
-			if (!display.RenPyScript.HasAudioClip(m_file)) {
+			if (!state.Data.HasAudioClip(m_file)) {
 				Debug.LogError("Could not file AudioClip \"" + m_file + "\"");
 				return;
 			}
-			AudioClip clip = display.RenPyScript.GetAudioClip(m_file);
+			AudioClip clip = state.Data.GetAudioClip(m_file);
 
-			// Play the audio file
-			display.BeginPlayCoroutine(m_channel, PlayAudio(display, clip));
-		}
+			// Setup the transitions
+			var fadein = new AudioChannelTransition();
+			fadein.FadeTo = 1;
+			fadein.ElapsedTime = m_fadeinTime;
+			fadein.Loop = m_loop;
 
-		private IEnumerator PlayAudio(RenPyDisplayState display, AudioClip clip)
-		{
-			AudioSource channel = GetChannel(display);
+			var fadeout = new AudioChannelTransition();
+			fadeout.EndAudio = clip;
+			fadeout.FadeTo = 0;
+			fadeout.TransitionTime = m_fadeoutTime;
+			fadeout.Loop = m_loop;
+			fadeout.NextTransition = fadein;
 
-			// Fade out
-			float start = channel.volume;
-			float time = 0;
-			if (channel.clip != clip) {
-				while (time < m_fadeout) {
-					yield return new WaitForFixedUpdate();
-					time += Time.fixedDeltaTime;
-					channel.volume = Mathf.Lerp(start, 0, time / m_fadeout);
-				}
-				channel.volume = 0;
-			}
-
-			// Change the audio
-			channel.clip = clip;
-			channel.loop = m_loop;
-			channel.Play();
-
-			// Fade in
-			start = channel.volume;
-			time = 0;
-			while (time < m_fadein) {
-				yield return new WaitForFixedUpdate();
-				time += Time.fixedDeltaTime;
-				channel.volume = Mathf.Lerp(start, 1, time / m_fadein);
-			}
-			channel.volume = 1;
-		}
-
-		private AudioSource GetChannel(RenPyDisplayState display)
-		{
-			switch (m_channel) {
-				case "music":
-					return display.Music;
-				case "sound":
-					return display.Sound;
-			}
-			return null;
+			AudioChannel channel = state.Aural.GetChannel(m_channel);
+			channel.Transition = fadeout;
 		}
 
 		public override string ToString()
@@ -132,8 +107,8 @@ namespace DPek.Raconteur.RenPy.Script
 			string str = "play " + m_channel;
 			str += " \"" + m_file + "\"";
 			str += " " + (m_loop ? "loop" : "noloop");
-			str += " " + (m_fadein > 0 ? "fadein " + m_fadein : "");
-			str += " " + (m_fadeout > 0 ? "fadeout " + m_fadeout : "");
+			str += " " + (m_fadeinTime > 0 ? "fadein " + m_fadeinTime : "");
+			str += " " + (m_fadeoutTime > 0 ? "fadeout " + m_fadeoutTime : "");
 
 			str += "\n" + base.ToString();
 			return str;

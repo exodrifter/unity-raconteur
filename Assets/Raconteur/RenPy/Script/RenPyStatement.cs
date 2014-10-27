@@ -1,4 +1,8 @@
-﻿namespace DPek.Raconteur.RenPy.Script
+﻿using System.Collections.Generic;
+
+using DPek.Raconteur.RenPy.State;
+
+namespace DPek.Raconteur.RenPy.Script
 {
 	/// <summary>
 	/// Represents a statement in RenPy.
@@ -17,6 +21,23 @@
 		}
 
 		/// <summary>
+		/// The blocks that are nested under this statement, or null if there
+		/// are none.
+		/// </summary>
+		private List<RenPyBlock> m_nestedBlocks;
+		public List<RenPyBlock> NestedBlocks
+		{
+			get
+			{
+				return m_nestedBlocks;
+			}
+			set
+			{
+				m_nestedBlocks = value;
+			}
+		}
+
+		/// <summary>
 		/// Creates a new RenPyStatement of the specified type.
 		/// </summary>
 		/// <param name="type">
@@ -30,7 +51,10 @@
 		/// <summary>
 		/// Executes the actions that this line takes.
 		/// </summary>
-		public abstract void Execute(RenPyDisplayState state);
+		/// <param name="state">
+		/// The state that this statement can modify
+		/// </param>
+		public abstract void Execute(RenPyState state);
 
 		public override string ToString()
 		{

@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
 
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py menu statement.
+	/// </summary>
 	public class RenPyMenu : RenPyStatement
 	{
 		public Dictionary<string, string> m_choices;
 
-		public RenPyMenu(ref RenPyScanner tokens) : base(RenPyStatementType.MENU)
+		public RenPyMenu(ref RenPyScanner tokens)
+			: base(RenPyStatementType.MENU)
 		{
 			m_choices = new Dictionary<string, string>();
 
@@ -39,7 +44,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			// Nothing to do
 		}

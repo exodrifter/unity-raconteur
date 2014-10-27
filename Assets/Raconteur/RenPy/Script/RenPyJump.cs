@@ -1,14 +1,17 @@
-﻿using UnityEngine;
-
-using DPek.Raconteur.RenPy.Parser;
+﻿using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py jump statement.
+	/// </summary>
 	public class RenPyJump : RenPyStatement
 	{
 		private string m_target;
 
-		public RenPyJump(ref RenPyScanner tokens) : base(RenPyStatementType.JUMP)
+		public RenPyJump(ref RenPyScanner tokens)
+			: base(RenPyStatementType.JUMP)
 		{
 			tokens.Seek("jump");
 			tokens.Next();
@@ -16,14 +19,12 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			Static.Log("jump " + m_target);
 
-			bool success = display.State.GoToLabel(display, m_target);
-			if (!success) {
-				Debug.LogError("Could not find the label \"" + m_target + "\"");
-			}
+			state.Execution.GoToLabel(m_target);
+			state.Execution.NextStatement(state);
 		}
 
 		public override string ToString()

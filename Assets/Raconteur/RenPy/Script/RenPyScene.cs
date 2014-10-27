@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
-using DPek.Raconteur.RenPy.Dialog;
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.RenPy.Util;
 
 namespace DPek.Raconteur.RenPy.Script
 {
+	/// <summary>
+	/// Ren'Py scene statement.
+	/// </summary>
 	public class RenPyScene : RenPyStatement
 	{
 		private string m_imageName;
 
-		public RenPyScene(ref RenPyScanner tokens) : base(RenPyStatementType.SCENE)
+		public RenPyScene(ref RenPyScanner tokens)
+			: base(RenPyStatementType.SCENE)
 		{
 			tokens.Seek("scene");
 			tokens.Next();
@@ -24,21 +28,21 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override void Execute(RenPyDisplayState display)
+		public override void Execute(RenPyState state)
 		{
 			// Remove all images
-			display.State.RemoveAllImages();
+			state.Visual.RemoveAllImages();
 
 			if (m_imageName == "black") {
-				display.State.BackgroundImage = null;
+				state.Visual.SetBackgroundImage(null);
 				return;
 			}
 
-			string filename = display.State.GetImageFilename(m_imageName);
-			Texture2D tex = display.RenPyScript.GetImage(filename);
-			var image = new RenPyDialogImage(ref tex, RenPyAlignment.Center);
+			string filename = state.GetImageFilename(m_imageName);
+			Texture2D tex = state.Data.GetImage(filename);
+			var image = new RenPyImageData(ref tex, RenPyAlignment.Center);
 
-			display.State.BackgroundImage = image;
+			state.Visual.SetBackgroundImage(image);
 		}
 
 		public override string ToString()
