@@ -49,5 +49,16 @@ namespace DPek.Raconteur.RenPy.Script
 				return m_statements[i];
 			}
 		}
+
+		/// <summary>
+		/// Removes the statement at the specified index.
+		/// </summary>
+		/// <param name="index">
+		/// The index of the statement to remove.
+		/// </param>
+		public void RemoveAt(int index)
+		{
+			m_statements.RemoveAt(index);
+		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 using DPek.Raconteur.RenPy.Script;
 using DPek.Raconteur.RenPy.State;
@@ -44,7 +45,66 @@ namespace DPek.Raconteur.RenPy.Parser
 			int startIndex = 0;
 			var blocks = ParseBlocks(ref statements, ref levels, ref startIndex);
 
-			return new RenPyState(ref script, ref blocks);
+			// Get init statements in order from low to high priority
+			RenPyInitPhase initPhase = ExtractInitPhase(blocks);
+			var initBlocks = new List<RenPyBlock>();
+			foreach(var kvp in initPhase.Statements.OrderBy(i => i.Key)) {
+				var block = new RenPyBlock(kvp.Value);
+				initBlocks.Add(block);
+			}
+
+			// Combine init blocks with the rest of the blocks
+			initBlocks.AddRange(blocks);
+
+			return new RenPyState(ref script, ref initBlocks);
+		}
+
+		/// <summary>
+		/// Extracts and removes the init phase from the passed list of
+		/// RenPyBlocks.
+		/// </summary>
+		/// <returns>
+		/// The init phase for the passed blocks.
+		/// </returns>
+		/// <param name="blocks">
+		/// A list of RenPyBlocks to extract the init phase from.
+		/// </param>
+		private static RenPyInitPhase ExtractInitPhase(List<RenPyBlock> blocks) {
+			RenPyInitPhase initPhase = new RenPyInitPhase();
+
+			// Read every statement in this block
+			for (int i = 0 ; i < blocks.Count; ++i) {
+				var block = blocks[i];
+				for(int j = 0; j < block.StatementCount; ++j) {
+					var statement = block[j];
+					bool remove = false;
+
+					// Look for statements that must be part of the init phase
+					if (statement is RenPyInit) {
+						int priority = (statement as RenPyInit).Priority;
+						initPhase.AddStatement(priority, statement);
+						remove = true;
+					} else if (statement is RenPyCharacter) {
+						initPhase.AddStatement(0, statement);
+						remove = true;
+					} else if (statement is RenPyImage) {
+						initPhase.AddStatement(990, statement);
+						remove = true;
+					}
+					// Look for init phase statements inside nested blocks
+					else if (statement.NestedBlocks != null) {
+						var addPhase = ExtractInitPhase(statement.NestedBlocks);
+						initPhase.AddPhase(ref addPhase);
+					}
+					
+					// Remove the statement if needed
+					if(remove) {
+						block.RemoveAt(j);
+						--j;
+					}
+				}
+			}
+			return initPhase;
 		}
 
 		private static List<RenPyBlock> ParseBlocks(ref List<RenPyStatement> statements,
@@ -101,6 +161,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return new RenPyHide(ref scanner);
 				case "if":
 					return new RenPyIf(ref scanner);
+				case "init":
+					return new RenPyInit(ref scanner);
 				case "image":
 					return new RenPyImage(ref scanner);
 				case "jump":
