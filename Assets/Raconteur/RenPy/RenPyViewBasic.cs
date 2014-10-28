@@ -54,6 +54,9 @@ namespace DPek.Raconteur.RenPy
 						StartCoroutine(WaitNextStatement(pause.WaitTime));
 					}
 					break;
+				case RenPyStatementType.MENU:
+					// Do nothing
+					break;
 				default:
 					// Show nothing for this line, proceed to the next one.
 					NextStatement();
@@ -157,11 +160,12 @@ namespace DPek.Raconteur.RenPy
 
 					// Display the choices
 					rect = new Rect(0, Screen.height - 130, Screen.width, 30);
-					foreach (var choice in menu.m_choices) {
+					foreach (var choice in menu.GetChoices()) {
 
 						// Check if a choice was selected
-						if (GUI.Button(rect, choice.Key, style)) {
-							m_display.State.Execution.GoToLabel(choice.Value);
+						if (GUI.Button(rect, choice, style)) {
+							menu.PickChoice(m_display.State, choice);
+							NextStatement();
 						}
 
 						rect.y += 30;

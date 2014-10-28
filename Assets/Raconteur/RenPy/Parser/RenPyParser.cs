@@ -171,6 +171,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return new RenPyLabel(ref scanner);
 				case "menu":
 					return new RenPyMenu(ref scanner);
+				case "pass":
+					return new RenPyPass(ref scanner);
 				case "pause":
 					return new RenPyPause(ref scanner);
 				case "play":
@@ -184,7 +186,11 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "stop":
 					return new RenPyStop(ref scanner);
 				default:
-					return new RenPySay(ref scanner);
+					if(scanner.PeekEnd() == ":") {
+						return new RenPyMenuChoice(ref scanner);
+					} else {
+						return new RenPySay(ref scanner);
+					}
 			}
 		}
 	}

@@ -10,38 +10,12 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyMenu : RenPyStatement
 	{
-		public Dictionary<string, string> m_choices;
-
 		public RenPyMenu(ref RenPyScanner tokens)
 			: base(RenPyStatementType.MENU)
 		{
-			m_choices = new Dictionary<string, string>();
-
 			tokens.Seek("menu");
 			tokens.Seek("\n");
 			tokens.Next();
-
-			while (true) {
-				tokens.SkipEmptyLines();
-				int spaces = tokens.SkipWhitespace(true, false, false);
-
-				if (spaces == 8) {
-					tokens.Seek("\"");
-					tokens.Next();
-					string choice = tokens.Seek("\"");
-
-					tokens.Seek("jump");
-					tokens.Next();
-					string jump = tokens.Seek("\n").Trim();
-
-					m_choices.Add(choice, jump);
-
-					tokens.Next();
-					continue;
-				} else {
-					break;
-				}
-			}
 		}
 
 		public override void Execute(RenPyState state)
@@ -49,11 +23,46 @@ namespace DPek.Raconteur.RenPy.Script
 			// Nothing to do
 		}
 
+		public List<string> GetChoices()
+		{
+			var choices = new List<string>();
+			foreach(var block in NestedBlocks) {
+				foreach(var statement in block.Statements) {
+					if(statement is RenPyMenuChoice) {
+						string choice = (statement as RenPyMenuChoice).Text;
+						choices.Add(choice);
+					}
+				}
+			}
+			return choices;
+		}
+
+		public void PickChoice(RenPyState state, string choice)
+		{
+			List<RenPyBlock> blocks = null;
+			foreach(var block in NestedBlocks) {
+				foreach(var statement in block.Statements) {
+					if(statement is RenPyMenuChoice) {
+						var text = (statement as RenPyMenuChoice).Text;
+						if(text == choice) {
+							blocks = statement.NestedBlocks;
+							break;
+						}
+					}
+				}
+
+				if(blocks != null) {
+					break;
+				}
+			}
+			state.Execution.PushStackFrame(blocks);
+		}
+
 		public override string ToString()
 		{
 			string str = "menu";
-			foreach (KeyValuePair<string, string> item in m_choices) {
-				str += " (\"" + item.Key + "\"=>" + item.Value + ")";
+			foreach (var item in GetChoices()) {
+				str += " (\"" + item + "\")";
 			}
 
 			str += "\n" + base.ToString();

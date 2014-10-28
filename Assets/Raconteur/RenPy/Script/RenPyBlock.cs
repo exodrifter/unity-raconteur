@@ -12,6 +12,12 @@ namespace DPek.Raconteur.RenPy.Script
 		/// A list of statements in this RenPyBlock.
 		/// </summary>
 		private List<RenPyStatement> m_statements;
+		public List<RenPyStatement> Statements
+		{
+			get {
+				return m_statements;
+			}
+		}
 
 		/// <summary>
 		/// The number of statements in this RenPyBlock.

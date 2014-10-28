@@ -22,6 +22,21 @@ namespace DPek.Raconteur.RenPy.Parser
 		{
 			return m_node.Value;
 		}
+		
+		public string PeekEnd()
+		{
+			LinkedListNode<string> node = m_node;
+			string endToken = null;
+			while (node != null) {
+				string str = node.Value;
+				if (str == "\n") {
+					break;
+				}
+				endToken = str;
+				node = node.Next;
+			}
+			return endToken;
+		}
 
 		public string PeekIgnoreWhitespace(bool spaces = true,
 		                                   bool tabs = true,
