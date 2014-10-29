@@ -16,6 +16,7 @@ namespace DPek.Raconteur
 		private static bool m_debug;
 		private static bool m_skipDialog;
 		private static bool m_debugLines;
+		private static bool m_muteAudio;
 
 		/// <summary>
 		/// Whether or not to show debugging information.
@@ -44,6 +45,16 @@ namespace DPek.Raconteur
 		{
 			get {
 				return m_debug && m_debugLines;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not to mute audio.
+		/// </summary>
+		public static bool MuteAudio
+		{
+			get {
+				return m_debug && m_muteAudio;
 			}
 		}
 		
@@ -79,10 +90,12 @@ namespace DPek.Raconteur
 			bool oldDebug = m_debug;
 			bool oldSkip = m_skipDialog;
 			bool oldLines = m_debugLines;
+			bool oldMuteAudio = m_muteAudio;
 
 			m_debug = EditorGUILayout.BeginToggleGroup("Enable Debugging", m_debug);
 			m_skipDialog = EditorGUILayout.Toggle("Skip Dialog", m_skipDialog);
 			m_debugLines = EditorGUILayout.Toggle("Debug Lines", m_debugLines);
+			m_muteAudio = EditorGUILayout.Toggle("Mute Audio", m_muteAudio);
 			EditorGUILayout.EndToggleGroup();
 
 			EditorGUILayout.Space();
@@ -105,7 +118,7 @@ namespace DPek.Raconteur
 
 			// Save if any options have changed
 			if (oldDebug != m_debug || oldSkip != m_skipDialog
-			    || oldLines != m_debugLines) {
+			    || oldLines != m_debugLines || oldMuteAudio != m_muteAudio) {
 				SaveEditorPrefs();
 			}
 
@@ -141,6 +154,7 @@ namespace DPek.Raconteur
 			m_debug = EditorPrefs.GetBool("raconteur-m_debug", false);
 			m_skipDialog = EditorPrefs.GetBool("raconteur-m_skipDialog", false);
 			m_debugLines = EditorPrefs.GetBool("raconteur-m_debugLines", false);
+			m_muteAudio = EditorPrefs.GetBool("raconteur-m_muteAudio", false);
 		}
 
 		/// <summary>
@@ -162,6 +176,11 @@ namespace DPek.Raconteur
 				EditorPrefs.SetBool("raconteur-m_debugLines", m_debugLines);
 			} else {
 				EditorPrefs.DeleteKey("raconteur-m_debugLines");
+			}
+			if (m_muteAudio) {
+				EditorPrefs.SetBool("raconteur-m_muteAudio", m_muteAudio);
+			} else {
+				EditorPrefs.DeleteKey("raconteur-m_muteAudio");
 			}
 		}
 
@@ -203,6 +222,13 @@ namespace DPek.Raconteur
 		}
 
 		public static bool DebugLines
+		{
+			get {
+				return false;
+			}
+		}
+
+		public static bool MuteAudio
 		{
 			get {
 				return false;

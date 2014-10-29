@@ -36,6 +36,7 @@ namespace DPek.Raconteur.RenPy.Display
 				m_source.Play();
 			}
 
+			m_source.mute = Static.MuteAudio;
 			m_source.loop = channel.Looping;
 			m_source.volume = channel.Volume;
 			m_source.clip = channel.Audio;
