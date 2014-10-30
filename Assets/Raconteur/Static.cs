@@ -92,6 +92,8 @@ namespace DPek.Raconteur
 			bool oldLines = m_debugLines;
 			bool oldMuteAudio = m_muteAudio;
 
+
+
 			m_debug = EditorGUILayout.BeginToggleGroup("Enable Debugging", m_debug);
 			m_skipDialog = EditorGUILayout.Toggle("Skip Dialog", m_skipDialog);
 			m_debugLines = EditorGUILayout.Toggle("Debug Lines", m_debugLines);
@@ -101,6 +103,7 @@ namespace DPek.Raconteur
 			EditorGUILayout.Space();
 
 			EditorGUILayout.LabelField("Variables");
+			
 			if (!Application.isPlaying) {
 				string msg = "Can only show variables in play mode.";
 				EditorGUILayout.HelpBox(msg, MessageType.Info, true);
@@ -109,11 +112,11 @@ namespace DPek.Raconteur
 				EditorGUILayout.HelpBox(msg, MessageType.Info, true);
 			} else {
 				// TODO: Allow editing of variables
-				GUI.enabled = false;
-				foreach (KeyValuePair<string, string> kvp in Vars) {
-					EditorGUILayout.TextField(kvp.Key, kvp.Value);
+				var keys = new List<string>(Vars.Keys);
+				foreach (string key in keys) {
+					var temp = EditorGUILayout.TextField(key, Vars[key]);
+					Vars[key] = temp; //Math.Round(dictionary[key], 3);
 				}
-				GUI.enabled = true;
 			}
 
 			// Save if any options have changed
