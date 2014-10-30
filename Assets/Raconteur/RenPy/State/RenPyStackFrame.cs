@@ -97,6 +97,21 @@ namespace DPek.Raconteur.RenPy.State
 		}
 
 		/// <summary>
+		/// Determines whether the stack frame has the specified label.
+		/// </summary>
+		/// <returns>
+		/// <c>true</c> if this instance has the specified label; otherwise,
+		/// <c>false</c>.
+		/// </returns>
+		/// <param name="label">
+		/// The label to find in the stack frame.
+		/// </param>
+		public bool HasLabel(string label)
+		{
+			return m_labelIndices.ContainsKey(label);
+		}
+
+		/// <summary>
 		/// Moves the stack frame to the statement right before the specified
 		/// label.
 		/// </summary>

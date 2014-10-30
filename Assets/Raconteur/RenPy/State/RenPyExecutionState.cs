@@ -115,6 +115,9 @@ namespace DPek.Raconteur.RenPy.State
 		/// </param>
 		public void GoToLabel(string label)
 		{
+			while(!m_stack.Peek().HasLabel(label)) {
+				m_stack.Pop();
+			}
 			m_stack.Peek().GoToLabel(label);
 		}
 		
