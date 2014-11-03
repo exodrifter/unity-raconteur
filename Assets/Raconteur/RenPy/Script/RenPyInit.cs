@@ -6,6 +6,7 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Ren'Py init statement.
 	/// </summary>
+	[System.Serializable]
 	public class RenPyInit : RenPyStatement
 	{
 		private int m_priority;
@@ -16,8 +17,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyInit(ref RenPyScanner tokens)
-			: base(RenPyStatementType.INIT)
+		public RenPyInit() : base(RenPyStatementType.INIT)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("init");
 			tokens.Next();
@@ -35,12 +40,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.PushStackFrame(NestedBlocks);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "init";
 			str += " " + m_priority + ":";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

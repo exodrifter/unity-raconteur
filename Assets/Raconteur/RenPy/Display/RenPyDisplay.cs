@@ -42,13 +42,7 @@ namespace DPek.Raconteur.RenPy.Display
 
 		public void Awake()
 		{
-			// Parse the Ren'Py script
-			// TODO: Do this when the asset is imported instead of at run-time
-			if (m_renPyScript == null) {
-				Debug.LogWarning("RenPy script is null!");
-				return;
-			}
-			m_state = RenPyParser.Parse(ref m_renPyScript);
+			m_state = new RenPyState(ref m_renPyScript);
 
 			// Create the children gameobjects
 			Transform parentTransform = this.gameObject.transform.parent;

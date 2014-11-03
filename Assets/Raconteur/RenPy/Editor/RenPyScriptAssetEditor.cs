@@ -2,7 +2,9 @@
 
 using UnityEditor;
 using UnityEngine;
+
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.Script;
 
 namespace DPek.Raconteur.RenPy.Editor
 {
@@ -20,22 +22,37 @@ namespace DPek.Raconteur.RenPy.Editor
 			}
 
 			GUIStyle style = new GUIStyle();
-			style.normal.textColor = Color.white;
+			style.normal.textColor = Color.gray;
+			style.margin = new RectOffset(0,0,0,0);
 
 			// If the asset is empty, display a help box
-			if (script.Lines == null || script.Lines.Length == 0) {
+			if (script.Blocks == null || script.Blocks.Count == 0) {
 				EditorGUILayout.HelpBox("Script is empty!", MessageType.Error);
 			}
 
 			// Otherwise, display the asset's contents
 			else {
-				string str = "";
-				for (int i = 0; i < script.Lines.Length; i++) {
-					str += script.Lines[i] + "\n";
+				GUILayout.Label(script.name, style);
+				for (int i = 0; i < script.Blocks.Count; i++) {
+					RenderBlock(script.Blocks[i], ref style);
 				}
-
-				GUILayout.Label(str, style);
 			}
+		}
+
+		private void RenderBlock(RenPyBlock block, ref GUIStyle style) {
+			string str = "";
+			foreach(var statement in block.Statements) {
+				GUILayout.Label(statement.ToDebugString(), style);
+
+				if(statement.NestedBlocks != null) {
+					GUIStyle nestedStyle = new GUIStyle(style);
+					nestedStyle.padding.left += 20;
+					foreach(RenPyBlock nestedBlock in statement.NestedBlocks) {
+						RenderBlock(nestedBlock, ref nestedStyle);
+					}
+				}
+			}
+			GUILayout.Box(str, style);
 		}
 	}
 }

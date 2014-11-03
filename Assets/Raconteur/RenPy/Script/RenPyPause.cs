@@ -30,8 +30,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyPause(ref RenPyScanner tokens)
-			: base(RenPyStatementType.PAUSE)
+		public RenPyPause() : base(RenPyStatementType.PAUSE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("pause");
 			tokens.Next();
@@ -57,12 +61,10 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "pause";
 			str += !WaitForInput ? " " + m_time : "";
-			
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

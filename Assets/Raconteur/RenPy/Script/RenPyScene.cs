@@ -12,8 +12,12 @@ namespace DPek.Raconteur.RenPy.Script
 	{
 		private string m_imageName;
 
-		public RenPyScene(ref RenPyScanner tokens)
-			: base(RenPyStatementType.SCENE)
+		public RenPyScene() : base(RenPyStatementType.SCENE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("scene");
 			tokens.Next();
@@ -45,12 +49,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Visual.SetBackgroundImage(image);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "scene";
 			str += " \"" + m_imageName + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

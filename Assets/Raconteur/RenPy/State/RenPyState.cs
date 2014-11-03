@@ -64,10 +64,10 @@ namespace DPek.Raconteur.RenPy.State
 		/// </summary>
 		private Dictionary<string, string> m_imageFilenames;
 
-		public RenPyState(ref RenPyScriptAsset data, ref List<RenPyBlock> blocks)
+		public RenPyState(ref RenPyScriptAsset data)
 		{
 			m_data = data;
-			m_executionState = new RenPyExecutionState(ref blocks);
+			m_executionState = new RenPyExecutionState(ref data.Blocks);
 			m_visualState = new RenPyVisualState();
 			m_auralState = new RenPyAuralState();
 

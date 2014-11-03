@@ -44,7 +44,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPySay(ref RenPyScanner tokens) : base(RenPyStatementType.SAY)
+		public RenPySay() : base(RenPyStatementType.SAY)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			string[] quotes = new string[] {"\"","'"};
 
@@ -101,13 +106,11 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = m_speaker;
 			str += !string.IsNullOrEmpty(str) ? " " : "";
 			str += "\"" + m_text + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

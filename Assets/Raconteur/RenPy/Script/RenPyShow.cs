@@ -13,7 +13,12 @@ namespace DPek.Raconteur.RenPy.Script
 		private string m_imageName;
 		private RenPyAlignment m_alignment;
 
-		public RenPyShow(ref RenPyScanner tokens) : base(RenPyStatementType.SHOW)
+		public RenPyShow() : base(RenPyStatementType.SHOW)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("show");
 			tokens.Next();
@@ -58,12 +63,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Visual.AddImage(m_imageName, ref image);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "show";
 			str += " \"" + m_imageName + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

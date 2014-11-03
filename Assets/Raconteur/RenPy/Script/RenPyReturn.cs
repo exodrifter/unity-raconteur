@@ -8,8 +8,12 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyReturn : RenPyStatement
 	{
-		public RenPyReturn(ref RenPyScanner tokens)
-			: base(RenPyStatementType.RETURN)
+		public RenPyReturn() : base(RenPyStatementType.RETURN)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("return");
 			tokens.Next();
@@ -20,11 +24,9 @@ namespace DPek.Raconteur.RenPy.Script
 			display.Execution.PopStackFrame();
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "return";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

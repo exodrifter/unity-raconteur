@@ -10,8 +10,12 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyMenu : RenPyStatement
 	{
-		public RenPyMenu(ref RenPyScanner tokens)
-			: base(RenPyStatementType.MENU)
+		public RenPyMenu() : base(RenPyStatementType.MENU)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("menu");
 			tokens.Seek("\n");
@@ -58,14 +62,12 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.PushStackFrame(blocks);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "menu";
 			foreach (var item in GetChoices()) {
 				str += " (\"" + item + "\")";
 			}
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

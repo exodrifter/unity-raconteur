@@ -30,8 +30,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyCharacter(ref RenPyScanner tokens)
-			: base(RenPyStatementType.CHARACTER)
+		public RenPyCharacter() : base(RenPyStatementType.CHARACTER)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("define");
 			tokens.Next();
@@ -62,14 +66,12 @@ namespace DPek.Raconteur.RenPy.Script
 			state.AddCharacter(this);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "define " + m_varName + "";
 			str += " = Character(";
 			str += "name=\"" + m_name + "\"";
 			str += ")";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

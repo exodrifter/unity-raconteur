@@ -10,8 +10,12 @@ namespace DPek.Raconteur.RenPy.Script
 	{
 		private string m_target;
 
-		public RenPyJump(ref RenPyScanner tokens)
-			: base(RenPyStatementType.JUMP)
+		public RenPyJump() : base(RenPyStatementType.JUMP)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("jump");
 			tokens.Next();
@@ -27,12 +31,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.NextStatement(state);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "jump";
 			str += " " + m_target;
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

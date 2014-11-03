@@ -16,8 +16,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyLabel(ref RenPyScanner tokens)
-			: base(RenPyStatementType.LABEL)
+		public RenPyLabel() : base(RenPyStatementType.LABEL)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("label");
 			tokens.Next();
@@ -30,12 +34,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.PushStackFrame(NestedBlocks);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "label";
 			str += " " + m_name + ":";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

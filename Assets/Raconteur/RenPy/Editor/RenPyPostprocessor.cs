@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
+
 using DPek.Raconteur.RenPy.Parser;
+using DPek.Raconteur.RenPy.Script;
 
 namespace DPek.Raconteur.RenPy.Editor
 {
@@ -101,7 +103,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
 			script.name = Path.GetFileNameWithoutExtension(handle.path);
 			script.Title = handle.name;
-			script.Lines = handle.lines;
+			script.Blocks = Parser.RenPyParser.Parse(handle.lines);
 
 			// Construct the system path of the Ren'Py asset folder
 			string dataPath  = Application.dataPath;
@@ -151,7 +153,31 @@ namespace DPek.Raconteur.RenPy.Editor
 			} else {
 				AssetDatabase.CreateAsset(script, handle.path);
 			}
+			
+			// Serialize the parsed script
+			asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
+			SerializeChildren(script.Blocks, ref asset);
+
 			AssetDatabase.SaveAssets();
+		}
+
+		private static void SerializeChildren(List<RenPyBlock> blocks,
+		                                      ref Object asset)
+		{
+			if(blocks == null) {
+				return;
+			}
+
+			var flags = HideFlags.HideInInspector | HideFlags.HideInHierarchy;
+			foreach (var block in blocks) {
+				foreach(var statement in block.Statements) {
+					statement.hideFlags = flags;
+					AssetDatabase.AddObjectToAsset(statement, asset);
+					SerializeChildren(statement.NestedBlocks, ref asset);
+				}
+				block.hideFlags = flags;
+				AssetDatabase.AddObjectToAsset(block, asset);
+			}
 		}
 
 		/// <summary>

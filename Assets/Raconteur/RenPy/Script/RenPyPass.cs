@@ -8,8 +8,12 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyPass : RenPyStatement
 	{
-		public RenPyPass(ref RenPyScanner tokens)
-			: base(RenPyStatementType.PASS)
+		public RenPyPass() : base(RenPyStatementType.PASS)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("pass");
 			tokens.Next();
@@ -20,12 +24,9 @@ namespace DPek.Raconteur.RenPy.Script
 			// Do nothing
 		}
 		
-		public override string ToString()
+		public override string ToDebugString()
 		{
-			string str = "pass";
-			
-			str += "\n" + base.ToString();
-			return str;
+			return "pass";
 		}
 	}
 }

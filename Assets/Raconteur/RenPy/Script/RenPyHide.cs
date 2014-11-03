@@ -13,8 +13,12 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </summary>
 		private string m_imageName;
 
-		public RenPyHide(ref RenPyScanner tokens)
-			: base(RenPyStatementType.HIDE)
+		public RenPyHide() : base(RenPyStatementType.HIDE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("hide");
 			tokens.Next();
@@ -47,12 +51,10 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Visual.RemoveImage(m_imageName);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "hide";
 			str += " \"" + m_imageName + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

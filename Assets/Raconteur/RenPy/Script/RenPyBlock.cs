@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -6,16 +7,21 @@ namespace DPek.Raconteur.RenPy.Script
 	/// A RenPyBlock is a collection of statements that belong to a block of
 	/// code such as a label, an init block, an if statement, etc.
 	/// </summary>
-	public class RenPyBlock
+	[System.Serializable]
+	public class RenPyBlock : ScriptableObject
 	{
 		/// <summary>
 		/// A list of statements in this RenPyBlock.
 		/// </summary>
+		[SerializeField]
 		private List<RenPyStatement> m_statements;
 		public List<RenPyStatement> Statements
 		{
 			get {
 				return m_statements;
+			}
+			set {
+				m_statements = value;
 			}
 		}
 
@@ -27,17 +33,6 @@ namespace DPek.Raconteur.RenPy.Script
 			get {
 				return m_statements.Count;
 			}
-		}
-
-		/// <summary>
-		/// Creates a new RenPyBlock with the referenced list of statements.
-		/// </summary>
-		/// <param name="statements">
-		/// A list of statements that belong to this RenPyBlock.
-		/// </param>
-		public RenPyBlock(List<RenPyStatement> statements)
-		{
-			m_statements = statements;
 		}
 
 		/// <summary>

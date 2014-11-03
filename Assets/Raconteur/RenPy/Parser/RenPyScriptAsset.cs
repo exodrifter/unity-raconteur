@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
-using System;
 using System.Collections.Generic;
+
+using DPek.Raconteur.RenPy.Script;
 
 namespace DPek.Raconteur.RenPy.Parser
 {
 	/// <summary>
 	/// Stores and serializes information about a Ren'Py script.
 	/// </summary>
-	[Serializable]
+	[System.Serializable]
 	public class RenPyScriptAsset : ScriptableObject
 	{
 		public string Title;
-		public string[] Lines;
+		[SerializeField]
+		public List<RenPyBlock> Blocks;
 
 		public string[] audioKeys;
 		public AudioClip[] audioValues;

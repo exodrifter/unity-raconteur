@@ -19,8 +19,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyComment(ref RenPyScanner tokens)
-			: base(RenPyStatementType.COMMENT)
+		public RenPyComment() : base(RenPyStatementType.COMMENT)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("#");
 			tokens.Next();
@@ -32,11 +36,9 @@ namespace DPek.Raconteur.RenPy.Script
 			// Nothing to do
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "#" + m_comment;
-
-			str += base.ToString();
 			return str;
 		}
 	}

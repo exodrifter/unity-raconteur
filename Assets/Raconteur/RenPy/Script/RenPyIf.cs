@@ -26,7 +26,12 @@ namespace DPek.Raconteur.RenPy.Script
 
 		private Evaluator m_evaluator;
 
-		public RenPyIf(ref RenPyScanner tokens) : base(RenPyStatementType.IF)
+		public RenPyIf() : base(RenPyStatementType.IF)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("if");
 			tokens.Next();
@@ -91,13 +96,11 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "if " + m_varName;
 			str += " " + m_evaluator.GetOp();
 			str += " " + m_value;
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

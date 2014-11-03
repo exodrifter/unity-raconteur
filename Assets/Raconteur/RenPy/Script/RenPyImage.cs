@@ -32,8 +32,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyImage(ref RenPyScanner tokens)
-			: base(RenPyStatementType.IMAGE)
+		public RenPyImage() : base(RenPyStatementType.IMAGE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("image");
 			tokens.Next();
@@ -60,14 +64,12 @@ namespace DPek.Raconteur.RenPy.Script
 			state.AddImageFilename(imageName, m_filename);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "image [" + m_imageTag;
 			bool hasName = !string.IsNullOrEmpty(m_imageName);
 			str += "]" + ( hasName ? " " + m_imageName : "");
 			str += " = \"" + m_filename + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

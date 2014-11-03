@@ -9,8 +9,12 @@ namespace DPek.Raconteur.RenPy.Script
 	{
 		private string m_label;
 
-		public RenPyCall(ref RenPyScanner tokens)
-			: base(RenPyStatementType.CALL)
+		public RenPyCall() : base(RenPyStatementType.CALL)
+		{
+			// Nothing to do
+		}
+
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("call");
 			tokens.Next();
@@ -27,12 +31,9 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.GoToLabel(m_label);
 		}
 		
-		public override string ToString()
+		public override string ToDebugString()
 		{
-			string str = "call";
-			str += " " + m_label;
-			
-			str += "\n" + base.ToString();
+			string str = "call " + m_label;
 			return str;
 		}
 	}

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -7,7 +9,8 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Represents a statement in RenPy.
 	/// </summary>
-	public abstract class RenPyStatement
+	[System.Serializable]
+	public abstract class RenPyStatement : ScriptableObject
 	{
 		/// <summary>
 		/// The type of this statement.
@@ -47,18 +50,34 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			this.m_type = type;
 		}
-
+		
 		/// <summary>
 		/// Executes the actions that this line takes.
 		/// </summary>
 		/// <param name="state">
-		/// The state that this statement can modify
+		/// The state that this statement can modify.
 		/// </param>
 		public abstract void Execute(RenPyState state);
+		
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="scanner">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public abstract void Parse(ref RenPyScanner scanner);
 
-		public override string ToString()
+		/// <summary>
+		/// Returns the statement as a debug string.
+		/// </summary>
+		/// <returns>
+		/// The statement as a debug string.
+		/// </returns>
+		public abstract string ToDebugString();
+
+		public sealed override string ToString()
 		{
-			return this.GetType().FullName;
+			return ToDebugString() + "\n" + this.GetType().FullName;
 		}
 	}
 }

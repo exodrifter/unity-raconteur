@@ -16,7 +16,12 @@ namespace DPek.Raconteur.RenPy.Script
 
 		private float m_fadeoutTime;
 
-		public RenPyStop(ref RenPyScanner tokens) : base(RenPyStatementType.STOP)
+		public RenPyStop() : base(RenPyStatementType.STOP)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("stop");
 			tokens.Next();
@@ -54,12 +59,10 @@ namespace DPek.Raconteur.RenPy.Script
 			channel.Transition = transition;
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "stop";
 			str += " " + m_channel;
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

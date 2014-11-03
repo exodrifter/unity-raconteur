@@ -16,8 +16,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyMenuChoice(ref RenPyScanner tokens)
-			: base(RenPyStatementType.MENU_CHOICE)
+		public RenPyMenuChoice() : base(RenPyStatementType.MENU_CHOICE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			string[] quotes = new string[] {"\"","'"};
 			string endQuote;
@@ -35,11 +39,9 @@ namespace DPek.Raconteur.RenPy.Script
 			state.Execution.PushStackFrame(NestedBlocks);
 		}
 		
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "\"" + m_text + "\":";
-			
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

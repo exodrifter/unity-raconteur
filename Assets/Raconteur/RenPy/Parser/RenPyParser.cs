@@ -9,14 +9,14 @@ namespace DPek.Raconteur.RenPy.Parser
 {
 	public class RenPyParser
 	{
-		public static RenPyState Parse(ref RenPyScriptAsset script)
+		public static List<RenPyBlock> Parse(string[] lines)
 		{
 			var tokenizer = new Tokenizer();
 
 			// Create the scanner
 			var tokens = new LinkedList<string>();
-			for (int line = 0; line < script.Lines.Length; line++) {
-				string[] arr = tokenizer.Tokenize(ref script.Lines[line]);
+			for (int line = 0; line < lines.Length; line++) {
+				string[] arr = tokenizer.Tokenize(ref lines[line]);
 				for (int i = 0; i < arr.Length; i++) {
 					tokens.AddLast(arr[i]);
 				}
@@ -49,14 +49,16 @@ namespace DPek.Raconteur.RenPy.Parser
 			RenPyInitPhase initPhase = ExtractInitPhase(blocks);
 			var initBlocks = new List<RenPyBlock>();
 			foreach(var kvp in initPhase.Statements.OrderBy(i => i.Key)) {
-				var block = new RenPyBlock(kvp.Value);
+				RenPyBlock block;
+				block = ScriptableObject.CreateInstance<RenPyBlock>();
+				block.Statements = kvp.Value;
 				initBlocks.Add(block);
 			}
 
 			// Combine init blocks with the rest of the blocks
 			initBlocks.AddRange(blocks);
 
-			return new RenPyState(ref script, ref initBlocks);
+			return initBlocks;
 		}
 
 		/// <summary>
@@ -125,7 +127,10 @@ namespace DPek.Raconteur.RenPy.Parser
 				// Reached the end of this block
 				else if (levels[index] < currentLevel) {
 					if (statementBlock.Count > 0) {
-						blocks.Add(new RenPyBlock(statementBlock));
+						RenPyBlock block;
+						block = ScriptableObject.CreateInstance<RenPyBlock>();
+						block.Statements = statementBlock;
+						blocks.Add(block);
 					}
 					--index;
 					return blocks;
@@ -140,7 +145,10 @@ namespace DPek.Raconteur.RenPy.Parser
 			}
 
 			if (statementBlock.Count > 0) {
-				blocks.Add(new RenPyBlock(statementBlock));
+				RenPyBlock block;
+				block = ScriptableObject.CreateInstance<RenPyBlock>();
+				block.Statements = statementBlock;
+				blocks.Add(block);
 			}
 			return blocks;
 		}
@@ -149,49 +157,57 @@ namespace DPek.Raconteur.RenPy.Parser
 		{
 			switch (scanner.Peek()) {
 				case "$":
-					return new RenPyVariable(ref scanner);
+					return NewStatement<RenPyVariable>(ref scanner);
 				case "#":
-					new RenPyComment(ref scanner);
+					NewStatement<RenPyComment>(ref scanner);
 					return null;
 				case "call":
-					return new RenPyCall(ref scanner);
+					return NewStatement<RenPyCall>(ref scanner);
 				case "define":
-					return new RenPyCharacter(ref scanner);
+					return NewStatement<RenPyCharacter>(ref scanner);
 				case "hide":
-					return new RenPyHide(ref scanner);
+					return NewStatement<RenPyHide>(ref scanner);
 				case "if":
-					return new RenPyIf(ref scanner);
+					return NewStatement<RenPyIf>(ref scanner);
 				case "init":
-					return new RenPyInit(ref scanner);
+					return NewStatement<RenPyInit>(ref scanner);
 				case "image":
-					return new RenPyImage(ref scanner);
+					return NewStatement<RenPyImage>(ref scanner);
 				case "jump":
-					return new RenPyJump(ref scanner);
+					return NewStatement<RenPyJump>(ref scanner);
 				case "label":
-					return new RenPyLabel(ref scanner);
+					return NewStatement<RenPyLabel>(ref scanner);
 				case "menu":
-					return new RenPyMenu(ref scanner);
+					return NewStatement<RenPyMenu>(ref scanner);
 				case "pass":
-					return new RenPyPass(ref scanner);
+					return NewStatement<RenPyPass>(ref scanner);
 				case "pause":
-					return new RenPyPause(ref scanner);
+					return NewStatement<RenPyPause>(ref scanner);
 				case "play":
-					return new RenPyPlay(ref scanner);
+					return NewStatement<RenPyPlay>(ref scanner);
 				case "return":
-					return new RenPyReturn(ref scanner);
+					return NewStatement<RenPyReturn>(ref scanner);
 				case "scene":
-					return new RenPyScene(ref scanner);
+					return NewStatement<RenPyScene>(ref scanner);
 				case "show":
-					return new RenPyShow(ref scanner);
+					return NewStatement<RenPyShow>(ref scanner);
 				case "stop":
-					return new RenPyStop(ref scanner);
+					return NewStatement<RenPyStop>(ref scanner);
 				default:
 					if(scanner.PeekEnd() == ":") {
-						return new RenPyMenuChoice(ref scanner);
+						return NewStatement<RenPyMenuChoice>(ref scanner);
 					} else {
-						return new RenPySay(ref scanner);
+						return NewStatement<RenPySay>(ref scanner);
 					}
 			}
+		}
+
+		public static RenPyStatement NewStatement<T>(ref RenPyScanner scanner)
+			where T : RenPyStatement
+		{
+			var statement = ScriptableObject.CreateInstance<T>();
+			statement.Parse(ref scanner);
+			return statement;
 		}
 	}
 }

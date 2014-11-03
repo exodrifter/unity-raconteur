@@ -23,7 +23,12 @@ namespace DPek.Raconteur.RenPy.Script
 
 		private Assignment m_assignment;
 
-		public RenPyVariable(ref RenPyScanner tokens) : base(RenPyStatementType.VARIABLE)
+		public RenPyVariable() : base(RenPyStatementType.VARIABLE)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("$");
 			tokens.Next();
@@ -59,13 +64,11 @@ namespace DPek.Raconteur.RenPy.Script
 			m_assignment.Assign(state, m_varName, m_value);
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "$" + m_varName;
 			str += " " + m_assignment.GetOp();
 			str += " \"" + m_value + "\"";
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}

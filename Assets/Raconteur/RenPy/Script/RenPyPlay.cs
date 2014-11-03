@@ -18,8 +18,12 @@ namespace DPek.Raconteur.RenPy.Script
 		private float m_fadeinTime;
 		private float m_fadeoutTime;
 
-		public RenPyPlay(ref RenPyScanner tokens)
-			: base(RenPyStatementType.PLAY)
+		public RenPyPlay() : base(RenPyStatementType.PLAY)
+		{
+			// Nothing to do
+		}
+		
+		public override void Parse(ref RenPyScanner tokens)
 		{
 			tokens.Seek("play");
 			tokens.Next();
@@ -102,15 +106,13 @@ namespace DPek.Raconteur.RenPy.Script
 			channel.Transition = fadeout;
 		}
 
-		public override string ToString()
+		public override string ToDebugString()
 		{
 			string str = "play " + m_channel;
 			str += " \"" + m_file + "\"";
 			str += " " + (m_loop ? "loop" : "noloop");
 			str += " " + (m_fadeinTime > 0 ? "fadein " + m_fadeinTime : "");
 			str += " " + (m_fadeoutTime > 0 ? "fadeout " + m_fadeoutTime : "");
-
-			str += "\n" + base.ToString();
 			return str;
 		}
 	}
