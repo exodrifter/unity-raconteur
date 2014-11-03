@@ -1,8 +1,10 @@
-﻿# This is a comment, comments are only seen when looking at the script itself.
+# This is a comment, comments are only seen when looking at the script itself.
 # This file contains the script for the Unity Raconteur demo. 
 # Execution starts at the start label.
 
 # Labels have blocks of text associated with them. Keep a look at for labels below.
+
+define r = Character('Raconteur', color='#f22')
 
 # The game starts here.
 #begin start
@@ -87,8 +89,8 @@ label startstory:
     r "The hero did not eat a very good breakfast."
 
 # If the player started the story before this label, show this extra line
-    if story_started
-    r "See? Labels can create non-linear storytelling hrough the jump command. Check the comments to understand jump."
+    if story_started:
+        r "See? Labels can create non-linear storytelling through the jump command. Check the comments to understand jump."
 
     $ story_started = True
 
@@ -107,8 +109,8 @@ label endstory:
     r "So she did not vanquish the dragon."
 
 # If the player started the story before this label, show this extra line
-    if story_started
-    r "See? Labels can create non-linear storytelling hrough the jump command. Check the comments to understand jump."
+    if story_started:
+        r "See? Labels can create non-linear storytelling through the jump command. Check the comments to understand jump."
 
     $ story_started = True
 
