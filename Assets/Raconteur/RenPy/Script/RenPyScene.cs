@@ -27,7 +27,7 @@ namespace DPek.Raconteur.RenPy.Script
 			m_imageName = tokens.Seek(new string[] { "\n", "with" }).Trim();
 
 			// Check if there is a "with" token next and ignore it
-			if (tokens.PeekIgnoreWhitespace(true, true, true) == "with") {
+			if (tokens.PeekIgnore(new string[]{" ","\t","\n"}) == "with") {
 				tokens.Seek("with");
 				tokens.Seek("\n"); // Ignore the argument for with
 				tokens.Next();

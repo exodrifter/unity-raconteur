@@ -34,12 +34,12 @@ namespace DPek.Raconteur.RenPy.Script
 			// Parse any recognized clauses
 			bool nothing = false;
 			while (!nothing) {
-				string token = tokens.PeekIgnoreWhitespace(true, true, true);
+				string token = tokens.PeekIgnore(new string[]{" ","\t","\n"});
 				switch (token) {
 					case "fadeout":
 						tokens.Seek("fadeout");
 						tokens.Next();
-						tokens.SkipWhitespace();
+						tokens.Skip(new string[]{" ","\t"});
 						m_fadeoutTime = float.Parse(tokens.Next());
 						m_fadeoutTime = m_fadeoutTime < 0 ? 0 : m_fadeoutTime;
 						break;

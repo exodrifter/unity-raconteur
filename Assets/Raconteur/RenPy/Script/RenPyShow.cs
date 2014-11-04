@@ -35,20 +35,20 @@ namespace DPek.Raconteur.RenPy.Script
 				foundToken = false;
 
 				// Check if there is a "with" argument
-				if (tokens.PeekIgnoreWhitespace(true, true, true) == "with")
+				if (tokens.PeekIgnore(new string[]{" ","\t","\n"}) == "with")
 				{
-					tokens.SkipWhitespace(true, true, true);
+					tokens.Skip(new string[]{" ","\t","\n"});
 					tokens.Next();
-					tokens.SkipWhitespace();
+					tokens.Skip(new string[]{" ","\t"});
 					tokens.Next(); // TODO: Don't ignore the with argument
 					foundToken = true;
 				}
 				// Check if there is an "at" argument
-				else if (tokens.PeekIgnoreWhitespace(true, true, true) == "at")
+				else if (tokens.PeekIgnore(new string[]{" ","\t","\n"}) == "at")
 				{
-					tokens.SkipWhitespace(true, true, true);
+					tokens.Skip(new string[]{" ","\t","\n"});
 					tokens.Next();
-					tokens.SkipWhitespace();
+					tokens.Skip(new string[]{" ","\t"});
 					string alignment = tokens.Next();
 					m_alignment = Util.RenPyAlignmentConverter.FromString(alignment);
 					foundToken = true;

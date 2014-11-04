@@ -39,7 +39,7 @@ namespace DPek.Raconteur.RenPy.Script
 			m_loop = (m_channel == "music" ? true : false);
 
 			// TODO: support multiple play statements
-			if (tokens.PeekIgnoreWhitespace(true, true, true) == "[") {
+			if (tokens.PeekIgnore(new string[]{" ","\t","\n"}) == "[") {
 				Debug.LogError("Multiple play statement not supported yet");
 			}
 
@@ -52,7 +52,7 @@ namespace DPek.Raconteur.RenPy.Script
 			// Parse any recognized clauses
 			bool nothing = false;
 			while (!nothing) {
-				string token = tokens.PeekIgnoreWhitespace(true, true, true);
+				string token = tokens.PeekIgnore(new string[]{" ","\t","\n"});
 				switch (token) {
 					case "loop":
 						tokens.Seek("loop");
@@ -67,14 +67,14 @@ namespace DPek.Raconteur.RenPy.Script
 					case "fadein":
 						tokens.Seek("fadein");
 						tokens.Next();
-						tokens.SkipWhitespace();
+						tokens.Skip(new string[]{" ","\t"});
 						m_fadeinTime = float.Parse(tokens.Next());
 						m_fadeinTime = m_fadeinTime < 0 ? 0 : m_fadeinTime;
 						break;
 					case "fadeout":
 						tokens.Seek("fadeout");
 						tokens.Next();
-						tokens.SkipWhitespace();
+						tokens.Skip(new string[]{" ","\t"});
 						m_fadeoutTime = float.Parse(tokens.Next());
 						m_fadeoutTime = m_fadeoutTime < 0 ? 0 : m_fadeoutTime;
 						break;

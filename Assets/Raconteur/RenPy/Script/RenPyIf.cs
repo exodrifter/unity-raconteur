@@ -48,9 +48,9 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 
 			// Get the variable name
-			tokens.SkipWhitespace();
+			tokens.Skip(new string[]{" ","\t"});
 			m_varName = tokens.Next();
-			tokens.SkipWhitespace();
+			tokens.Skip(new string[]{" ","\t"});
 
 			// Get the evaluation criterea
 			string eval = tokens.Next();

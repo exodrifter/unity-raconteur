@@ -20,7 +20,7 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			tokens.Seek("call");
 			tokens.Next();
-			tokens.SkipWhitespace();
+			tokens.Skip(new string[]{" ","\t"});
 
 			// Get the label that we want to call
 			m_label = tokens.Next();

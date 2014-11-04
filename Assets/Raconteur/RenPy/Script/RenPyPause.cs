@@ -40,7 +40,7 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			tokens.Seek("pause");
 			tokens.Next();
-			tokens.SkipWhitespace();
+			tokens.Skip(new string[]{" ","\t"});
 
 			// Check if there is an argument that is a number
 			float time;

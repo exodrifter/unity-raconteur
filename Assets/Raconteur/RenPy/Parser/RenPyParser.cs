@@ -30,7 +30,7 @@ namespace DPek.Raconteur.RenPy.Parser
 			scanner.SkipEmptyLines();
 			while (scanner.HasNext()) {
 
-				int level = scanner.SkipWhitespace();
+				int level = scanner.Skip(new string[]{" ","\t"});
 
 				RenPyStatement statement = ParseStatement(ref scanner);
 				if (statement != null) {
