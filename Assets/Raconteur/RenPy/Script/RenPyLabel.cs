@@ -1,4 +1,6 @@
-﻿using DPek.Raconteur.RenPy.Parser;
+﻿using UnityEngine;
+
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -8,6 +10,7 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyLabel : RenPyStatement
 	{
+		[SerializeField]
 		private string m_name;
 		public string Name
 		{

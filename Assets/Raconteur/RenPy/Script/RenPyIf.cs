@@ -1,4 +1,6 @@
-﻿using DPek.Raconteur.RenPy.Parser;
+﻿using UnityEngine;
+
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -8,6 +10,7 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyIf : RenPyStatement
 	{
+		[SerializeField]
 		private string m_varName;
 		public string Name
 		{
@@ -16,6 +19,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
+		[SerializeField]
 		private string m_value;
 		public string Value
 		{
@@ -24,7 +28,14 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
+		[SerializeField]
 		private Evaluator m_evaluator;
+		public Evaluator Operator
+		{
+			get {
+				return m_evaluator;
+			}
+		}
 
 		public RenPyIf() : base(RenPyStatementType.IF)
 		{
@@ -45,30 +56,30 @@ namespace DPek.Raconteur.RenPy.Script
 			string eval = tokens.Next();
 			if (eval == ":") {
 				// True if the variable is set to "True"
-				m_evaluator = new TrueEvaluator();
+				m_evaluator = ScriptableObject.CreateInstance<TrueEvaluator>();
 				return;
 			} else if (eval == ">") {
 				if (tokens.Peek() == "=") {
-					m_evaluator = new GreaterEqualEvaluator();
+					m_evaluator = ScriptableObject.CreateInstance<GreaterEqualEvaluator>();
 				} else {
-					m_evaluator = new GreaterThanEvaluator();
+					m_evaluator = ScriptableObject.CreateInstance<GreaterThanEvaluator>();
 				}
 				tokens.Next();
 			} else if (eval == "<") {
 				if (tokens.Peek() == "=") {
-					m_evaluator = new LessEqualEvaluator();
+					m_evaluator = ScriptableObject.CreateInstance<LessEqualEvaluator>();
 				} else {
-					m_evaluator = new LessThanEvaluator();
+					m_evaluator = ScriptableObject.CreateInstance<LessThanEvaluator>();
 				}
 				tokens.Next();
 			} else if (eval == "=") {
 				tokens.Next(); // Assume the next token is an "=" sign
-				m_evaluator = new EqualEvaluator();
+				m_evaluator = ScriptableObject.CreateInstance<EqualEvaluator>();
 			} else if (eval == "!") {
 				tokens.Next(); // Assume the next token is an "=" sign
-				m_evaluator = new NotEqualEvaluator();
+				m_evaluator = ScriptableObject.CreateInstance<NotEqualEvaluator>();
 			} else if (eval == "is") {
-				m_evaluator = new EqualEvaluator();
+				m_evaluator = ScriptableObject.CreateInstance<EqualEvaluator>();
 				tokens.Next();
 			}
 			m_value = tokens.Next();
@@ -102,202 +113,6 @@ namespace DPek.Raconteur.RenPy.Script
 			str += " " + m_evaluator.GetOp();
 			str += " " + m_value;
 			return str;
-		}
-	}
-
-	abstract class Evaluator
-	{
-		public abstract bool Evaluate(RenPyState state, string variable,
-		                              string value);
-		public abstract string GetOp();
-	}
-
-	class TrueEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-			return current == "True";
-		}
-
-		public override string GetOp()
-		{
-			return ":";
-		}
-	}
-
-	class GreaterThanEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-
-			int iLeft;
-			if (int.TryParse(current, out iLeft)) {
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return iLeft > iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return iLeft > fRight;
-				}
-			} else {
-				float fLeft = float.Parse(current);
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return fLeft > iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return fLeft > fRight;
-				}
-			}
-		}
-
-		public override string GetOp()
-		{
-			return ">";
-		}
-	}
-
-	class GreaterEqualEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-
-			int iLeft;
-			if (int.TryParse(current, out iLeft)) {
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return iLeft >= iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return iLeft >= fRight;
-				}
-			} else {
-				float fLeft = float.Parse(current);
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return fLeft >= iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return fLeft >= fRight;
-				}
-			}
-		}
-
-		public override string GetOp()
-		{
-			return ">=";
-		}
-	}
-
-	class LessThanEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-
-			int iLeft;
-			if (int.TryParse(current, out iLeft)) {
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return iLeft < iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return iLeft < fRight;
-				}
-			} else {
-				float fLeft = float.Parse(current);
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return fLeft < iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return fLeft < fRight;
-				}
-			}
-		}
-
-		public override string GetOp()
-		{
-			return "<";
-		}
-	}
-
-	class LessEqualEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-
-			int iLeft;
-			if (int.TryParse(current, out iLeft)) {
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return iLeft <= iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return iLeft <= fRight;
-				}
-			} else {
-				float fLeft = float.Parse(current);
-				int iRight;
-				if (int.TryParse(value, out iRight)) {
-					return fLeft <= iRight;
-				} else {
-					float fRight;
-					fRight = float.Parse(value);
-					return fLeft <= fRight;
-				}
-			}
-		}
-
-		public override string GetOp()
-		{
-			return "<=";
-		}
-	}
-
-	class EqualEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-			return current == value;
-		}
-
-		public override string GetOp()
-		{
-			return "==";
-		}
-	}
-
-	class NotEqualEvaluator : Evaluator
-	{
-		public override bool Evaluate(RenPyState state, string variable,
-		                              string value)
-		{
-			string current = state.GetVariable(variable);
-			return current != value;
-		}
-
-		public override string GetOp()
-		{
-			return "!=";
 		}
 	}
 }

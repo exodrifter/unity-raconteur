@@ -1,3 +1,5 @@
+using UnityEngine;
+
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
@@ -11,6 +13,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The contents of this comment.
 		/// </summary>
+		[SerializeField]
 		private string m_comment;
 		public string Comment
 		{

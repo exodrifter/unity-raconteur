@@ -15,6 +15,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The type of this statement.
 		/// </summary>
+		[SerializeField]
 		private RenPyStatementType m_type;
 		public RenPyStatementType Type
 		{
@@ -27,6 +28,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// The blocks that are nested under this statement, or null if there
 		/// are none.
 		/// </summary>
+		[SerializeField]
 		private List<RenPyBlock> m_nestedBlocks;
 		public List<RenPyBlock> NestedBlocks
 		{

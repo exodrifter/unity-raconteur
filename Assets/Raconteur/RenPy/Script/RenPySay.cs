@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using UnityEngine;
+using System.Text.RegularExpressions;
 
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
@@ -14,6 +15,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// The variable or string of the speaker saying this line. Null when
 		/// the narrator is saying the line
 		/// </summary>
+		[SerializeField]
 		private string m_speaker;
 		public string Speaker
 		{
@@ -25,6 +27,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// Whether or not the speaker is a variable or a string.
 		/// </summary>
+		[SerializeField]
 		private bool m_speakerIsVariable;
 		public bool SpeakerIsVariable
 		{
@@ -36,6 +39,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The text of what the character is saying
 		/// </summary>
+		[SerializeField]
 		private string m_text;
 		public string Text
 		{

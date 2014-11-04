@@ -3,6 +3,7 @@
 	/// <summary>
 	/// Defines the alignment of an item in RenPy.
 	/// </summary>
+	[System.Serializable]
 	public enum RenPyAlignment
 	{
 		BottomCenter, BottomLeft, BottomRight, Center, LeftCenter, RightCenter,

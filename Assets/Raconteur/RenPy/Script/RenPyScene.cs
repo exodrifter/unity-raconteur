@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.RenPy.Util;
@@ -10,6 +11,7 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyScene : RenPyStatement
 	{
+		[SerializeField]
 		private string m_imageName;
 
 		public RenPyScene() : base(RenPyStatementType.SCENE)

@@ -12,8 +12,10 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyStop : RenPyStatement
 	{
+		[SerializeField]
 		private string m_channel;
 
+		[SerializeField]
 		private float m_fadeoutTime;
 
 		public RenPyStop() : base(RenPyStatementType.STOP)

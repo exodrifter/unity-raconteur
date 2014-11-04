@@ -11,6 +11,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// An int indicating how long to pause for.
 		/// </summary>
+		[SerializeField]
 		private float m_time;
 		public float WaitTime
 		{

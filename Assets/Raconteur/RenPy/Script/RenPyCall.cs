@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
@@ -7,6 +8,7 @@ namespace DPek.Raconteur.RenPy.Script
 {
 	public class RenPyCall : RenPyStatement
 	{
+		[SerializeField]
 		private string m_label;
 
 		public RenPyCall() : base(RenPyStatementType.CALL)

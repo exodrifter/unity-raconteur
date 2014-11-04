@@ -12,10 +12,15 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyPlay : RenPyStatement
 	{
+		[SerializeField]
 		private string m_channel;
+		[SerializeField]
 		private string m_file;
+		[SerializeField]
 		private bool m_loop;
+		[SerializeField]
 		private float m_fadeinTime;
+		[SerializeField]
 		private float m_fadeoutTime;
 
 		public RenPyPlay() : base(RenPyStatementType.PLAY)

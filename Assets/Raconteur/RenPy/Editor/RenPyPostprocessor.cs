@@ -168,11 +168,20 @@ namespace DPek.Raconteur.RenPy.Editor
 				return;
 			}
 
-			var flags = HideFlags.HideInInspector | HideFlags.HideInHierarchy;
+			var flags = HideFlags.HideInHierarchy;
 			foreach (var block in blocks) {
 				foreach(var statement in block.Statements) {
 					statement.hideFlags = flags;
 					AssetDatabase.AddObjectToAsset(statement, asset);
+					if(statement is RenPyVariable) {
+						var v = statement as RenPyVariable;
+						v.Operator.hideFlags = flags;
+						AssetDatabase.AddObjectToAsset(v.Operator, asset);
+					} else if(statement is RenPyIf) {
+						var v = statement as RenPyIf;
+						v.Operator.hideFlags = flags;
+						AssetDatabase.AddObjectToAsset(v.Operator, asset);
+					}
 					SerializeChildren(statement.NestedBlocks, ref asset);
 				}
 				block.hideFlags = flags;

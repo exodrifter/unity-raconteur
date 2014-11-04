@@ -1,4 +1,6 @@
-﻿using DPek.Raconteur.RenPy.Parser;
+﻿using UnityEngine;
+
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -6,9 +8,9 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Ren'Py init statement.
 	/// </summary>
-	[System.Serializable]
 	public class RenPyInit : RenPyStatement
 	{
+		[SerializeField]
 		private int m_priority;
 		public int Priority
 		{

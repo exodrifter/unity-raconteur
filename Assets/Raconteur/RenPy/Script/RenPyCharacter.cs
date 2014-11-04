@@ -1,4 +1,6 @@
-﻿using DPek.Raconteur.RenPy.Parser;
+﻿using UnityEngine;
+
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -11,6 +13,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of the variable that stores this character.
 		/// </summary>
+		[SerializeField]
 		private string m_varName;
 		public string VarName
 		{
@@ -22,6 +25,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of this character.
 		/// </summary>
+		[SerializeField]
 		private string m_name;
 		public string Name
 		{

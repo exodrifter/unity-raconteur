@@ -1,4 +1,6 @@
-﻿using DPek.Raconteur.RenPy.Parser;
+﻿using UnityEngine;
+
+using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.RenPy.Script
@@ -11,6 +13,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of the image to hide
 		/// </summary>
+		[SerializeField]
 		private string m_imageName;
 
 		public RenPyHide() : base(RenPyStatementType.HIDE)
