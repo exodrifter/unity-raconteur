@@ -29,7 +29,7 @@ namespace DPek.Raconteur.RenPy.Parser
 
 			// Setup parsing for Twine tokens
 			string[] tokens;
-			tokens = "[ ] ( ) # \\\" \" ' ; = + - * / \\ : $".Split(' ');
+			tokens = "[ ] ( ) # \\\" \" ' , ; = + - * / \\ : $".Split(' ');
 			foreach (string str in tokens) {
 				m_tokenDefinitions.Add(new TokenDefinition(str));
 			}
