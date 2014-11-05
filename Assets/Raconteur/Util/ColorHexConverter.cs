@@ -26,7 +26,7 @@ namespace DPek.Raconteur.Util
 			c = char.ToLower(c);
 
 			// Check if the character is a letter
-			if(96 < c && c < 103) {
+			if (96 < c && c < 103) {
 				return c - 86;
 			}
 			// Check if the character is a number
@@ -51,7 +51,7 @@ namespace DPek.Raconteur.Util
 		private static int FromHex(string str)
 		{
 			int totalVal = 0;
-			for(int i = str.Length-1; i >= 0; --i) {
+			for (int i = str.Length - 1; i >= 0; --i) {
 				totalVal *= 16;
 				totalVal += FromHex(str[i]);
 			}
@@ -60,7 +60,7 @@ namespace DPek.Raconteur.Util
 
 		/// <summary>
 		/// Parses a hex string in the format #RGB or RGB.
-		/// 
+		///
 		/// The hex string (when considered without the '#' character) may be
 		/// any multiple of 3. For example, if the hex string is #FF9930, the
 		/// format is assumed to be #RRGGBB or RRGGBB.
@@ -73,7 +73,7 @@ namespace DPek.Raconteur.Util
 		/// </param>
 		public static Color FromRGB(string str)
 		{
-			if(str[0] == '#') {
+			if (str[0] == '#') {
 				str = str.Substring(1);
 			}
 
@@ -85,7 +85,7 @@ namespace DPek.Raconteur.Util
 			float r, g, b = 0;
 			r = FromHex(str.Substring(0, size)) / maxVal;
 			g = FromHex(str.Substring(size, size)) / maxVal;
-			b = FromHex(str.Substring(size*2, size)) / maxVal;
+			b = FromHex(str.Substring(size * 2, size)) / maxVal;
 
 			return new Color(r, g, b);
 		}

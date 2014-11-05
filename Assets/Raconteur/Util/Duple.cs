@@ -1,5 +1,4 @@
-﻿
-namespace DPek.Raconteur.Util
+﻿namespace DPek.Raconteur.Util
 {
 	/// <summary>
 	/// A utility class for storing two objects as one object.
@@ -18,7 +17,8 @@ namespace DPek.Raconteur.Util
 		private A m_first;
 		public A First
 		{
-			get {
+			get
+			{
 				return m_first;
 			}
 			set {
@@ -32,12 +32,10 @@ namespace DPek.Raconteur.Util
 		private B m_second;
 		public B Second
 		{
-			get
-			{
+			get {
 				return m_second;
 			}
-			set
-			{
+			set {
 				m_second = value;
 			}
 		}
@@ -46,6 +44,25 @@ namespace DPek.Raconteur.Util
 		{
 			m_first = first;
 			m_second = second;
+		}
+
+		public override bool Equals(System.Object obj)
+		{
+			Duple<A, B> other = obj as Duple<A, B>;
+			if (other == null) {
+				return false;
+			}
+
+			return (First == other.First) && (Second == other.Second);
+		}
+
+		public bool Equals(Duple<A, B> other)
+		{
+			if (other == null) {
+				return false;
+			}
+
+			return (First == other.First) && (Second == other.Second);
 		}
 	}
 }
