@@ -45,24 +45,5 @@
 			m_first = first;
 			m_second = second;
 		}
-
-		public override bool Equals(System.Object obj)
-		{
-			Duple<A, B> other = obj as Duple<A, B>;
-			if (other == null) {
-				return false;
-			}
-
-			return (First == other.First) && (Second == other.Second);
-		}
-
-		public bool Equals(Duple<A, B> other)
-		{
-			if (other == null) {
-				return false;
-			}
-
-			return (First == other.First) && (Second == other.Second);
-		}
 	}
 }
