@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+using DPek.Raconteur.Util;
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
@@ -34,6 +35,15 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
+		[SerializeField]
+		private Color m_color;
+		public Color Color
+		{
+			get {
+				return m_color;
+			}
+		}
+
 		public RenPyCharacter() : base(RenPyStatementType.CHARACTER)
 		{
 			// Nothing to do
@@ -58,7 +68,36 @@ namespace DPek.Raconteur.RenPy.Script
 			m_name = tokens.Seek(quote);
 			tokens.Next();
 
-			// TODO: Parse character color
+			// Parse character color
+			tokens.Seek(new string[] {"(", ")", "\"", "\'"});
+			if(tokens.Peek() != ")") {
+				quote = tokens.Next();
+				if(quote == "(") {
+					float r, g, b = 0;
+					float a = 1;
+					float.TryParse(tokens.Next(), out r);
+					r /= 255;
+					tokens.Next();
+					tokens.Skip(new string[] {" "});
+					float.TryParse(tokens.Next(), out g);
+					g /= 255;
+					tokens.Next();
+					tokens.Skip(new string[] {" "});
+					float.TryParse(tokens.Next(), out b);
+					b /= 255;
+					tokens.Next();
+					tokens.Skip(new string[] {" "});
+					float.TryParse(tokens.Next(), out a);
+					a /= 255;
+					tokens.Seek(")");
+					tokens.Next();
+					m_color = new Color(r,g,b,a);
+				} else {
+					string colorHex = tokens.Seek(quote);
+					tokens.Next();
+					m_color = ColorHexConverter.FromRGB(colorHex);
+				}
+			}
 
 			// Skip the rest of the constructor
 			tokens.Seek(")");
@@ -74,7 +113,8 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			string str = "define " + m_varName + "";
 			str += " = Character(";
-			str += "name=\"" + m_name + "\"";
+			str += "name=\"" + m_name + "\", ";
+			str += "color=\"" + m_color + "\"";
 			str += ")";
 			return str;
 		}

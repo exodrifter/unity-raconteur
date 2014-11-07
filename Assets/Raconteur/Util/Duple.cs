@@ -1,5 +1,4 @@
-﻿
-namespace DPek.Raconteur.Util
+﻿namespace DPek.Raconteur.Util
 {
 	/// <summary>
 	/// A utility class for storing two objects as one object.
@@ -18,7 +17,8 @@ namespace DPek.Raconteur.Util
 		private A m_first;
 		public A First
 		{
-			get {
+			get
+			{
 				return m_first;
 			}
 			set {
@@ -32,12 +32,10 @@ namespace DPek.Raconteur.Util
 		private B m_second;
 		public B Second
 		{
-			get
-			{
+			get {
 				return m_second;
 			}
-			set
-			{
+			set {
 				m_second = value;
 			}
 		}

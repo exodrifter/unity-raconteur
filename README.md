@@ -1,9 +1,11 @@
 Raconteur
 =========
-Raconteur is a Unity3D library that provides support for narrative resources created in other tools.
+Raconteur is a Unity3D library that provides support for narrative resources
+created in other tools.
 
-For now the library only supports RenPy. In the future I hope to implement Twine support as well.
+For now the library only supports Ren'Py. Twine support is planned for the
+future.
 
 Licensing
 ---------
-Please see the file called LICENSE.
+Please see the file named ``LICENSE.md``.
