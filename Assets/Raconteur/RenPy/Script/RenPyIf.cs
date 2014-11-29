@@ -11,29 +11,11 @@ namespace DPek.Raconteur.RenPy.Script
 	public class RenPyIf : RenPyStatement
 	{
 		[SerializeField]
-		private string m_varName;
-		public string Name
+		private Expression m_expression;
+		public Expression Expression
 		{
 			get {
-				return m_varName;
-			}
-		}
-
-		[SerializeField]
-		private string m_value;
-		public string Value
-		{
-			get {
-				return m_value;
-			}
-		}
-
-		[SerializeField]
-		private Evaluator m_evaluator;
-		public Evaluator Operator
-		{
-			get {
-				return m_evaluator;
+				return m_expression;
 			}
 		}
 
@@ -49,69 +31,48 @@ namespace DPek.Raconteur.RenPy.Script
 
 			// Get the variable name
 			tokens.Skip(new string[]{" ","\t"});
-			m_varName = tokens.Next();
-			tokens.Skip(new string[]{" ","\t"});
-
-			// Get the evaluation criterea
-			string eval = tokens.Next();
-			if (eval == ":") {
-				// True if the variable is set to "True"
-				m_evaluator = ScriptableObject.CreateInstance<TrueEvaluator>();
-				return;
-			} else if (eval == ">") {
-				if (tokens.Peek() == "=") {
-					m_evaluator = ScriptableObject.CreateInstance<GreaterEqualEvaluator>();
-				} else {
-					m_evaluator = ScriptableObject.CreateInstance<GreaterThanEvaluator>();
-				}
-				tokens.Next();
-			} else if (eval == "<") {
-				if (tokens.Peek() == "=") {
-					m_evaluator = ScriptableObject.CreateInstance<LessEqualEvaluator>();
-				} else {
-					m_evaluator = ScriptableObject.CreateInstance<LessThanEvaluator>();
-				}
-				tokens.Next();
-			} else if (eval == "=") {
-				tokens.Next(); // Assume the next token is an "=" sign
-				m_evaluator = ScriptableObject.CreateInstance<EqualEvaluator>();
-			} else if (eval == "!") {
-				tokens.Next(); // Assume the next token is an "=" sign
-				m_evaluator = ScriptableObject.CreateInstance<NotEqualEvaluator>();
-			} else if (eval == "is") {
-				m_evaluator = ScriptableObject.CreateInstance<EqualEvaluator>();
-				tokens.Next();
-			}
-			m_value = tokens.Next();
+			string expressionString = tokens.Next();
 			tokens.Seek(":");
 			tokens.Next();
+			
+			var parser = new ExpressionParser();
+			parser.SetupOperator(Get<OperatorPlus>("+"));
+			parser.SetupOperator(Get<OperatorMinus>("-"));
+			parser.SetupOperator(Get<OperatorEquals>("=="));
+			parser.SetupOperator(Get<OperatorNotEquals>("!="));
+			parser.SetupOperator(Get<OperatorLessThan>("<"));
+			parser.SetupOperator(Get<OperatorLessThanOrEqual>("<="));
+			parser.SetupOperator(Get<OperatorGreaterThan>(">"));
+			parser.SetupOperator(Get<OperatorGreaterThanOrEqual>(">="));
+
+			m_expression = parser.ParseExpression(expressionString);
+		}
+
+		Operator Get<T>(string symbol) where T : Operator {
+			T op = ScriptableObject.CreateInstance<T>();
+			op.Symbol = symbol;
+			return op;
 		}
 
 		public override void Execute(RenPyState state)
 		{
 			// If evaluation succeeds, push back this block
-			if (m_evaluator.Evaluate(state, m_varName, m_value)) {
-				string msg = "if " + m_varName + m_evaluator.GetOp() + m_value;
-				msg += " evaluated to true (" + m_varName + "=";
-				msg += state.GetVariable(m_varName) + ")";
+			if (m_expression.Evaluate(state).GetValue(state) as string == "True") {
+				string msg = "if " + m_expression + " evaluated to true";
 				Static.Log(msg);
 
 				state.Execution.PushStackFrame(NestedBlocks);
 			}
 			// If evaluation fails, skip this block
 			else {
-				string msg = "if " + m_varName + m_evaluator.GetOp() + m_value;
-				msg += " evaluated to false (" + m_varName + "=";
-				msg += state.GetVariable(m_varName) + ")";
+				string msg = "if " + m_expression + " evaluated to false";
 				Static.Log(msg);
 			}
 		}
 
 		public override string ToDebugString()
 		{
-			string str = "if " + m_varName;
-			str += " " + m_evaluator.GetOp();
-			str += " " + m_value;
+			string str = "if " + m_expression + ":";
 			return str;
 		}
 	}

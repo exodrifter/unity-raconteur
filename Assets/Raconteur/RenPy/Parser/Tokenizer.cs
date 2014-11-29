@@ -16,22 +16,51 @@ namespace DPek.Raconteur.RenPy.Parser
 		/// </summary>
 		private List<TokenDefinition> m_tokenDefinitions;
 
+		/// <summary>
+		/// Whether or not to remove whitespace from the list of returned
+		/// tokens.
+		/// </summary>
+		private bool m_dropWhitespace;
+
 		#endregion
 
 		#region Constructor
 
 		/// <summary>
-		/// Creates a new Tokenizer with the default tokens for RenPy.
+		/// Creates a new Tokenizer. The tokenizer will not be ready for use
+		/// until it is set up with additional calls to methods that start with
+		/// the word "Setup".
 		/// </summary>
-		public Tokenizer()
+		public Tokenizer(bool dropWhiteSpace)
 		{
+			m_dropWhitespace = dropWhiteSpace;
 			m_tokenDefinitions = new List<TokenDefinition>();
+		}
 
-			// Setup parsing for Twine tokens
-			string[] tokens;
-			tokens = "[ ] ( ) # \\\" \" ' , ; = + - * / \\ : $".Split(' ');
-			foreach (string str in tokens) {
-				m_tokenDefinitions.Add(new TokenDefinition(str));
+		#endregion
+
+		#region Setup Methods
+
+		/// <summary>
+		/// Setups a token that can be parsed as a single token by the
+		/// Tokenizer.
+		/// </summary>
+		/// <param name="tokens">
+		/// The token that can be parsed.
+		/// </param>
+		public void SetupToken(string token) {
+			m_tokenDefinitions.Add(new TokenDefinition(token));
+		}
+
+		/// <summary>
+		/// Setups tokens that can be parsed as a single token by the Tokenizer.
+		/// </summary>
+		/// <param name="tokens">
+		/// The tokens that can be parsed.
+		/// </param>
+		public void SetupTokens(string[] tokens) {
+			foreach (string token in tokens) {
+				SetupToken(token);
 			}
 		}
 
@@ -74,17 +103,26 @@ namespace DPek.Raconteur.RenPy.Parser
 
 					// Treat whitespace as a token
 					if (ch == ' ') {
-						tokens.Add(" ");
+						if(!m_dropWhitespace)
+						{
+							tokens.Add(" ");
+						}
 					}
 
 					// Treat tabs as a token
 					else if (ch == '\t') {
-						tokens.Add("\t");
+						if(!m_dropWhitespace)
+						{
+							tokens.Add("\t");
+						}
 					}
 
 					// Treat '\n' as a token, unless the last token was '\n'
 					else if ((ch == '\n' || ch == '\r') && !newlineAdded) {
-						tokens.Add("\n");
+						if(!m_dropWhitespace)
+						{
+							tokens.Add("\n");
+						}
 						newlineAdded = true;
 					}
 

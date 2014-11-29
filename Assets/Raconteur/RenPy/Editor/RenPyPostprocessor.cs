@@ -179,8 +179,8 @@ namespace DPek.Raconteur.RenPy.Editor
 						AssetDatabase.AddObjectToAsset(v.Operator, asset);
 					} else if(statement is RenPyIf) {
 						var v = statement as RenPyIf;
-						v.Operator.hideFlags = flags;
-						AssetDatabase.AddObjectToAsset(v.Operator, asset);
+						v.Expression.hideFlags = flags;
+						AssetDatabase.AddObjectToAsset(v.Expression, asset);
 					}
 					SerializeChildren(statement.NestedBlocks, ref asset);
 				}
