@@ -32,24 +32,9 @@ namespace DPek.Raconteur.RenPy.Script
 			// Get the expression
 			string expressionString = tokens.Seek(":").Trim();
 			tokens.Next();
-			
-			var parser = new ExpressionParser();
-			parser.SetupOperator(Get<OperatorPlus>("+"));
-			parser.SetupOperator(Get<OperatorMinus>("-"));
-			parser.SetupOperator(Get<OperatorEquals>("=="));
-			parser.SetupOperator(Get<OperatorNotEquals>("!="));
-			parser.SetupOperator(Get<OperatorLessThan>("<"));
-			parser.SetupOperator(Get<OperatorLessThanOrEqual>("<="));
-			parser.SetupOperator(Get<OperatorGreaterThan>(">"));
-			parser.SetupOperator(Get<OperatorGreaterThanOrEqual>(">="));
 
+			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
-		}
-
-		Operator Get<T>(string symbol) where T : Operator {
-			T op = ScriptableObject.CreateInstance<T>();
-			op.Symbol = symbol;
-			return op;
 		}
 
 		public override void Execute(RenPyState state)
