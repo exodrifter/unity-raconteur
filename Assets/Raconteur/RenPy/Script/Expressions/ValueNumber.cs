@@ -8,7 +8,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The value of this number.
 		/// </summary>
-		private object m_value;
+		protected object m_value;
 
 		/// <summary>
 		/// Creates a new number from the specified string.
@@ -65,13 +65,18 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <returns>
 		/// The value of this number.
 		/// </returns>
-		public override object GetValue(RenPyState state)
+		public override Value GetValue(RenPyState state)
 		{
 			if(m_value != null)
 			{
-				return m_value;
+				return new ValueNumber(this.AsString(state));
 			}
 			return null;
+		}
+
+		public override object GetRawValue(RenPyState state)
+		{
+			return m_value;
 		}
 
 		/// <summary>
@@ -82,10 +87,14 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="value">
 		/// The value to set this number to.
 		/// </param>
-		public override void SetValue(RenPyState state, string value)
+		public override void SetValue(RenPyState state, Value value)
 		{
 			string msg = "Cannot assign a value to a number";
 			throw new InvalidOperationException(msg);
+		}
+
+		public override string AsString(RenPyState state) {
+			return m_value.ToString();
 		}
 		
 		/// <summary>

@@ -6,7 +6,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// Represents an operator that returns true if the two arguments are not
 	/// equal.
 	/// </summary>
-	[System.Serializable]
 	public class OperatorNotEquals : Operator
 	{
 		/// <summary>

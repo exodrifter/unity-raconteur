@@ -179,8 +179,8 @@ namespace DPek.Raconteur.RenPy.Editor
 						AssetDatabase.AddObjectToAsset(v.Operator, asset);
 					} else if(statement is RenPyIf) {
 						var v = statement as RenPyIf;
-						v.Expression.hideFlags = flags;
-						AssetDatabase.AddObjectToAsset(v.Expression, asset);
+						var e = v.Expression;
+						SaveExpression(ref e, ref asset);
 					}
 					SerializeChildren(statement.NestedBlocks, ref asset);
 				}
@@ -199,6 +199,26 @@ namespace DPek.Raconteur.RenPy.Editor
 		{
 			if (handle != null) {
 				AssetDatabase.DeleteAsset(handle.path);
+			}
+		}
+
+		private static void SaveExpression(ref Expression expression, ref Object asset) {
+			var flags = HideFlags.HideInHierarchy;
+			expression.hideFlags = flags;
+			AssetDatabase.AddObjectToAsset(expression, asset);
+			expression.Operator.hideFlags = flags;
+			if(!AssetDatabase.Contains(expression.Operator))
+			{
+				AssetDatabase.AddObjectToAsset(expression.Operator, asset);
+			}
+
+			if(expression.Left is Expression) {
+				var e = expression.Left as Expression;
+				SaveExpression(ref e, ref asset);
+			}
+			if(expression.Right is Expression) {
+				var e = expression.Right as Expression;
+				SaveExpression(ref e, ref asset);
 			}
 		}
 	}

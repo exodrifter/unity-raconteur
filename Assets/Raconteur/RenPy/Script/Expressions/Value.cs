@@ -10,16 +10,20 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public abstract class Value
 	{
-		public abstract object GetValue(RenPyState state);
+		public abstract Value GetValue(RenPyState state);
+
+		public abstract object GetRawValue(RenPyState state);
 		
-		public abstract void SetValue(RenPyState state, string value);
+		public abstract void SetValue(RenPyState state, Value value);
+
+		public abstract string AsString(RenPyState state);
 
 		#region Arithmetic
 
 		public static Value Add(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 
 			if(leftNum is int)
 			{
@@ -81,8 +85,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static Value Minus(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -144,8 +148,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public static Value Multiply(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -207,8 +211,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static Value Divide(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -270,8 +274,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static Value Mod(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -337,8 +341,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public static bool GreaterThan(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -391,8 +395,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static bool GreaterThanOrEqual(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -445,8 +449,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static bool LessThan(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{
@@ -499,8 +503,8 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public static bool LessThanOrEqual(RenPyState state, Value left, Value right) 
 		{
-			object leftNum = left.GetValue(state);
-			object rightNum = right.GetValue(state);
+			object leftNum = left.GetRawValue(state);
+			object rightNum = right.GetRawValue(state);
 			
 			if(leftNum is int)
 			{

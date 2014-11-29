@@ -29,10 +29,8 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Seek("if");
 			tokens.Next();
 
-			// Get the variable name
-			tokens.Skip(new string[]{" ","\t"});
-			string expressionString = tokens.Next();
-			tokens.Seek(":");
+			// Get the expression
+			string expressionString = tokens.Seek(":").Trim();
 			tokens.Next();
 			
 			var parser = new ExpressionParser();
@@ -57,7 +55,7 @@ namespace DPek.Raconteur.RenPy.Script
 		public override void Execute(RenPyState state)
 		{
 			// If evaluation succeeds, push back this block
-			if (m_expression.Evaluate(state).GetValue(state) as string == "True") {
+			if (m_expression.Evaluate(state).GetValue(state).AsString(state) == "True") {
 				string msg = "if " + m_expression + " evaluated to true";
 				Static.Log(msg);
 

@@ -5,7 +5,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Represents an operator that returns true if the two arguments are equal
 	/// </summary>
-	[System.Serializable]
 	public class OperatorLessThanOrEqual : Operator
 	{
 		/// <summary>

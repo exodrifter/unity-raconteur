@@ -17,8 +17,19 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			m_variable = variable;
 		}
-
-		public override object GetValue(RenPyState state)
+		
+		public override Value GetValue(RenPyState state)
+		{
+			string value = state.GetVariable(m_variable);
+			object number = ParseNumber(value);
+			if(number != null)
+			{
+				return new ValueNumber(value);
+			}
+			return new ValueString(value);
+		}
+		
+		public override object GetRawValue(RenPyState state)
 		{
 			string value = state.GetVariable(m_variable);
 			object number = ParseNumber(value);
@@ -29,9 +40,14 @@ namespace DPek.Raconteur.RenPy.Script
 			return value;
 		}
 		
-		public override void SetValue(RenPyState state, string value)
+		public override void SetValue(RenPyState state, Value value)
 		{
-			state.SetVariable(m_variable, value);
+			state.SetVariable(m_variable, value.AsString(state));
+		}
+
+		public override string AsString(RenPyState state)
+		{
+			return state.GetVariable(m_variable);
 		}
 		
 		/// <summary>

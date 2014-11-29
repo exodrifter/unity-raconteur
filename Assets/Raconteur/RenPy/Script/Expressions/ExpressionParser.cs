@@ -81,7 +81,7 @@ namespace DPek.Raconteur.RenPy.Script
 				return expression;
 			}
 
-			var left = new List<string>();
+			var right = new List<string>();
 			for(int i = tokens.Length-1; i >= 0; --i)
 			{
 				string token = tokens[i];
@@ -91,19 +91,19 @@ namespace DPek.Raconteur.RenPy.Script
 				{
 					if(op.Symbol == token)
 					{
-						string[] right = GetRemainder(i-1, tokens);
-						Expression leftExp = ParseExpression(left.ToArray());
-						Expression rightExp = ParseExpression(right);
+						string[] left = GetRemainder(i-1, tokens);
+						Expression leftExp = ParseExpression(left);
+						Expression rightExp = ParseExpression(right.ToArray());
 
 						var expression = ScriptableObject.CreateInstance<Expression>();
 						expression.Operator = op;
-						expression.Left = leftExp;
 						expression.Right = rightExp;
+						expression.Left = leftExp;
 						return expression;
 					}
 				}
 
-				left.Add(token);
+				right.Add(token);
 			}
 
 			string list = "[";

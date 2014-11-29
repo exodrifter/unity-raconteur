@@ -5,7 +5,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Represents an operator that returns the argument it has.
 	/// </summary>
-	[System.Serializable]
 	public class OperatorMod : Operator
 	{
 		/// <summary>

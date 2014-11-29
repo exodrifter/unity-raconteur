@@ -4,21 +4,31 @@ namespace DPek.Raconteur.RenPy.Script
 {
 	public class ValueString : Value
 	{
-		private string m_str;
+		protected string m_str;
 
 		public ValueString(string str)
 		{
 			m_str = str;
 		}
 		
-		public override object GetValue(RenPyState state)
+		public override Value GetValue(RenPyState state)
+		{
+			return new ValueString(m_str);
+		}
+		
+		public override object GetRawValue(RenPyState state)
 		{
 			return m_str;
 		}
 		
-		public override void SetValue(RenPyState state, string value)
+		public override void SetValue(RenPyState state, Value value)
 		{
-			m_str = value;
+			m_str = value.AsString(state);
+		}
+
+		public override string AsString(RenPyState state)
+		{
+			return m_str;
 		}
 		
 		/// <summary>
