@@ -66,6 +66,30 @@ namespace DPek.Raconteur.RenPy.State
 		}
 
 		/// <summary>
+		/// Moves the stack frame to the previous statement and returns it.
+		/// </summary>
+		/// <returns>
+		/// The previous statement or null if there is no previous statement.
+		/// </returns>
+		public RenPyStatement PreviousStatement()
+		{
+			--m_statementIndex;
+
+			// Check if we need to go to the previous block
+			if (m_statementIndex < 0) {
+				if(m_blockIndex > 0) {
+					m_blockIndex--;
+					m_statementIndex = m_blocks[m_blockIndex].StatementCount-1;
+				} else {
+					Reset();
+				}
+			}
+
+			var statement = m_blocks[m_blockIndex][m_statementIndex];
+			return statement;
+		}
+
+		/// <summary>
 		/// Moves the stack frame to the next statement, executes that
 		/// statement, and returns that statement.
 		/// </summary>

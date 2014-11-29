@@ -196,6 +196,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return NewStatement<RenPyShow>(ref scanner);
 				case "stop":
 					return NewStatement<RenPyStop>(ref scanner);
+				case "while":
+					return NewStatement<RenPyWhile>(ref scanner);
 				default:
 					if(scanner.PeekEnd() == ":") {
 						return NewStatement<RenPyMenuChoice>(ref scanner);

@@ -57,7 +57,22 @@ namespace DPek.Raconteur.RenPy.State
 		}
 
 		/// <summary>
-		/// Moves the state to the next statement and returns that statement.
+		/// Moves the state to the previous statement and returns that
+		/// statement.
+		/// </summary>
+		/// <returns>
+		/// The previous statement or null if there is no previous statement.
+		/// </returns>
+		public RenPyStatement PreviousStatement()
+		{
+			if(m_stack.Count > 0) {
+				return m_stack.Peek().PreviousStatement();
+			}
+			return null;
+		}
+
+		/// <summary>
+		/// Moves the state to the next statement, executes it, and returns it.
 		/// </summary>
 		/// <param name="state">
 		/// The state to execute the statement with.

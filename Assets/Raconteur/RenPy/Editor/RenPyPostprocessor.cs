@@ -181,6 +181,10 @@ namespace DPek.Raconteur.RenPy.Editor
 						var v = statement as RenPyIf;
 						var e = v.Expression;
 						SaveExpression(ref e, ref asset);
+					} else if(statement is RenPyWhile) {
+						var v = statement as RenPyWhile;
+						var e = v.Expression;
+						SaveExpression(ref e, ref asset);
 					}
 					SerializeChildren(statement.NestedBlocks, ref asset);
 				}
