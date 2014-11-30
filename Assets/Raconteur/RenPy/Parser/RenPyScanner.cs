@@ -211,7 +211,7 @@ namespace DPek.Raconteur.RenPy.Parser
 			int skipped = 0;
 
 			string str = Seek("\n");
-			while (string.IsNullOrEmpty(str)) {
+			while (string.IsNullOrEmpty(str.Trim())) {
 				string result = Next();
 				if (result == null) {
 					// Seek did not find newline, we are at end of document.

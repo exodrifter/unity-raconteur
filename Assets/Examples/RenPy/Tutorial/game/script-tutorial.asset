@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Parser:RenPyScriptAsset
   Title: Tutorial
   Blocks:
-  - {fileID: 11403262}
-  - {fileID: 11403960}
+  - {fileID: 11403964}
+  - {fileID: 11404698}
   audioKeys: []
   audioValues: []
   imageKeys: []
@@ -28972,3 +28972,5580 @@ MonoBehaviour:
   - {fileID: 11403826}
   - {fileID: 11403880}
   - {fileID: 11403934}
+--- !u!114 &11403962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyCharacter
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: r
+  m_name: R
+  m_color: {r: 1, g: .125, b: .125, a: 1}
+--- !u!114 &11403964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11403962}
+--- !u!114 &11403966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404040}
+  m_name: start
+--- !u!114 &11403968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_arnold
+  m_value: False
+  m_assignment: {fileID: 11403970}
+--- !u!114 &11403970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_felicia
+  m_value: False
+  m_assignment: {fileID: 11403974}
+--- !u!114 &11403974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_q
+  m_value: False
+  m_assignment: {fileID: 11403978}
+--- !u!114 &11403978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"kid"'
+  m_assignment: {fileID: 11403982}
+--- !u!114 &11403982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: just_two
+  m_value: False
+  m_assignment: {fileID: 11403986}
+--- !u!114 &11403986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: olivia
+  m_value: False
+  m_assignment: {fileID: 11403990}
+--- !u!114 &11403990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: paulie
+  m_value: False
+  m_assignment: {fileID: 11403994}
+--- !u!114 &11403994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11403996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: sal
+  m_value: False
+  m_assignment: {fileID: 11403998}
+--- !u!114 &11403998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: tempest
+  m_value: False
+  m_assignment: {fileID: 11404002}
+--- !u!114 &11404002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Oof! Huh?
+--- !u!114 &11404006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Damn it!
+--- !u!114 &11404008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Nevermind, it's not safe now. This operation is a bust. We've got to head
+    out of here.
+--- !u!114 &11404010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Okay, it looks like the coast is clear.
+--- !u!114 &11404012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was about to make a very clean swipe of the most famous painting in the
+    world before you messed up my timing.
+--- !u!114 &11404014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We'll have to try again. You owe me now, and people always pay me back.
+--- !u!114 &11404016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Walk and talk, kid. Let's keep moving.
+--- !u!114 &11404018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404038}
+--- !u!114 &11404020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404024}
+  m_text: Who are you?
+--- !u!114 &11404022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_who
+--- !u!114 &11404024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404022}
+--- !u!114 &11404026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404030}
+  m_text: Where are we?
+--- !u!114 &11404028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_where
+--- !u!114 &11404030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404028}
+--- !u!114 &11404032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404036}
+  m_text: What's going on?
+--- !u!114 &11404034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatA
+--- !u!114 &11404036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404034}
+--- !u!114 &11404038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404020}
+  - {fileID: 11404026}
+  - {fileID: 11404032}
+--- !u!114 &11404040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11403968}
+  - {fileID: 11403972}
+  - {fileID: 11403976}
+  - {fileID: 11403980}
+  - {fileID: 11403984}
+  - {fileID: 11403988}
+  - {fileID: 11403992}
+  - {fileID: 11403996}
+  - {fileID: 11404000}
+  - {fileID: 11404004}
+  - {fileID: 11404006}
+  - {fileID: 11404008}
+  - {fileID: 11404010}
+  - {fileID: 11404012}
+  - {fileID: 11404014}
+  - {fileID: 11404016}
+  - {fileID: 11404018}
+--- !u!114 &11404042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404074}
+  m_name: intro_where
+--- !u!114 &11404044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Are you kidding me? This is New York! You need to eat your wheaties.
+--- !u!114 &11404046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The building where we met is a little place called the Museum of Modern
+    Art. Not exactly an easy place to forget.
+--- !u!114 &11404048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was having a real nice visit until you couldn't watch where you were going.
+--- !u!114 &11404050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Yeah, New York ain't without its problems. A few bad pizzerias. One too
+    many up and comers. There's the mob, gangs, and even children.
+--- !u!114 &11404052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Children terrify me.
+--- !u!114 &11404054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But if you can get past the kids, it's the perfect place for a professional
+    such as myself.
+--- !u!114 &11404056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Great food, lots of wealthy individuals, and, of course, art!
+--- !u!114 &11404058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404072}
+--- !u!114 &11404060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404064}
+  m_text: So you're a criminal?
+--- !u!114 &11404062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_who2
+--- !u!114 &11404064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404062}
+--- !u!114 &11404066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404070}
+  m_text: How did I mess up your operation?
+--- !u!114 &11404068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatA
+--- !u!114 &11404070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404068}
+--- !u!114 &11404072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404060}
+  - {fileID: 11404066}
+--- !u!114 &11404074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404044}
+  - {fileID: 11404046}
+  - {fileID: 11404048}
+  - {fileID: 11404050}
+  - {fileID: 11404052}
+  - {fileID: 11404054}
+  - {fileID: 11404056}
+  - {fileID: 11404058}
+--- !u!114 &11404076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404108}
+  m_name: intro_where2
+--- !u!114 &11404078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Are you kidding me? This is New York! You need to eat your wheaties.
+--- !u!114 &11404080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The building where we met is a little place called the Museum of Modern
+    Art. Not exactly an easy place to forget.
+--- !u!114 &11404082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was having a real nice visit until you couldn't watch where you were going.
+--- !u!114 &11404084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Yeah, New York ain't without its problems. A few bad pizzerias. One too
+    many up and comers. There's the mob, gangs, and even children.
+--- !u!114 &11404086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Children terrify me.
+--- !u!114 &11404088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But if you can get past the kids, it's the perfect place for a professional
+    such as myself.
+--- !u!114 &11404090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Great food, lots of wealthy individuals, and, of course, art!
+--- !u!114 &11404092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404106}
+--- !u!114 &11404094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404098}
+  m_text: So are you some sort of thief?
+--- !u!114 &11404096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_where2
+--- !u!114 &11404098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404096}
+--- !u!114 &11404100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404104}
+  m_text: How did I mess up your operation?
+--- !u!114 &11404102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatD
+--- !u!114 &11404104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404102}
+--- !u!114 &11404106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404094}
+  - {fileID: 11404100}
+--- !u!114 &11404108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404078}
+  - {fileID: 11404080}
+  - {fileID: 11404082}
+  - {fileID: 11404084}
+  - {fileID: 11404086}
+  - {fileID: 11404088}
+  - {fileID: 11404090}
+  - {fileID: 11404092}
+--- !u!114 &11404110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404140}
+  m_name: intro_who
+--- !u!114 &11404112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Who am I?
+--- !u!114 &11404114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Just call me R. I'm highly skilled in what you might call the delicate art
+    of theft.
+--- !u!114 &11404116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You may be asking why I'm so open about my skills as a moonlighting artisan.
+--- !u!114 &11404118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I know how to read people, and your eyes tell me everything I need to know
+    about you. You're not a cop.
+--- !u!114 &11404120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Do you hear that back there? Pigs are all over the museum at this point.
+--- !u!114 &11404122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Things were clockwork until you got in my way.
+--- !u!114 &11404124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404138}
+--- !u!114 &11404126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404130}
+  m_text: So you're a criminal?
+--- !u!114 &11404128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_who2
+--- !u!114 &11404130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404128}
+--- !u!114 &11404132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404136}
+  m_text: What happened when I got in the way?
+--- !u!114 &11404134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatB
+--- !u!114 &11404136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404134}
+--- !u!114 &11404138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404126}
+  - {fileID: 11404132}
+--- !u!114 &11404140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404112}
+  - {fileID: 11404114}
+  - {fileID: 11404116}
+  - {fileID: 11404118}
+  - {fileID: 11404120}
+  - {fileID: 11404122}
+  - {fileID: 11404124}
+--- !u!114 &11404142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404180}
+  m_name: intro_who2
+--- !u!114 &11404144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: If you play by the paltry rules of society, then sure, someone like me is
+    a criminal.
+--- !u!114 &11404146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I don't play those rules. I'm an artist. And my art is stealing.
+--- !u!114 &11404148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But I don't steal just anything. No, I steal art.
+--- !u!114 &11404150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Fine paintings and antiquities of yore. Bagging these relics are what I
+    live for.
+--- !u!114 &11404152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Of course, they also fetch a nice price with the right buyer. But money
+    isn't my goal.
+--- !u!114 &11404154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: When I've collected enough pieces, I'll open my own exclusory gallery.
+--- !u!114 &11404156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The greatest collection of art ever assembled. Only the ritziest upper crust
+    will know about it.
+--- !u!114 &11404158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Even the Louvre will feel like an elementary school art show in comparison.
+--- !u!114 &11404160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I'm gonna provide the ultimate, but before that we've got to make this heist
+    happen.
+--- !u!114 &11404162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The heist that was dialed in before you came out of nowhere.
+--- !u!114 &11404164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404178}
+--- !u!114 &11404166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404170}
+  m_text: What is the heist?
+--- !u!114 &11404168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatB
+--- !u!114 &11404170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404168}
+--- !u!114 &11404172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404176}
+  m_text: How did I manage to mess up your operation?
+--- !u!114 &11404174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whatC
+--- !u!114 &11404176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404174}
+--- !u!114 &11404178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404166}
+  - {fileID: 11404172}
+--- !u!114 &11404180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404144}
+  - {fileID: 11404146}
+  - {fileID: 11404148}
+  - {fileID: 11404150}
+  - {fileID: 11404152}
+  - {fileID: 11404154}
+  - {fileID: 11404156}
+  - {fileID: 11404158}
+  - {fileID: 11404160}
+  - {fileID: 11404162}
+  - {fileID: 11404164}
+--- !u!114 &11404182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404226}
+  m_name: intro_whatA
+--- !u!114 &11404184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You certainly cut to the quick, kid.
+--- !u!114 &11404186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I like that.
+--- !u!114 &11404188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You happened to interrupt me during a 5 second window to get past security
+    at the art museum and blew my heist.
+--- !u!114 &11404190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: So now you're going to help me make this heist happen.
+--- !u!114 &11404192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: It's the heist to end all heists.
+--- !u!114 &11404194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: My dream is to create the perfect art gallery. The ultimate experience,
+    only for the ritziest, most secretive upper crust.
+--- !u!114 &11404196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: And I'm looking for my crown jewel. A particular painting.
+--- !u!114 &11404198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11404200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11404202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in? You
+    don't have much of a choice, by the way.
+--- !u!114 &11404204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404224}
+--- !u!114 &11404206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404210}
+  m_text: Let's do it!
+--- !u!114 &11404208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11404210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404208}
+--- !u!114 &11404212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404216}
+  m_text: What's in it for me?
+--- !u!114 &11404214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11404216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404214}
+--- !u!114 &11404218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404222}
+  m_text: I'm not a thief.
+--- !u!114 &11404220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11404222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404220}
+--- !u!114 &11404224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404206}
+  - {fileID: 11404212}
+  - {fileID: 11404218}
+--- !u!114 &11404226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404184}
+  - {fileID: 11404186}
+  - {fileID: 11404188}
+  - {fileID: 11404190}
+  - {fileID: 11404192}
+  - {fileID: 11404194}
+  - {fileID: 11404196}
+  - {fileID: 11404198}
+  - {fileID: 11404200}
+  - {fileID: 11404202}
+  - {fileID: 11404204}
+--- !u!114 &11404228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404266}
+  m_name: intro_whatB
+--- !u!114 &11404230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You certainly cut to the quick, kid.
+--- !u!114 &11404232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I like that.
+--- !u!114 &11404234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: This is a heist to end all heists.
+--- !u!114 &11404236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got a business associate who will fund the rest of the logistics for
+    the gallery if I can pull this off.
+--- !u!114 &11404238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11404240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11404242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in?
+--- !u!114 &11404244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404264}
+--- !u!114 &11404246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404250}
+  m_text: Let's do it!
+--- !u!114 &11404248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11404250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404248}
+--- !u!114 &11404252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404256}
+  m_text: What's in it for me?
+--- !u!114 &11404254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11404256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404254}
+--- !u!114 &11404258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404262}
+  m_text: I'm not a thief.
+--- !u!114 &11404260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11404262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404260}
+--- !u!114 &11404264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404246}
+  - {fileID: 11404252}
+  - {fileID: 11404258}
+--- !u!114 &11404266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404230}
+  - {fileID: 11404232}
+  - {fileID: 11404234}
+  - {fileID: 11404236}
+  - {fileID: 11404238}
+  - {fileID: 11404240}
+  - {fileID: 11404242}
+  - {fileID: 11404244}
+--- !u!114 &11404268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404310}
+  m_name: intro_whatC
+--- !u!114 &11404270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got an inside man. Vincenzo.
+--- !u!114 &11404272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I had a 5 second window to get into the vault where the painting was being
+    conditioned.
+--- !u!114 &11404274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was waltzing in, then you got in my way. I couldn't run past the guard
+    station without gathering some attention at that point.
+--- !u!114 &11404276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But it's fine. I didn't exactly have an escape plan figured out. And now
+    you're gonna help me see this through.
+--- !u!114 &11404278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: This is a heist to end all heists.
+--- !u!114 &11404280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got a business associate who will fund the rest of the logistics for
+    the gallery if I can pull this off.
+--- !u!114 &11404282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11404284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11404286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in?
+--- !u!114 &11404288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404308}
+--- !u!114 &11404290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404294}
+  m_text: Let's do it!
+--- !u!114 &11404292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11404294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404292}
+--- !u!114 &11404296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404300}
+  m_text: What's in it for me?
+--- !u!114 &11404298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11404300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404298}
+--- !u!114 &11404302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404306}
+  m_text: I'm not a thief.
+--- !u!114 &11404304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11404306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404304}
+--- !u!114 &11404308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404290}
+  - {fileID: 11404296}
+  - {fileID: 11404302}
+--- !u!114 &11404310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404270}
+  - {fileID: 11404272}
+  - {fileID: 11404274}
+  - {fileID: 11404276}
+  - {fileID: 11404278}
+  - {fileID: 11404280}
+  - {fileID: 11404282}
+  - {fileID: 11404284}
+  - {fileID: 11404286}
+  - {fileID: 11404288}
+--- !u!114 &11404312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404360}
+  m_name: intro_whyA
+--- !u!114 &11404314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Your enthusiasm gives me hope for the future. Truly. You got a name?
+--- !u!114 &11404316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404358}
+--- !u!114 &11404318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404330}
+  m_text: I'm Arnold.
+--- !u!114 &11404320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_arnold
+  m_value: True
+  m_assignment: {fileID: 11404322}
+--- !u!114 &11404322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Arnie"'
+  m_assignment: {fileID: 11404326}
+--- !u!114 &11404326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404320}
+  - {fileID: 11404324}
+  - {fileID: 11404328}
+--- !u!114 &11404332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404342}
+  m_text: Felicia is the name.
+--- !u!114 &11404334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_felicia
+  m_value: True
+  m_assignment: {fileID: 11404336}
+--- !u!114 &11404336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Dolly"'
+  m_assignment: {fileID: 11404340}
+--- !u!114 &11404340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404334}
+  - {fileID: 11404338}
+--- !u!114 &11404344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404356}
+  m_text: Just call me Q.
+--- !u!114 &11404346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_q
+  m_value: True
+  m_assignment: {fileID: 11404348}
+--- !u!114 &11404348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Q"'
+  m_assignment: {fileID: 11404352}
+--- !u!114 &11404352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404346}
+  - {fileID: 11404350}
+  - {fileID: 11404354}
+--- !u!114 &11404358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404318}
+  - {fileID: 11404332}
+  - {fileID: 11404344}
+--- !u!114 &11404360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404314}
+  - {fileID: 11404316}
+--- !u!114 &11404362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404412}
+  m_name: intro_whyB
+--- !u!114 &11404364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: How does a chance to be part of something larger than life sound? Otherwise
+    I can arrange some kidney damage for you if that sounds more appealing.
+--- !u!114 &11404366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: What's your handle, kid?
+--- !u!114 &11404368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404410}
+--- !u!114 &11404370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404382}
+  m_text: I'm Arnold.
+--- !u!114 &11404372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_arnold
+  m_value: True
+  m_assignment: {fileID: 11404374}
+--- !u!114 &11404374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Arnie"'
+  m_assignment: {fileID: 11404378}
+--- !u!114 &11404378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404372}
+  - {fileID: 11404376}
+  - {fileID: 11404380}
+--- !u!114 &11404384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404394}
+  m_text: Felicia is the name.
+--- !u!114 &11404386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_felicia
+  m_value: True
+  m_assignment: {fileID: 11404388}
+--- !u!114 &11404388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Dolly"'
+  m_assignment: {fileID: 11404392}
+--- !u!114 &11404392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404386}
+  - {fileID: 11404390}
+--- !u!114 &11404396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404408}
+  m_text: Just call me Q.
+--- !u!114 &11404398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_q
+  m_value: True
+  m_assignment: {fileID: 11404400}
+--- !u!114 &11404400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Q"'
+  m_assignment: {fileID: 11404404}
+--- !u!114 &11404404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404398}
+  - {fileID: 11404402}
+  - {fileID: 11404406}
+--- !u!114 &11404410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404370}
+  - {fileID: 11404384}
+  - {fileID: 11404396}
+--- !u!114 &11404412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404364}
+  - {fileID: 11404366}
+  - {fileID: 11404368}
+--- !u!114 &11404414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404462}
+  m_name: intro_whyC
+--- !u!114 &11404416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You're either going to be a thief or a dead goody two-shoes. Think about
+    it? Yeah? That was a quick decision. What's your name?
+--- !u!114 &11404418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404460}
+--- !u!114 &11404420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404432}
+  m_text: I'm Arnold.
+--- !u!114 &11404422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_arnold
+  m_value: True
+  m_assignment: {fileID: 11404424}
+--- !u!114 &11404424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Arnie"'
+  m_assignment: {fileID: 11404428}
+--- !u!114 &11404428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404422}
+  - {fileID: 11404426}
+  - {fileID: 11404430}
+--- !u!114 &11404434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404444}
+  m_text: Felicia is the name.
+--- !u!114 &11404436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_felicia
+  m_value: True
+  m_assignment: {fileID: 11404438}
+--- !u!114 &11404438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Dolly"'
+  m_assignment: {fileID: 11404442}
+--- !u!114 &11404442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404436}
+  - {fileID: 11404440}
+--- !u!114 &11404446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404458}
+  m_text: Just call me Q.
+--- !u!114 &11404448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name_q
+  m_value: True
+  m_assignment: {fileID: 11404450}
+--- !u!114 &11404450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: name
+  m_value: '"Q"'
+  m_assignment: {fileID: 11404454}
+--- !u!114 &11404454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11404458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404448}
+  - {fileID: 11404452}
+  - {fileID: 11404456}
+--- !u!114 &11404460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404420}
+  - {fileID: 11404434}
+  - {fileID: 11404446}
+--- !u!114 &11404462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404416}
+  - {fileID: 11404418}
+--- !u!114 &11404464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404542}
+  m_name: intro_finish
+--- !u!114 &11404466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404480}
+  m_expression: {fileID: 11404468}
+--- !u!114 &11404468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404472}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404476}
+--- !u!114 &11404470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:OperatorEquals
+  m_symbol: ==
+--- !u!114 &11404472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:OperatorNoOp
+  m_symbol: 
+--- !u!114 &11404476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Arnold? I don't like the sound of that. Let's try, Arnie.
+--- !u!114 &11404480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404478}
+--- !u!114 &11404482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404492}
+  m_expression: {fileID: 11404484}
+--- !u!114 &11404484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404486}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404488}
+--- !u!114 &11404486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: That's fiesty. Felicia. But we can't have you running around with a name
+    like that. We'll call you Flo.
+--- !u!114 &11404492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404490}
+--- !u!114 &11404494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404504}
+  m_expression: {fileID: 11404496}
+--- !u!114 &11404496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404498}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404500}
+--- !u!114 &11404498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I see what you're getting at. And I like it. You've got it, Q.
+--- !u!114 &11404504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404502}
+--- !u!114 &11404506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But we've got to get this show on the road, %(name)s.
+--- !u!114 &11404508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The reason I had this project in the bag was because I had a guy on the
+    inside.
+--- !u!114 &11404510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Vincenzo. He's a good guy, but he has a couple of loose screws if you know
+    what I mean.
+--- !u!114 &11404512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Since our cover got blown, he's gonna take some heat for this. But he won't
+    rat.
+--- !u!114 &11404514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: There's nothing I hate more than a rat.
+--- !u!114 &11404516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Anyway, it's the two of us, and Vincenzo is sitting this one out. He might
+    be sitting this one out in the big house.
+--- !u!114 &11404518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We need a couple more hands on deck to make this happen.
+--- !u!114 &11404520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got 4 people in mind, but we really only need two of 'em. How's about
+    you help me figure out who we're going to take?
+--- !u!114 &11404522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404540}
+--- !u!114 &11404524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404532}
+  m_text: I think the two of us can handle it.
+--- !u!114 &11404526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: just_two
+  m_value: True
+  m_assignment: {fileID: 11404528}
+--- !u!114 &11404528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish2
+--- !u!114 &11404532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404526}
+  - {fileID: 11404530}
+--- !u!114 &11404534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404538}
+  m_text: Who do you know?
+--- !u!114 &11404536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish2
+--- !u!114 &11404538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404536}
+--- !u!114 &11404540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404524}
+  - {fileID: 11404534}
+--- !u!114 &11404542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404466}
+  - {fileID: 11404482}
+  - {fileID: 11404494}
+  - {fileID: 11404506}
+  - {fileID: 11404508}
+  - {fileID: 11404510}
+  - {fileID: 11404512}
+  - {fileID: 11404514}
+  - {fileID: 11404516}
+  - {fileID: 11404518}
+  - {fileID: 11404520}
+  - {fileID: 11404522}
+--- !u!114 &11404544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404600}
+  m_name: intro_finish2
+--- !u!114 &11404546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404556}
+  m_expression: {fileID: 11404548}
+--- !u!114 &11404548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404550}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404552}
+--- !u!114 &11404550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: just_two
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You've got spunk. But this is bigger than the two of us.
+--- !u!114 &11404556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404554}
+--- !u!114 &11404558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: These are four individuals that I've had the pleasure of working with in
+    the past to great success.
+--- !u!114 &11404560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But they ain't perfect. And not all of 'em get along, if you know what I
+    mean. Here's the breakdown.
+--- !u!114 &11404562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: First, we've got Olivia. Smoothest operator in the business. She can get
+    passwords, keys, you name it. Never can tell what her end game is.
+--- !u!114 &11404564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Next up is Paulie. He's hotheaded and only after cash. His musclehead look
+    may suggest otherwise, but damn if he can't outsmart a security system.
+--- !u!114 &11404566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: 'We can''t have Olivia and Paulie together: they do the same job. That''s
+    bad economics 101. Take notes, %(name)s.'
+--- !u!114 &11404568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Not to mention, we've got to pay off all our operatives since the painting
+    is going in the gallery. The less mouths to feed the better.
+--- !u!114 &11404570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Then there's Sal. Cold. That's what you feel, just looking at him. Eye contact
+    makes me shiver. He's a getaway driver with nerves of steel.
+--- !u!114 &11404572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Last and certainly not least, we've got Tempest. She's a hurricane that
+    takes the form of a dame. Drives a boosted import.
+--- !u!114 &11404574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: When it comes to drivers, it's really a matter of style. Let's start with
+    that. Do you want to leave a trail of flames or zip out like nothing happened?
+--- !u!114 &11404576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404598}
+--- !u!114 &11404578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404586}
+  m_text: Let's go with a cool and collected getaway - Sal.
+--- !u!114 &11404580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: sal
+  m_value: True
+  m_assignment: {fileID: 11404582}
+--- !u!114 &11404582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish3
+--- !u!114 &11404586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404580}
+  - {fileID: 11404584}
+--- !u!114 &11404588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404596}
+  m_text: Let's go out in style - Tempest.
+--- !u!114 &11404590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: tempest
+  m_value: True
+  m_assignment: {fileID: 11404592}
+--- !u!114 &11404592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_finish3
+--- !u!114 &11404596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404590}
+  - {fileID: 11404594}
+--- !u!114 &11404598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404578}
+  - {fileID: 11404588}
+--- !u!114 &11404600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404546}
+  - {fileID: 11404558}
+  - {fileID: 11404560}
+  - {fileID: 11404562}
+  - {fileID: 11404564}
+  - {fileID: 11404566}
+  - {fileID: 11404568}
+  - {fileID: 11404570}
+  - {fileID: 11404572}
+  - {fileID: 11404574}
+  - {fileID: 11404576}
+--- !u!114 &11404602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404662}
+  m_name: intro_finish3
+--- !u!114 &11404604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404614}
+  m_expression: {fileID: 11404606}
+--- !u!114 &11404606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404608}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404610}
+--- !u!114 &11404608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: sal
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Sal also happens to be about 70 years old. He was driving when they still
+    used horses.
+--- !u!114 &11404614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404612}
+--- !u!114 &11404616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404626}
+  m_expression: {fileID: 11404618}
+--- !u!114 &11404618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404620}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404622}
+--- !u!114 &11404620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: tempest
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: All right. I hope you know how to put a seat belt on.
+--- !u!114 &11404626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404624}
+--- !u!114 &11404628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We've got one more pick, and this is the big one. Who's going to be our
+    shaker?
+--- !u!114 &11404630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Olivia and Paulie come with their own challenges.
+--- !u!114 &11404632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Olivia is a master at getting information. But her smoothness scares me
+    sometimes. She could outcon me someday.
+--- !u!114 &11404634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Paulie has a brain as big as his biceps. His temper and tunnel vision for
+    cash have led to some close calls.
+--- !u!114 &11404636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: What does your heart say about this one, %(name)s?
+--- !u!114 &11404638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenu
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11404660}
+--- !u!114 &11404640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404648}
+  m_text: We need the subtlety - Olivia.
+--- !u!114 &11404642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: olivia
+  m_value: True
+  m_assignment: {fileID: 11404644}
+--- !u!114 &11404644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_end
+--- !u!114 &11404648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404642}
+  - {fileID: 11404646}
+--- !u!114 &11404650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyMenuChoice
+  m_type: 12
+  m_nestedBlocks:
+  - {fileID: 11404658}
+  m_text: Can't go wrong with brain and brawn - Paulie.
+--- !u!114 &11404652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyVariable
+  m_type: 21
+  m_nestedBlocks: []
+  m_varName: paulie
+  m_value: True
+  m_assignment: {fileID: 11404654}
+--- !u!114 &11404654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:NormalAssignment
+--- !u!114 &11404656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyJump
+  m_type: 8
+  m_nestedBlocks: []
+  m_target: intro_end
+--- !u!114 &11404658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404652}
+  - {fileID: 11404656}
+--- !u!114 &11404660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404640}
+  - {fileID: 11404650}
+--- !u!114 &11404662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404604}
+  - {fileID: 11404616}
+  - {fileID: 11404628}
+  - {fileID: 11404630}
+  - {fileID: 11404632}
+  - {fileID: 11404634}
+  - {fileID: 11404636}
+  - {fileID: 11404638}
+--- !u!114 &11404664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyLabel
+  m_type: 9
+  m_nestedBlocks:
+  - {fileID: 11404696}
+  m_name: intro_end
+--- !u!114 &11404666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404676}
+  m_expression: {fileID: 11404668}
+--- !u!114 &11404668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404670}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404672}
+--- !u!114 &11404670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: olivia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: She's a genius at getting information and getting people to what she wants
+    - for better or worse.
+--- !u!114 &11404676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404674}
+--- !u!114 &11404678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyIf
+  m_type: 5
+  m_nestedBlocks:
+  - {fileID: 11404688}
+  m_expression: {fileID: 11404680}
+--- !u!114 &11404680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404470}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11404682}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11404684}
+--- !u!114 &11404682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: paulie
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:Expression
+  m_op: {fileID: 11404474}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11404686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: If it comes down to it, I don't think I could take the guy in a scrap. We'll
+    have to keep him calm.
+--- !u!114 &11404688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404686}
+--- !u!114 &11404690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: So we've got a team.
+--- !u!114 &11404692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPySay
+  m_type: 17
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The next step is to get us all in the same place. There's no going back
+    after this, kid.
+--- !u!114 &11404694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyReturn
+  m_type: 16
+  m_nestedBlocks: []
+--- !u!114 &11404696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11404666}
+  - {fileID: 11404678}
+  - {fileID: 11404690}
+  - {fileID: 11404692}
+  - {fileID: 11404694}
+--- !u!114 &11404698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp:DPek.Raconteur.RenPy.Script:RenPyBlock
+  m_statements:
+  - {fileID: 11403966}
+  - {fileID: 11404042}
+  - {fileID: 11404076}
+  - {fileID: 11404110}
+  - {fileID: 11404142}
+  - {fileID: 11404182}
+  - {fileID: 11404228}
+  - {fileID: 11404268}
+  - {fileID: 11404312}
+  - {fileID: 11404362}
+  - {fileID: 11404414}
+  - {fileID: 11404464}
+  - {fileID: 11404544}
+  - {fileID: 11404602}
+  - {fileID: 11404664}
