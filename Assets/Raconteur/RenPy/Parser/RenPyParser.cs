@@ -188,6 +188,8 @@ namespace DPek.Raconteur.RenPy.Parser
 					return NewStatement<RenPyPause>(ref scanner);
 				case "play":
 					return NewStatement<RenPyPlay>(ref scanner);
+				case "queue":
+					return NewStatement<RenPyQueue>(ref scanner);
 				case "return":
 					return NewStatement<RenPyReturn>(ref scanner);
 				case "scene":

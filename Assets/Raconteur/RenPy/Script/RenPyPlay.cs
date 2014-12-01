@@ -49,6 +49,11 @@ namespace DPek.Raconteur.RenPy.Script
 			m_file = tokens.Seek("\"");
 			tokens.Next();
 
+			// Default clause values
+			m_loop = false;
+			m_fadeinTime = 0;
+			m_fadeoutTime = 0;
+
 			// Parse any recognized clauses
 			bool nothing = false;
 			while (!nothing) {
@@ -89,7 +94,7 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			// Get the audio file
 			if (!state.Data.HasAudioClip(m_file)) {
-				Debug.LogError("Could not file AudioClip \"" + m_file + "\"");
+				Debug.LogError("Could not find AudioClip \"" + m_file + "\"");
 				return;
 			}
 			AudioClip clip = state.Data.GetAudioClip(m_file);

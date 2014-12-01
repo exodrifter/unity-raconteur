@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.RenPy.State
 {
@@ -48,6 +49,9 @@ namespace DPek.Raconteur.RenPy.State
 			}
 			set {
 				m_audio = value;
+				m_audioChanged = true;
+				m_queueIndex = -1;
+				Queue = null;
 			}
 		}
 
@@ -93,11 +97,58 @@ namespace DPek.Raconteur.RenPy.State
 			}
 		}
 
+		/// <summary>
+		/// The queue for this audio channel.
+		/// </summary>
+		private List<AudioClip> m_queue;
+		public List<AudioClip> Queue
+		{
+			get {
+				return m_queue;
+			}
+			set {
+				m_queue = value != null ? value : new List<AudioClip>();
+				m_queueIndex = -1;
+			}
+		}
+
+		/// <summary>
+		/// The index of the current audio file in the queue.
+		/// </summary>
+		private int m_queueIndex;
+
+		/// <summary>
+		/// Whether or not the audio file has been changed.
+		/// </summary>
+		private bool m_audioChanged;
+
 		public AudioChannel()
 		{
 			m_audio = null;
+			m_audioChanged = false;
+			m_queueIndex = -1;
 			m_volume = 1;
 			m_looping = false;
+			m_queue = new List<AudioClip>();
+		}
+
+		public AudioClip NextClip() {
+			if(m_audioChanged) {
+				m_audioChanged = false;
+				return Audio;
+			}
+			if(Queue.Count > 0 && Queue.Count != m_queueIndex) {
+				m_queueIndex++;
+				if(m_queueIndex >= Queue.Count) {
+					if(Looping) {
+						m_queueIndex = 0;
+					} else {
+						return null;
+					}
+				}
+				return Queue[m_queueIndex];
+			}
+			return null;
 		}
 	}
 

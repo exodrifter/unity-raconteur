@@ -21,41 +21,33 @@ namespace DPek.Raconteur.RenPy.Display
 
 		void Update()
 		{
-			if (m_source == null)
-			{
-				return;
-			}
-
 			AudioChannel channel = m_state.Aural.GetChannel(m_channel);
-			if (channel == null)
-			{
+			if (channel == null) {
 				return;
 			}
 
-			if (!m_source.isPlaying) {
-				m_source.Play();
+			// Set source properties
+			m_source.mute = Static.MuteAudio;
+			m_source.volume = channel.Volume;
+			m_source.loop = false;
+
+			// Play the next audio clip if we stopped playing audio
+			if(!m_source.isPlaying) {
+				m_source.clip = channel.NextClip();
+				if(m_source.clip != null) {
+					m_source.Play();
+				}
 			}
 
-			m_source.mute = Static.MuteAudio;
-			m_source.loop = channel.Looping;
-			m_source.volume = channel.Volume;
-			m_source.clip = channel.Audio;
-
-			if (channel.Transition != null) {
+			// Check for transitions
+			// TODO: This is really hacky and won't work for small non-zero
+			// transition times. Fix transitions so they respect changes to the
+			// current audio clip and queue list.
+			while (channel.Transition != null) {
 				AudioChannelTransition t = channel.Transition;
 
-				// Check if the transition is finished
-				if (t.ElapsedTime >= t.TransitionTime) {
-					if (t.EndAudio != null) {
-						channel.Audio = t.EndAudio;
-					}
-					channel.Looping = t.Loop;
-					channel.Volume = t.FadeTo;
-					channel.Transition = t.NextTransition;
-				}
-
 				// Check if the transition has started yet
-				else if (t.ElapsedTime <= 0) {
+				if (t.ElapsedTime <= 0) {
 					if (t.EndAudio != null) {
 						channel.Audio = t.StartAudio;
 					}
@@ -64,10 +56,20 @@ namespace DPek.Raconteur.RenPy.Display
 				}
 
 				// Play the transition
-				else {
-					t.ElapsedTime += Time.deltaTime;
-					float ratio = t.ElapsedTime / t.TransitionTime;
-					channel.Volume = Mathf.Lerp(startVol, t.FadeTo, ratio);
+				t.ElapsedTime += Time.deltaTime;
+				float ratio = t.ElapsedTime / t.TransitionTime;
+				channel.Volume = Mathf.Lerp(startVol, t.FadeTo, ratio);
+				
+				// Check if the transition is finished
+				if (t.ElapsedTime >= t.TransitionTime) {
+					if (t.EndAudio != null) {
+						channel.Audio = t.EndAudio;
+					}
+					channel.Looping = t.Loop;
+					channel.Volume = t.FadeTo;
+					channel.Transition = t.NextTransition;
+				} else {
+					break;
 				}
 			}
 		}

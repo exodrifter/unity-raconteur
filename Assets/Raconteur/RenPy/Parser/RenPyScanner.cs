@@ -75,7 +75,7 @@ namespace DPek.Raconteur.RenPy.Parser
 				}
 				break;
 			}
-			return node.Value;
+			return node != null ? node.Value : null;
 		}
 
 		/// <summary>
