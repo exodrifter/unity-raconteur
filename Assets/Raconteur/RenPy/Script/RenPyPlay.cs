@@ -19,6 +19,8 @@ namespace DPek.Raconteur.RenPy.Script
 		[SerializeField]
 		private bool m_loop;
 		[SerializeField]
+		private bool m_ifChanged;
+		[SerializeField]
 		private float m_fadeinTime;
 		[SerializeField]
 		private float m_fadeoutTime;
@@ -53,6 +55,7 @@ namespace DPek.Raconteur.RenPy.Script
 			m_loop = false;
 			m_fadeinTime = 0;
 			m_fadeoutTime = 0;
+			m_ifChanged = false;
 
 			// Parse any recognized clauses
 			bool nothing = false;
@@ -68,6 +71,11 @@ namespace DPek.Raconteur.RenPy.Script
 						tokens.Seek("noloop");
 						tokens.Next();
 						m_loop = false;
+						break;
+					case "if_changed":
+						tokens.Seek("if_changed");
+						tokens.Next();
+						m_ifChanged = true;
 						break;
 					case "fadein":
 						tokens.Seek("fadein");
@@ -99,6 +107,12 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 			AudioClip clip = state.Data.GetAudioClip(m_file);
 
+			// Check if the audio file is the same
+			AudioChannel channel = state.Aural.GetChannel(m_channel);
+			if (m_ifChanged && channel.Clip == clip) {
+				return;
+			}
+
 			// Setup the transitions
 			var fadein = new AudioChannelTransition();
 			fadein.FadeTo = 1;
@@ -112,7 +126,6 @@ namespace DPek.Raconteur.RenPy.Script
 			fadeout.Loop = m_loop;
 			fadeout.NextTransition = fadein;
 
-			AudioChannel channel = state.Aural.GetChannel(m_channel);
 			channel.Transition = fadeout;
 		}
 

@@ -41,14 +41,14 @@ namespace DPek.Raconteur.RenPy.State
 		/// <summary>
 		/// The audio clip in this channel.
 		/// </summary>
-		private AudioClip m_audio;
-		public AudioClip Audio
+		private AudioClip m_clip;
+		public AudioClip Clip
 		{
 			get {
-				return m_audio;
+				return m_clip;
 			}
 			set {
-				m_audio = value;
+				m_clip = value;
 				m_audioChanged = true;
 				m_queueIndex = -1;
 				Queue = null;
@@ -124,7 +124,7 @@ namespace DPek.Raconteur.RenPy.State
 
 		public AudioChannel()
 		{
-			m_audio = null;
+			m_clip = null;
 			m_audioChanged = false;
 			m_queueIndex = -1;
 			m_volume = 1;
@@ -135,7 +135,7 @@ namespace DPek.Raconteur.RenPy.State
 		public AudioClip NextClip() {
 			if(m_audioChanged) {
 				m_audioChanged = false;
-				return Audio;
+				return Clip;
 			}
 			if(Queue.Count > 0 && Queue.Count != m_queueIndex) {
 				m_queueIndex++;

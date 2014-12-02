@@ -49,7 +49,7 @@ namespace DPek.Raconteur.RenPy.Display
 				// Check if the transition has started yet
 				if (t.ElapsedTime <= 0) {
 					if (t.EndAudio != null) {
-						channel.Audio = t.StartAudio;
+						channel.Clip = t.StartAudio;
 					}
 					t.ElapsedTime = 0;
 					startVol = m_source.volume;
@@ -63,7 +63,7 @@ namespace DPek.Raconteur.RenPy.Display
 				// Check if the transition is finished
 				if (t.ElapsedTime >= t.TransitionTime) {
 					if (t.EndAudio != null) {
-						channel.Audio = t.EndAudio;
+						channel.Clip = t.EndAudio;
 					}
 					channel.Looping = t.Loop;
 					channel.Volume = t.FadeTo;
