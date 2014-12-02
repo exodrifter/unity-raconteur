@@ -145,5 +145,31 @@ namespace DPek.Raconteur.RenPy.State
 			m_blockIndex = index.First;
 			m_statementIndex = index.Second - 1;
 		}
+
+		/// <summary>
+		/// Returns the previous statement.
+		/// </summary>
+		/// <returns>
+		/// The previous statement or null if there is no previous statement.
+		/// </returns>
+		public RenPyStatement GetPreviousStatement()
+		{
+			int blockIndex = m_blockIndex;
+			int index = m_statementIndex - 1;
+
+			// Check if we need to go to the previous block
+			if (index < 0) {
+				if (m_blockIndex > 0) {
+					blockIndex--;
+					index = m_blocks[blockIndex].StatementCount - 1;
+				}
+				else {
+					Reset();
+				}
+			}
+
+			var statement = m_blocks[blockIndex][index];
+			return statement;
+		}
 	}
 }

@@ -6,22 +6,23 @@ using DPek.Raconteur.RenPy.State;
 namespace DPek.Raconteur.RenPy.Script
 {
 	/// <summary>
-	/// Ren'Py if statement.
+	/// Ren'Py elif statement.
 	/// </summary>
-	public class RenPyIf : RenPyStatement
+	public class RenPyElif : RenPyStatement
 	{
 		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
-			get {
+			get
+			{
 				return m_expression;
 			}
 		}
 
 		/// <summary>
 		/// Whether or not last time this statement was executed that it
-		/// evaluated as true.
+		/// or some if statement before it evaluated as true.
 		/// </summary>
 		private bool m_wasSuccessful;
 		public bool WasSuccessful
@@ -32,14 +33,14 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyIf() : base(RenPyStatementType.IF)
+		public RenPyElif() : base(RenPyStatementType.ELIF)
 		{
 			m_wasSuccessful = false;
 		}
-		
+
 		public override void Parse(ref RenPyScanner tokens)
 		{
-			tokens.Seek("if");
+			tokens.Seek("elif");
 			tokens.Next();
 
 			// Get the expression
@@ -52,9 +53,28 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public override void Execute(RenPyState state)
 		{
+			// Check if evaluation is necessary
+			var prev = state.Execution.GetPreviousStatement() as RenPyIf;
+			if (prev == null) {
+				var elif = state.Execution.GetPreviousStatement() as RenPyElif;
+				if (elif == null) {
+					var msg = "elif expression has no preceding if statement";
+					UnityEngine.Debug.LogError(msg);
+					return;
+				}
+				else if (elif.WasSuccessful) {
+					m_wasSuccessful = true;
+					return;
+				}
+			}
+			else if (prev.WasSuccessful) {
+				m_wasSuccessful = true;
+				return;
+			}
+
 			// If evaluation succeeds, push back this block
 			if (m_expression.Evaluate(state).GetValue(state).AsString(state) == "True") {
-				string msg = "if " + m_expression + " evaluated to true";
+				string msg = "elif " + m_expression + " evaluated to true";
 				Static.Log(msg);
 
 				m_wasSuccessful = true;
@@ -62,7 +82,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 			// If evaluation fails, skip this block
 			else {
-				string msg = "if " + m_expression + " evaluated to false";
+				string msg = "elif " + m_expression + " evaluated to false";
 				Static.Log(msg);
 
 				m_wasSuccessful = false;
@@ -71,7 +91,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public override string ToDebugString()
 		{
-			string str = "if " + m_expression + ":";
+			string str = "elif " + m_expression + ":";
 			return str;
 		}
 	}

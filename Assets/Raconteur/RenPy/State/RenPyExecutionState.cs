@@ -155,5 +155,19 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			m_stack.Pop();
 		}
+
+		/// <summary>
+		/// Returns the previous statement.
+		/// </summary>
+		/// <returns>
+		/// The previous statement or null if there is no previous statement.
+		/// </returns>
+		public RenPyStatement GetPreviousStatement()
+		{
+			if (m_stack.Count > 0) {
+				return m_stack.Peek().GetPreviousStatement();
+			}
+			return null;
+		}
 	}
 }

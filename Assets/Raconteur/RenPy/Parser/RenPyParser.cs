@@ -168,6 +168,10 @@ namespace DPek.Raconteur.RenPy.Parser
 					return NewStatement<RenPyCall>(ref scanner);
 				case "define":
 					return NewStatement<RenPyCharacter>(ref scanner);
+				case "elif":
+					return NewStatement<RenPyElif>(ref scanner);
+				case "else":
+					return NewStatement<RenPyElse>(ref scanner);
 				case "hide":
 					return NewStatement<RenPyHide>(ref scanner);
 				case "if":
