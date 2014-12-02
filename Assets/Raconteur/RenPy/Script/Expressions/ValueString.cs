@@ -9,7 +9,6 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public ValueString(string str)
 		{
-			UnityEngine.Debug.Log("Creating string with \"" + str + "\"");
 			m_str = str;
 		}
 		
