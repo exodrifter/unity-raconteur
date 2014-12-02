@@ -27,14 +27,19 @@ namespace DPek.Raconteur.RenPy.Script
 				return m_renPyExpressionParser;
 			}
 			var parser = m_renPyExpressionParser = new ExpressionParser();
-			parser.SetupOperator(Get<OperatorPlus>("+"));
-			parser.SetupOperator(Get<OperatorMinus>("-"));
+			parser.SetupOperator(Get<OperatorAssignPlus>("+="));
+			parser.SetupOperator(Get<OperatorAssignMinus>("-="));
+			parser.SetupOperator(Get<OperatorAssignMultiply>("*="));
+			parser.SetupOperator(Get<OperatorAssignDivide>("/="));
 			parser.SetupOperator(Get<OperatorEquals>("=="));
 			parser.SetupOperator(Get<OperatorNotEquals>("!="));
-			parser.SetupOperator(Get<OperatorLessThan>("<"));
 			parser.SetupOperator(Get<OperatorLessThanOrEqual>("<="));
-			parser.SetupOperator(Get<OperatorGreaterThan>(">"));
 			parser.SetupOperator(Get<OperatorGreaterThanOrEqual>(">="));
+			parser.SetupOperator(Get<OperatorAssign>("="));
+			parser.SetupOperator(Get<OperatorPlus>("+"));
+			parser.SetupOperator(Get<OperatorMinus>("-"));
+			parser.SetupOperator(Get<OperatorLessThan>("<"));
+			parser.SetupOperator(Get<OperatorGreaterThan>(">"));
 
 			return m_renPyExpressionParser;
 		}

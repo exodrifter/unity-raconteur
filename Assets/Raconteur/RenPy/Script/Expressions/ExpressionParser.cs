@@ -92,6 +92,7 @@ namespace DPek.Raconteur.RenPy.Script
 					if(op.Symbol == token)
 					{
 						string[] left = GetRemainder(i-1, tokens);
+
 						Expression leftExp = ParseExpression(left);
 						Expression rightExp = ParseExpression(right.ToArray());
 

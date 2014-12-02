@@ -42,6 +42,7 @@ namespace DPek.Raconteur.RenPy.Script
 		
 		public override void SetValue(RenPyState state, Value value)
 		{
+			UnityEngine.Debug.Log("Setting " + m_variable + " to " + value.AsString(state));
 			state.SetVariable(m_variable, value.AsString(state));
 		}
 

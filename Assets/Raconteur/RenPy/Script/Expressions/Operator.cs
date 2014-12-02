@@ -50,13 +50,24 @@ namespace DPek.Raconteur.RenPy.Script
 			Value leftVal = null;
 			if(left is Expression) {
 				leftVal = (left as Expression).Evaluate(state);
-			} else if (left is string) {
-				if(Value.ParseNumber(left as string) != null) {
-					leftVal = new ValueNumber(left as string);
-				} else {
-					leftVal = new ValueVariable(left as string);
+			}
+			else if (left is string) {
+				var leftString = left as string;
+				if (Value.ParseNumber(leftString) != null) {
+					leftVal = new ValueNumber(leftString);
 				}
-			} else if(left != null) {
+				else if (leftString == "True" || leftString == "False") {
+					leftVal = new ValueString(leftString);
+				}
+				else if (leftString.StartsWith("\"")) {
+					var str = leftString.Substring(1, leftString.Length - 2);
+					leftVal = new ValueString(str);
+				}
+				else {
+					leftVal = new ValueVariable(leftString);
+				}
+			}
+			else if (left != null) {
 				string msg = "Parameter must be an expression or a value";
 				throw new ArgumentException(msg, "left");
 			}
@@ -64,13 +75,24 @@ namespace DPek.Raconteur.RenPy.Script
 			Value rightVal = null;
 			if(right is Expression) {
 				rightVal = (right as Expression).Evaluate(state);
-			} else if (right is string) {
-				if(Value.ParseNumber(right as string) != null) {
-					rightVal = new ValueNumber(right as string);
-				} else {
-					rightVal = new ValueVariable(right as string);
+			}
+			else if (right is string) {
+				var rightString = right as string;
+				if(Value.ParseNumber(rightString) != null) {
+					rightVal = new ValueNumber(rightString);
 				}
-			} else if(right != null) {
+				else if(rightString == "True" || rightString == "False") {
+					rightVal = new ValueString(rightString);
+				}
+				else if (rightString.StartsWith("\"")) {
+					var str = rightString.Substring(1, rightString.Length - 2);
+					rightVal = new ValueString(str);
+				}
+				else {
+					rightVal = new ValueVariable(rightString);
+				}
+			}
+			else if(right != null) {
 				string msg = "Parameter must be an expression or a value";
 				throw new ArgumentException(msg, "right");
 			}
