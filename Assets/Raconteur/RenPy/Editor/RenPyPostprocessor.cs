@@ -1,17 +1,25 @@
 ﻿#if UNITY_EDITOR
 
-using UnityEngine;
-using UnityEditor;
-using System.Collections.Generic;
-using System.IO;
-
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.Script;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using UnityEditor;
+using UnityEngine;
 
 namespace DPek.Raconteur.RenPy.Editor
 {
 	/// <summary>
-	/// Processes RenPy files.
+	/// Processes and parses Ren'Py .rpy files during the asset post process
+	/// phase.
+	/// 
+	/// Besides parsing .rpy files at import time, this class is also required
+	/// to access the .rpy files in the first place. This is because trying to
+	/// access the files with Unity's TextAsset class will require the files to
+	/// have an extension that is not .rpy. To get around this, this class
+	/// accesses the file in the post process phase and saves it as a custom
+	/// unity asset for later access.
 	/// </summary>
 	public class RenPyPostprocessor : AssetPostprocessor
 	{
@@ -20,12 +28,12 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// files.
 		/// </summary>
 		private static void OnPostprocessAllAssets(string[] importedAssets,
-		        string[] deletedAssets,
-		        string[] movedAssets,
-		        string[] movedFromPath)
+		                                           string[] deletedAssets,
+		                                           string[] movedAssets,
+		                                           string[] movedFromPath)
 		{
 			foreach (string assetPath in importedAssets) {
-				CreateRenPyAsset(GetRenPyFileHandle(assetPath));
+				CreateRenPyAsset(GetRenPyFileHandle(assetPath, true));
 			}
 
 			foreach (string assetPath in deletedAssets) {
@@ -33,7 +41,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			}
 
 			foreach (string assetPath in movedAssets) {
-				CreateRenPyAsset(GetRenPyFileHandle(assetPath));
+				CreateRenPyAsset(GetRenPyFileHandle(assetPath, true));
 			}
 
 			foreach (string assetPath in movedFromPath) {
@@ -54,7 +62,7 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// The RenPyFile for the passed asset path.
 		/// </returns>
 		private static RenPyFile GetRenPyFileHandle(string assetPath,
-		        bool getContents = true)
+		                                            bool getContents)
 		{
 			// Check if the file is a Ren'Py script
 			string filename = Path.GetFileNameWithoutExtension(assetPath);
@@ -74,7 +82,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			path += "script-" + foldername.ToLower() + ".asset";
 
 			// Get the file's contents
-			List<string> content = new List<string>();
+			var content = new List<string>();
 			if (getContents) {
 				StreamReader scanner = new StreamReader(assetPath);
 				while (scanner.Peek() > 0) {
@@ -91,7 +99,7 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// Creates a custom asset file with the passed RenPyFile.
 		/// </summary>
 		/// <param name="handle">
-		/// The RenPyFile asset to create
+		/// The RenPyFile asset to create.
 		/// </param>
 		private static void CreateRenPyAsset(RenPyFile handle)
 		{
@@ -99,8 +107,7 @@ namespace DPek.Raconteur.RenPy.Editor
 				return;
 			}
 
-			RenPyScriptAsset script;
-			script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
+			var script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
 			script.name = Path.GetFileNameWithoutExtension(handle.path);
 			script.Title = handle.name;
 			script.Blocks = Parser.RenPyParser.Parse(handle.lines);
@@ -161,6 +168,15 @@ namespace DPek.Raconteur.RenPy.Editor
 			AssetDatabase.SaveAssets();
 		}
 
+		/// <summary>
+		/// Serializes the RenPyBlocks and all of its children into an asset.
+		/// </summary>
+		/// <param name="blocks">
+		/// The blocks to save.
+		/// </param>
+		/// <param name="asset">
+		/// The asset to save the blocks in.
+		/// </param>
 		private static void SerializeChildren(List<RenPyBlock> blocks,
 		                                      ref Object asset)
 		{
@@ -168,28 +184,67 @@ namespace DPek.Raconteur.RenPy.Editor
 				return;
 			}
 
-			var flags = HideFlags.HideInHierarchy;
+			// Save each block
 			foreach (var block in blocks) {
+				block.hideFlags = HideFlags.HideInHierarchy;
+				AssetDatabase.AddObjectToAsset(block, asset);
+
+				// Save each statement in each block
 				foreach(var statement in block.Statements) {
-					statement.hideFlags = flags;
+					statement.hideFlags = HideFlags.HideInHierarchy;
 					AssetDatabase.AddObjectToAsset(statement, asset);
-					if(statement is RenPyVariable) {
-						var v = statement as RenPyVariable;
-						v.Operator.hideFlags = flags;
-						AssetDatabase.AddObjectToAsset(v.Operator, asset);
-					} else if(statement is RenPyIf) {
-						var v = statement as RenPyIf;
-						var e = v.Expression;
-						SaveExpression(ref e, ref asset);
-					} else if(statement is RenPyWhile) {
-						var v = statement as RenPyWhile;
-						var e = v.Expression;
-						SaveExpression(ref e, ref asset);
-					}
+
+					// Save each statement's children
+					SaveScriptableObjects(statement, ref asset);
 					SerializeChildren(statement.NestedBlocks, ref asset);
 				}
-				block.hideFlags = flags;
-				AssetDatabase.AddObjectToAsset(block, asset);
+			}
+		}
+
+		/// <summary>
+		/// Saves every public and non-public member of type ScriptableObject
+		/// in the object into the asset. If a ScriptableObject is found, its
+		/// members will also be checked for ScriptableObjects to save.
+		/// 
+		/// Note that this method will not save member variables that are not
+		/// ScriptableObjects but contain ScriptableObjects within them. For
+		/// example, a member variable of type List<ScriptableObject> will not
+		/// be saved.
+		/// </summary>
+		/// <param name="obj">
+		/// The object that should be checked for ScriptableObjects.
+		/// </param>
+		/// <param name="asset">
+		/// The asset to save the ScriptableObjects to.
+		/// </param>
+		private static void SaveScriptableObjects(object obj, ref Object asset)
+		{
+			if (obj == null) {
+				return;
+			}
+
+			var scriptableType = typeof(ScriptableObject);
+			var bindFlags = BindingFlags.FlattenHierarchy | BindingFlags.Public
+						  | BindingFlags.NonPublic | BindingFlags.Instance;
+			FieldInfo[] fields = obj.GetType().GetFields(bindFlags);
+
+			// Search the fields for a scriptable object
+			foreach (FieldInfo field in fields) {
+				if (scriptableType.IsAssignableFrom(field.FieldType)) {
+					Object child = field.GetValue(obj) as Object;
+					if (child == null) {
+						continue;
+					}
+
+					// Save the scriptable object
+					child.hideFlags = HideFlags.HideInHierarchy;
+					if (!AssetDatabase.Contains(child)) {
+						AssetDatabase.AddObjectToAsset(child, asset);
+					}
+
+					// Save this scriptable object's children
+					SaveScriptableObjects(child, ref asset);
+				}
 			}
 		}
 
@@ -203,26 +258,6 @@ namespace DPek.Raconteur.RenPy.Editor
 		{
 			if (handle != null) {
 				AssetDatabase.DeleteAsset(handle.path);
-			}
-		}
-
-		private static void SaveExpression(ref Expression expression, ref Object asset) {
-			var flags = HideFlags.HideInHierarchy;
-			expression.hideFlags = flags;
-			AssetDatabase.AddObjectToAsset(expression, asset);
-			expression.Operator.hideFlags = flags;
-			if(!AssetDatabase.Contains(expression.Operator))
-			{
-				AssetDatabase.AddObjectToAsset(expression.Operator, asset);
-			}
-
-			if(expression.Left is Expression) {
-				var e = expression.Left as Expression;
-				SaveExpression(ref e, ref asset);
-			}
-			if(expression.Right is Expression) {
-				var e = expression.Right as Expression;
-				SaveExpression(ref e, ref asset);
 			}
 		}
 	}
