@@ -17,8 +17,7 @@
 		private A m_first;
 		public A First
 		{
-			get
-			{
+			get {
 				return m_first;
 			}
 			set {
@@ -40,6 +39,15 @@
 			}
 		}
 
+		/// <summary>
+		/// Creates a new duple.
+		/// </summary>
+		/// <param name="first">
+		/// The first object to store
+		/// </param>
+		/// <param name="second">
+		/// The second object to store
+		/// </param>
 		public Duple(A first, B second)
 		{
 			m_first = first;
