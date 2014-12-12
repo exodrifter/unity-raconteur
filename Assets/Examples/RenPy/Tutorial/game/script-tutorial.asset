@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Tutorial
   Blocks:
-  - {fileID: 11406462}
-  - {fileID: 11406466}
+  - {fileID: 11407330}
+  - {fileID: 11407334}
   audioKeys:
   - theme.ogg
   audioValues:
@@ -55345,4 +55345,6713 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 17
+  m_nestedBlocks: []
+--- !u!114 &11407330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407332}
+--- !u!114 &11407332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8057eb4e29c5d0e4486bfbe1ccb000f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: r
+  m_name: R
+  m_color: {r: 1, g: .125, b: .125, a: 1}
+--- !u!114 &11407334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407336}
+  - {fileID: 11407452}
+  - {fileID: 11407486}
+  - {fileID: 11407520}
+  - {fileID: 11407552}
+  - {fileID: 11407592}
+  - {fileID: 11407638}
+  - {fileID: 11407678}
+  - {fileID: 11407722}
+  - {fileID: 11407796}
+  - {fileID: 11407872}
+  - {fileID: 11407946}
+  - {fileID: 11408028}
+  - {fileID: 11408094}
+  - {fileID: 11408164}
+--- !u!114 &11407336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407338}
+  m_name: start
+--- !u!114 &11407338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407340}
+  - {fileID: 11407352}
+  - {fileID: 11407360}
+  - {fileID: 11407368}
+  - {fileID: 11407376}
+  - {fileID: 11407384}
+  - {fileID: 11407392}
+  - {fileID: 11407400}
+  - {fileID: 11407408}
+  - {fileID: 11407416}
+  - {fileID: 11407418}
+  - {fileID: 11407420}
+  - {fileID: 11407422}
+  - {fileID: 11407424}
+  - {fileID: 11407426}
+  - {fileID: 11407428}
+  - {fileID: 11407430}
+--- !u!114 &11407340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407342}
+--- !u!114 &11407342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407346}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407350}
+--- !u!114 &11407344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52afd635c21a2a45b3a3ee634f8e60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_symbol: =
+--- !u!114 &11407346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a985d093c712240cdab999ffa7c6a528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_symbol: 
+--- !u!114 &11407350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407354}
+--- !u!114 &11407354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407356}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407358}
+--- !u!114 &11407356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407362}
+--- !u!114 &11407362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407364}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407366}
+--- !u!114 &11407364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407370}
+--- !u!114 &11407370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407372}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407374}
+--- !u!114 &11407372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"kid"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407378}
+--- !u!114 &11407378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407380}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407382}
+--- !u!114 &11407380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: just_two
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407386}
+--- !u!114 &11407386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407388}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407390}
+--- !u!114 &11407388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: olivia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407394}
+--- !u!114 &11407394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407396}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407398}
+--- !u!114 &11407396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: paulie
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407402}
+--- !u!114 &11407402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407404}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407406}
+--- !u!114 &11407404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: sal
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407410}
+--- !u!114 &11407410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407412}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407414}
+--- !u!114 &11407412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: tempest
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Oof! Huh?
+--- !u!114 &11407418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Damn it!
+--- !u!114 &11407420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Nevermind, it's not safe now. This operation is a bust. We've got to head
+    out of here.
+--- !u!114 &11407422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Okay, it looks like the coast is clear.
+--- !u!114 &11407424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was about to make a very clean swipe of the most famous painting in the
+    world before you messed up my timing.
+--- !u!114 &11407426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We'll have to try again. You owe me now, and people always pay me back.
+--- !u!114 &11407428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Walk and talk, kid. Let's keep moving.
+--- !u!114 &11407430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407432}
+--- !u!114 &11407432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407434}
+  - {fileID: 11407440}
+  - {fileID: 11407446}
+--- !u!114 &11407434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407436}
+  m_text: Who are you?
+--- !u!114 &11407436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407438}
+--- !u!114 &11407438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_who
+--- !u!114 &11407440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407442}
+  m_text: Where are we?
+--- !u!114 &11407442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407444}
+--- !u!114 &11407444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_where
+--- !u!114 &11407446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407448}
+  m_text: What's going on?
+--- !u!114 &11407448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407450}
+--- !u!114 &11407450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatA
+--- !u!114 &11407452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407454}
+  m_name: intro_where
+--- !u!114 &11407454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407456}
+  - {fileID: 11407458}
+  - {fileID: 11407460}
+  - {fileID: 11407462}
+  - {fileID: 11407464}
+  - {fileID: 11407466}
+  - {fileID: 11407468}
+  - {fileID: 11407470}
+--- !u!114 &11407456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Are you kidding me? This is New York! You need to eat your wheaties.
+--- !u!114 &11407458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The building where we met is a little place called the Museum of Modern
+    Art. Not exactly an easy place to forget.
+--- !u!114 &11407460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was having a real nice visit until you couldn't watch where you were going.
+--- !u!114 &11407462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Yeah, New York ain't without its problems. A few bad pizzerias. One too
+    many up and comers. There's the mob, gangs, and even children.
+--- !u!114 &11407464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Children terrify me.
+--- !u!114 &11407466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But if you can get past the kids, it's the perfect place for a professional
+    such as myself.
+--- !u!114 &11407468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Great food, lots of wealthy individuals, and, of course, art!
+--- !u!114 &11407470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407472}
+--- !u!114 &11407472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407474}
+  - {fileID: 11407480}
+--- !u!114 &11407474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407476}
+  m_text: So you're a criminal?
+--- !u!114 &11407476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407478}
+--- !u!114 &11407478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_who2
+--- !u!114 &11407480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407482}
+  m_text: How did I mess up your operation?
+--- !u!114 &11407482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407484}
+--- !u!114 &11407484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatA
+--- !u!114 &11407486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407488}
+  m_name: intro_where2
+--- !u!114 &11407488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407490}
+  - {fileID: 11407492}
+  - {fileID: 11407494}
+  - {fileID: 11407496}
+  - {fileID: 11407498}
+  - {fileID: 11407500}
+  - {fileID: 11407502}
+  - {fileID: 11407504}
+--- !u!114 &11407490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Are you kidding me? This is New York! You need to eat your wheaties.
+--- !u!114 &11407492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The building where we met is a little place called the Museum of Modern
+    Art. Not exactly an easy place to forget.
+--- !u!114 &11407494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was having a real nice visit until you couldn't watch where you were going.
+--- !u!114 &11407496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Yeah, New York ain't without its problems. A few bad pizzerias. One too
+    many up and comers. There's the mob, gangs, and even children.
+--- !u!114 &11407498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Children terrify me.
+--- !u!114 &11407500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But if you can get past the kids, it's the perfect place for a professional
+    such as myself.
+--- !u!114 &11407502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Great food, lots of wealthy individuals, and, of course, art!
+--- !u!114 &11407504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407506}
+--- !u!114 &11407506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407508}
+  - {fileID: 11407514}
+--- !u!114 &11407508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407510}
+  m_text: So are you some sort of thief?
+--- !u!114 &11407510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407512}
+--- !u!114 &11407512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_where2
+--- !u!114 &11407514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407516}
+  m_text: How did I mess up your operation?
+--- !u!114 &11407516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407518}
+--- !u!114 &11407518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatD
+--- !u!114 &11407520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407522}
+  m_name: intro_who
+--- !u!114 &11407522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407524}
+  - {fileID: 11407526}
+  - {fileID: 11407528}
+  - {fileID: 11407530}
+  - {fileID: 11407532}
+  - {fileID: 11407534}
+  - {fileID: 11407536}
+--- !u!114 &11407524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Who am I?
+--- !u!114 &11407526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Just call me R. I'm highly skilled in what you might call the delicate art
+    of theft.
+--- !u!114 &11407528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You may be asking why I'm so open about my skills as a moonlighting artisan.
+--- !u!114 &11407530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I know how to read people, and your eyes tell me everything I need to know
+    about you. You're not a cop.
+--- !u!114 &11407532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Do you hear that back there? Pigs are all over the museum at this point.
+--- !u!114 &11407534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Things were clockwork until you got in my way.
+--- !u!114 &11407536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407538}
+--- !u!114 &11407538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407540}
+  - {fileID: 11407546}
+--- !u!114 &11407540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407542}
+  m_text: So you're a criminal?
+--- !u!114 &11407542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407544}
+--- !u!114 &11407544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_who2
+--- !u!114 &11407546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407548}
+  m_text: What happened when I got in the way?
+--- !u!114 &11407548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407550}
+--- !u!114 &11407550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatB
+--- !u!114 &11407552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407554}
+  m_name: intro_who2
+--- !u!114 &11407554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407556}
+  - {fileID: 11407558}
+  - {fileID: 11407560}
+  - {fileID: 11407562}
+  - {fileID: 11407564}
+  - {fileID: 11407566}
+  - {fileID: 11407568}
+  - {fileID: 11407570}
+  - {fileID: 11407572}
+  - {fileID: 11407574}
+  - {fileID: 11407576}
+--- !u!114 &11407556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: If you play by the paltry rules of society, then sure, someone like me is
+    a criminal.
+--- !u!114 &11407558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I don't play those rules. I'm an artist. And my art is stealing.
+--- !u!114 &11407560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But I don't steal just anything. No, I steal art.
+--- !u!114 &11407562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Fine paintings and antiquities of yore. Bagging these relics are what I
+    live for.
+--- !u!114 &11407564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Of course, they also fetch a nice price with the right buyer. But money
+    isn't my goal.
+--- !u!114 &11407566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: When I've collected enough pieces, I'll open my own exclusory gallery.
+--- !u!114 &11407568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The greatest collection of art ever assembled. Only the ritziest upper crust
+    will know about it.
+--- !u!114 &11407570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Even the Louvre will feel like an elementary school art show in comparison.
+--- !u!114 &11407572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I'm gonna provide the ultimate, but before that we've got to make this heist
+    happen.
+--- !u!114 &11407574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The heist that was dialed in before you came out of nowhere.
+--- !u!114 &11407576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407578}
+--- !u!114 &11407578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407580}
+  - {fileID: 11407586}
+--- !u!114 &11407580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407582}
+  m_text: What is the heist?
+--- !u!114 &11407582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407584}
+--- !u!114 &11407584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatB
+--- !u!114 &11407586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407588}
+  m_text: How did I manage to mess up your operation?
+--- !u!114 &11407588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407590}
+--- !u!114 &11407590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whatC
+--- !u!114 &11407592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407594}
+  m_name: intro_whatA
+--- !u!114 &11407594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407596}
+  - {fileID: 11407598}
+  - {fileID: 11407600}
+  - {fileID: 11407602}
+  - {fileID: 11407604}
+  - {fileID: 11407606}
+  - {fileID: 11407608}
+  - {fileID: 11407610}
+  - {fileID: 11407612}
+  - {fileID: 11407614}
+  - {fileID: 11407616}
+--- !u!114 &11407596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You certainly cut to the quick, kid.
+--- !u!114 &11407598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I like that.
+--- !u!114 &11407600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You happened to interrupt me during a 5 second window to get past security
+    at the art museum and blew my heist.
+--- !u!114 &11407602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: So now you're going to help me make this heist happen.
+--- !u!114 &11407604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: It's the heist to end all heists.
+--- !u!114 &11407606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: My dream is to create the perfect art gallery. The ultimate experience,
+    only for the ritziest, most secretive upper crust.
+--- !u!114 &11407608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: And I'm looking for my crown jewel. A particular painting.
+--- !u!114 &11407610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11407612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11407614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in? You
+    don't have much of a choice, by the way.
+--- !u!114 &11407616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407618}
+--- !u!114 &11407618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407620}
+  - {fileID: 11407626}
+  - {fileID: 11407632}
+--- !u!114 &11407620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407622}
+  m_text: Let's do it!
+--- !u!114 &11407622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407624}
+--- !u!114 &11407624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11407626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407628}
+  m_text: What's in it for me?
+--- !u!114 &11407628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407630}
+--- !u!114 &11407630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11407632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407634}
+  m_text: I'm not a thief.
+--- !u!114 &11407634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407636}
+--- !u!114 &11407636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11407638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407640}
+  m_name: intro_whatB
+--- !u!114 &11407640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407642}
+  - {fileID: 11407644}
+  - {fileID: 11407646}
+  - {fileID: 11407648}
+  - {fileID: 11407650}
+  - {fileID: 11407652}
+  - {fileID: 11407654}
+  - {fileID: 11407656}
+--- !u!114 &11407642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You certainly cut to the quick, kid.
+--- !u!114 &11407644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I like that.
+--- !u!114 &11407646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: This is a heist to end all heists.
+--- !u!114 &11407648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got a business associate who will fund the rest of the logistics for
+    the gallery if I can pull this off.
+--- !u!114 &11407650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11407652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11407654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in?
+--- !u!114 &11407656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407658}
+--- !u!114 &11407658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407660}
+  - {fileID: 11407666}
+  - {fileID: 11407672}
+--- !u!114 &11407660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407662}
+  m_text: Let's do it!
+--- !u!114 &11407662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407664}
+--- !u!114 &11407664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11407666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407668}
+  m_text: What's in it for me?
+--- !u!114 &11407668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407670}
+--- !u!114 &11407670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11407672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407674}
+  m_text: I'm not a thief.
+--- !u!114 &11407674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407676}
+--- !u!114 &11407676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11407678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407680}
+  m_name: intro_whatC
+--- !u!114 &11407680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407682}
+  - {fileID: 11407684}
+  - {fileID: 11407686}
+  - {fileID: 11407688}
+  - {fileID: 11407690}
+  - {fileID: 11407692}
+  - {fileID: 11407694}
+  - {fileID: 11407696}
+  - {fileID: 11407698}
+  - {fileID: 11407700}
+--- !u!114 &11407682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got an inside man. Vincenzo.
+--- !u!114 &11407684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I had a 5 second window to get into the vault where the painting was being
+    conditioned.
+--- !u!114 &11407686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I was waltzing in, then you got in my way. I couldn't run past the guard
+    station without gathering some attention at that point.
+--- !u!114 &11407688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But it's fine. I didn't exactly have an escape plan figured out. And now
+    you're gonna help me see this through.
+--- !u!114 &11407690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: This is a heist to end all heists.
+--- !u!114 &11407692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got a business associate who will fund the rest of the logistics for
+    the gallery if I can pull this off.
+--- !u!114 &11407694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The painting is a work from of a buddy of mine, Vinny van Gogh. Starry Night.
+    Heard of it?
+--- !u!114 &11407696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Thought so. Well, I just lost my chance for a solo operation. I'll need
+    to get a team together.
+--- !u!114 &11407698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I could use a bright face like you as the decoy. Whaddya say? You in?
+--- !u!114 &11407700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407702}
+--- !u!114 &11407702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407704}
+  - {fileID: 11407710}
+  - {fileID: 11407716}
+--- !u!114 &11407704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407706}
+  m_text: Let's do it!
+--- !u!114 &11407706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407708}
+--- !u!114 &11407708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyA
+--- !u!114 &11407710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407712}
+  m_text: What's in it for me?
+--- !u!114 &11407712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407714}
+--- !u!114 &11407714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyB
+--- !u!114 &11407716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407718}
+  m_text: I'm not a thief.
+--- !u!114 &11407718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407720}
+--- !u!114 &11407720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_whyC
+--- !u!114 &11407722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407724}
+  m_name: intro_whyA
+--- !u!114 &11407724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407726}
+  - {fileID: 11407728}
+--- !u!114 &11407726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Your enthusiasm gives me hope for the future. Truly. You got a name?
+--- !u!114 &11407728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407730}
+--- !u!114 &11407730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407732}
+  - {fileID: 11407754}
+  - {fileID: 11407774}
+--- !u!114 &11407732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407734}
+  m_text: I'm Arnold.
+--- !u!114 &11407734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407736}
+  - {fileID: 11407744}
+  - {fileID: 11407752}
+--- !u!114 &11407736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407738}
+--- !u!114 &11407738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407740}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407742}
+--- !u!114 &11407740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407746}
+--- !u!114 &11407746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407748}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407750}
+--- !u!114 &11407748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Arnie"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407756}
+  m_text: Felicia is the name.
+--- !u!114 &11407756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407758}
+  - {fileID: 11407766}
+--- !u!114 &11407758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407760}
+--- !u!114 &11407760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407762}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407764}
+--- !u!114 &11407762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407768}
+--- !u!114 &11407768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407770}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407772}
+--- !u!114 &11407770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Dolly"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407776}
+  m_text: Just call me Q.
+--- !u!114 &11407776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407778}
+  - {fileID: 11407786}
+  - {fileID: 11407794}
+--- !u!114 &11407778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407780}
+--- !u!114 &11407780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407782}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407784}
+--- !u!114 &11407782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407788}
+--- !u!114 &11407788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407790}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407792}
+--- !u!114 &11407790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Q"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407798}
+  m_name: intro_whyB
+--- !u!114 &11407798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407800}
+  - {fileID: 11407802}
+  - {fileID: 11407804}
+--- !u!114 &11407800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: How does a chance to be part of something larger than life sound? Otherwise
+    I can arrange some kidney damage for you if that sounds more appealing.
+--- !u!114 &11407802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: What's your handle, kid?
+--- !u!114 &11407804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407806}
+--- !u!114 &11407806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407808}
+  - {fileID: 11407830}
+  - {fileID: 11407850}
+--- !u!114 &11407808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407810}
+  m_text: I'm Arnold.
+--- !u!114 &11407810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407812}
+  - {fileID: 11407820}
+  - {fileID: 11407828}
+--- !u!114 &11407812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407814}
+--- !u!114 &11407814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407816}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407818}
+--- !u!114 &11407816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407822}
+--- !u!114 &11407822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407824}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407826}
+--- !u!114 &11407824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Arnie"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407832}
+  m_text: Felicia is the name.
+--- !u!114 &11407832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407834}
+  - {fileID: 11407842}
+--- !u!114 &11407834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407836}
+--- !u!114 &11407836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407838}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407840}
+--- !u!114 &11407838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407844}
+--- !u!114 &11407844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407846}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407848}
+--- !u!114 &11407846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Dolly"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407852}
+  m_text: Just call me Q.
+--- !u!114 &11407852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407854}
+  - {fileID: 11407862}
+  - {fileID: 11407870}
+--- !u!114 &11407854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407856}
+--- !u!114 &11407856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407858}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407860}
+--- !u!114 &11407858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407864}
+--- !u!114 &11407864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407866}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407868}
+--- !u!114 &11407866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Q"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407874}
+  m_name: intro_whyC
+--- !u!114 &11407874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407876}
+  - {fileID: 11407878}
+--- !u!114 &11407876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You're either going to be a thief or a dead goody two-shoes. Think about
+    it? Yeah? That was a quick decision. What's your name?
+--- !u!114 &11407878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11407880}
+--- !u!114 &11407880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407882}
+  - {fileID: 11407904}
+  - {fileID: 11407924}
+--- !u!114 &11407882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407884}
+  m_text: I'm Arnold.
+--- !u!114 &11407884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407886}
+  - {fileID: 11407894}
+  - {fileID: 11407902}
+--- !u!114 &11407886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407888}
+--- !u!114 &11407888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407890}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407892}
+--- !u!114 &11407890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407896}
+--- !u!114 &11407896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407898}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407900}
+--- !u!114 &11407898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Arnie"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407906}
+  m_text: Felicia is the name.
+--- !u!114 &11407906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407908}
+  - {fileID: 11407916}
+--- !u!114 &11407908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407910}
+--- !u!114 &11407910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407912}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407914}
+--- !u!114 &11407912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407918}
+--- !u!114 &11407918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407920}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407922}
+--- !u!114 &11407920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Dolly"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11407926}
+  m_text: Just call me Q.
+--- !u!114 &11407926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407928}
+  - {fileID: 11407936}
+  - {fileID: 11407944}
+--- !u!114 &11407928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407930}
+--- !u!114 &11407930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407932}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407934}
+--- !u!114 &11407932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11407938}
+--- !u!114 &11407938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407940}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407942}
+--- !u!114 &11407940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: '"Q"'
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish
+--- !u!114 &11407946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11407948}
+  m_name: intro_finish
+--- !u!114 &11407948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407950}
+  - {fileID: 11407964}
+  - {fileID: 11407976}
+  - {fileID: 11407988}
+  - {fileID: 11407990}
+  - {fileID: 11407992}
+  - {fileID: 11407994}
+  - {fileID: 11407996}
+  - {fileID: 11407998}
+  - {fileID: 11408000}
+  - {fileID: 11408002}
+  - {fileID: 11408004}
+--- !u!114 &11407950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11407960}
+  m_expression: {fileID: 11407952}
+--- !u!114 &11407952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407956}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407958}
+--- !u!114 &11407954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0433fc3de4344801a846d1b778c6916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_symbol: ==
+--- !u!114 &11407956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_arnold
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407962}
+--- !u!114 &11407962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Arnold? I don't like the sound of that. Let's try, Arnie.
+--- !u!114 &11407964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11407972}
+  m_expression: {fileID: 11407966}
+--- !u!114 &11407966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407968}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407970}
+--- !u!114 &11407968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_felicia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407974}
+--- !u!114 &11407974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: That's fiesty. Felicia. But we can't have you running around with a name
+    like that. We'll call you Flo.
+--- !u!114 &11407976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11407984}
+  m_expression: {fileID: 11407978}
+--- !u!114 &11407978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11407980}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11407982}
+--- !u!114 &11407980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: name_q
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11407984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11407986}
+--- !u!114 &11407986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I see what you're getting at. And I like it. You've got it, Q.
+--- !u!114 &11407988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But we've got to get this show on the road, %(name)s.
+--- !u!114 &11407990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The reason I had this project in the bag was because I had a guy on the
+    inside.
+--- !u!114 &11407992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Vincenzo. He's a good guy, but he has a couple of loose screws if you know
+    what I mean.
+--- !u!114 &11407994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Since our cover got blown, he's gonna take some heat for this. But he won't
+    rat.
+--- !u!114 &11407996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: There's nothing I hate more than a rat.
+--- !u!114 &11407998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Anyway, it's the two of us, and Vincenzo is sitting this one out. He might
+    be sitting this one out in the big house.
+--- !u!114 &11408000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We need a couple more hands on deck to make this happen.
+--- !u!114 &11408002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: I've got 4 people in mind, but we really only need two of 'em. How's about
+    you help me figure out who we're going to take?
+--- !u!114 &11408004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11408006}
+--- !u!114 &11408006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408008}
+  - {fileID: 11408022}
+--- !u!114 &11408008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408010}
+  m_text: I think the two of us can handle it.
+--- !u!114 &11408010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408012}
+  - {fileID: 11408020}
+--- !u!114 &11408012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11408014}
+--- !u!114 &11408014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408016}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408018}
+--- !u!114 &11408016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: just_two
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish2
+--- !u!114 &11408022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408024}
+  m_text: Who do you know?
+--- !u!114 &11408024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408026}
+--- !u!114 &11408026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish2
+--- !u!114 &11408028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11408030}
+  m_name: intro_finish2
+--- !u!114 &11408030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408032}
+  - {fileID: 11408044}
+  - {fileID: 11408046}
+  - {fileID: 11408048}
+  - {fileID: 11408050}
+  - {fileID: 11408052}
+  - {fileID: 11408054}
+  - {fileID: 11408056}
+  - {fileID: 11408058}
+  - {fileID: 11408060}
+  - {fileID: 11408062}
+--- !u!114 &11408032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11408040}
+  m_expression: {fileID: 11408034}
+--- !u!114 &11408034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408036}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408038}
+--- !u!114 &11408036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: just_two
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408042}
+--- !u!114 &11408042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: You've got spunk. But this is bigger than the two of us.
+--- !u!114 &11408044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: These are four individuals that I've had the pleasure of working with in
+    the past to great success.
+--- !u!114 &11408046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: But they ain't perfect. And not all of 'em get along, if you know what I
+    mean. Here's the breakdown.
+--- !u!114 &11408048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: First, we've got Olivia. Smoothest operator in the business. She can get
+    passwords, keys, you name it. Never can tell what her end game is.
+--- !u!114 &11408050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Next up is Paulie. He's hotheaded and only after cash. His musclehead look
+    may suggest otherwise, but damn if he can't outsmart a security system.
+--- !u!114 &11408052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: 'We can''t have Olivia and Paulie together: they do the same job. That''s
+    bad economics 101. Take notes, %(name)s.'
+--- !u!114 &11408054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Not to mention, we've got to pay off all our operatives since the painting
+    is going in the gallery. The less mouths to feed the better.
+--- !u!114 &11408056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Then there's Sal. Cold. That's what you feel, just looking at him. Eye contact
+    makes me shiver. He's a getaway driver with nerves of steel.
+--- !u!114 &11408058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Last and certainly not least, we've got Tempest. She's a hurricane that
+    takes the form of a dame. Drives a boosted import.
+--- !u!114 &11408060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: When it comes to drivers, it's really a matter of style. Let's start with
+    that. Do you want to leave a trail of flames or zip out like nothing happened?
+--- !u!114 &11408062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11408064}
+--- !u!114 &11408064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408066}
+  - {fileID: 11408080}
+--- !u!114 &11408066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408068}
+  m_text: Let's go with a cool and collected getaway - Sal.
+--- !u!114 &11408068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408070}
+  - {fileID: 11408078}
+--- !u!114 &11408070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11408072}
+--- !u!114 &11408072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408074}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408076}
+--- !u!114 &11408074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: sal
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish3
+--- !u!114 &11408080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408082}
+  m_text: Let's go out in style - Tempest.
+--- !u!114 &11408082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408084}
+  - {fileID: 11408092}
+--- !u!114 &11408084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11408086}
+--- !u!114 &11408086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408088}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408090}
+--- !u!114 &11408088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: tempest
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_finish3
+--- !u!114 &11408094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11408096}
+  m_name: intro_finish3
+--- !u!114 &11408096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408098}
+  - {fileID: 11408110}
+  - {fileID: 11408122}
+  - {fileID: 11408124}
+  - {fileID: 11408126}
+  - {fileID: 11408128}
+  - {fileID: 11408130}
+  - {fileID: 11408132}
+--- !u!114 &11408098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11408106}
+  m_expression: {fileID: 11408100}
+--- !u!114 &11408100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408102}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408104}
+--- !u!114 &11408102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: sal
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408108}
+--- !u!114 &11408108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Sal also happens to be about 70 years old. He was driving when they still
+    used horses.
+--- !u!114 &11408110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11408118}
+  m_expression: {fileID: 11408112}
+--- !u!114 &11408112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408114}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408116}
+--- !u!114 &11408114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: tempest
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408120}
+--- !u!114 &11408120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: All right. I hope you know how to put a seat belt on.
+--- !u!114 &11408122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: We've got one more pick, and this is the big one. Who's going to be our
+    shaker?
+--- !u!114 &11408124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Olivia and Paulie come with their own challenges.
+--- !u!114 &11408126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Olivia is a master at getting information. But her smoothness scares me
+    sometimes. She could outcon me someday.
+--- !u!114 &11408128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: Paulie has a brain as big as his biceps. His temper and tunnel vision for
+    cash have led to some close calls.
+--- !u!114 &11408130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: What does your heart say about this one, %(name)s?
+--- !u!114 &11408132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11408134}
+--- !u!114 &11408134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408136}
+  - {fileID: 11408150}
+--- !u!114 &11408136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408138}
+  m_text: We need the subtlety - Olivia.
+--- !u!114 &11408138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408140}
+  - {fileID: 11408148}
+--- !u!114 &11408140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11408142}
+--- !u!114 &11408142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408144}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408146}
+--- !u!114 &11408144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: olivia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_end
+--- !u!114 &11408150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11408152}
+  m_text: Can't go wrong with brain and brawn - Paulie.
+--- !u!114 &11408152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408154}
+  - {fileID: 11408162}
+--- !u!114 &11408154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11408156}
+--- !u!114 &11408156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407344}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408158}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408160}
+--- !u!114 &11408158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: paulie
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_end
+--- !u!114 &11408164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11408166}
+  m_name: intro_end
+--- !u!114 &11408166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408168}
+  - {fileID: 11408180}
+  - {fileID: 11408192}
+  - {fileID: 11408194}
+  - {fileID: 11408196}
+--- !u!114 &11408168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11408176}
+  m_expression: {fileID: 11408170}
+--- !u!114 &11408170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408172}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408174}
+--- !u!114 &11408172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: olivia
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408178}
+--- !u!114 &11408178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: She's a genius at getting information and getting people to what she wants
+    - for better or worse.
+--- !u!114 &11408180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11408188}
+  m_expression: {fileID: 11408182}
+--- !u!114 &11408182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407954}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11408184}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11408186}
+--- !u!114 &11408184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: paulie
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11407348}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11408188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11408190}
+--- !u!114 &11408190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: If it comes down to it, I don't think I could take the guy in a scrap. We'll
+    have to keep him calm.
+--- !u!114 &11408192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: So we've got a team.
+--- !u!114 &11408194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: r
+  m_speakerIsVariable: 1
+  m_text: The next step is to get us all in the same place. There's no going back
+    after this, kid.
+--- !u!114 &11408196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2f7222555479f45afeabd6d8e665e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 19
   m_nestedBlocks: []

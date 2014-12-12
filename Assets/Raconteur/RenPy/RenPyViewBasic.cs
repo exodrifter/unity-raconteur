@@ -159,10 +159,29 @@ namespace DPek.Raconteur.RenPy
 						NextStatement();
 					}
 
-					// Render the speech
+					// Render the speaker
 					int y = Screen.height - 200;
 					int width = Screen.width - 100;
-					rect = new Rect(50, y, width, 100);
+					rect = new Rect(50, y, width, 200);
+					style.alignment = TextAnchor.UpperLeft;
+					string speaker = speech.Speaker;
+					if (speech.Speaker != null)
+					{
+						if (speech.SpeakerIsVariable) {
+							var ch = m_display.State.GetCharacter(speaker);
+							var oldColor = style.normal.textColor;
+							style.normal.textColor = ch.Color;
+							GUI.Label(rect, ch.Name, style);
+							style.normal.textColor = oldColor;
+						}
+						else {
+							GUI.Label(rect, speaker, style);
+						}
+					}
+
+					// Render the speech
+					style.alignment = TextAnchor.MiddleCenter;
+					rect = new Rect(50, y + 50, width, 100);
 					GUI.Label(rect, speech.Text, style);
 					break;
 
