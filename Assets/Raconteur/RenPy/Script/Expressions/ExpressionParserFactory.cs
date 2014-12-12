@@ -38,6 +38,8 @@ namespace DPek.Raconteur.RenPy.Script
 			parser.SetupOperator(Get<OperatorAssign>("="));
 			parser.SetupOperator(Get<OperatorPlus>("+"));
 			parser.SetupOperator(Get<OperatorMinus>("-"));
+			parser.SetupOperator(Get<OperatorMultiply>("*"));
+			parser.SetupOperator(Get<OperatorDivide>("/"));
 			parser.SetupOperator(Get<OperatorLessThan>("<"));
 			parser.SetupOperator(Get<OperatorGreaterThan>(">"));
 
