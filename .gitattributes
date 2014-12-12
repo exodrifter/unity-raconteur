@@ -2,6 +2,6 @@
 *.cs text
 *.js text
 *.shader text
-*.asset text eol=lf
+*.asset binary
 *.meta text eol=lf
 
