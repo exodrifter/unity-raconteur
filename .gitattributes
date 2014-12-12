@@ -2,6 +2,7 @@
 *.cs text
 *.js text
 *.shader text
-*.asset binary
+ProjectSettings/*.asset text eol=lf
+Assets/*.asset binary
 *.meta text eol=lf
 
