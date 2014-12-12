@@ -135,9 +135,24 @@ namespace DPek.Raconteur.RenPy
 				GUI.DrawTexture(pos, image.Texture, ScaleMode.ScaleToFit);
 			}
 
+			// Draw the window if needed
+			bool isSayStatement = mode == RenPyStatementType.SAY;
+			if (isSayStatement || m_display.State.Visual.WindowRequested) {
+				if (mode != RenPyStatementType.MENU) {
+					Texture2D texture = new Texture2D(1, 1);
+					texture.SetPixel(0, 0, new Color(0, 0, 0, 0.6f));
+					texture.Apply();
+					GUI.skin.box.normal.background = texture;
+					Rect dim = new Rect(50, Screen.height - 200,
+										Screen.width - 100, 200);
+					GUI.Box(dim, GUIContent.none);
+				}
+			}
+
 			// Draw text
 			switch (mode) {
 				case RenPyStatementType.SAY:
+					m_display.State.Visual.WindowRequested = false;
 					var speech = m_currentStatement as RenPySay;
 					if (speech == null) {
 						Debug.LogError("Type mismatch!");
@@ -145,7 +160,7 @@ namespace DPek.Raconteur.RenPy
 					}
 
 					// Render the speech
-					int y = Screen.height - 250;
+					int y = Screen.height - 200;
 					int width = Screen.width - 100;
 					rect = new Rect(50, y, width, 100);
 					GUI.Label(rect, speech.Text, style);

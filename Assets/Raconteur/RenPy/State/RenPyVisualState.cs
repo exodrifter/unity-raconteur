@@ -11,9 +11,29 @@ namespace DPek.Raconteur.RenPy.State
 	public class RenPyVisualState
 	{
 		/// <summary>
+		/// Whether or not the dialog window has been requested to be visible.
+		/// </summary>
+		private bool m_windowRequested;
+		public bool WindowRequested
+		{
+			get {
+				return m_windowRequested;
+			}
+			set {
+				m_windowRequested = value;
+			}
+		}
+
+		/// <summary>
 		/// The current background image or null if there is none.
 		/// </summary>
-		public RenPyImageData m_bgImage;
+		private RenPyImageData m_bgImage;
+		public RenPyImageData BgImage
+		{
+			get {
+				return m_bgImage;
+			}
+		}
 
 		/// <summary>
 		/// A list of images that should be visible as a result of show and hide
@@ -25,6 +45,7 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			m_images = new Dictionary<string, RenPyImageData>();
 			m_bgImage = null;
+			m_windowRequested = false;
 		}
 
 		/// <summary>
@@ -34,6 +55,7 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			m_images.Clear();
 			m_bgImage = null;
+			m_windowRequested = false;
 		}
 
 		/// <summary>
