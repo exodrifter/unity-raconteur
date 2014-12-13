@@ -193,7 +193,10 @@ namespace DPek.Raconteur.RenPy
 					}
 
 					// Display the choices
-					rect = new Rect(0, Screen.height - 130, Screen.width, 30);
+					int height = 30;
+					int numChoices = menu.GetChoices().Count;
+					int yPos = Mathf.Max(0, Screen.height/2 - numChoices*height);
+					rect = new Rect(0, yPos, Screen.width, height);
 					foreach (var choice in menu.GetChoices()) {
 
 						// Check if a choice was selected
@@ -202,7 +205,7 @@ namespace DPek.Raconteur.RenPy
 							NextStatement();
 						}
 
-						rect.y += 30;
+						rect.y += height;
 					}
 					break;
 			}
