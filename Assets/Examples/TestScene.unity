@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01846983878a06d4690fa28ff4c7f3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_renPyScript: {fileID: 0}
+  m_renPyScript: {fileID: 11400000, guid: 6adc7978a99934c0c9027533587cadda, type: 2}
   m_music: {fileID: 0}
   m_sound: {fileID: 0}
   m_voice: {fileID: 0}

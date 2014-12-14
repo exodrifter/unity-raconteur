@@ -46,6 +46,14 @@ namespace DPek.Raconteur.RenPy.Script
 			return m_renPyExpressionParser;
 		}
 
+		public static void DestroyUnusedExpressions()
+		{
+			if (m_renPyExpressionParser != null) {
+				m_renPyExpressionParser.Destroy();
+				m_renPyExpressionParser = null;
+			}
+		}
+
 		/// <summary>
 		/// Returns a new Operator with the specified symbol.
 		/// </summary>

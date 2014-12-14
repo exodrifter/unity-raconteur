@@ -161,6 +161,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			} else {
 				AssetDatabase.CreateAsset(script, handle.path);
 			}
+			ExpressionParserFactory.DestroyUnusedExpressions();
 			
 			// Serialize the parsed script
 			asset = AssetDatabase.LoadMainAssetAtPath(handle.path);

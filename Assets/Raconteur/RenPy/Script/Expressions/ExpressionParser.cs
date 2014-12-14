@@ -18,6 +18,11 @@ namespace DPek.Raconteur.RenPy.Script
 		private List<Operator> m_operators;
 
 		/// <summary>
+		/// A list of operators that this parser has not used.
+		/// </summary>
+		private List<Operator> m_unusedOperators;
+
+		/// <summary>
 		/// The tokenizer for this parser
 		/// </summary>
 		private Tokenizer m_tokenizer;
@@ -36,6 +41,7 @@ namespace DPek.Raconteur.RenPy.Script
 		public ExpressionParser()
 		{
 			m_operators = new List<Operator>();
+			m_unusedOperators = new List<Operator>();
 			m_tokenizer = new Tokenizer(true);
 			m_operatorNoOp = ScriptableObject.CreateInstance<OperatorNoOp>();
 		}
@@ -56,6 +62,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 			m_tokenizer.SetupToken(op.Symbol);
 			m_operators.Add(op);
+			m_unusedOperators.Add(op);
 		}
 
 		#endregion
@@ -64,7 +71,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public void Destroy()
 		{
-			foreach (Operator op in m_operators) {
+			foreach (Operator op in m_unusedOperators) {
 				ScriptableObject.DestroyImmediate(op, true);
 			}
 		}
@@ -102,6 +109,7 @@ namespace DPek.Raconteur.RenPy.Script
 				{
 					if(op.Symbol == token)
 					{
+						m_unusedOperators.Remove(op);
 						string[] left = GetRemainder(i-1, tokens);
 
 						Expression leftExp = ParseExpression(left);
