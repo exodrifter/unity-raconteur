@@ -113,6 +113,13 @@ namespace DPek.Raconteur.RenPy.Display
 		/// </summary>
 		public void StopDialog()
 		{
+			if (running) {
+				// Stop the audio
+				m_music.StopAudio();
+				m_sound.StopAudio();
+				m_voice.StopAudio();
+			}
+
 			running = false;
 		}
 

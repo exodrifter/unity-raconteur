@@ -23,6 +23,8 @@ namespace DPek.Raconteur.RenPy.Display
 		{
 			AudioChannel channel = m_state.Aural.GetChannel(m_channel);
 			if (channel == null) {
+				m_source.Stop();
+				m_source.mute = true;
 				return;
 			}
 
@@ -76,6 +78,22 @@ namespace DPek.Raconteur.RenPy.Display
 					break;
 				}
 			}
+		}
+
+		/// <summary>
+		/// Called by the display when execution of the script stops
+		/// </summary>
+		public void StopAudio()
+		{
+			AudioChannel channel = m_state.Aural.GetChannel(m_channel);
+			if (channel == null) {
+				return;
+			}
+
+			var transition = new AudioChannelTransition();
+			transition.FadeTo = 0;
+			transition.TransitionTime = 2;
+			channel.Transition = transition;
 		}
 	}
 }

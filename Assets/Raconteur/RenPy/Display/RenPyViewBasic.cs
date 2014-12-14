@@ -23,7 +23,8 @@ namespace DPek.Raconteur.RenPy
 
 		void Update()
 		{
-			if(!m_display.Running) {
+			if (!m_display.Running) {
+				m_display.StopDialog();
 				return;
 			}
 

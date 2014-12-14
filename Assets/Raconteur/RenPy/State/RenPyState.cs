@@ -88,6 +88,7 @@ namespace DPek.Raconteur.RenPy.State
 		{
 			m_executionState.Reset();
 			m_visualState.Reset();
+			m_auralState.Reset();
 
 			m_characters.Clear();
 			m_imageFilenames.Clear();

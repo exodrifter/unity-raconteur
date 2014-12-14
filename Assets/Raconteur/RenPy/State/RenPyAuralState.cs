@@ -12,10 +12,7 @@ namespace DPek.Raconteur.RenPy.State
 
 		public RenPyAuralState()
 		{
-			m_channels = new AudioChannel[7];
-			for (int i = 0; i < m_channels.Length; ++i) {
-				m_channels[i] = new AudioChannel();
-			}
+			Reset();
 		}
 
 		public AudioChannel GetChannel(int index)
@@ -33,6 +30,14 @@ namespace DPek.Raconteur.RenPy.State
 				return m_channels[1]; // TODO: What channel is voice?
 			}
 			return null;
+		}
+
+		public void Reset()
+		{
+			m_channels = new AudioChannel[7];
+			for (int i = 0; i < m_channels.Length; ++i) {
+				m_channels[i] = new AudioChannel();
+			}
 		}
 	}
 
