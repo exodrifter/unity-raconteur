@@ -38,7 +38,7 @@ namespace DPek.Raconteur.RenPy.Display
 		public bool Running
 		{
 			get {
-				return running && m_state.Execution.Running;
+				return running && m_state != null && m_state.Execution.Running;
 			}
 		}
 
@@ -60,6 +60,10 @@ namespace DPek.Raconteur.RenPy.Display
 		/// </summary>
 		public void Awake()
 		{
+			if (m_renPyScript == null) {
+				throw new System.Exception("Script property is not set!");
+			}
+
 			m_state = new RenPyState(ref m_renPyScript);
 
 			// Create the children gameobjects
@@ -104,8 +108,10 @@ namespace DPek.Raconteur.RenPy.Display
 			StopAllCoroutines();
 			running = true;
 
-			m_state.Reset();
-			m_state.Execution.NextStatement(m_state);
+			if (m_state != null) {
+				m_state.Reset();
+				m_state.Execution.NextStatement(m_state);
+			}
 		}
 
 		/// <summary>
