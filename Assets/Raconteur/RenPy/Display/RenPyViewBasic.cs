@@ -136,8 +136,8 @@ namespace DPek.Raconteur.RenPy
 				texture.SetPixel(0, 0, new Color(0, 0, 0, 0.6f));
 				texture.Apply();
 				GUI.skin.box.normal.background = texture;
-				Rect dim = new Rect(50, Screen.height - 200,
-									Screen.width - 100, 200);
+				var dim = new Rect(50, Screen.height - 200,
+				                   Screen.width - 100, 200);
 				GUI.Box(dim, GUIContent.none);
 			}
 
@@ -145,30 +145,17 @@ namespace DPek.Raconteur.RenPy
 			switch (m_display.GetCurrentStatement().Type) {
 				case RenPyStatementType.SAY:
 					var speech = m_display.GetCurrentStatement() as RenPySay;
-					if (speech == null) {
-						Debug.LogError("Type mismatch!");
-						m_display.NextStatement();
-					}
 
 					// Render the speaker
 					int y = Screen.height - 200;
 					int width = Screen.width - 100;
 					rect = new Rect(50, y, width, 200);
 					style.alignment = TextAnchor.UpperLeft;
-					string speaker = speech.Speaker;
-					if (speech.Speaker != null)
-					{
-						if (speech.SpeakerIsVariable) {
-							var ch = m_display.GetCharacter(speaker);
-							var oldColor = style.normal.textColor;
-							style.normal.textColor = ch.Color;
-							GUI.Label(rect, ch.Name, style);
-							style.normal.textColor = oldColor;
-						}
-						else {
-							GUI.Label(rect, speaker, style);
-						}
-					}
+					RenPyCharacterData speaker = m_display.GetSpeaker(speech);
+					var oldColor = style.normal.textColor;
+					style.normal.textColor = speaker.Color;
+					GUI.Label(rect, speaker.Name, style);
+					style.normal.textColor = oldColor;
 
 					// Render the speech
 					style.alignment = TextAnchor.MiddleCenter;
@@ -178,10 +165,6 @@ namespace DPek.Raconteur.RenPy
 
 				case RenPyStatementType.MENU:
 					var menu = m_display.GetCurrentStatement() as RenPyMenu;
-					if (menu == null) {
-						Debug.LogError("Type mismatch!");
-						m_display.NextStatement();
-					}
 
 					// Display the choices
 					int height = 30;

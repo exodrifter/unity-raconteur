@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Text.RegularExpressions;
 
+using DPek.Raconteur.RenPy.Display;
 using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
 
@@ -17,24 +18,12 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </summary>
 		[SerializeField]
 		private string m_speaker;
-		public string Speaker
-		{
-			get {
-				return m_speaker;
-			}
-		}
 
 		/// <summary>
 		/// Whether or not the speaker is a variable or a string.
 		/// </summary>
 		[SerializeField]
 		private bool m_speakerIsVariable;
-		public bool SpeakerIsVariable
-		{
-			get {
-				return m_speakerIsVariable;
-			}
-		}
 
 		/// <summary>
 		/// The text of what the character is saying
@@ -110,6 +99,17 @@ namespace DPek.Raconteur.RenPy.Script
 			// Go to the next line if we are skipping the dialog
 			if (Static.SkipDialog) {
 				state.Execution.NextStatement(state);
+			}
+		}
+
+		public RenPyCharacterData GetSpeaker(RenPyState state)
+		{
+			if (m_speakerIsVariable) {
+				RenPyCharacter ch = state.GetCharacter(m_speaker);
+				return new RenPyCharacterData(ch.Name, ch.Color);
+			}
+			else {
+				return new RenPyCharacterData(m_speaker, Color.white);
 			}
 		}
 

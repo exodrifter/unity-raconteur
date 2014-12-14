@@ -130,17 +130,17 @@ namespace DPek.Raconteur.RenPy.Display
 		#region State Wrapper Methods
 
 		/// <summary>
-		/// Gets the RenPyCharacter with the specified name.
+		/// Gets the speaker of the passed RenPySay statement.
 		/// </summary>
-		/// <param name="characterVarName">
-		/// The name of the RenPyCharacter.
+		/// <param name="statement">
+		/// The statement to get the speaker of.
 		/// </param>
 		/// <returns>
-		/// The RenPyCharacter with the specified name.
+		/// The RenPyCharacterData of the speaker.
 		/// </returns>
-		public RenPyCharacter GetCharacter(string characterVarName)
+		public RenPyCharacterData GetSpeaker(RenPySay statement)
 		{
-			return m_state.GetCharacter(characterVarName);
+			return statement.GetSpeaker(m_state);
 		}
 
 		#endregion
