@@ -58,6 +58,7 @@ namespace DPek.Raconteur.RenPy
 				default:
 					// Show nothing for this line, proceed to the next one.
 					m_display.NextStatement();
+					Update(); // Update immediately to prevent delay
 					break;
 			}
 		}
