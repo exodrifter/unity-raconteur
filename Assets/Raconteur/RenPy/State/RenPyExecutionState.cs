@@ -117,6 +117,11 @@ namespace DPek.Raconteur.RenPy.State
 
 			if (m_currentStatement != null) {
 				Static.Log(m_currentStatement.ToString());
+
+				var type = m_currentStatement.Type;
+				if (type == RenPyStatementType.SAY && Static.SkipDialog) {
+					state.Execution.NextStatement(state);
+				}
 			} else {
 				Static.Log("Execution state reached end of script");
 			}
@@ -142,9 +147,21 @@ namespace DPek.Raconteur.RenPy.State
 		/// </param>
 		public void GoToLabel(string label)
 		{
-			while(!m_stack.Peek().HasLabel(label)) {
-				m_stack.Pop();
+			if (m_stack.Count == 0) {
+				UnityEngine.Debug.LogError("There is no stack to search.");
+				return;
 			}
+
+			while (!m_stack.Peek().HasLabel(label)) {
+				m_stack.Pop();
+
+				if (m_stack.Count == 0) {
+					UnityEngine.Debug.LogError("Label " + label + " could not be "
+						+ "found.");
+					return;
+				}
+			}
+
 			m_stack.Peek().GoToLabel(label);
 		}
 		

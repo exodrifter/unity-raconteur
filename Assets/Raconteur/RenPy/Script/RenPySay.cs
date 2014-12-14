@@ -95,11 +95,6 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			// Stop requesting the dialog window
 			state.Visual.WindowRequested = false;
-
-			// Go to the next line if we are skipping the dialog
-			if (Static.SkipDialog) {
-				state.Execution.NextStatement(state);
-			}
 		}
 
 		public RenPyCharacterData GetSpeaker(RenPyState state)

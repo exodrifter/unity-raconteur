@@ -28,10 +28,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public override void Execute(RenPyState state)
 		{
-			Static.Log("jump " + m_target);
-
 			state.Execution.GoToLabel(m_target);
-			state.Execution.NextStatement(state);
 		}
 
 		public override string ToDebugString()
