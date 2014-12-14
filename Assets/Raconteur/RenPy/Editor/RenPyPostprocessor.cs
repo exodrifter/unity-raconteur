@@ -165,6 +165,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
 			SerializeChildren(script.Blocks, ref asset);
 
+			ScriptableObject.DestroyImmediate(script, true);
 			AssetDatabase.SaveAssets();
 		}
 

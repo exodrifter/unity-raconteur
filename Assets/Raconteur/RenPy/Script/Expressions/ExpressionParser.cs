@@ -60,6 +60,17 @@ namespace DPek.Raconteur.RenPy.Script
 
 		#endregion
 
+		#region Destruction
+
+		public void Destroy()
+		{
+			foreach (Operator op in m_operators) {
+				ScriptableObject.DestroyImmediate(op, true);
+			}
+		}
+
+		#endregion
+
 		#region Parsing
 
 		public Expression ParseExpression(string str)

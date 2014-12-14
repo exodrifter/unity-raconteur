@@ -32,6 +32,7 @@ namespace DPek.Raconteur.RenPy.Script
 
 			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
+			parser.Destroy();
 		}
 
 		public override void Execute(RenPyState state)

@@ -162,7 +162,8 @@ namespace DPek.Raconteur.RenPy.Parser
 				case "$":
 					return NewStatement<RenPyVariable>(ref scanner);
 				case "#":
-					NewStatement<RenPyComment>(ref scanner);
+					var statement = NewStatement<RenPyComment>(ref scanner);
+					ScriptableObject.DestroyImmediate(statement, true);
 					return null;
 				case "call":
 					return NewStatement<RenPyCall>(ref scanner);
