@@ -104,6 +104,9 @@ namespace DPek.Raconteur.RenPy.Script
 
 		public override void Execute(RenPyState state)
 		{
+			// Stop requesting the dialog window
+			state.Visual.WindowRequested = false;
+
 			// Go to the next line if we are skipping the dialog
 			if (Static.SkipDialog) {
 				state.Execution.NextStatement(state);

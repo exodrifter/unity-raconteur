@@ -77,11 +77,11 @@ namespace DPek.Raconteur.RenPy.Script
 			// Get the audio file
 			var clips = new List<AudioClip>();
 			foreach(string file in m_files) {
-				if (!state.Data.HasAudioClip(file)) {
+				if (!state.Script.HasAudioClip(file)) {
 					Debug.LogError("Could not find AudioClip \"" + file + "\"");
 					return;
 				}
-				var clip = state.Data.GetAudioClip(file);
+				var clip = state.Script.GetAudioClip(file);
 				clips.Add(clip);
 			}
 			

@@ -101,11 +101,11 @@ namespace DPek.Raconteur.RenPy.Script
 		public override void Execute(RenPyState state)
 		{
 			// Get the audio file
-			if (!state.Data.HasAudioClip(m_file)) {
+			if (!state.Script.HasAudioClip(m_file)) {
 				Debug.LogError("Could not find AudioClip \"" + m_file + "\"");
 				return;
 			}
-			AudioClip clip = state.Data.GetAudioClip(m_file);
+			AudioClip clip = state.Script.GetAudioClip(m_file);
 
 			// Check if the audio file is the same
 			AudioChannel channel = state.Aural.GetChannel(m_channel);

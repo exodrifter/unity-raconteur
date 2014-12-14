@@ -11,13 +11,13 @@ namespace DPek.Raconteur.RenPy.State
 	public class RenPyState
 	{
 		/// <summary>
-		/// Stores the data of the Ren'Py script.
+		/// The Ren'Py script to store state for.
 		/// </summary>
-		private RenPyScriptAsset m_data;
-		public RenPyScriptAsset Data
+		private RenPyScriptAsset m_script;
+		public RenPyScriptAsset Script
 		{
 			get {
-				return m_data;
+				return m_script;
 			}
 		}
 
@@ -64,10 +64,16 @@ namespace DPek.Raconteur.RenPy.State
 		/// </summary>
 		private Dictionary<string, string> m_imageFilenames;
 
-		public RenPyState(ref RenPyScriptAsset data)
+		/// <summary>
+		/// Creates a new RenPyState for the passed script.
+		/// </summary>
+		/// <param name="script">
+		/// The script to store state for.
+		/// </param>
+		public RenPyState(ref RenPyScriptAsset script)
 		{
-			m_data = data;
-			m_executionState = new RenPyExecutionState(ref data.Blocks);
+			m_script = script;
+			m_executionState = new RenPyExecutionState(ref script.Blocks);
 			m_visualState = new RenPyVisualState();
 			m_auralState = new RenPyAuralState();
 
@@ -75,6 +81,9 @@ namespace DPek.Raconteur.RenPy.State
 			m_imageFilenames = new Dictionary<string, string>();
 		}
 
+		/// <summary>
+		/// Resets the state.
+		/// </summary>
 		public void Reset()
 		{
 			m_executionState.Reset();
@@ -85,20 +94,6 @@ namespace DPek.Raconteur.RenPy.State
 		}
 
 		#region Getters and Setters
-
-		/// <summary>
-		/// Gets the RenPyCharacter with the specified name.
-		/// </summary>
-		/// <returns>
-		/// The RenPyCharacter with the specified name.
-		/// </returns>
-		/// <param name="characterVarName">
-		/// The name of the RenPyCharacter.
-		/// </param>
-		public RenPyCharacter GetCharacter(string characterVarName)
-		{
-			return m_characters[characterVarName];
-		}
 
 		/// <summary>
 		/// Adds a RenPyCharacter.
@@ -123,6 +118,20 @@ namespace DPek.Raconteur.RenPy.State
 		public void AddImageFilename(string imageName, string filename)
 		{
 			m_imageFilenames[imageName] = filename;
+		}
+
+		/// <summary>
+		/// Gets the RenPyCharacter with the specified name.
+		/// </summary>
+		/// <returns>
+		/// The RenPyCharacter with the specified name.
+		/// </returns>
+		/// <param name="characterVarName">
+		/// The name of the RenPyCharacter.
+		/// </param>
+		public RenPyCharacter GetCharacter(string characterVarName)
+		{
+			return m_characters[characterVarName];
 		}
 
 		/// <summary>
@@ -157,6 +166,12 @@ namespace DPek.Raconteur.RenPy.State
 		/// <summary>
 		/// Sets the specified variable to the specified value.
 		/// </summary>
+		/// <param name="name">
+		/// The name of the variable to set the value of.
+		/// </param>
+		/// <param name="value">
+		/// The value to the variable to.
+		/// </param>
 		public void SetVariable(string name, string value)
 		{
 			if (!Static.Vars.ContainsKey(name))

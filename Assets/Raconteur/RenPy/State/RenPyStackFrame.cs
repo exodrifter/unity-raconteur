@@ -102,6 +102,9 @@ namespace DPek.Raconteur.RenPy.State
 		public RenPyStatement NextStatement(RenPyState state)
 		{
 			++m_statementIndex;
+			if (m_blockIndex >= m_blocks.Count) {
+				return null;
+			}
 
 			// Check if we need to go to the next block
 			if (m_statementIndex >= m_blocks[m_blockIndex].StatementCount) {

@@ -60,7 +60,7 @@ namespace DPek.Raconteur.RenPy.Script
 		public override void Execute(RenPyState state)
 		{
 			string filename = state.GetImageFilename(m_imageName);
-			Texture2D tex = state.Data.GetImage(filename);
+			Texture2D tex = state.Script.GetImage(filename);
 			var image = new RenPyImageData(ref tex, m_alignment);
 
 			state.Visual.AddImage(m_imageName, ref image);

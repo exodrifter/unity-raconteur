@@ -45,7 +45,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 
 			string filename = state.GetImageFilename(m_imageName);
-			Texture2D tex = state.Data.GetImage(filename);
+			Texture2D tex = state.Script.GetImage(filename);
 			var image = new RenPyImageData(ref tex, RenPyAlignment.Center);
 
 			state.Visual.SetBackgroundImage(image);

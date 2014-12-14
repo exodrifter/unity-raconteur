@@ -28,6 +28,18 @@ namespace DPek.Raconteur.RenPy.State
 		private readonly Stack<RenPyStackFrame> m_stack;
 
 		/// <summary>
+		/// The statement that the execution state is currently pointing to.
+		/// </summary>
+		private RenPyStatement m_currentStatement;
+		public RenPyStatement CurrentStatement
+		{
+			get
+			{
+				return m_currentStatement;
+			}
+		}
+
+		/// <summary>
 		/// A boolean that indicates whether or not the execution has stack
 		/// frames.
 		/// </summary>
@@ -66,7 +78,8 @@ namespace DPek.Raconteur.RenPy.State
 		public RenPyStatement PreviousStatement()
 		{
 			if(m_stack.Count > 0) {
-				return m_stack.Peek().PreviousStatement();
+				m_currentStatement = m_stack.Peek().PreviousStatement();
+				return m_currentStatement;
 			}
 			return null;
 		}
@@ -82,13 +95,12 @@ namespace DPek.Raconteur.RenPy.State
 		/// </returns>
 		public RenPyStatement NextStatement(RenPyState state)
 		{
-			RenPyStatement statement = null;
 			if(m_stack.Count > 0) {
-				 statement = m_stack.Peek().NextStatement(state);
+				m_currentStatement = m_stack.Peek().NextStatement(state);
 			}
 
 			// If there are no more statements, dispose of that stack frame
-			while(statement == null) {
+			while (m_currentStatement == null) {
 				if(m_stack.Count > 0) {
 					m_stack.Pop();
 				} else {
@@ -97,18 +109,18 @@ namespace DPek.Raconteur.RenPy.State
 				
 				// Check if there are any more frames
 				if(m_stack.Count > 0) {
-					statement = m_stack.Peek().NextStatement(state);
+					m_currentStatement = m_stack.Peek().NextStatement(state);
 				} else {
 					break;
 				}
 			}
 
-			if(statement != null) {
-				Static.Log(statement.ToString());
+			if (m_currentStatement != null) {
+				Static.Log(m_currentStatement.ToString());
 			} else {
 				Static.Log("Execution state reached end of script");
 			}
-			return statement;
+			return m_currentStatement;
 		}
 
 		/// <summary>
@@ -117,9 +129,9 @@ namespace DPek.Raconteur.RenPy.State
 		public void Reset()
 		{
 			m_initialStackFrame.Reset();
-
 			m_stack.Clear();
 			m_stack.Push(m_initialStackFrame);
+			m_currentStatement = null;
 		}
 		
 		/// <summary>
