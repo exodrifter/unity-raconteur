@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Tutorial
   Blocks:
-  - {fileID: 11409200}
-  - {fileID: 11409210}
-  - {fileID: 11409218}
+  - {fileID: 11409404}
+  - {fileID: 11409414}
+  - {fileID: 11409422}
   audioKeys:
   - theme.ogg
   audioValues:
@@ -71362,6 +71362,1594 @@ MonoBehaviour:
   m_statements:
   - {fileID: 11409402}
 --- !u!114 &11409402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2f7222555479f45afeabd6d8e665e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 19
+  m_nestedBlocks: []
+--- !u!114 &11409404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409406}
+  - {fileID: 11409408}
+  - {fileID: 11409410}
+  - {fileID: 11409412}
+--- !u!114 &11409406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8057eb4e29c5d0e4486bfbe1ccb000f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: m
+  m_name: Me
+  m_color: {r: 1, g: .125, b: .125, a: 1}
+--- !u!114 &11409408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8057eb4e29c5d0e4486bfbe1ccb000f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: c
+  m_name: Cashier
+  m_color: {r: 1, g: .5625, b: 0, a: 1}
+--- !u!114 &11409410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8057eb4e29c5d0e4486bfbe1ccb000f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: b
+  m_name: Boss
+  m_color: {r: .3125, g: .5625, b: .375, a: 1}
+--- !u!114 &11409412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8057eb4e29c5d0e4486bfbe1ccb000f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 2
+  m_nestedBlocks: []
+  m_varName: o
+  m_name: Old Man
+  m_color: {r: .1875, g: .25, b: .5625, a: 1}
+--- !u!114 &11409414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409416}
+  - {fileID: 11409418}
+  - {fileID: 11409420}
+--- !u!114 &11409416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b007dbe967eb47a2047f06d85a441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 8
+  m_nestedBlocks: []
+  m_imageName: cafe
+  m_imageTag: bg
+  m_filename: cafe.png
+--- !u!114 &11409418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b007dbe967eb47a2047f06d85a441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 8
+  m_nestedBlocks: []
+  m_imageName: office
+  m_imageTag: bg
+  m_filename: office.jpg
+--- !u!114 &11409420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b007dbe967eb47a2047f06d85a441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 8
+  m_nestedBlocks: []
+  m_imageName: scenery
+  m_imageTag: bg
+  m_filename: scenery.jpg
+--- !u!114 &11409422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409424}
+  - {fileID: 11409484}
+  - {fileID: 11409496}
+  - {fileID: 11409516}
+  - {fileID: 11409544}
+  - {fileID: 11409584}
+  - {fileID: 11409602}
+--- !u!114 &11409424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409426}
+  m_name: start
+--- !u!114 &11409426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409428}
+  - {fileID: 11409430}
+  - {fileID: 11409442}
+  - {fileID: 11409444}
+  - {fileID: 11409446}
+  - {fileID: 11409448}
+  - {fileID: 11409450}
+  - {fileID: 11409452}
+  - {fileID: 11409454}
+  - {fileID: 11409456}
+  - {fileID: 11409458}
+  - {fileID: 11409460}
+  - {fileID: 11409462}
+  - {fileID: 11409464}
+  - {fileID: 11409466}
+  - {fileID: 11409468}
+--- !u!114 &11409428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7939d5e60779e8a4ca9d678ed1f3832e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 17
+  m_nestedBlocks: []
+  m_channel: music
+  m_file: theme.ogg
+  m_loop: 1
+  m_ifChanged: 0
+  m_fadeinTime: 0
+  m_fadeoutTime: 0
+--- !u!114 &11409430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11409432}
+--- !u!114 &11409432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409434}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11409436}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11409440}
+--- !u!114 &11409434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52afd635c21a2a45b3a3ee634f8e60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_symbol: =
+--- !u!114 &11409436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: curious
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a985d093c712240cdab999ffa7c6a528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_symbol: 
+--- !u!114 &11409440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: False
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: It's another brisk day, but winter is fading.
+--- !u!114 &11409446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: I walk into this cafe every morning, and every morning, he's here.
+--- !u!114 &11409448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: An older man with a leathery face. I wonder how old he actually is.
+--- !u!114 &11409450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: He's dressed neatly, but his eyes seem tired. Always reading.
+--- !u!114 &11409452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: I'm never here for long, just in for some coffee and out again.
+--- !u!114 &11409454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: There's always so much to do...
+--- !u!114 &11409456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: It's nicer out than it was yesterday.
+--- !u!114 &11409460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: He's here again, shouldn't be surprised.
+--- !u!114 &11409462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: The holidays are coming up soon. I wonder where his family is.
+--- !u!114 &11409464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: c
+  m_speakerIsVariable: 1
+  m_text: That'll be two bucks for the coffee sir.
+--- !u!114 &11409466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: Oh, I should pay more attention.
+--- !u!114 &11409468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11409470}
+--- !u!114 &11409470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409472}
+  - {fileID: 11409478}
+--- !u!114 &11409472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11409474}
+  m_text: Here you go.
+--- !u!114 &11409474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409476}
+--- !u!114 &11409476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_go
+--- !u!114 &11409478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11409480}
+  m_text: Here's the money. Do you know who that old man is?
+--- !u!114 &11409480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409482}
+--- !u!114 &11409482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_who
+--- !u!114 &11409484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409486}
+  m_name: intro_go
+--- !u!114 &11409486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409488}
+  - {fileID: 11409490}
+  - {fileID: 11409492}
+  - {fileID: 11409494}
+--- !u!114 &11409488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: c
+  m_speakerIsVariable: 1
+  m_text: Here's your coffe. You know that guy? You were staring at him pretty hard.
+--- !u!114 &11409492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: Oh, no I don't. Thanks.
+--- !u!114 &11409494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_pass
+--- !u!114 &11409496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409498}
+  m_name: intro_who
+--- !u!114 &11409498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409500}
+  - {fileID: 11409508}
+  - {fileID: 11409510}
+  - {fileID: 11409512}
+  - {fileID: 11409514}
+--- !u!114 &11409500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64955f7fffec0ec48863a449db85412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 24
+  m_nestedBlocks: []
+  m_expression: {fileID: 11409502}
+--- !u!114 &11409502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409434}
+  m_leftStr: 
+  m_leftExpression: {fileID: 11409504}
+  m_rightStr: 
+  m_rightExpression: {fileID: 11409506}
+--- !u!114 &11409504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: curious
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: True
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: c
+  m_speakerIsVariable: 1
+  m_text: Not sure really to be honest. He's here every day from open to close with
+    the same book.
+--- !u!114 &11409510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: c
+  m_speakerIsVariable: 1
+  m_text: You could go ask him yourself, you know.
+--- !u!114 &11409512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: Thanks.
+--- !u!114 &11409514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_pass
+--- !u!114 &11409516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409518}
+  m_name: intro_pass
+--- !u!114 &11409518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409520}
+  - {fileID: 11409522}
+  - {fileID: 11409524}
+  - {fileID: 11409526}
+  - {fileID: 11409528}
+--- !u!114 &11409520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: I wonder if I should go talk to him. Today isn't the best day though.
+--- !u!114 &11409524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: I'm up for a promotion and I shouldn't be late for work.
+--- !u!114 &11409526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: There he is, his eyes are motionless. I wonder...
+--- !u!114 &11409528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253cf6b7d5a004fbb5ca7dbe415ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 13
+  m_nestedBlocks:
+  - {fileID: 11409530}
+--- !u!114 &11409530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409532}
+  - {fileID: 11409538}
+--- !u!114 &11409532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11409534}
+  m_text: Talk to the old man.
+--- !u!114 &11409534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409536}
+--- !u!114 &11409536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_talk
+--- !u!114 &11409538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb24c7120dec446b9f28854a2d48b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 14
+  m_nestedBlocks:
+  - {fileID: 11409540}
+  m_text: Leave cafe and go to work.
+--- !u!114 &11409540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409542}
+--- !u!114 &11409542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: intro_work
+--- !u!114 &11409544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409546}
+  m_name: intro_talk
+--- !u!114 &11409546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409548}
+  - {fileID: 11409550}
+  - {fileID: 11409558}
+  - {fileID: 11409560}
+  - {fileID: 11409562}
+  - {fileID: 11409570}
+  - {fileID: 11409572}
+  - {fileID: 11409574}
+  - {fileID: 11409576}
+  - {fileID: 11409578}
+  - {fileID: 11409580}
+  - {fileID: 11409582}
+--- !u!114 &11409548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11409554}
+  m_expression: {fileID: 11409552}
+--- !u!114 &11409552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: curious
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409556}
+--- !u!114 &11409556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: 
+  m_speakerIsVariable: 0
+  m_text: My curiosity got the better of me
+--- !u!114 &11409558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07b310b9a8d7b2419b2f24fbec2e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 5
+  m_nestedBlocks: []
+--- !u!114 &11409560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9377261185699945966ab3d7706886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 7
+  m_nestedBlocks:
+  - {fileID: 11409566}
+  m_expression: {fileID: 11409564}
+--- !u!114 &11409564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653a2e18216b4cb1895bad52cc39186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_op: {fileID: 11409438}
+  m_leftStr: curious
+  m_leftExpression: {fileID: 0}
+  m_rightStr: 
+  m_rightExpression: {fileID: 0}
+--- !u!114 &11409566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409568}
+--- !u!114 &11409568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: 
+  m_speakerIsVariable: 0
+  m_text: Even though I was curious, I needed to get to work.
+--- !u!114 &11409570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07b310b9a8d7b2419b2f24fbec2e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 5
+  m_nestedBlocks: []
+--- !u!114 &11409572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg cafe
+--- !u!114 &11409574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: Now I own the company, and I still visit that cafe.
+--- !u!114 &11409576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: But I haven't seen the old man since that day.
+--- !u!114 &11409578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: And every day, I wonder what would have happened if I had talked to him.
+--- !u!114 &11409580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: 
+  m_speakerIsVariable: 0
+  m_text: .:. Bad Ending.
+--- !u!114 &11409582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: end
+--- !u!114 &11409584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409586}
+  m_name: good_ending
+--- !u!114 &11409586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409588}
+  - {fileID: 11409590}
+  - {fileID: 11409592}
+  - {fileID: 11409594}
+  - {fileID: 11409596}
+  - {fileID: 11409598}
+  - {fileID: 11409600}
+--- !u!114 &11409588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd546c113a12294d8efa97df6a81ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 21
+  m_nestedBlocks: []
+  m_imageName: bg scenery
+--- !u!114 &11409590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: So the Old Man, Roy, told me his story. He was a mountaineer, the first
+    to scale many peaks.
+--- !u!114 &11409592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: He never had a family growing up, and spent too much time on adventures
+    for one of his own.
+--- !u!114 &11409594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: Now he sits and remembers his life, while listening to the hustle and bustle
+    inside the cafe.
+--- !u!114 &11409596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: m
+  m_speakerIsVariable: 1
+  m_text: I've invited him to my house for a holiday dinner. Who knows what other
+    stories he has to tell.
+--- !u!114 &11409598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eee97cfc778f84cb10082e5c75e318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 20
+  m_nestedBlocks: []
+  m_speaker: 
+  m_speakerIsVariable: 0
+  m_text: .:. Good Ending.
+--- !u!114 &11409600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabaf3865c8127f46aaf3b587deeff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 10
+  m_nestedBlocks: []
+  m_target: end
+--- !u!114 &11409602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428d48f134c290418b65d79a101f315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 11
+  m_nestedBlocks:
+  - {fileID: 11409604}
+  m_name: end
+--- !u!114 &11409604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afd804eebd3714f90e3a1b3d91b714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_statements:
+  - {fileID: 11409606}
+  - {fileID: 11409608}
+--- !u!114 &11409606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d404841ca42599642b579e0bd3207038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 23
+  m_nestedBlocks: []
+  m_channel: music
+  m_fadeoutTime: 2
+--- !u!114 &11409608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

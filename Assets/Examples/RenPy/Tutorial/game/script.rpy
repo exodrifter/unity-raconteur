@@ -152,4 +152,5 @@ label good_ending:
 
 
 label end:
+    stop music fadeout 2
     return
