@@ -157,6 +157,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			RenPyScriptAsset outputScript = asset as RenPyScriptAsset;
 			if (outputScript != null) {
 				EditorUtility.CopySerialized(script, outputScript);
+				ScriptableObject.DestroyImmediate(script, true);
 			} else {
 				AssetDatabase.CreateAsset(script, handle.path);
 			}
@@ -165,7 +166,6 @@ namespace DPek.Raconteur.RenPy.Editor
 			asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
 			SerializeChildren(script.Blocks, ref asset);
 
-			ScriptableObject.DestroyImmediate(script, true);
 			AssetDatabase.SaveAssets();
 		}
 
