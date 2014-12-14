@@ -137,6 +137,8 @@ namespace DPek.Raconteur.RenPy.State
 				m_audioChanged = false;
 				return Clip;
 			}
+
+			// Loop through the queue
 			if(Queue.Count > 0 && Queue.Count != m_queueIndex) {
 				m_queueIndex++;
 				if(m_queueIndex >= Queue.Count) {

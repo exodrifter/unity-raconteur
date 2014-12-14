@@ -31,7 +31,11 @@ namespace DPek.Raconteur.RenPy.Display
 			m_source.volume = channel.Volume;
 			m_source.loop = false;
 
-			// Play the next audio clip if we stopped playing audio
+			// Loop the audio if the queue is empty and looping is requested
+			if (channel.Queue.Count == 0) {
+				m_source.loop = channel.Looping;
+			}
+			// Play the next audio clip in the queue if we stopped playing audio
 			if(!m_source.isPlaying) {
 				m_source.clip = channel.NextClip();
 				if(m_source.clip != null) {

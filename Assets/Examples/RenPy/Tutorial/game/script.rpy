@@ -22,7 +22,7 @@ define o = Character('Old Man', color='#349')
 label start:
 
     # Start the background music playing.
-    # play music "theme.ogg"
+    play music "theme.ogg" loop
 
     $ curious = False
     # This is a variable that will be used to remember player decisions later on.
