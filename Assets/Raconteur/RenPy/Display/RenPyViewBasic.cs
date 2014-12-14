@@ -133,13 +133,7 @@ namespace DPek.Raconteur.RenPy
 
 			// Draw the window if needed
 			if (m_display.ShouldDrawWindow()) {
-				Texture2D texture = new Texture2D(1, 1);
-				texture.SetPixel(0, 0, new Color(0, 0, 0, 0.6f));
-				texture.Apply();
-				GUI.skin.box.normal.background = texture;
-				var dim = new Rect(50, Screen.height - 200,
-				                   Screen.width - 100, 200);
-				GUI.Box(dim, GUIContent.none);
+				DrawBox(50, Screen.height - 200, Screen.width - 100, 200);
 			}
 
 			// Draw text
@@ -171,10 +165,11 @@ namespace DPek.Raconteur.RenPy
 					int height = 30;
 					int numChoices = menu.GetChoices().Count;
 					int yPos = Mathf.Max(0, Screen.height/2 - numChoices*height);
-					rect = new Rect(0, yPos, Screen.width, height);
+					rect = new Rect(100, yPos, Screen.width-200, height);
 					foreach (var choice in menu.GetChoices()) {
 
 						// Check if a choice was selected
+						DrawBox(100, rect.y + 5, rect.width, rect.height - 10);
 						if (GUI.Button(rect, choice, style)) {
 							m_display.PickChoice(menu, choice);
 							m_display.NextStatement();
@@ -195,6 +190,16 @@ namespace DPek.Raconteur.RenPy
 				m_display.NextStatement();
 				waiting = false;
 			}
+		}
+
+		private void DrawBox(float x, float y, float width, float height)
+		{
+			Rect rect = new Rect(x, y, width, height);
+			Texture2D texture = new Texture2D(1, 1);
+			texture.SetPixel(0, 0, new Color(0, 0, 0, 0.6f));
+			texture.Apply();
+			GUI.skin.box.normal.background = texture;
+			GUI.Box(rect, GUIContent.none);
 		}
 	}
 }
