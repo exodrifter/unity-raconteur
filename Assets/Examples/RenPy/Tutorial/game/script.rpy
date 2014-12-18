@@ -7,7 +7,7 @@
 # Execution starts at the start label.
 
 # Declare images used by this game.
-image bg cafe = "cafe.png"
+image bg cafe = "cafe.jpg"
 image bg office = "office.jpg"
 image bg scenery = "scenery.jpg"
 
@@ -16,13 +16,13 @@ image bg scenery = "scenery.jpg"
 define m = Character('Me', color='#f22')
 define c = Character('Cashier', color='#f90')
 define b = Character('Boss', color='#596')
-define o = Character('Old Man', color='#349')
+define o = Character('Old Man', color='#ff4')
 
 # The game starts here.
 label start:
 
     # Start the background music playing.
-    play music "theme.ogg" loop
+    # play music "theme.ogg" loop
 
     $ curious = False
     # This is a variable that will be used to remember player decisions later on.
@@ -97,8 +97,8 @@ label intro_talk:
     #with fade
 
     if curious:
-        "My curiosity got the better of me"
-    else
+        "My curiosity got the better of me."
+    else:
         "I could have asked the cashier, but I'd rather be direct."
 
     m "Hello. I've seen you every day since I started my new job."
@@ -119,7 +119,7 @@ label intro_work:
 
     if curious:
         "Even though I was curious, I needed to get to work."
-    else
+    else:
         "I'm sure the cashier would have known who this man was. I needed to get to work."
 
     m "And so I went to work instead."
