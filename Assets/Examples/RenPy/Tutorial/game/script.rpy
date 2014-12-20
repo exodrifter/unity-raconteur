@@ -54,9 +54,9 @@ label start:
 
     menu:
         "Here you go.":
-            jump intro_go
+            jump end
         "Here's the money. Do you know who that old man is?":
-            jump intro_who
+            jump end
 
 label intro_go:
     scene bg cafe
@@ -152,5 +152,5 @@ label good_ending:
 
 
 label end:
-    stop music fadeout 2
+    #stop music fadeout 2
     return
