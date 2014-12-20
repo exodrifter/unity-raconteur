@@ -12,7 +12,6 @@ namespace DPek.Raconteur.RenPy.Script
 	{
 		[SerializeField]
 		private Expression m_expression;
-		private Value m_return;
 		public Expression Expression
 		{
 			get {
