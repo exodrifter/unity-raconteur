@@ -86,7 +86,7 @@ namespace DPek.Raconteur
 		private static Texture deltext = Resources.LoadAssetAtPath(dtex, typeof(Texture)) as Texture;
 		
 		private static GUIContent content = new GUIContent();
-		private static GUIStyle style = new GUIStyle("Assets/Raconteur/borderless");
+		private static GUIStyle style;
 		
 		private static int juggle = 0;
 		private static int space = 18;
@@ -103,6 +103,8 @@ namespace DPek.Raconteur
 		
 		void OnGUI()
 		{
+			style = style ?? new GUIStyle("Assets/Raconteur/borderless");
+
 			bool oldDebug = m_debug;
 			bool oldSkip = m_skipDialog;
 			bool oldLines = m_debugLines;
