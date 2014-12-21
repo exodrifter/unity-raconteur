@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DPek.Raconteur.RenPy.Parser
+namespace DPek.Raconteur.Util.Parser
 {
 	/// <summary>
 	/// A class that can produce a sequence of tokens from a string that

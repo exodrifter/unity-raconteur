@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace DPek.Raconteur.RenPy.Parser
+namespace DPek.Raconteur.Util.Parser
 {
 	/// <summary>
-	/// A scanner for iterating through a list of strings or tokens.
+	/// A scanner for iterating through a list of tokens.
 	/// </summary>
-	public class RenPyScanner
+	public class Scanner
 	{
 		/// <summary>
 		/// The list of tokens.
@@ -23,7 +23,7 @@ namespace DPek.Raconteur.RenPy.Parser
 		/// <param name="tokens">
 		/// A reference to a list of tokens.
 		/// </param>
-		public RenPyScanner(ref LinkedList<string> tokens)
+		public Scanner(ref LinkedList<string> tokens)
 		{
 			this.m_tokens = tokens;
 			this.m_node = m_tokens.First;

@@ -4,6 +4,7 @@ using System.Linq;
 
 using DPek.Raconteur.RenPy.Script;
 using DPek.Raconteur.RenPy.State;
+using DPek.Raconteur.Util.Parser;
 
 namespace DPek.Raconteur.RenPy.Parser
 {
@@ -25,7 +26,7 @@ namespace DPek.Raconteur.RenPy.Parser
 				}
 				tokens.AddLast("\n");
 			}
-			var scanner = new RenPyScanner(ref tokens);
+			var scanner = new Scanner(ref tokens);
 
 			// Parse the statements
 			var statements = new List<RenPyStatement>();
@@ -156,7 +157,7 @@ namespace DPek.Raconteur.RenPy.Parser
 			return blocks;
 		}
 
-		private static RenPyStatement ParseStatement(ref RenPyScanner scanner)
+		private static RenPyStatement ParseStatement(ref Scanner scanner)
 		{
 			switch (scanner.Peek()) {
 				case "$":
@@ -216,7 +217,7 @@ namespace DPek.Raconteur.RenPy.Parser
 			}
 		}
 
-		public static RenPyStatement NewStatement<T>(ref RenPyScanner scanner)
+		public static RenPyStatement NewStatement<T>(ref Scanner scanner)
 			where T : RenPyStatement
 		{
 			var statement = ScriptableObject.CreateInstance<T>();

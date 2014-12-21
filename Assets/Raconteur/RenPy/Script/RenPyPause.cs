@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
+using DPek.Raconteur.Util.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -36,7 +36,7 @@ namespace DPek.Raconteur.RenPy.Script
 			// Nothing to do
 		}
 		
-		public override void Parse(ref RenPyScanner tokens)
+		public override void Parse(ref Scanner tokens)
 		{
 			tokens.Seek("pause");
 			tokens.Next();

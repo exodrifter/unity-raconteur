@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
-using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
+using DPek.Raconteur.Util.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {

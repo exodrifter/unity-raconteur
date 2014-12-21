@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.State;
+using DPek.Raconteur.Util.Parser;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -67,7 +67,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="scanner">
 		/// The scanner to use to initialize this statement.
 		/// </param>
-		public abstract void Parse(ref RenPyScanner scanner);
+		public abstract void Parse(ref Scanner scanner);
 
 		/// <summary>
 		/// Returns the statement as a debug string.

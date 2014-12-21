@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace DPek.Raconteur.RenPy.Parser
+﻿namespace DPek.Raconteur.Util.Parser
 {
 	/// <summary>
 	/// Represents the definition of a token.
