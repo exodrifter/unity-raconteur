@@ -1,3 +1,5 @@
+﻿using UnityEngine;
+
 ﻿using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
 
@@ -8,6 +10,15 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyReturn : RenPyStatement
 	{
+		[SerializeField]
+		private Expression m_expression;
+		public Expression Expression
+		{
+			get {
+				return m_expression;
+			}
+		}
+
 		public RenPyReturn() : base(RenPyStatementType.RETURN)
 		{
 			// Nothing to do
@@ -17,16 +28,31 @@ namespace DPek.Raconteur.RenPy.Script
 		{
 			tokens.Seek("return");
 			tokens.Next();
+
+			// If there is anything left after the return
+			if(tokens.Peek().Length > 0)
+			{
+				//string expressionString = tokens.Seek ("\n").Trim();
+				//tokens.Next();
+
+				// Parse the expression
+				//var parser = ExpressionParserFactory.GetRenPyParser ();
+				//m_expression = parser.ParseExpression (expressionString);
+			}
+
 		}
 
-		public override void Execute(RenPyState display)
+		//TODO Dynamically scope the _return variable for milestone 3
+		public override void Execute(RenPyState state)
 		{
-			display.Execution.PopStackFrame();
+			//Evaluate the optional expression and store in _return
+			//state.SetVariable ("_return", m_expression.Evaluate (state).ToString());
+			state.Execution.PopStackFrame();
 		}
 
 		public override string ToDebugString()
 		{
-			string str = "return";
+			string str = "return +" + m_expression;
 			return str;
 		}
 	}
