@@ -22,7 +22,7 @@ define o = Character('Old Man', color='#ff4')
 label start:
 
     # Start the background music playing.
-    # play music "theme.ogg" loop
+    play music "theme.ogg" loop
 
     $ curious = False
     # This is a variable that will be used to remember player decisions later on.
@@ -54,9 +54,9 @@ label start:
 
     menu:
         "Here you go.":
-            jump end
+            jump intro_go
         "Here's the money. Do you know who that old man is?":
-            jump end
+            jump intro_who
 
 label intro_go:
     scene bg cafe
@@ -152,5 +152,5 @@ label good_ending:
 
 
 label end:
-    #stop music fadeout 2
+    stop music fadeout 2
     return

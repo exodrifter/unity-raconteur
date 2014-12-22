@@ -12,6 +12,8 @@ namespace DPek.Raconteur.RenPy.Script
 	{
 		[SerializeField]
 		private Expression m_expression;
+		private string m_expressionString;
+		private bool m_optionalExpressionUsed;
 		public Expression Expression
 		{
 			get {
@@ -29,30 +31,33 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Seek("return");
 			tokens.Next();
 
-			// If there is anything left after the return
-			if(tokens.Peek().Length > 0)
+			// Check if there is anything after the return
+			if(tokens.HasNext())
 			{
-				//string expressionString = tokens.Seek ("\n").Trim();
-				//tokens.Next();
+				// Get the expression
+				m_expressionString = tokens.Seek ("\0").Trim();
+				tokens.Next();
 
 				// Parse the expression
-				//var parser = ExpressionParserFactory.GetRenPyParser ();
-				//m_expression = parser.ParseExpression (expressionString);
+				var parser = ExpressionParserFactory.GetRenPyParser ();
+				m_expression = parser.ParseExpression (m_expressionString);
+				m_optionalExpressionUsed = true;
 			}
 
 		}
 
-		//TODO Dynamically scope the _return variable for milestone 3
+		//TODO Dynamically scope the _return variable for Milestone 3
 		public override void Execute(RenPyState state)
 		{
 			//Evaluate the optional expression and store in _return
-			//state.SetVariable ("_return", m_expression.Evaluate (state).ToString());
+			if(m_optionalExpressionUsed)
+				state.SetVariable ("_return", m_expression.Evaluate (state).ToString());
 			state.Execution.PopStackFrame();
 		}
 
 		public override string ToDebugString()
 		{
-			string str = "return +" + m_expression;
+			string str = "return " + m_expressionString;
 			return str;
 		}
 	}
