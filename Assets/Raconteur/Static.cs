@@ -79,16 +79,15 @@ namespace DPek.Raconteur
 		private static string var_name = "";
 		private static string var_value = "";
 		
-		private static string atex = "Assets/Raconteur/add.png";
+		private static string atex = "Assets/Raconteur/Editor/add.png";
 		private static Texture addtext = Resources.LoadAssetAtPath(atex, typeof(Texture)) as Texture;
 		
-		private static string dtex = "Assets/Raconteur/delete.png";
+		private static string dtex = "Assets/Raconteur/Editor/delete.png";
 		private static Texture deltext = Resources.LoadAssetAtPath(dtex, typeof(Texture)) as Texture;
 		
 		private static GUIContent content = new GUIContent();
 		private static GUIStyle style;
-		
-		private static int juggle = 0;
+
 		private static int space = 18;
 		#endregion
 		
@@ -103,13 +102,15 @@ namespace DPek.Raconteur
 		
 		void OnGUI()
 		{
-			style = style ?? new GUIStyle("Assets/Raconteur/borderless");
+			style = style ?? new GUIStyle("Assets/Raconteur/Editor/borderless");
 
 			bool oldDebug = m_debug;
 			bool oldSkip = m_skipDialog;
 			bool oldLines = m_debugLines;
 			bool oldMuteAudio = m_muteAudio;
-			
+
+			int offset = 0;
+
 			m_debug = EditorGUILayout.BeginToggleGroup("Enable Debugging", m_debug);
 			m_skipDialog = EditorGUILayout.Toggle("Skip Dialog", m_skipDialog);
 			m_debugLines = EditorGUILayout.Toggle("Debug Lines", m_debugLines);
@@ -130,14 +131,17 @@ namespace DPek.Raconteur
 				EditorGUILayout.HelpBox(msg, MessageType.Info, true);
 			} else {
 				var keys = new List<string>(Vars.Keys);
-				foreach (string key in keys) {
+				for (int i = 0; i < keys.Count; i++) {
 					GUILayout.BeginHorizontal();
-					var temp = EditorGUILayout.TextField(key, Vars[key], GUILayout.Width(225));
-					Vars[key] = temp;
+					var temp_key = GUILayout.TextField(keys[i]);
+					var temp_val = GUILayout.TextField(Vars[keys[i]]);
+					Vars.Remove(keys[i]);
+					keys[i] = temp_key;
+					Vars[keys[i]] = temp_val;
 					if (GUILayout.Button (deltext, style, GUILayout.Width(space), GUILayout.Height(space))) {
-						juggle -= space;
-						Vars.Remove(key);
+						Vars.Remove(keys[i]);
 					}
+					offset += space;
 					GUILayout.EndHorizontal();
 				}
 			}
@@ -151,7 +155,6 @@ namespace DPek.Raconteur
 			// Begin add Button Code
 			content.image = addtext;
 			content.text = " Add Variable";
-			content.tooltip = "oh hai!";
 			
 			if (show_add_variable && GUILayout.Button(content, GUILayout.Width(100), GUILayout.Height(30))) {
 				new_variable_time = !new_variable_time;
@@ -159,7 +162,7 @@ namespace DPek.Raconteur
 			}
 			
 			if (new_variable_time) {
-				GUI.Box(new Rect(0, 117 + juggle, 300, 65), "");
+				//GUI.Box(new Rect(0, 140 + offset, 300, 65), "");
 				var_name = EditorGUILayout.TextField ("Key", var_name);
 				var_value = EditorGUILayout.TextField ("Value", var_value);
 				GUILayout.BeginHorizontal();
@@ -169,7 +172,6 @@ namespace DPek.Raconteur
 					new_variable_time = false;
 					var_name = "";
 					var_value = "";
-					juggle += space;
 				}
 				if (GUILayout.Button ("Cancel")) {
 					show_add_variable = true;
