@@ -102,7 +102,7 @@ namespace DPek.Raconteur
 		
 		void OnGUI()
 		{
-			style = style ?? new GUIStyle("Assets/Raconteur/Editor/borderless");
+			style = style ?? new GUIStyle();
 
 			bool oldDebug = m_debug;
 			bool oldSkip = m_skipDialog;
