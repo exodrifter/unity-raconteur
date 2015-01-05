@@ -1,0 +1,18 @@
+﻿:: Start [tag1 tag2]
+Your story will display this passage first. Edit it by double clicking it.
+
+[[Click here|Passage]]
+
+
+:: Passage
+Hello world!
+
+
+:: StoryTitle
+Untitled Story
+
+
+:: StoryAuthor
+Anonymous
+
+

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
+  m_Name: script-test
+  m_EditorClassIdentifier: 
+  lines:
+  - ':: Start [tag1 tag2]'
+  - Your story will display this passage first. Edit it by double clicking it.
+  - 
+  - '[[Click here|Passage]]'
+  - 
+  - 
+  - ':: Passage'
+  - Hello world!
+  - 
+  - 
+  - ':: StoryTitle'
+  - Untitled Story
+  - 
+  - 
+  - ':: StoryAuthor'
+  - Anonymous
+  - 
+  - 
