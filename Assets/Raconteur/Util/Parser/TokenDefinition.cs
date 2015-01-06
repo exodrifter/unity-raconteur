@@ -76,7 +76,9 @@
 		{
 			token = "";
 			for (int offset = 0; offset < m_sequence.Length; ++offset) {
-				if (m_sequence[offset] != chars[index + offset]) {
+				if (chars.Length <= index + offset
+					|| m_sequence[offset] != chars[index + offset])
+				{
 					token = null;
 					return false;
 				}
