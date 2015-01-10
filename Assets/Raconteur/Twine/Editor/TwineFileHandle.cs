@@ -10,12 +10,20 @@ namespace DPek.Raconteur.Twine.Editor
 		/// <summary>
 		/// The path to the location of the Twine script asset file.
 		/// </summary>
-		public readonly string assetPath;
+		private readonly string m_assetPath;
+		public string AssetPath
+		{
+			get { return m_assetPath; }
+		}
 
 		/// <summary>
 		/// The content of the Ren'Py script.
 		/// </summary>
-		public readonly string[] lines;
+		private readonly string m_content;
+		public string Content
+		{
+			get { return m_content; }
+		}
 
 		/// <summary>
 		/// Creates a new TwineFileHandle with the passed information.
@@ -24,18 +32,18 @@ namespace DPek.Raconteur.Twine.Editor
 		/// The name of the Twine script.
 		/// </param>
 		/// <param name="path">
-        /// The path to the Twine script.
+		/// The path to the Twine script.
 		/// </param>
 		/// <param name="folder">
-        /// The path to the folder containing the Twine script.
+		/// The path to the folder containing the Twine script.
 		/// </param>
-		/// <param name="lines">
-        /// The content of the Twine script.
+		/// <param name="content">
+		/// The content of the Twine script.
 		/// </param>
-		public TwineFileHandle(string assetPath, string[] lines)
+		public TwineFileHandle(string assetPath, string content)
 		{
-            this.assetPath = assetPath;
-			this.lines = lines;
+			this.m_assetPath = assetPath;
+			this.m_content = content;
 		}
 	}
 }

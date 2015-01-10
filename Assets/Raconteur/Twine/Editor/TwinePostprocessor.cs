@@ -69,17 +69,13 @@ namespace DPek.Raconteur.Twine.Editor
 			path += "script-" + filename.ToLower() + ".asset";
 
 			// Get the file's contents
-			var content = new List<string>();
+			string content = null;
 			if (getContents) {
 				StreamReader scanner = new StreamReader(assetPath);
-				while (scanner.Peek() > 0) {
-					string line = scanner.ReadLine();
-					content.Add(line);
-				}
+				content = scanner.ReadToEnd();
 			}
-			string[] lines = content.Count != 0 ? content.ToArray() : null;
 
-			return new TwineFileHandle(path, lines);
+			return new TwineFileHandle(path, content);
 		}
 
 		/// <summary>
@@ -96,16 +92,16 @@ namespace DPek.Raconteur.Twine.Editor
 
 			// Create the asset
 			var script = ScriptableObject.CreateInstance<TwineScriptAsset>();
-			script.lines = handle.lines;
+			script.content = handle.Content;
 
 			// Update the asset on disk
-			Object asset = AssetDatabase.LoadMainAssetAtPath(handle.assetPath);
+			Object asset = AssetDatabase.LoadMainAssetAtPath(handle.AssetPath);
 			TwineScriptAsset outputScript = asset as TwineScriptAsset;
 			if (outputScript != null) {
 				EditorUtility.CopySerialized(script, outputScript);
 				ScriptableObject.DestroyImmediate(script, true);
 			} else {
-				AssetDatabase.CreateAsset(script, handle.assetPath);
+				AssetDatabase.CreateAsset(script, handle.AssetPath);
 			}
 			AssetDatabase.SaveAssets();
 		}
@@ -119,7 +115,7 @@ namespace DPek.Raconteur.Twine.Editor
 		private static void RemoveAsset(TwineFileHandle handle)
 		{
 			if (handle != null) {
-				AssetDatabase.DeleteAsset(handle.assetPath);
+				AssetDatabase.DeleteAsset(handle.AssetPath);
 			}
 		}
 	}

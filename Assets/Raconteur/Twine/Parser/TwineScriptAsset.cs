@@ -11,6 +11,6 @@ namespace DPek.Raconteur.Twine.Parser
 	[System.Serializable]
 	public class TwineScriptAsset : ScriptableObject
 	{
-		public string[] lines;
+		public string content;
 	}
 }

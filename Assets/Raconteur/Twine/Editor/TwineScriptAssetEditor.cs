@@ -21,15 +21,13 @@ namespace DPek.Raconteur.RenPy.Editor
 			}
 
 			// If the asset is empty, display a help box
-			if (script.lines == null || script.lines.Length == 0) {
+			if (script.content == null || script.content.Length == 0) {
 				EditorGUILayout.HelpBox("Script is empty!", MessageType.Error);
 			}
 
 			// Otherwise, display the asset's contents
 			else {
-				for (int i = 0; i < script.lines.Length; i++) {
-					GUILayout.Label(script.lines[i]);
-				}
+				GUILayout.Label(script.content);
 			}
 		}
 	}

@@ -55,7 +55,7 @@ namespace DPek.Raconteur.Twine.Display
 			}
 
 			// Parse the script
-			m_story = TwineParser.Parse(m_twineScriptAsset.lines);
+			m_story = TwineParser.Parse(m_twineScriptAsset.content);
 			m_state = new TwineState(ref m_story);
 		}
 
@@ -79,12 +79,12 @@ namespace DPek.Raconteur.Twine.Display
 			running = false;
 		}
 
-		public string GetTitle()
+		public string GetStoryTitle()
 		{
 			return m_story.Title;
 		}
 
-		public string GetAuthor()
+		public string GetStoryAuthor()
 		{
 			return m_story.Author;
 		}

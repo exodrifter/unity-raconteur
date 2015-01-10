@@ -45,8 +45,8 @@ namespace DPek.Raconteur.Twine
 			style.richText = true;
 
 			GUILayout.BeginHorizontal();
-			GUILayout.Label(m_display.GetTitle(), style);
-			GUILayout.Label(m_display.GetAuthor(), style);
+			GUILayout.Label(m_display.GetStoryTitle(), style);
+			GUILayout.Label(m_display.GetStoryAuthor(), style);
 			GUILayout.EndHorizontal();
 
 			var areaPad = 25;

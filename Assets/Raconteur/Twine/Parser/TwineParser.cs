@@ -1,30 +1,38 @@
 ﻿using DPek.Raconteur.Twine.Script;
 using DPek.Raconteur.Util.Parser;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace DPek.Raconteur.Twine.Parser
 {
 	public class TwineParser
 	{
-		public static TwineStory Parse(string[] lines)
+		/// <summary>
+		/// Attempts to parse the passed lines as a TwineStory. Throws a
+		/// ParseException if parsing fails.
+		/// </summary>
+		/// <param name="content">
+		/// The string to parse
+		/// </param>
+		/// <returns>
+		/// The parsed TwineStory.
+		/// </returns>
+		public static TwineStory Parse(string content)
 		{
 			var story = new TwineStory();
 
+			// Prepare the tokenizer
 			var tokenizer = new Tokenizer(false);
 			string[] parseTokens;
-			parseTokens = "[[ ]] << >> | [ ] ( ) # \\\" \" ' , ; = + - * / \\ :: $".Split(' ');
+			parseTokens = "[[ ]] << >> // /% %/ | [ ] ( ) # \\\" \" ' , ; = + - * / \\ :: $".Split(' ');
 			tokenizer.SetupTokens(parseTokens);
 
 			// Create the scanner
 			var tokens = new LinkedList<string>();
-			for (int line = 0; line < lines.Length; line++)
+			string[] arr = tokenizer.Tokenize(ref content);
+			for (int i = 0; i < arr.Length; i++)
 			{
-				string[] arr = tokenizer.Tokenize(ref lines[line]);
-				for (int i = 0; i < arr.Length; i++)
-				{
-					tokens.AddLast(arr[i]);
-				}
-				tokens.AddLast("\n");
+				tokens.AddLast(arr[i]);
 			}
 			var scanner = new Scanner(ref tokens);
 
@@ -50,7 +58,46 @@ namespace DPek.Raconteur.Twine.Parser
 				}
 				else if (token == "<<")
 				{
-					scanner.Next(); // TODO: Parse
+					string type = scanner.PeekIgnore(new string[] {"<<", " "});
+					switch (type)
+					{
+						case "if":
+							throw new ParseException("if macro not supported");
+						case "else":
+							throw new ParseException("else macro not supported");
+						case "endif":
+							throw new ParseException("endif macro not supported");
+						case "set":
+							throw new ParseException("set macro not supported");
+						case "remember":
+							throw new ParseException("remember macro not supported");
+						case "print":
+							throw new ParseException("print macro not supported");
+						case "display":
+							throw new ParseException("display macro not supported");
+						case "actions":
+							throw new ParseException("actions macro not supported");
+						case "choice":
+							throw new ParseException("choice macro not supported");
+						case "nobr":
+							throw new ParseException("nobr macro not supported");
+						case "textinput":
+							throw new ParseException("textinput macro not supported");
+						case "radio":
+							throw new ParseException("radio macro not supported");
+						case "checkbox":
+							throw new ParseException("checkbox macro not supported");
+						case "button":
+							throw new ParseException("button macro not supported");
+						case "silently":
+							throw new ParseException("silently macro not supported");
+						case "back":
+							throw new ParseException("back macro not supported");
+						case "return":
+							throw new ParseException("return macro not supported");
+						default:
+							throw new ParseException("unrecognized macro \"" + type + "\"");
+					}
 				}
 				else
 				{
