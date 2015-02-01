@@ -9,20 +9,18 @@ namespace DPek.Raconteur.RenPy.Script
 	/// Represents an expression, which is an operator that can be evaluated and
 	/// two objects that are used as arguments.
 	/// </summary>
-	[System.Serializable]
-	public sealed class Expression : ScriptableObject
+	public sealed class Expression
 	{
 		/// <summary>
 		/// The operator for this expression.
 		/// </summary>
-		[SerializeField]
 		private Operator m_op;
 		public Operator Operator
 		{
 			get {
 				return m_op;
 			}
-			set {
+			private set {
 				m_op = value;
 			}
 		}
@@ -30,9 +28,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The left hand side of this expression.
 		/// </summary>
-		[SerializeField]
 		private string m_leftStr;
-		[SerializeField]
 		private Expression m_leftExpression;
 		public object Left
 		{
@@ -42,7 +38,7 @@ namespace DPek.Raconteur.RenPy.Script
 				}
 				return m_leftStr;
 			}
-			set {
+			private set {
 				if(value == null) {
 					m_leftStr = null;
 					m_leftExpression = null;
@@ -66,9 +62,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The right hand side of this expression.
 		/// </summary>
-		[SerializeField]
 		private string m_rightStr;
-		[SerializeField]
 		private Expression m_rightExpression;
 		public object Right
 		{
@@ -78,7 +72,7 @@ namespace DPek.Raconteur.RenPy.Script
 				}
 				return m_rightStr;
 			}
-			set {
+			private set {
 				if(value == null) {
 					m_rightStr = null;
 					m_rightExpression = null;
@@ -112,6 +106,13 @@ namespace DPek.Raconteur.RenPy.Script
 		public Value Evaluate(RenPyState state)
 		{
 			return m_op.Evaluate(state, Left, Right);
+		}
+
+		public Expression(Operator op, object left, object right)
+		{
+			m_op = op;
+			Left = left;
+			Right = right;
 		}
 
 		/// <summary>

@@ -72,8 +72,9 @@ namespace DPek.Raconteur.RenPy.State
 		/// </param>
 		public RenPyState(ref RenPyScriptAsset script)
 		{
+			var blocks = RenPyParser.Parse(script.Lines);
 			m_script = script;
-			m_executionState = new RenPyExecutionState(ref script.Blocks);
+			m_executionState = new RenPyExecutionState(ref blocks);
 			m_visualState = new RenPyVisualState();
 			m_auralState = new RenPyAuralState();
 

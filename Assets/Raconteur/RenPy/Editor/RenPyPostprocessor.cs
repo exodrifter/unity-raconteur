@@ -110,7 +110,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			var script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
 			script.name = Path.GetFileNameWithoutExtension(handle.path);
 			script.Title = handle.name;
-			script.Blocks = Parser.RenPyParser.Parse(handle.lines);
+			script.Lines = handle.lines;
 
 			// Construct the system path of the Ren'Py asset folder
 			string dataPath  = Application.dataPath;
@@ -161,93 +161,7 @@ namespace DPek.Raconteur.RenPy.Editor
 			} else {
 				AssetDatabase.CreateAsset(script, handle.path);
 			}
-			ExpressionParserFactory.DestroyUnusedExpressions();
-			
-			// Serialize the parsed script
-			asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
-			SerializeChildren(script.Blocks, ref asset);
-
 			AssetDatabase.SaveAssets();
-		}
-
-		/// <summary>
-		/// Serializes the RenPyBlocks and all of its children into an asset.
-		/// </summary>
-		/// <param name="blocks">
-		/// The blocks to save.
-		/// </param>
-		/// <param name="asset">
-		/// The asset to save the blocks in.
-		/// </param>
-		private static void SerializeChildren(List<RenPyBlock> blocks,
-		                                      ref Object asset)
-		{
-			if(blocks == null) {
-				return;
-			}
-
-			// Save each block
-			foreach (var block in blocks) {
-				block.hideFlags = HideFlags.HideInHierarchy;
-				AssetDatabase.AddObjectToAsset(block, asset);
-
-				// Save each statement in each block
-				foreach(var statement in block.Statements) {
-					statement.hideFlags = HideFlags.HideInHierarchy;
-					AssetDatabase.AddObjectToAsset(statement, asset);
-
-					// Save each statement's children
-					SaveScriptableObjects(statement, ref asset);
-					SerializeChildren(statement.NestedBlocks, ref asset);
-				}
-			}
-		}
-
-		/// <summary>
-		/// Saves every public and non-public member of type ScriptableObject
-		/// in the object into the asset. If a ScriptableObject is found, its
-		/// members will also be checked for ScriptableObjects to save.
-		/// 
-		/// Note that this method will not save member variables that are not
-		/// ScriptableObjects but contain ScriptableObjects within them. For
-		/// example, a member variable of type List<ScriptableObject> will not
-		/// be saved.
-		/// </summary>
-		/// <param name="obj">
-		/// The object that should be checked for ScriptableObjects.
-		/// </param>
-		/// <param name="asset">
-		/// The asset to save the ScriptableObjects to.
-		/// </param>
-		private static void SaveScriptableObjects(object obj, ref Object asset)
-		{
-			if (obj == null) {
-				return;
-			}
-
-			var scriptableType = typeof(ScriptableObject);
-			var bindFlags = BindingFlags.FlattenHierarchy | BindingFlags.Public
-						  | BindingFlags.NonPublic | BindingFlags.Instance;
-			FieldInfo[] fields = obj.GetType().GetFields(bindFlags);
-
-			// Search the fields for a scriptable object
-			foreach (FieldInfo field in fields) {
-				if (scriptableType.IsAssignableFrom(field.FieldType)) {
-					Object child = field.GetValue(obj) as Object;
-					if (child == null) {
-						continue;
-					}
-
-					// Save the scriptable object
-					child.hideFlags = HideFlags.HideInHierarchy;
-					if (!AssetDatabase.Contains(child)) {
-						AssetDatabase.AddObjectToAsset(child, asset);
-					}
-
-					// Save this scriptable object's children
-					SaveScriptableObjects(child, ref asset);
-				}
-			}
 		}
 
 		/// <summary>

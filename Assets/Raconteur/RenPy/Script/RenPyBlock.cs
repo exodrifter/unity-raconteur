@@ -7,31 +7,16 @@ namespace DPek.Raconteur.RenPy.Script
 	/// A RenPyBlock is a collection of statements that belong to a block of
 	/// code such as a label, an init block, an if statement, etc.
 	/// </summary>
-	[System.Serializable]
-	public class RenPyBlock : ScriptableObject
+	public class RenPyBlock
 	{
 		/// <summary>
 		/// A list of statements in this RenPyBlock.
 		/// </summary>
-		[SerializeField]
 		private List<RenPyStatement> m_statements;
 		public List<RenPyStatement> Statements
 		{
 			get {
 				return m_statements;
-			}
-			set {
-				m_statements = value;
-			}
-		}
-
-		/// <summary>
-		/// The number of statements in this RenPyBlock.
-		/// </summary>
-		public int StatementCount
-		{
-			get {
-				return m_statements.Count;
 			}
 		}
 
@@ -49,6 +34,17 @@ namespace DPek.Raconteur.RenPy.Script
 			get {
 				return m_statements[i];
 			}
+		}
+
+		/// <summary>
+		/// Creates a new RenPyBlock containing the passed statements.
+		/// </summary>
+		/// <param name="statements">
+		/// The statements to store in the RenPyBlock.
+		/// </param>
+		public RenPyBlock(List<RenPyStatement> statements)
+		{
+			m_statements = statements;
 		}
 
 		/// <summary>

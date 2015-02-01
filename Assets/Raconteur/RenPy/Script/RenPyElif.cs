@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyElif : RenPyStatement
 	{
-		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
@@ -33,12 +32,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyElif() : base(RenPyStatementType.ELIF)
-		{
-			m_wasSuccessful = false;
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyElif(ref Scanner tokens) : base(RenPyStatementType.ELIF)
 		{
 			tokens.Seek("elif");
 			tokens.Next();
@@ -49,6 +49,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
+
+			m_wasSuccessful = false;
 		}
 
 		public override void Execute(RenPyState state)

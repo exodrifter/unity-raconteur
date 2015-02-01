@@ -18,20 +18,9 @@ namespace DPek.Raconteur.RenPy.Script
 		private List<Operator> m_operators;
 
 		/// <summary>
-		/// A list of operators that this parser has not used.
-		/// </summary>
-		private List<Operator> m_unusedOperators;
-
-		/// <summary>
 		/// The tokenizer for this parser
 		/// </summary>
 		private Tokenizer m_tokenizer;
-
-		/// <summary>
-		/// The OperatorNoOp for use by the ExpressionParser. This is the only
-		/// default operator in an expression parser.
-		/// </summary>
-		private OperatorNoOp m_operatorNoOp;
 
 		/// <summary>
 		/// Creates a new ExpressionParser. The parser will not be ready for use
@@ -41,9 +30,7 @@ namespace DPek.Raconteur.RenPy.Script
 		public ExpressionParser()
 		{
 			m_operators = new List<Operator>();
-			m_unusedOperators = new List<Operator>();
 			m_tokenizer = new Tokenizer(true);
-			m_operatorNoOp = ScriptableObject.CreateInstance<OperatorNoOp>();
 		}
 
 		#region Setup
@@ -62,18 +49,6 @@ namespace DPek.Raconteur.RenPy.Script
 
 			m_tokenizer.SetupToken(op.Symbol);
 			m_operators.Add(op);
-			m_unusedOperators.Add(op);
-		}
-
-		#endregion
-
-		#region Destruction
-
-		public void Destroy()
-		{
-			foreach (Operator op in m_unusedOperators) {
-				ScriptableObject.DestroyImmediate(op, true);
-			}
 		}
 
 		#endregion
@@ -92,11 +67,7 @@ namespace DPek.Raconteur.RenPy.Script
 				throw new ArgumentException("Tokens may not be empty","tokens");
 			}
 			if(tokens.Length == 1) {
-				var expression = ScriptableObject.CreateInstance<Expression>();
-				expression.Operator = m_operatorNoOp;
-				expression.Left = tokens[0];
-				expression.Right = null;
-				return expression;
+				return new Expression(new OperatorNoOp(""), tokens[0], null);
 			}
 
 			var right = new List<string>();
@@ -109,17 +80,12 @@ namespace DPek.Raconteur.RenPy.Script
 				{
 					if(op.Symbol == token)
 					{
-						m_unusedOperators.Remove(op);
 						string[] left = GetRemainder(i-1, tokens);
 
 						Expression leftExp = ParseExpression(left);
 						Expression rightExp = ParseExpression(right.ToArray());
 
-						var expression = ScriptableObject.CreateInstance<Expression>();
-						expression.Operator = op;
-						expression.Right = rightExp;
-						expression.Left = leftExp;
-						return expression;
+						return new Expression(op, leftExp, rightExp);
 					}
 				}
 

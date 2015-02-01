@@ -9,6 +9,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorAssignMinus : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorAssignMinus(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Subtracts the value of the right hand argument from the left hand
 		/// argument, assigns that value to the left hand argument, and returns
 		/// the new value of the left hand argument.

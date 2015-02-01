@@ -10,10 +10,10 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyReturn : RenPyStatement
 	{
-		[SerializeField]
-		private Expression m_expression;
 		private string m_expressionString;
 		private bool m_optionalExpressionUsed;
+
+		private Expression m_expression;
 		public Expression Expression
 		{
 			get {
@@ -21,12 +21,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyReturn() : base(RenPyStatementType.RETURN)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyReturn(ref Scanner tokens) : base(RenPyStatementType.RETURN)
 		{
 			tokens.Seek("return");
 			tokens.Next();

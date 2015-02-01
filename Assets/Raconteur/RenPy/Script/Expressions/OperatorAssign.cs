@@ -9,6 +9,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorAssign : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorAssign(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Assigns the right hand argument to the left hand argument and
 		/// returns the new value of the left hand argument.
 		/// </summary>

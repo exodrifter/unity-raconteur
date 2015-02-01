@@ -8,14 +8,12 @@ namespace DPek.Raconteur.RenPy.Script
 	/// Represents an operator in an expression. An operator returns a result
 	/// based on the left and right hand sides of an expression.
 	/// </summary>
-	[System.Serializable]
-	public abstract class Operator : ScriptableObject
+	public abstract class Operator
 	{
 		/// <summary>
 		/// The symbol of the operator. This must be set for the operator to
 		/// work properly in the serializer.
 		/// </summary>
-		[SerializeField]
 		private string m_symbol;
 		public string Symbol
 		{
@@ -27,6 +25,17 @@ namespace DPek.Raconteur.RenPy.Script
 			{
 				m_symbol = value;
 			}
+		}
+
+		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public Operator(string symbol)
+		{
+			m_symbol = symbol;
 		}
 
 		/// <summary>

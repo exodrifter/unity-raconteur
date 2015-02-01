@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyIf : RenPyStatement
 	{
-		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
@@ -32,12 +31,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyIf() : base(RenPyStatementType.IF)
-		{
-			m_wasSuccessful = false;
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyIf(ref Scanner tokens) : base(RenPyStatementType.IF)
 		{
 			tokens.Seek("if");
 			tokens.Next();
@@ -48,6 +48,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
+
+			m_wasSuccessful = false;
 		}
 
 		public override void Execute(RenPyState state)

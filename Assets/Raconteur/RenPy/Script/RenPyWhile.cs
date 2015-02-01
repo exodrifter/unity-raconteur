@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyWhile : RenPyStatement
 	{
-		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
@@ -18,13 +17,14 @@ namespace DPek.Raconteur.RenPy.Script
 				return m_expression;
 			}
 		}
-		
-		public RenPyWhile() : base(RenPyStatementType.WHILE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyWhile(ref Scanner tokens) : base(RenPyStatementType.WHILE)
 		{
 			tokens.Seek("while");
 			tokens.Next();

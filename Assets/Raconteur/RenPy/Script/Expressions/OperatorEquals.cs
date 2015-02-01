@@ -8,6 +8,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorEquals : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorEquals(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Returns true if the left and right hand sides are equal
 		/// </summary>
 		/// <param name="state">

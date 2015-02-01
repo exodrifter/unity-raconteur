@@ -13,7 +13,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The contents of this comment.
 		/// </summary>
-		[SerializeField]
 		private string m_comment;
 		public string Comment
 		{
@@ -22,12 +21,14 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyComment() : base(RenPyStatementType.COMMENT)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyComment(ref Scanner tokens)
+			: base(RenPyStatementType.COMMENT)
 		{
 			tokens.Seek("#");
 			tokens.Next();

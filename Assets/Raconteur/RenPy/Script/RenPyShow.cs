@@ -11,17 +11,16 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyShow : RenPyStatement
 	{
-		[SerializeField]
 		private string m_imageName;
-		[SerializeField]
 		private RenPyAlignment m_alignment;
 
-		public RenPyShow() : base(RenPyStatementType.SHOW)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyShow(ref Scanner tokens) : base(RenPyStatementType.SHOW)
 		{
 			tokens.Seek("show");
 			tokens.Next();

@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyImage : RenPyStatement
 	{
-		[SerializeField]
 		private string m_imageName;
 		public string ImageName
 		{
@@ -19,7 +18,6 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		[SerializeField]
 		private string m_imageTag;
 		public string ImageTag
 		{
@@ -28,7 +26,6 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		[SerializeField]
 		private string m_filename;
 		public string Filename
 		{
@@ -37,12 +34,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyImage() : base(RenPyStatementType.IMAGE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyImage(ref Scanner tokens) : base(RenPyStatementType.IMAGE)
 		{
 			tokens.Seek("image");
 			tokens.Next();

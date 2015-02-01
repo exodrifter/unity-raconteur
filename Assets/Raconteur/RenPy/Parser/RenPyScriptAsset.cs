@@ -12,8 +12,7 @@ namespace DPek.Raconteur.RenPy.Parser
 	public class RenPyScriptAsset : ScriptableObject
 	{
 		public string Title;
-		[SerializeField]
-		public List<RenPyBlock> Blocks;
+		public string[] Lines;
 
 		public string[] audioKeys;
 		public AudioClip[] audioValues;

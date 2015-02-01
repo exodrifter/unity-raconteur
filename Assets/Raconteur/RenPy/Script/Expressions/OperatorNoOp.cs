@@ -8,6 +8,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorNoOp : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorNoOp(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Returns the left hand argument if it is non-null. If the left hand
 		/// argument is null, this returns the right hand argument.
 		/// </summary>

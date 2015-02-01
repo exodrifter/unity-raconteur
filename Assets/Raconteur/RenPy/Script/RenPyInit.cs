@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyInit : RenPyStatement
 	{
-		[SerializeField]
 		private int m_priority;
 		public int Priority
 		{
@@ -19,12 +18,7 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyInit() : base(RenPyStatementType.INIT)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		public RenPyInit(ref Scanner tokens) : base(RenPyStatementType.INIT)
 		{
 			tokens.Seek("init");
 			tokens.Next();

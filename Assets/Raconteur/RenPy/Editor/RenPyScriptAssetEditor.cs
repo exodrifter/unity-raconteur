@@ -26,33 +26,17 @@ namespace DPek.Raconteur.RenPy.Editor
 			style.margin = new RectOffset(0,0,0,0);
 
 			// If the asset is empty, display a help box
-			if (script.Blocks == null || script.Blocks.Count == 0) {
+			if (script.Lines == null || script.Lines.Length == 0) {
 				EditorGUILayout.HelpBox("Script is empty!", MessageType.Error);
 			}
 
 			// Otherwise, display the asset's contents
 			else {
 				GUILayout.Label(script.name, style);
-				for (int i = 0; i < script.Blocks.Count; i++) {
-					RenderBlock(script.Blocks[i], ref style);
+				for (int i = 0; i < script.Lines.Length; i++) {
+					GUILayout.Label(script.Lines[i], style);
 				}
 			}
-		}
-
-		private void RenderBlock(RenPyBlock block, ref GUIStyle style) {
-			string str = "";
-			foreach(var statement in block.Statements) {
-				GUILayout.Label(statement.ToDebugString(), style);
-
-				if(statement.NestedBlocks != null) {
-					GUIStyle nestedStyle = new GUIStyle(style);
-					nestedStyle.padding.left += 20;
-					foreach(RenPyBlock nestedBlock in statement.NestedBlocks) {
-						RenderBlock(nestedBlock, ref nestedStyle);
-					}
-				}
-			}
-			GUILayout.Box(str, style);
 		}
 	}
 }

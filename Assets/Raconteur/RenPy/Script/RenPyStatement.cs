@@ -9,13 +9,11 @@ namespace DPek.Raconteur.RenPy.Script
 	/// <summary>
 	/// Represents a statement in RenPy.
 	/// </summary>
-	[System.Serializable]
-	public abstract class RenPyStatement : ScriptableObject
+	public abstract class RenPyStatement
 	{
 		/// <summary>
 		/// The type of this statement.
 		/// </summary>
-		[SerializeField]
 		private RenPyStatementType m_type;
 		public RenPyStatementType Type
 		{
@@ -28,7 +26,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// The blocks that are nested under this statement, or null if there
 		/// are none.
 		/// </summary>
-		[SerializeField]
 		private List<RenPyBlock> m_nestedBlocks;
 		public List<RenPyBlock> NestedBlocks
 		{
@@ -60,14 +57,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// The state that this statement can modify.
 		/// </param>
 		public abstract void Execute(RenPyState state);
-		
-		/// <summary>
-		/// Initializes this statement with the passed scanner.
-		/// </summary>
-		/// <param name="scanner">
-		/// The scanner to use to initialize this statement.
-		/// </param>
-		public abstract void Parse(ref Scanner scanner);
 
 		/// <summary>
 		/// Returns the statement as a debug string.

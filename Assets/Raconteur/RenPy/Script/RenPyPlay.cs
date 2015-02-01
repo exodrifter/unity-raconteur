@@ -12,25 +12,20 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyPlay : RenPyStatement
 	{
-		[SerializeField]
 		private string m_channel;
-		[SerializeField]
 		private string m_file;
-		[SerializeField]
 		private bool m_loop;
-		[SerializeField]
 		private bool m_ifChanged;
-		[SerializeField]
 		private float m_fadeinTime;
-		[SerializeField]
 		private float m_fadeoutTime;
 
-		public RenPyPlay() : base(RenPyStatementType.PLAY)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyPlay(ref Scanner tokens) : base(RenPyStatementType.PLAY)
 		{
 			tokens.Seek("play");
 			tokens.Next();

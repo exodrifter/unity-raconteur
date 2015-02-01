@@ -9,6 +9,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorAssignDivide : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorAssignDivide(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Divides the value of the left hand argument by the right hand
 		/// argument, assigns that value to the left hand argument, and returns
 		/// the new value of the left hand argument.

@@ -11,7 +11,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// An int indicating how long to pause for.
 		/// </summary>
-		[SerializeField]
 		private float m_time;
 		public float WaitTime
 		{
@@ -31,12 +30,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyPause() : base(RenPyStatementType.PAUSE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyPause(ref Scanner tokens) : base(RenPyStatementType.PAUSE)
 		{
 			tokens.Seek("pause");
 			tokens.Next();

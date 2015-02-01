@@ -8,15 +8,15 @@ namespace DPek.Raconteur.RenPy.Script
 {
 	public class RenPyCall : RenPyStatement
 	{
-		[SerializeField]
 		private string m_label;
 
-		public RenPyCall() : base(RenPyStatementType.CALL)
-		{
-			// Nothing to do
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyCall(ref Scanner tokens) : base(RenPyStatementType.CALL)
 		{
 			tokens.Seek("call");
 			tokens.Next();

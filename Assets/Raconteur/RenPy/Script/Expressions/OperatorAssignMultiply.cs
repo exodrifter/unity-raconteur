@@ -9,6 +9,14 @@ namespace DPek.Raconteur.RenPy.Script
 	public class OperatorAssignMultiply : Operator
 	{
 		/// <summary>
+		/// Creates a new operator that is represented by the specified symbol.
+		/// </summary>
+		/// <param name="symbol">
+		/// The symbol that represents this operator
+		/// </param>
+		public OperatorAssignMultiply(string symbol) : base(symbol) {}
+
+		/// <summary>
 		/// Multiplies the value of the right and left hand arguments, assigns
 		/// that value to the left hand argument, and returns the new value of
 		/// the left hand argument.
