@@ -1,7 +1,7 @@
 ﻿using System;
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	public class ValueNumber : Value
 	{

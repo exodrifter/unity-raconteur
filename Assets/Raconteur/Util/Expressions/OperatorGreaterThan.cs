@@ -1,12 +1,11 @@
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns true if the two arguments are not
-	/// equal.
+	/// Represents an operator that returns true if the two arguments are equal
 	/// </summary>
-	public class OperatorNotEquals : Operator
+	public class OperatorGreaterThan : Operator
 	{
 		/// <summary>
 		/// Creates a new operator that is represented by the specified symbol.
@@ -14,7 +13,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorNotEquals(string symbol) : base(symbol) {}
+		public OperatorGreaterThan(string symbol) : base(symbol) {}
 
 		/// <summary>
 		/// Returns true if the left and right hand sides are equal
@@ -30,7 +29,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </param>
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
-			bool result = left.GetValue(state) != right.GetValue(state);
+			bool result = Value.GreaterThan(state, left, right);
 			return new ValueString(result.ToString());
 		}
 	}

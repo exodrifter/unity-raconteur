@@ -2,7 +2,7 @@
 using System;
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// A value represents an item in an expression. It can be a number, a

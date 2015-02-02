@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// The Expression Parser parses simple expressions that involve arithmetic

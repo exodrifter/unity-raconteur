@@ -2,6 +2,7 @@
 
 ﻿using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
+using DPek.Raconteur.Util.Expressions;
 
 namespace DPek.Raconteur.RenPy.Script
 {

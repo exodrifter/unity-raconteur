@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// A convenience class for getting Expression Parsers of a specific

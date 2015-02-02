@@ -2,7 +2,7 @@
 using System;
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// Represents an operator in an expression. An operator returns a result

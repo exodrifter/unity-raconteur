@@ -1,11 +1,11 @@
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// Represents an operator that returns the argument it has.
 	/// </summary>
-	public class OperatorDivide : Operator
+	public class OperatorMod : Operator
 	{
 		/// <summary>
 		/// Creates a new operator that is represented by the specified symbol.
@@ -13,7 +13,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorDivide(string symbol) : base(symbol) {}
+		public OperatorMod(string symbol) : base(symbol) {}
 
 		/// <summary>
 		/// Returns the left hand argument if it is non-null. If the left hand
@@ -30,7 +30,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </param>
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
-			return Value.Divide(state, left, right);
+			return Value.Mod(state, left, right);
 		}
 	}
 }

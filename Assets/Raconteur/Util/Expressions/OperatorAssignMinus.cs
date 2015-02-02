@@ -1,12 +1,12 @@
 ﻿using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that divides the left hand argument by the
-	/// right hand argument and assigns that value to the left hand argument.
+	/// Represents an operator that subtracts the right hand argument from the
+	/// left hand argument and assigns that value to the left hand argument.
 	/// </summary>
-	public class OperatorAssignDivide : Operator
+	public class OperatorAssignMinus : Operator
 	{
 		/// <summary>
 		/// Creates a new operator that is represented by the specified symbol.
@@ -14,10 +14,10 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAssignDivide(string symbol) : base(symbol) {}
+		public OperatorAssignMinus(string symbol) : base(symbol) {}
 
 		/// <summary>
-		/// Divides the value of the left hand argument by the right hand
+		/// Subtracts the value of the right hand argument from the left hand
 		/// argument, assigns that value to the left hand argument, and returns
 		/// the new value of the left hand argument.
 		/// </summary>
@@ -32,7 +32,7 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </param>
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
-			Value result = Value.Divide(state, left, right);
+			Value result = Value.Minus(state, left, right);
 			left.SetValue(state, result);
 			return left.GetValue(state);
 		}

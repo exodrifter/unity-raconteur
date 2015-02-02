@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// Represents an expression, which is an operator that can be evaluated and

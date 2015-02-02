@@ -1,6 +1,6 @@
 ﻿using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// A Variable represents a string in an expression that refers to a

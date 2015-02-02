@@ -1,11 +1,12 @@
-using DPek.Raconteur.RenPy.State;
+﻿using DPek.Raconteur.RenPy.State;
 
-namespace DPek.Raconteur.RenPy.Script
+namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns true if the two arguments are equal
+	/// Represents an operator that assigns the right hand argument to the left
+	/// hand argument.
 	/// </summary>
-	public class OperatorLessThan : Operator
+	public class OperatorAssign : Operator
 	{
 		/// <summary>
 		/// Creates a new operator that is represented by the specified symbol.
@@ -13,10 +14,11 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorLessThan(string symbol) : base(symbol) {}
+		public OperatorAssign(string symbol) : base(symbol) {}
 
 		/// <summary>
-		/// Returns true if the left and right hand sides are equal
+		/// Assigns the right hand argument to the left hand argument and
+		/// returns the new value of the left hand argument.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.
@@ -29,8 +31,8 @@ namespace DPek.Raconteur.RenPy.Script
 		/// </param>
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
-			bool result = Value.LessThan(state, left, right);
-			return new ValueString(result.ToString());
+			left.SetValue(state, right);
+			return left.GetValue(state);
 		}
 	}
 }
