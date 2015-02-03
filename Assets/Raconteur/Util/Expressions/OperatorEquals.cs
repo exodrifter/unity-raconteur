@@ -3,7 +3,7 @@ using DPek.Raconteur.RenPy.State;
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns true if the two arguments are equal
+	/// Represents an operator that returns true if the two arguments are equal.
 	/// </summary>
 	public class OperatorEquals : Operator
 	{
@@ -16,7 +16,7 @@ namespace DPek.Raconteur.Util.Expressions
 		public OperatorEquals(string symbol) : base(symbol) {}
 
 		/// <summary>
-		/// Returns true if the left and right hand sides are equal
+		/// Returns true if the left and right hand sides are equal.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.
@@ -29,8 +29,8 @@ namespace DPek.Raconteur.Util.Expressions
 		/// </param>
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
-			bool result = left.GetValue(state) == right.GetValue(state);
-			return new ValueString(result.ToString());
+			bool result = left.AsString(state) == right.AsString(state);
+			return new ValueBoolean(result);
 		}
 	}
 }

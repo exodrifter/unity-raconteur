@@ -42,6 +42,8 @@ namespace DPek.Raconteur.Util.Expressions
 			parser.SetupOperator(new OperatorDivide("/"));
 			parser.SetupOperator(new OperatorLessThan("<"));
 			parser.SetupOperator(new OperatorGreaterThan(">"));
+			parser.SetupOperator(new OperatorAnd("and"));
+			parser.SetupOperator(new OperatorOr("or"));
 
 			return m_renPyExpressionParser;
 		}

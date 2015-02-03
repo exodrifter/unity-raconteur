@@ -30,7 +30,7 @@ namespace DPek.Raconteur.Util.Expressions
 		public override Value Eval(RenPyState state, Value left, Value right)
 		{
 			bool result = Value.GreaterThanOrEqual(state, left, right);
-			return new ValueString(result.ToString());
+			return new ValueBoolean(result);
 		}
 	}
 }

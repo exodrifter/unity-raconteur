@@ -76,7 +76,8 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 
 			// If evaluation succeeds, push back this block
-			if (m_expression.Evaluate(state).GetValue(state).AsString(state) == "True") {
+			Value v = m_expression.Evaluate(state);
+			if (v is ValueBoolean && (bool) v.GetRawValue(state)) {
 				string msg = "elif " + m_expression + " evaluated to true";
 				Static.Log(msg);
 

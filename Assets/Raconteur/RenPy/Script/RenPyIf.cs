@@ -56,7 +56,8 @@ namespace DPek.Raconteur.RenPy.Script
 		public override void Execute(RenPyState state)
 		{
 			// If evaluation succeeds, push back this block
-			if (m_expression.Evaluate(state).GetValue(state).AsString(state) == "True") {
+			Value v = m_expression.Evaluate(state);
+			if (v is ValueBoolean && (bool) v.GetRawValue(state)) {
 				string msg = "if " + m_expression + " evaluated to true";
 				Static.Log(msg);
 
