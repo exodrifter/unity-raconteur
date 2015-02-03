@@ -31,13 +31,10 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Seek("return");
 			tokens.Next();
 
-			// Check if there is anything after the return
+			// Check to see what's after the return before looking parsing
+			m_expressionString = tokens.Seek("\0").Trim();
 			if(tokens.HasNext())
 			{
-				// Get the expression
-				m_expressionString = tokens.Seek ("\0").Trim();
-				tokens.Next();
-
 				// Parse the expression
 				var parser = ExpressionParserFactory.GetRenPyParser ();
 				m_expression = parser.ParseExpression (m_expressionString);
