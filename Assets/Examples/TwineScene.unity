@@ -99,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 317418916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78966940310d19d438496c69eddf1277, type: 3}
+  m_Script: {fileID: 11500000, guid: 86fc866d75ee5426188e6678e8426676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_twineScriptAsset: {fileID: 11400000, guid: b7c052b0daba60c46b7ff890cc05b59f, type: 2}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_autoStart: 1
-  m_display: {fileID: 317418917}
+  m_controller: {fileID: 317418917}
 --- !u!1 &1811183231
 GameObject:
   m_ObjectHideFlags: 0

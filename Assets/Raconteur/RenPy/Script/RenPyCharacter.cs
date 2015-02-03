@@ -14,7 +14,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of the variable that stores this character.
 		/// </summary>
-		[SerializeField]
 		private string m_varName;
 		public string VarName
 		{
@@ -26,7 +25,6 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of this character.
 		/// </summary>
-		[SerializeField]
 		private string m_name;
 		public string Name
 		{
@@ -35,7 +33,6 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		[SerializeField]
 		private Color m_color;
 		public Color Color
 		{
@@ -44,12 +41,14 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyCharacter() : base(RenPyStatementType.CHARACTER)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyCharacter(ref Scanner tokens)
+			: base(RenPyStatementType.CHARACTER)
 		{
 			tokens.Seek("define");
 			tokens.Next();

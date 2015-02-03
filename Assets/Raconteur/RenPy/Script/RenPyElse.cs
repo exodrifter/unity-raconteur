@@ -2,6 +2,7 @@
 
 using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
+using DPek.Raconteur.Util.Expressions;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -10,12 +11,13 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyElse : RenPyStatement
 	{
-		public RenPyElse() : base(RenPyStatementType.ELSE)
-		{
-			// Nothing to do
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyElse(ref Scanner tokens) : base(RenPyStatementType.ELSE)
 		{
 			tokens.Seek("else");
 			tokens.Next();

@@ -2,6 +2,7 @@
 
 using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
+using DPek.Raconteur.Util.Expressions;
 
 namespace DPek.Raconteur.RenPy.Script
 {
@@ -10,7 +11,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyElif : RenPyStatement
 	{
-		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
@@ -33,12 +33,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyElif() : base(RenPyStatementType.ELIF)
-		{
-			m_wasSuccessful = false;
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyElif(ref Scanner tokens) : base(RenPyStatementType.ELIF)
 		{
 			tokens.Seek("elif");
 			tokens.Next();
@@ -49,6 +50,8 @@ namespace DPek.Raconteur.RenPy.Script
 
 			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
+
+			m_wasSuccessful = false;
 		}
 
 		public override void Execute(RenPyState state)
@@ -73,7 +76,8 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 
 			// If evaluation succeeds, push back this block
-			if (m_expression.Evaluate(state).GetValue(state).AsString(state) == "True") {
+			Value v = m_expression.Evaluate(state);
+			if (v is ValueBoolean && (bool) v.GetRawValue(state)) {
 				string msg = "elif " + m_expression + " evaluated to true";
 				Static.Log(msg);
 

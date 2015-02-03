@@ -2,12 +2,12 @@
 
 using DPek.Raconteur.RenPy.State;
 using DPek.Raconteur.Util.Parser;
+using DPek.Raconteur.Util.Expressions;
 
 namespace DPek.Raconteur.RenPy.Script
 {
 	public class RenPyVariable : RenPyStatement
 	{
-		[SerializeField]
 		private Expression m_expression;
 		public Expression Expression
 		{
@@ -16,12 +16,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyVariable() : base(RenPyStatementType.VARIABLE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyVariable(ref Scanner tokens) : base(RenPyStatementType.VARIABLE)
 		{
 			tokens.Seek("$");
 			tokens.Next();

@@ -49,7 +49,7 @@ namespace DPek.Raconteur.RenPy.State
 
 			m_labelIndices = new Dictionary<string, Duple<int,int>>();
 			for(int i = 0; i < m_blocks.Count; ++i) {
-				for(int j = 0; j < m_blocks[i].StatementCount; ++j) {
+				for(int j = 0; j < m_blocks[i].Statements.Count; ++j) {
 					if (m_blocks[i][j] is RenPyLabel) {
 						var name = (m_blocks[i][j] as RenPyLabel).Name;
 						var index = new Duple<int, int>(i, j);
@@ -79,7 +79,8 @@ namespace DPek.Raconteur.RenPy.State
 			if (m_statementIndex < 0) {
 				if(m_blockIndex > 0) {
 					m_blockIndex--;
-					m_statementIndex = m_blocks[m_blockIndex].StatementCount-1;
+					int statements = m_blocks[m_blockIndex].Statements.Count;
+					m_statementIndex = statements - 1;
 				} else {
 					Reset();
 				}
@@ -107,7 +108,7 @@ namespace DPek.Raconteur.RenPy.State
 			}
 
 			// Check if we need to go to the next block
-			if (m_statementIndex >= m_blocks[m_blockIndex].StatementCount) {
+			if (m_statementIndex >= m_blocks[m_blockIndex].Statements.Count) {
 				m_statementIndex = 0;
 				++m_blockIndex;
 			}
@@ -164,7 +165,7 @@ namespace DPek.Raconteur.RenPy.State
 			if (index < 0) {
 				if (m_blockIndex > 0) {
 					blockIndex--;
-					index = m_blocks[blockIndex].StatementCount - 1;
+					index = m_blocks[blockIndex].Statements.Count - 1;
 				}
 				else {
 					Reset();

@@ -1,4 +1,4 @@
-﻿using DPek.Raconteur.Twine.Display;
+using DPek.Raconteur.Twine.Display;
 using DPek.Raconteur.Twine.Script;
 using UnityEngine;
 using System.Collections.Generic;
@@ -9,44 +9,44 @@ namespace DPek.Raconteur.Twine
 	public class TwineViewBasic : MonoBehaviour
 	{
 		public bool m_autoStart;
-		public TwineDisplay m_display;
+		public TwineController m_controller;
 		Vector2 scrollPosition = new Vector2(0, 0);
 
 		void Start()
 		{
 			if (m_autoStart) {
-				m_display.StartDialog();
+				m_controller.StartDialog();
 			}
 		}
 
 		void Update()
 		{
-			if (!m_display.Running) {
-				m_display.StopDialog();
+			if (!m_controller.Running) {
+				m_controller.StopDialog();
 				return;
 			}
 
 			if (Input.GetKeyDown(KeyCode.Escape)) {
-				m_display.StopDialog();
+				m_controller.StopDialog();
 				scrollPosition = new Vector2(0, 0);
 			}
 		}
 
 		void OnGUI()
 		{
-			if (!m_display.Running) {
+			if (!m_controller.Running) {
 				return;
 			}
 
-			TwinePassage passage = m_display.GetCurrentPassage();
+			TwinePassage passage = m_controller.GetCurrentPassage();
 
 			GUIStyle style = new GUIStyle();
 			style.normal.textColor = Color.white;
 			style.richText = true;
 
 			GUILayout.BeginHorizontal();
-			GUILayout.Label(m_display.GetStoryTitle(), style);
-			GUILayout.Label(m_display.GetStoryAuthor(), style);
+			GUILayout.Label(m_controller.GetStoryTitle(), style);
+			GUILayout.Label(m_controller.GetStoryAuthor(), style);
 			GUILayout.EndHorizontal();
 
 			var areaPad = 25;
@@ -68,7 +68,8 @@ namespace DPek.Raconteur.Twine
 					for (int i = 0; i < wrapped.Length; ++i)
 					{
 						string str = wrapped[i];
-						GUILayout.Label(str, style, GUILayout.ExpandWidth(false));
+						var layout = GUILayout.ExpandWidth(false);
+						GUILayout.Label(str, style, layout);
 						if (i < wrapped.Length - 1 || str.EndsWith("\n"))
 						{
 							GUILayout.EndHorizontal();
@@ -85,7 +86,7 @@ namespace DPek.Raconteur.Twine
 						if (GUILayout.Button(str, style,
 							GUILayout.ExpandWidth(false)))
 						{
-							m_display.GoToPassage((line as TwineLink).Target);
+							m_controller.GoToPassage((line as TwineLink).Target);
 							scrollPosition = new Vector2(0, 0);
 						}
 						if (i < wrapped.Length - 1 || str.EndsWith("\n"))

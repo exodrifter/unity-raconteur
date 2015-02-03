@@ -10,19 +10,17 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyQueue : RenPyStatement
 	{
-		[SerializeField]
 		private string m_channel;
-		[SerializeField]
 		private bool m_loop;
-		[SerializeField]
 		private string[] m_files;
 
-		public RenPyQueue() : base(RenPyStatementType.QUEUE)
-		{
-			// Nothing to do
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyQueue(ref Scanner tokens) : base(RenPyStatementType.QUEUE)
 		{
 			tokens.Seek("queue");
 			tokens.Next();

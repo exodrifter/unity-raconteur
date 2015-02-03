@@ -9,7 +9,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyMenuChoice : RenPyStatement
 	{
-		[SerializeField]
 		private string m_text;
 		public string Text
 		{
@@ -18,12 +17,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyMenuChoice() : base(RenPyStatementType.MENU_CHOICE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyMenuChoice(ref Scanner tokens) : base(RenPyStatementType.MENU_CHOICE)
 		{
 			string[] quotes = new string[] {"\"","'"};
 			string endQuote;

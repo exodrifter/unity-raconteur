@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyWindow : RenPyStatement
 	{
-		[SerializeField]
 		private bool m_show;
 		public bool Show
 		{
@@ -19,12 +18,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyWindow() : base(RenPyStatementType.WINDOW)
-		{
-			// Nothing to do
-		}
-
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyWindow(ref Scanner tokens) : base(RenPyStatementType.WINDOW)
 		{
 			tokens.Seek("window");
 			tokens.Next();

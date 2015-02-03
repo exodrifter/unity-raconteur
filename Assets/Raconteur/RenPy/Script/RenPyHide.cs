@@ -13,15 +13,15 @@ namespace DPek.Raconteur.RenPy.Script
 		/// <summary>
 		/// The name of the image to hide
 		/// </summary>
-		[SerializeField]
 		private string m_imageName;
 
-		public RenPyHide() : base(RenPyStatementType.HIDE)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyHide(ref Scanner tokens) : base(RenPyStatementType.HIDE)
 		{
 			tokens.Seek("hide");
 			tokens.Next();

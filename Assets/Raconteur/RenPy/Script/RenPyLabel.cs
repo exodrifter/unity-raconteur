@@ -10,7 +10,6 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyLabel : RenPyStatement
 	{
-		[SerializeField]
 		private string m_name;
 		public string Name
 		{
@@ -19,12 +18,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPyLabel() : base(RenPyStatementType.LABEL)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyLabel(ref Scanner tokens) : base(RenPyStatementType.LABEL)
 		{
 			tokens.Seek("label");
 			tokens.Next();

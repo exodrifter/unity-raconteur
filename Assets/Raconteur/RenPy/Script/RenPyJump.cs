@@ -10,15 +10,15 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyJump : RenPyStatement
 	{
-		[SerializeField]
 		private string m_target;
 
-		public RenPyJump() : base(RenPyStatementType.JUMP)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyJump(ref Scanner tokens) : base(RenPyStatementType.JUMP)
 		{
 			tokens.Seek("jump");
 			tokens.Next();

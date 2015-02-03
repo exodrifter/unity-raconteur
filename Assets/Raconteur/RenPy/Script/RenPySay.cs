@@ -16,19 +16,16 @@ namespace DPek.Raconteur.RenPy.Script
 		/// The variable or string of the speaker saying this line. Null when
 		/// the narrator is saying the line
 		/// </summary>
-		[SerializeField]
 		private string m_speaker;
 
 		/// <summary>
 		/// Whether or not the speaker is a variable or a string.
 		/// </summary>
-		[SerializeField]
 		private bool m_speakerIsVariable;
 
 		/// <summary>
 		/// The text of what the character is saying
 		/// </summary>
-		[SerializeField]
 		private string m_text;
 		public string Text
 		{
@@ -37,12 +34,13 @@ namespace DPek.Raconteur.RenPy.Script
 			}
 		}
 
-		public RenPySay() : base(RenPyStatementType.SAY)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPySay(ref Scanner tokens) : base(RenPyStatementType.SAY)
 		{
 			string[] quotes = new string[] {"\"","'"};
 

@@ -12,18 +12,17 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyStop : RenPyStatement
 	{
-		[SerializeField]
 		private string m_channel;
 
-		[SerializeField]
 		private float m_fadeoutTime;
 
-		public RenPyStop() : base(RenPyStatementType.STOP)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyStop(ref Scanner tokens) : base(RenPyStatementType.STOP)
 		{
 			tokens.Seek("stop");
 			tokens.Next();

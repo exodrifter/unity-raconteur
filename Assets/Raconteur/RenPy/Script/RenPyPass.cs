@@ -8,12 +8,13 @@ namespace DPek.Raconteur.RenPy.Script
 	/// </summary>
 	public class RenPyPass : RenPyStatement
 	{
-		public RenPyPass() : base(RenPyStatementType.PASS)
-		{
-			// Nothing to do
-		}
-		
-		public override void Parse(ref Scanner tokens)
+		/// <summary>
+		/// Initializes this statement with the passed scanner.
+		/// </summary>
+		/// <param name="tokens">
+		/// The scanner to use to initialize this statement.
+		/// </param>
+		public RenPyPass(ref Scanner tokens) : base(RenPyStatementType.PASS)
 		{
 			tokens.Seek("pass");
 			tokens.Next();

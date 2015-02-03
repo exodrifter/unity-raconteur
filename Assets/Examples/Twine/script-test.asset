@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
-  m_Name: 
+  m_Name: script-test
   m_EditorClassIdentifier: 
   content: ':: Start [tag1 tag2]
 
