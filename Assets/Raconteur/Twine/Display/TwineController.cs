@@ -10,7 +10,7 @@ namespace DPek.Raconteur.Twine.Display
 	/// as well as all of the relevant GameObject references created by the
 	/// script.
 	/// </summary>
-	public sealed class TwineDisplay : MonoBehaviour
+	public sealed class TwineController : MonoBehaviour
 	{
 		/// <summary>
 		/// The script that the display will run.

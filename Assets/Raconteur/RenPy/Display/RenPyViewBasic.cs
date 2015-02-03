@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 using DPek.Raconteur.RenPy.Display;
@@ -12,40 +12,40 @@ namespace DPek.Raconteur.RenPy
 	public class RenPyViewBasic : MonoBehaviour
 	{
 		public bool m_autoStart;
-		public RenPyDisplay m_display;
+		public RenPyController m_controller;
 
 		void Start()
 		{
 			if (m_autoStart) {
-				m_display.StartDialog();
+				m_controller.StartDialog();
 			}
 		}
 
 		void Update()
 		{
-			if (!m_display.Running) {
-				m_display.StopDialog();
+			if (!m_controller.Running) {
+				m_controller.StopDialog();
 				return;
 			}
 
-			if (m_display.GetCurrentStatement() == null) {
-				m_display.NextStatement();
+			if (m_controller.GetCurrentStatement() == null) {
+				m_controller.NextStatement();
 			}
 
-			RenPyStatementType mode = m_display.GetCurrentStatement().Type;
+			RenPyStatementType mode = m_controller.GetCurrentStatement().Type;
 
 			switch (mode) {
 				case RenPyStatementType.SAY:
 					// Check for input to go to next line
 					if (Input.GetMouseButtonDown(0)) {
-						m_display.NextStatement();
+						m_controller.NextStatement();
 					}
 					break;
 				case RenPyStatementType.PAUSE:
 					// Check for input to go to next line
-					var pause = m_display.GetCurrentStatement() as RenPyPause;
+					var pause = m_controller.GetCurrentStatement() as RenPyPause;
 					if (pause.WaitForInput && Input.GetMouseButtonDown(0)) {
-						m_display.NextStatement();
+						m_controller.NextStatement();
 					}
 					// Or wait until we can go to the next line
 					else {
@@ -57,7 +57,7 @@ namespace DPek.Raconteur.RenPy
 					break;
 				default:
 					// Show nothing for this line, proceed to the next one.
-					m_display.NextStatement();
+					m_controller.NextStatement();
 					Update(); // Update immediately to prevent delay
 					break;
 			}
@@ -65,7 +65,7 @@ namespace DPek.Raconteur.RenPy
 
 		void OnGUI()
 		{
-			if (!m_display.Running || m_display.GetCurrentStatement() == null) {
+			if (!m_controller.Running || m_controller.GetCurrentStatement() == null) {
 				return;
 			}
 
@@ -77,14 +77,14 @@ namespace DPek.Raconteur.RenPy
 			style.wordWrap = true;
 
 			// Draw background
-			var bg = m_display.GetBackgroundImage();
+			var bg = m_controller.GetBackgroundImage();
 			if (bg != null) {
 				var pos = new Rect(0, 0, Screen.width, Screen.height);
 				GUI.DrawTexture(pos, bg.Texture, ScaleMode.ScaleAndCrop);
 			}
 
 			// Draw images
-			var images = m_display.GetImages();
+			var images = m_controller.GetImages();
 			foreach (RenPyImageData image in images) {
 				float screenWidth = Screen.width;
 				float screenHeight = Screen.height;
@@ -133,21 +133,21 @@ namespace DPek.Raconteur.RenPy
 			}
 
 			// Draw the window if needed
-			if (m_display.ShouldDrawWindow()) {
+			if (m_controller.ShouldDrawWindow()) {
 				DrawBox(50, Screen.height - 200, Screen.width - 100, 200);
 			}
 
 			// Draw text
-			switch (m_display.GetCurrentStatement().Type) {
+			switch (m_controller.GetCurrentStatement().Type) {
 				case RenPyStatementType.SAY:
-					var speech = m_display.GetCurrentStatement() as RenPySay;
+					var speech = m_controller.GetCurrentStatement() as RenPySay;
 
 					// Render the speaker
 					int y = Screen.height - 200;
 					int width = Screen.width - 100;
 					rect = new Rect(50, y, width, 200);
 					style.alignment = TextAnchor.UpperLeft;
-					RenPyCharacterData speaker = m_display.GetSpeaker(speech);
+					RenPyCharacterData speaker = m_controller.GetSpeaker(speech);
 					var oldColor = style.normal.textColor;
 					style.normal.textColor = speaker.Color;
 					GUI.Label(rect, speaker.Name, style);
@@ -160,7 +160,7 @@ namespace DPek.Raconteur.RenPy
 					break;
 
 				case RenPyStatementType.MENU:
-					var menu = m_display.GetCurrentStatement() as RenPyMenu;
+					var menu = m_controller.GetCurrentStatement() as RenPyMenu;
 
 					// Display the choices
 					int height = 30;
@@ -172,8 +172,8 @@ namespace DPek.Raconteur.RenPy
 						// Check if a choice was selected
 						DrawBox(100, rect.y + 5, rect.width, rect.height - 10);
 						if (GUI.Button(rect, choice, style)) {
-							m_display.PickChoice(menu, choice);
-							m_display.NextStatement();
+							m_controller.PickChoice(menu, choice);
+							m_controller.NextStatement();
 						}
 
 						rect.y += height;
@@ -188,7 +188,7 @@ namespace DPek.Raconteur.RenPy
 			if (!waiting) {
 				waiting = true;
 				yield return new WaitForSeconds(time);
-				m_display.NextStatement();
+				m_controller.NextStatement();
 				waiting = false;
 			}
 		}

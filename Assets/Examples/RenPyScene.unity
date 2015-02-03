@@ -166,8 +166,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1578666700}
-  - 114: {fileID: 1578666701}
   - 114: {fileID: 1578666702}
+  - 114: {fileID: 1578666701}
   m_Layer: 0
   m_Name: Dialog
   m_TagString: Untagged
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_autoStart: 1
-  m_display: {fileID: 1578666702}
+  m_controller: {fileID: 1578666702}
 --- !u!114 &1578666702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578666699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01846983878a06d4690fa28ff4c7f3c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e883341a672f49dba7d61fcb5973a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_renPyScript: {fileID: 11400000, guid: 6adc7978a99934c0c9027533587cadda, type: 2}

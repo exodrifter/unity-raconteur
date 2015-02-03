@@ -12,7 +12,7 @@ namespace DPek.Raconteur.RenPy.Display
 	/// script as well as all of the relevant GameObject references created by
 	/// the script.
 	/// </summary>
-	public sealed class RenPyDisplay : MonoBehaviour
+	public sealed class RenPyController : MonoBehaviour
 	{
 		/// <summary>
 		/// The script that the display will run.
