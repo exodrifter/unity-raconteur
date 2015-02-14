@@ -14,7 +14,8 @@ namespace DPek.Raconteur.Twine.Script
 		/// The title of the story.
 		/// </summary>
 		private string m_title;
-		public string Title {
+		public string Title
+		{
 			get { return m_title;  }
 			set { m_title = value; }
 		}
@@ -37,7 +38,8 @@ namespace DPek.Raconteur.Twine.Script
 		/// <summary>
 		/// Creates a new, empty Twine story.
 		/// </summary>
-		public TwineStory() {
+		public TwineStory()
+		{
 			m_title = null;
 			m_author = null;
 			m_passages = new Dictionary<string, TwinePassage>();
@@ -49,11 +51,15 @@ namespace DPek.Raconteur.Twine.Script
 		/// <param name="TwinePassage">
 		/// The TwinePassage to add to the story.
 		/// </param>
-		public void AddPassage(TwinePassage passage) {
-			if (m_passages.ContainsKey(passage.Title)) {
+		public void AddPassage(TwinePassage passage)
+		{
+			if (m_passages.ContainsKey(passage.Title))
+			{
 				throw new ArgumentException("Story already contains a passage "
 					+ "with the title \"" + passage.Title + "\"");
-			} else {
+			}
+			else
+			{
 				m_passages.Add(passage.Title, passage);
 			}
 		}
@@ -63,7 +69,8 @@ namespace DPek.Raconteur.Twine.Script
 		/// </summary>
 		/// <param name="passageTitle">The title of the passage to get</param>
 		/// <returns></returns>
-		public TwinePassage GetPassage(string passageTitle) {
+		public TwinePassage GetPassage(string passageTitle)
+		{
 			return m_passages[passageTitle];
 		}
 	}

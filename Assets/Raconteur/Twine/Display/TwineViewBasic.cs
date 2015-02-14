@@ -59,7 +59,7 @@ namespace DPek.Raconteur.Twine
 
 			float remaining = areaWidth;
 			GUILayout.BeginHorizontal();
-			foreach (TwineLine line in passage.Lines)
+			foreach (TwineLine line in passage.Compile())
 			{
 				string[] wrapped = Wrap(line.Print(), style, areaWidth, remaining, out remaining);
 

@@ -31,12 +31,12 @@ namespace DPek.Raconteur.Twine.Script
 		}
 
 		/// <summary>
-		/// The lines of this passage
+		/// The source lines of this passage
 		/// </summary>
-		private List<TwineLine> m_lines;
-		public List<TwineLine> Lines
+		private List<TwineLine> m_source;
+		public List<TwineLine> Source
 		{
-			get { return m_lines; }
+			get { return m_source; }
 		}
 
 		#endregion
@@ -73,8 +73,17 @@ namespace DPek.Raconteur.Twine.Script
 			}
 			m_tags = tags.ToArray();
 
+			m_source = new List<TwineLine>();
+		}
 
-			m_lines = new List<TwineLine>();
+		public List<TwineLine> Compile()
+		{
+			var ret = new List<TwineLine>();
+			foreach (TwineLine line in m_source)
+			{
+				ret.AddRange(line.Compile());
+			}
+			return ret;
 		}
 	}
 }

@@ -54,7 +54,7 @@ namespace DPek.Raconteur.Twine.Parser
 				}
 				else if (token == "[[")
 				{
-					passage.Lines.Add(new TwineLink(ref scanner));
+					passage.Source.Add(new TwineLink(ref scanner));
 				}
 				else if (token == "<<")
 				{
@@ -101,7 +101,7 @@ namespace DPek.Raconteur.Twine.Parser
 				}
 				else
 				{
-					passage.Lines.Add(new TwineEcho(ref scanner));
+					passage.Source.Add(new TwineEcho(ref scanner));
 				}
 			}
 

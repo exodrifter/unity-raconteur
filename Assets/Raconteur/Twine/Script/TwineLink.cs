@@ -1,4 +1,5 @@
 ﻿using DPek.Raconteur.Util.Parser;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
@@ -32,6 +33,13 @@ namespace DPek.Raconteur.Twine.Script
 			} else {
 				m_target = m_label;
 			}
+		}
+
+		public override List<TwineLine> Compile()
+		{
+			var ret = new List<TwineLine>();
+			ret.Add(this);
+			return ret;
 		}
 
 		public override string Print()
