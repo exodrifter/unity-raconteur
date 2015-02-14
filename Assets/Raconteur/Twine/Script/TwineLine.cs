@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DPek.Raconteur.Twine.State;
+using UnityEngine;
 using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
@@ -20,7 +21,7 @@ namespace DPek.Raconteur.Twine.Script
 		/// Compiles the contents of this line.
 		/// </summary>
 		/// <returns></returns>
-		public abstract List<TwineLine> Compile();
+		public abstract List<TwineLine> Compile(TwineState state);
 
 		/// <summary>
 		/// Returns a debug string for this line.

@@ -1,6 +1,4 @@
-﻿using DPek.Raconteur.RenPy.State;
-
-namespace DPek.Raconteur.Util.Expressions
+﻿namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// A Variable represents a string in an expression that refers to a
@@ -17,8 +15,8 @@ namespace DPek.Raconteur.Util.Expressions
 		{
 			m_variable = variable;
 		}
-		
-		public override Value GetValue(RenPyState state)
+
+		public override Value GetValue(StoryState state)
 		{
 			string value = state.GetVariable(m_variable);
 			object number = ParseNumber(value);
@@ -28,8 +26,8 @@ namespace DPek.Raconteur.Util.Expressions
 			}
 			return new ValueString(value);
 		}
-		
-		public override object GetRawValue(RenPyState state)
+
+		public override object GetRawValue(StoryState state)
 		{
 			string value = state.GetVariable(m_variable);
 			object number = ParseNumber(value);
@@ -39,13 +37,13 @@ namespace DPek.Raconteur.Util.Expressions
 			}
 			return value;
 		}
-		
-		public override void SetValue(RenPyState state, Value value)
+
+		public override void SetValue(StoryState state, Value value)
 		{
 			state.SetVariable(m_variable, value.AsString(state));
 		}
 
-		public override string AsString(RenPyState state)
+		public override string AsString(StoryState state)
 		{
 			return state.GetVariable(m_variable);
 		}

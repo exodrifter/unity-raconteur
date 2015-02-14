@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System;
-using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.Util.Expressions
 {
@@ -10,17 +9,17 @@ namespace DPek.Raconteur.Util.Expressions
 	/// </summary>
 	public abstract class Value
 	{
-		public abstract Value GetValue(RenPyState state);
+		public abstract Value GetValue(StoryState state);
 
-		public abstract object GetRawValue(RenPyState state);
-		
-		public abstract void SetValue(RenPyState state, Value value);
+		public abstract object GetRawValue(StoryState state);
 
-		public abstract string AsString(RenPyState state);
+		public abstract void SetValue(StoryState state, Value value);
+
+		public abstract string AsString(StoryState state);
 
 		#region Arithmetic
 
-		public static Value Add(RenPyState state, Value left, Value right) 
+		public static Value Add(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -82,8 +81,8 @@ namespace DPek.Raconteur.Util.Expressions
 
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static Value Minus(RenPyState state, Value left, Value right) 
+
+		public static Value Minus(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -146,7 +145,7 @@ namespace DPek.Raconteur.Util.Expressions
 			throw new ArgumentException("Arguments are not numbers");
 		}
 
-		public static Value Multiply(RenPyState state, Value left, Value right) 
+		public static Value Multiply(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -208,8 +207,8 @@ namespace DPek.Raconteur.Util.Expressions
 			
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static Value Divide(RenPyState state, Value left, Value right) 
+
+		public static Value Divide(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -271,8 +270,8 @@ namespace DPek.Raconteur.Util.Expressions
 			
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static Value Mod(RenPyState state, Value left, Value right) 
+
+		public static Value Mod(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -339,7 +338,7 @@ namespace DPek.Raconteur.Util.Expressions
 
 		#region Comparison
 
-		public static bool GreaterThan(RenPyState state, Value left, Value right) 
+		public static bool GreaterThan(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -392,8 +391,8 @@ namespace DPek.Raconteur.Util.Expressions
 			
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static bool GreaterThanOrEqual(RenPyState state, Value left, Value right) 
+
+		public static bool GreaterThanOrEqual(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -446,8 +445,8 @@ namespace DPek.Raconteur.Util.Expressions
 			
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static bool LessThan(RenPyState state, Value left, Value right) 
+
+		public static bool LessThan(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);
@@ -500,8 +499,8 @@ namespace DPek.Raconteur.Util.Expressions
 			
 			throw new ArgumentException("Arguments are not numbers");
 		}
-		
-		public static bool LessThanOrEqual(RenPyState state, Value left, Value right) 
+
+		public static bool LessThanOrEqual(StoryState state, Value left, Value right) 
 		{
 			object leftNum = left.GetRawValue(state);
 			object rightNum = right.GetRawValue(state);

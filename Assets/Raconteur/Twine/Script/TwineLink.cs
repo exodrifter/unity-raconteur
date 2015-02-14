@@ -1,4 +1,5 @@
-﻿using DPek.Raconteur.Util.Parser;
+﻿using DPek.Raconteur.Twine.State;
+using DPek.Raconteur.Util.Parser;
 using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
@@ -35,7 +36,7 @@ namespace DPek.Raconteur.Twine.Script
 			}
 		}
 
-		public override List<TwineLine> Compile()
+		public override List<TwineLine> Compile(TwineState state)
 		{
 			var ret = new List<TwineLine>();
 			ret.Add(this);

@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-
-using DPek.Raconteur.RenPy.Parser;
+﻿using DPek.Raconteur.RenPy.Parser;
 using DPek.Raconteur.RenPy.Script;
+using DPek.Raconteur.Util;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.RenPy.State
 {
 	/// <summary>
 	/// Stores the state of a Ren'Py script.
 	/// </summary>
-	public class RenPyState
+	public class RenPyState : StoryState
 	{
 		/// <summary>
 		/// The Ren'Py script to store state for.
@@ -160,7 +160,7 @@ namespace DPek.Raconteur.RenPy.State
 		/// <param name="name">
 		/// The name of the variable to get the value of.
 		/// </param>
-		public string GetVariable(string name)
+		public override string GetVariable(string name)
 		{
 			return Static.Vars.ContainsKey(name) ? Static.Vars[name] : "";
 		}
@@ -174,7 +174,7 @@ namespace DPek.Raconteur.RenPy.State
 		/// <param name="value">
 		/// The value to the variable to.
 		/// </param>
-		public void SetVariable(string name, string value)
+		public override void SetVariable(string name, string value)
 		{
 			if (!Static.Vars.ContainsKey(name))
 			{

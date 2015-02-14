@@ -92,12 +92,12 @@ namespace DPek.Raconteur.Util.Expressions
 				right.Add(token);
 			}
 
-			string list = "[";
+			string list = null;
 			foreach(string token in tokens)
 			{
-				if(list.Length == 1)
+				if(list == null)
 				{
-					list += token;
+					list = "[" + token;
 				}
 				else
 				{
@@ -106,7 +106,7 @@ namespace DPek.Raconteur.Util.Expressions
 			}
 			list += "]";
 			string msg = "Tokens are not a valid expression string";
-			msg += " (was:" + list+")";
+			msg += " (was:" + list + ")";
 			throw new ArgumentException(msg, "tokens");
 		}
 

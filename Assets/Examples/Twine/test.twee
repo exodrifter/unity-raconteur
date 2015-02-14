@@ -1,6 +1,8 @@
 ﻿:: Start [tag1 tag2]
 Your story will display this passage first. [[Click here.|Passage]] Edit it by double clicking it.
 
+<<set $hello to True>>
+<<set $test to 1; $room to start>>
 
 :: Passage
 Hello world!

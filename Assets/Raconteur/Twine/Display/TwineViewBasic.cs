@@ -38,8 +38,6 @@ namespace DPek.Raconteur.Twine
 				return;
 			}
 
-			TwinePassage passage = m_controller.GetCurrentPassage();
-
 			GUIStyle style = new GUIStyle();
 			style.normal.textColor = Color.white;
 			style.richText = true;
@@ -59,7 +57,7 @@ namespace DPek.Raconteur.Twine
 
 			float remaining = areaWidth;
 			GUILayout.BeginHorizontal();
-			foreach (TwineLine line in passage.Compile())
+			foreach (TwineLine line in m_controller.GetCurrentPassage())
 			{
 				string[] wrapped = Wrap(line.Print(), style, areaWidth, remaining, out remaining);
 

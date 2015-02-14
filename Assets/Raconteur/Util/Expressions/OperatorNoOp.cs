@@ -1,5 +1,3 @@
-using DPek.Raconteur.RenPy.State;
-
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
@@ -28,7 +26,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="right">
 		/// The right hand argument.
 		/// </param>
-		public override Value Eval(RenPyState state, Value left, Value right)
+		public override Value Eval(StoryState state, Value left, Value right)
 		{
 			return left != null ? left : right;
 		}

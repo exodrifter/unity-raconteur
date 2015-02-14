@@ -1,5 +1,4 @@
 ﻿using System;
-using DPek.Raconteur.RenPy.State;
 
 namespace DPek.Raconteur.Util.Expressions
 {
@@ -65,7 +64,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <returns>
 		/// The value of this number.
 		/// </returns>
-		public override Value GetValue(RenPyState state)
+		public override Value GetValue(StoryState state)
 		{
 			if(m_value != null)
 			{
@@ -74,7 +73,7 @@ namespace DPek.Raconteur.Util.Expressions
 			return null;
 		}
 
-		public override object GetRawValue(RenPyState state)
+		public override object GetRawValue(StoryState state)
 		{
 			return m_value;
 		}
@@ -87,13 +86,14 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="value">
 		/// The value to set this number to.
 		/// </param>
-		public override void SetValue(RenPyState state, Value value)
+		public override void SetValue(StoryState state, Value value)
 		{
 			string msg = "Cannot assign a value to a number";
 			throw new InvalidOperationException(msg);
 		}
 
-		public override string AsString(RenPyState state) {
+		public override string AsString(StoryState state)
+		{
 			return m_value.ToString();
 		}
 		

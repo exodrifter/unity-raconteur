@@ -1,5 +1,6 @@
 ﻿using DPek.Raconteur.Twine.Parser;
 using DPek.Raconteur.Twine.Script;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.State
 {
@@ -8,13 +9,13 @@ namespace DPek.Raconteur.Twine.State
 		/// <summary>
 		/// The story that this execution state uses.
 		/// </summary>
-		private TwineStory m_story;
+		private TwineState m_state;
 
 		/// <summary>
 		/// The passage that this execution state is currently pointing to.
 		/// </summary>
-		private TwinePassage m_currentPassage;
-		public TwinePassage CurrentPassage
+		private List<TwineLine> m_currentPassage;
+		public List<TwineLine> CurrentPassage
 		{
 			get { return m_currentPassage; }
 		}
@@ -28,20 +29,21 @@ namespace DPek.Raconteur.Twine.State
 		}
 
 		/// <summary>
-		/// Creates a new execution state with the passed TwineStory.
+		/// Creates a new execution state.
 		/// </summary>
-		/// <param name="story">
-		/// The TwineStory to keep execution state for
+		/// <param name="state">
+		/// The TwineState this execution state belongs to.
 		/// <param>
-		public TwineExecutionState(ref TwineStory story)
+		public TwineExecutionState(TwineState state)
 		{
-			m_story = story;
+			m_state = state;
 			m_currentPassage = null;
 		}
 
 		public void GoToPassage(string name)
 		{
-			m_currentPassage = m_story.GetPassage(name);
+			TwinePassage passage = m_state.Script.GetPassage(name);
+			m_currentPassage = passage.Compile(m_state);
 		}
 
 		/// <summary>

@@ -1,6 +1,4 @@
-﻿using DPek.Raconteur.RenPy.State;
-
-namespace DPek.Raconteur.Util.Expressions
+﻿namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
 	/// Represents an operator that returns true if either arguments are true.
@@ -27,7 +25,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="right">
 		/// The right hand argument.
 		/// </param>
-		public override Value Eval(RenPyState state, Value left, Value right)
+		public override Value Eval(StoryState state, Value left, Value right)
 		{
 			bool leftVal;
 			bool success = bool.TryParse(left.AsString(state), out leftVal);

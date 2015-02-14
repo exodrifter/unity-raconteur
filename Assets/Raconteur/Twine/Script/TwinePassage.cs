@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using DPek.Raconteur.Twine.State;
+using DPek.Raconteur.Util.Parser;
+using UnityEngine;
 using System;
 using System.Collections.Generic;
-using DPek.Raconteur.Util.Parser;
 
 namespace DPek.Raconteur.Twine.Script
 {
@@ -76,12 +77,12 @@ namespace DPek.Raconteur.Twine.Script
 			m_source = new List<TwineLine>();
 		}
 
-		public List<TwineLine> Compile()
+		public List<TwineLine> Compile(TwineState state)
 		{
 			var ret = new List<TwineLine>();
 			foreach (TwineLine line in m_source)
 			{
-				ret.AddRange(line.Compile());
+				ret.AddRange(line.Compile(state));
 			}
 			return ret;
 		}

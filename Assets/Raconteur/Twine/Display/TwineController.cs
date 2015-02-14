@@ -2,6 +2,7 @@
 using DPek.Raconteur.Twine.Script;
 using DPek.Raconteur.Twine.State;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Display
 {
@@ -97,7 +98,7 @@ namespace DPek.Raconteur.Twine.Display
 		/// <returns>
 		/// The current TwinePassage.
 		/// </returns>
-		public TwinePassage GetCurrentPassage()
+		public List<TwineLine> GetCurrentPassage()
 		{
 			return m_state.Execution.CurrentPassage;
 		}

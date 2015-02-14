@@ -9,13 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
-  m_Name: script-test
+  m_Name: 
   m_EditorClassIdentifier: 
   content: ':: Start [tag1 tag2]
 
     Your story will display this passage first. [[Click here.|Passage]] Edit it by
     double clicking it.
 
+
+    <<set $hello to True>>
+
+    <<set $test to 1; $room to start>>
 
 
     :: Passage

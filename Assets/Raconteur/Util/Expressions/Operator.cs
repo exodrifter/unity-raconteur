@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System;
-using DPek.Raconteur.RenPy.State;
+﻿using System;
+using UnityEngine;
 
 namespace DPek.Raconteur.Util.Expressions
 {
@@ -53,7 +52,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <returns>
 		/// The result of this operator with the specified arguments.
 		/// </returns>
-		public Value Evaluate(RenPyState state, object left, object right)
+		public Value Evaluate(StoryState state, object left, object right)
 		{
 			// Get the value of the left and right sides
 			Value leftVal = null;
@@ -124,7 +123,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <returns>
 		/// The result of this operator with the specified arguments.
 		/// </returns>
-		public abstract Value Eval(RenPyState state, Value left, Value right);
+		public abstract Value Eval(StoryState state, Value left, Value right);
 
 		/// <summary>
 		/// Returns a string that represents this object for debugging purposes.

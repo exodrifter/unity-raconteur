@@ -103,7 +103,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <returns>
 		/// The value of this expression.
 		/// </returns>
-		public Value Evaluate(RenPyState state)
+		public Value Evaluate(StoryState state)
 		{
 			return m_op.Evaluate(state, Left, Right);
 		}

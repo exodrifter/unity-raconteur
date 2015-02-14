@@ -1,12 +1,13 @@
 ﻿using DPek.Raconteur.Twine.Parser;
 using DPek.Raconteur.Twine.Script;
+using DPek.Raconteur.Util;
 
 namespace DPek.Raconteur.Twine.State
 {
 	/// <summary>
 	/// Stores the state of a Twine story.
 	/// </summary>
-	public class TwineState
+	public class TwineState : StoryState
 	{
 		/// <summary>
 		/// The Twine story to store state for.
@@ -35,7 +36,7 @@ namespace DPek.Raconteur.Twine.State
 		public TwineState(ref TwineStory story)
 		{
 			m_story = story;
-			m_executionState = new TwineExecutionState(ref story);
+			m_executionState = new TwineExecutionState(this);
 		}
 
 		/// <summary>
@@ -56,9 +57,18 @@ namespace DPek.Raconteur.Twine.State
 		/// <param name="name">
 		/// The name of the variable to get the value of.
 		/// </param>
-		public string GetVariable(string name)
+		public override string GetVariable(string name)
 		{
-			return Static.Vars.ContainsKey(name) ? Static.Vars[name] : "";
+			if(Static.Vars.ContainsKey(name))
+			{
+				return Static.Vars[name]; 
+			}
+			else
+			{
+				var msg = "Variable \"" + name + "\" does not exist";
+				UnityEngine.Debug.LogWarning(msg);
+				return "";
+			}
 		}
 
 		/// <summary>
@@ -70,7 +80,7 @@ namespace DPek.Raconteur.Twine.State
 		/// <param name="value">
 		/// The value to the variable to.
 		/// </param>
-		public void SetVariable(string name, string value)
+		public override void SetVariable(string name, string value)
 		{
 			if (!Static.Vars.ContainsKey(name)) {
 				Static.Vars.Add(name, value);

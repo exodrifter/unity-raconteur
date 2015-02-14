@@ -1,5 +1,4 @@
-﻿using DPek.Raconteur.RenPy.State;
-using System;
+﻿using System;
 
 namespace DPek.Raconteur.Util.Expressions
 {
@@ -11,24 +10,24 @@ namespace DPek.Raconteur.Util.Expressions
 		{
 			m_value = value;
 		}
-		
-		public override Value GetValue(RenPyState state)
+
+		public override Value GetValue(StoryState state)
 		{
 			return new ValueBoolean(m_value);
 		}
-		
-		public override object GetRawValue(RenPyState state)
+
+		public override object GetRawValue(StoryState state)
 		{
 			return m_value;
 		}
-		
-		public override void SetValue(RenPyState state, Value value)
+
+		public override void SetValue(StoryState state, Value value)
 		{
 			string msg = "Cannot assign a value to a boolean";
 			throw new InvalidOperationException(msg);
 		}
-		
-		public override string AsString(RenPyState state)
+
+		public override string AsString(StoryState state)
 		{
 			return m_value.ToString();
 		}
