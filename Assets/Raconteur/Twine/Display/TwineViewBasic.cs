@@ -118,12 +118,11 @@ namespace DPek.Raconteur.Twine
 				if (token == "\n")
 				{
 					lines.Add(line);
-					lines.Add("");
 					line = "";
 					continue;
 				}
 
-				string testLine = line != "" ? line + token : token;
+				string testLine = line + token;
 				Vector2 size = style.CalcSize(new GUIContent(testLine));
 				if ((lines.Count == 0 && size.x > right)
 					|| (lines.Count != 0 && size.x > width))

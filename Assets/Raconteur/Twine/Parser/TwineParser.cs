@@ -37,7 +37,6 @@ namespace DPek.Raconteur.Twine.Parser
 			var scanner = new Scanner(ref tokens);
 
 			TwinePassage passage = null;
-			scanner.SkipEmptyLines();
 			while (scanner.HasNext())
 			{
 				string token = scanner.Peek();
@@ -73,7 +72,11 @@ namespace DPek.Raconteur.Twine.Parser
 						case "remember":
 							throw new ParseException("remember macro not supported");
 						case "print":
-							throw new ParseException("print macro not supported");
+							passage.Source.Add(new TwinePrintMacro(ref scanner, false));
+							break;
+						case "$":
+							passage.Source.Add(new TwinePrintMacro(ref scanner, true));
+							break;
 						case "display":
 							throw new ParseException("display macro not supported");
 						case "actions":

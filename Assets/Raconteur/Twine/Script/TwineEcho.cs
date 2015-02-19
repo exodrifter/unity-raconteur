@@ -16,6 +16,11 @@ namespace DPek.Raconteur.Twine.Script
 			m_contents = tokens.Seek(new string[] { "[[", "<<", "::"});
 		}
 
+		public TwineEcho(string str)
+		{
+			m_contents = str;
+		}
+
 		public override List<TwineLine> Compile(TwineState state)
 		{
 			var ret = new List<TwineLine>();
