@@ -14,6 +14,7 @@ namespace DPek.Raconteur.Twine.Script
 		public TwineEcho(ref Scanner tokens)
 		{
 			m_contents = tokens.Seek(new string[] { "[[", "<<", "::"});
+			m_contents = m_contents.Replace("\\\n", "");
 		}
 
 		public TwineEcho(string str)
