@@ -68,9 +68,13 @@ namespace DPek.Raconteur.Twine.Parser
 							throw new ParseException("endif macro not supported");
 						case "set":
 							passage.Source.Add(new TwineSetMacro(ref scanner));
-							break;
+						break;
 						case "remember":
-							throw new ParseException("remember macro not supported");
+							passage.Source.Add(new TwineRememberMacro(ref scanner));
+							break;
+						case "forget":
+							passage.Source.Add(new TwineForgetMacro(ref scanner));
+							break;
 						case "print":
 							passage.Source.Add(new TwinePrintMacro(ref scanner, false));
 							break;
