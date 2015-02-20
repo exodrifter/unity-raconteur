@@ -3,6 +3,7 @@ using DPek.Raconteur.Twine.Script;
 using DPek.Raconteur.Twine.State;
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 namespace DPek.Raconteur.Twine.Display
 {
@@ -104,17 +105,34 @@ namespace DPek.Raconteur.Twine.Display
 		}
 
 		/// <summary>
-		/// Picks a choice in a RenPyMenu.
+		/// Changes the current passage to the specified passage. This should
+		/// NOT be used to jump to a passage as a result of clicking a link. To
+		/// do that, call <see cref="Navigate"/> instead.
 		/// </summary>
-		/// <param name="menu">
-		/// The menu to pick a choice in.
-		/// </param>
-		/// <param name="choice">
-		/// The choice to pick.
+		/// <param name="title">
+		/// The passage to go to.
 		/// </param>
 		public void GoToPassage(string title)
 		{
 			m_state.Execution.GoToPassage(title);
+		}
+
+		/// <summary>
+		/// Navigates to a passage as specified by a link
+		/// </summary>
+		/// <param name="title">
+		/// The passage to go to.
+		/// </param>
+		public void Navigate(TwineLink link)
+		{
+			if (!link.Active)
+			{
+				throw new InvalidOperationException("Link \"" + link.Label
+				    + "\"=>(" + link.Target + ") is not active");
+			}
+
+			link.OnUsed();
+			m_state.Execution.GoToPassage(link.Target);
 		}
 
 		#endregion

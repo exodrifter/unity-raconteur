@@ -85,7 +85,8 @@ namespace DPek.Raconteur.Twine.Parser
 							passage.Source.Add(new TwineDisplayMacro(ref scanner, false));
 							break;
 						case "actions":
-							throw new ParseException("actions macro not supported");
+							passage.Source.Add(new TwineActionsMacro(ref scanner));
+							break;
 						case "choice":
 							throw new ParseException("choice macro not supported");
 						case "nobr":

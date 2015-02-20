@@ -55,6 +55,7 @@ namespace DPek.Raconteur.Twine
 			scrollPosition = GUILayout.BeginScrollView(scrollPosition,
 				GUILayout.Width(areaWidth), GUILayout.Height(areaHeight));
 
+			bool inActionGroup = false;
 			float remaining = areaWidth;
 			GUILayout.BeginHorizontal();
 			foreach (TwineLine line in m_controller.GetCurrentPassage())
@@ -77,23 +78,38 @@ namespace DPek.Raconteur.Twine
 				}
 				else if (line is TwineLink)
 				{
-					style.normal.textColor = new Color(0.6f, 0.6f, 1.0f);
+					var link = line as TwineLink;
+					if (link.Active)
+					{
+						style.normal.textColor = new Color(0.6f, 0.6f, 1.0f);
+					}
+					else
+					{
+						style.normal.textColor = new Color(0.5f, 0.5f, 0.5f);
+					}
+
 					for (int i = 0; i < wrapped.Length; ++i)
 					{
 						string str = wrapped[i];
 						if (GUILayout.Button(str, style,
-							GUILayout.ExpandWidth(false)))
+							GUILayout.ExpandWidth(false)) && link.Active)
 						{
-							m_controller.GoToPassage((line as TwineLink).Target);
+							m_controller.Navigate(link);
 							scrollPosition = new Vector2(0, 0);
 						}
-						if (i < wrapped.Length - 1 || str.EndsWith("\n"))
+						if (i < wrapped.Length - 1 || str.EndsWith("\n")
+						    || inActionGroup)
 						{
 							GUILayout.EndHorizontal();
 							GUILayout.BeginHorizontal();
 						}
 					}
 					style.normal.textColor = Color.white;
+				}
+				else if (line is TwineActionGroup)
+				{
+					var group = line as TwineActionGroup;
+					inActionGroup = group.Start;
 				}
 			}
 			GUILayout.EndHorizontal();

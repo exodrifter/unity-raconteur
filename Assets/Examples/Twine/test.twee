@@ -1,9 +1,21 @@
 ﻿:: Start [tag1 tag2]
-<<display "Passage">>
-<<Passage>>
+<<actions "Passage" "Hello" "Hi">>
+
 
 :: Passage
+Passage.
+<<display "Start">>
+
+
+:: Hello
 Hello world!
+<<display "Start">>
+
+
+:: Hi
+Hi!
+<<display "Start">>
+
 
 :: StoryTitle
 Untitled Story

@@ -11,28 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: ':: Start [tag1 tag2]
-
-    <<display "Passage">>
-
-    <<Passage>>
-
-
-    :: Passage
-
-    Hello world!
-
-
-    :: StoryTitle
-
-    Untitled Story
-
-
-
-    :: StoryAuthor
-
-    Anonymous
-
-
-
-'
+  content: ":: Start [tag1 tag2]\r\n<<actions \"Passage\" \"Hello\" \"Hi\">>\r\n\r\n\r\n::
+    Passage\r\nPassage.\r\n<<display \"Start\">>\r\n\r\n\r\n:: Hello\r\nHello world!\r\n<<display
+    \"Start\">>\r\n\r\n\r\n:: Hi\r\nHi!\r\n<<display \"Start\">>\r\n\r\n\r\n:: StoryTitle\r\nUntitled
+    Story\r\n\r\n\r\n:: StoryAuthor\r\nAnonymous\r\n\r\n\r\n"
