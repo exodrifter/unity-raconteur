@@ -154,15 +154,21 @@ namespace DPek.Raconteur.RenPy.State
 		/// Gets the value of the specified variable.
 		/// </summary>
 		/// <returns>
-		/// The value of the specified variable or an empty string if the
-		/// variable does not exist.
+		/// The value of the specified variable.
 		/// </returns>
 		/// <param name="name">
 		/// The name of the variable to get the value of.
 		/// </param>
 		public override string GetVariable(string name)
 		{
-			return Static.Vars.ContainsKey(name) ? Static.Vars[name] : "";
+			if (Static.Vars.ContainsKey(name))
+			{
+				return Static.Vars[name];
+			}
+			else
+			{
+				throw new UndefinedVariableException(name);
+			}
 		}
 
 		/// <summary>
@@ -172,7 +178,7 @@ namespace DPek.Raconteur.RenPy.State
 		/// The name of the variable to set the value of.
 		/// </param>
 		/// <param name="value">
-		/// The value to the variable to.
+		/// The value to set the variable to.
 		/// </param>
 		public override void SetVariable(string name, string value)
 		{
@@ -184,6 +190,17 @@ namespace DPek.Raconteur.RenPy.State
 			{
 				Static.Vars[name] = value;
 			}
+		}
+
+		/// <summary>
+		/// Deletes the specified variable.
+		/// </summary>
+		/// <param name="name">
+		/// The name of the variable to delete.
+		/// </param>
+		public override void DeleteVariable(string name)
+		{
+			Static.Vars.Remove(name);
 		}
 
 		#endregion

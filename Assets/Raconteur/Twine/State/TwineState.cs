@@ -51,8 +51,7 @@ namespace DPek.Raconteur.Twine.State
 		/// Gets the value of the specified variable.
 		/// </summary>
 		/// <returns>
-		/// The value of the specified variable or an empty string if the
-		/// variable does not exist.
+		/// The value of the specified variable.
 		/// </returns>
 		/// <param name="name">
 		/// The name of the variable to get the value of.
@@ -65,9 +64,7 @@ namespace DPek.Raconteur.Twine.State
 			}
 			else
 			{
-				var msg = "Variable \"" + name + "\" does not exist";
-				UnityEngine.Debug.LogWarning(msg);
-				return "";
+				throw new UndefinedVariableException(name);
 			}
 		}
 
@@ -82,11 +79,25 @@ namespace DPek.Raconteur.Twine.State
 		/// </param>
 		public override void SetVariable(string name, string value)
 		{
-			if (!Static.Vars.ContainsKey(name)) {
+			if (!Static.Vars.ContainsKey(name))
+			{
 				Static.Vars.Add(name, value);
-			} else {
+			}
+			else
+			{
 				Static.Vars[name] = value;
 			}
+		}
+
+		/// <summary>
+		/// Deletes the specified variable.
+		/// </summary>
+		/// <param name="name">
+		/// The name of the variable to delete.
+		/// </param>
+		public override void DeleteVariable(string name)
+		{
+			Static.Vars.Remove(name);
 		}
 	}
 }
