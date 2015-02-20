@@ -5,18 +5,27 @@ using System.Collections.Generic;
 namespace DPek.Raconteur.Twine.Script
 {
 	/// <summary>
-	/// Defines the start and end of an action group.
+	/// Defines the start and end of a group of actions or choices.
 	/// </summary>
-	public class TwineActionGroup : TwineLine
+	public class TwineGroup : TwineLine
 	{
+		public enum GroupType { Actions, Choices }
+
+		private GroupType m_type;
+		public GroupType Type
+		{
+			get { return m_type; }
+		}
+
 		private bool m_start;
 		public bool Start
 		{
 			get { return m_start;  }
 		}
 
-		public TwineActionGroup(bool start)
+		public TwineGroup(GroupType type, bool start)
 		{
+			m_type = type;
 			m_start = start;
 		}
 
@@ -34,7 +43,7 @@ namespace DPek.Raconteur.Twine.Script
 
 		protected override string ToDebugString()
 		{
-			return "start=" + m_start;
+			return "type=" + m_type + " start=" + m_start;
 		}
 	}
 }

@@ -1,6 +1,9 @@
 ﻿:: Start [tag1 tag2]
 <<actions "Passage" "Hello" "Hi">>
 
+<<choice [[Passage]]>>
+<<choice [[Hello]]>>
+<<choice [[Hi]]>>
 
 :: Passage
 Passage.

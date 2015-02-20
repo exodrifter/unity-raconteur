@@ -106,9 +106,9 @@ namespace DPek.Raconteur.Twine
 					}
 					style.normal.textColor = Color.white;
 				}
-				else if (line is TwineActionGroup)
+				else if (line is TwineGroup)
 				{
-					var group = line as TwineActionGroup;
+					var group = line as TwineGroup;
 					inActionGroup = group.Start;
 				}
 			}
