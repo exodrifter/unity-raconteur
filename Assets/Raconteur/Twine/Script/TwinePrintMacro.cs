@@ -5,7 +5,10 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwinePrintMacro : TwineLine
+	/// <summary>
+	/// The Twine print macro echoes the value of an expression.
+	/// </summary>
+	public class TwinePrintMacro : TwineMacro
 	{
 		private Expression m_expression;
 		
@@ -33,7 +36,6 @@ namespace DPek.Raconteur.Twine.Script
 		
 		public override List<TwineLine> Compile(TwineState state)
 		{
-			Static.Log(m_expression.ToString());
 			Value val = m_expression.Evaluate(state);
 
 			var list = new List<TwineLine>();
@@ -41,15 +43,11 @@ namespace DPek.Raconteur.Twine.Script
 			return list;
 		}
 		
-		public override string Print()
-		{
-			return null;
-		}
-		
 		protected override string ToDebugString()
 		{
-			string ret = m_expression.ToString();
-			return ret;
+			string str = "print ";
+			str += m_expression.ToString();
+			return str;
 		}
 	}
 }

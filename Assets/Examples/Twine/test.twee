@@ -12,7 +12,7 @@ Passage.
 
 :: Hello
 Hello world!
-<<display "Start">>
+<<Start>>
 
 
 :: Hi

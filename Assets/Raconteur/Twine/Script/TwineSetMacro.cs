@@ -5,7 +5,10 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwineSetMacro : TwineLine
+	/// <summary>
+	/// The Twine set macro sets the value of any number of variables.
+	/// </summary>
+	public class TwineSetMacro : TwineMacro
 	{
 		private List<Expression> m_expressions;
 
@@ -42,26 +45,21 @@ namespace DPek.Raconteur.Twine.Script
 			return new List<TwineLine>();
 		}
 
-		public override string Print()
-		{
-			return null;
-		}
-
 		protected override string ToDebugString()
 		{
-			string ret = null;
+			string str = "set ";
+			
+			bool first = true;
 			foreach (Expression expression in m_expressions)
 			{
-				if (ret == null)
+				if (!first)
 				{
-					ret = expression.ToString();
+					str += "; ";
 				}
-				else
-				{
-					ret += "; " + expression.ToString();
-				}
+				str += expression.ToString();
+				first = false;
 			}
-			return ret;
+			return str;
 		}
 	}
 }

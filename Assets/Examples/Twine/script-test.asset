@@ -9,10 +9,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
-  m_Name: script-test
+  m_Name: 
   m_EditorClassIdentifier: 
-  content: ":: Start [tag1 tag2]\r\n<<actions \"Passage\" \"Hello\" \"Hi\">>\r\n\r\n<<choice
-    [[Passage]]>>\r\n<<choice [[Hello]]>>\r\n<<choice [[Hi]]>>\r\n\r\n:: Passage\r\nPassage.\r\n<<display
-    \"Start\">>\r\n\r\n\r\n:: Hello\r\nHello world!\r\n<<display \"Start\">>\r\n\r\n\r\n::
-    Hi\r\nHi!\r\n<<display \"Start\">>\r\n\r\n\r\n:: StoryTitle\r\nUntitled Story\r\n\r\n\r\n::
-    StoryAuthor\r\nAnonymous\r\n\r\n\r\n"
+  content: ':: Start [tag1 tag2]
+
+    <<actions "Passage" "Hello" "Hi">>
+
+
+    <<choice [[Passage]]>>
+
+    <<choice [[Hello]]>>
+
+    <<choice [[Hi]]>>
+
+
+    :: Passage
+
+    Passage.
+
+    <<display "Start">>
+
+
+
+    :: Hello
+
+    Hello world!
+
+    <<Start>>
+
+
+
+    :: Hi
+
+    Hi!
+
+    <<display "Start">>
+
+
+
+    :: StoryTitle
+
+    Untitled Story
+
+
+
+    :: StoryAuthor
+
+    Anonymous
+
+
+
+'

@@ -88,7 +88,11 @@ namespace DPek.Raconteur.Twine.Script
 
 		protected override string ToDebugString()
 		{
-			return m_target + " (" + m_label + ")";
+			string str = "link ";
+			str += "active=" + m_active + " ";
+			str += "label=" + m_label + " ";
+			str += "target=" + m_target + " ";
+			return str;
 		}
 	}
 }

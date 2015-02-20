@@ -9,7 +9,7 @@ namespace DPek.Raconteur.Twine.Script
 	/// </summary>
 	public class TwineGroup : TwineLine
 	{
-		public enum GroupType { Actions, Choices }
+		public enum GroupType { ACTIONS, CHOICES }
 
 		private GroupType m_type;
 		public GroupType Type
@@ -43,7 +43,10 @@ namespace DPek.Raconteur.Twine.Script
 
 		protected override string ToDebugString()
 		{
-			return "type=" + m_type + " start=" + m_start;
+			string str = "group ";
+			str += m_start ? "start " : "end ";
+			str += "type=" + m_type + " ";
+			return str;
 		}
 	}
 }

@@ -79,11 +79,14 @@ namespace DPek.Raconteur.Twine.Script
 
 		public List<TwineLine> Compile(TwineState state)
 		{
+			Static.Log("<i>Compiling passage " + Title + "...</i>\n");
 			var ret = new List<TwineLine>();
 			foreach (TwineLine line in m_source)
 			{
+				Static.Log(line.ToString());
 				ret.AddRange(line.Compile(state));
 			}
+			Static.Log("<i>Done compiling passage " + Title + "</i>\n");
 			return ret;
 		}
 	}

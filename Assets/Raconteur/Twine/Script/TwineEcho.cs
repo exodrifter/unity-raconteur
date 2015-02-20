@@ -36,7 +36,10 @@ namespace DPek.Raconteur.Twine.Script
 
 		protected override string ToDebugString()
 		{
-			return m_contents;
+			string str = "echo \"";
+			str += m_contents.Replace("\n","\\n");
+			str += "\"";
+			return str;
 		}
 	}
 }

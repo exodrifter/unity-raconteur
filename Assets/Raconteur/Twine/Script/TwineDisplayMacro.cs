@@ -5,10 +5,17 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwineDisplayMacro : TwineLine
+	/// <summary>
+	/// The Twine display macro inserts a specified passage into the current
+	/// passage.
+	/// </summary>
+	public class TwineDisplayMacro : TwineMacro
 	{
+		/// <summary>
+		/// The expression, when evaluated, will return the name of the passage
+		/// to insert.
+		/// </summary>
 		private Expression m_expression = null;
-		private string m_passageName = null;
 		
 		public TwineDisplayMacro(ref Scanner tokens, bool shorthand)
 		{
@@ -26,7 +33,8 @@ namespace DPek.Raconteur.Twine.Script
 			}
 			else
 			{
-				m_passageName = tokens.Seek(">>");
+				string passage = tokens.Seek(">>");
+				m_expression = parser.ParseExpression("\"" + passage + "\"");
 			}
 
 			tokens.Next();
@@ -34,23 +42,15 @@ namespace DPek.Raconteur.Twine.Script
 		
 		public override List<TwineLine> Compile(TwineState state)
 		{
-			string passageName = m_passageName;
-			if (passageName == null)
-			{
-				passageName = m_expression.Evaluate(state).AsString(state);
-			}
-
-			return state.Script.GetPassage(passageName).Compile(state);
-		}
-		
-		public override string Print()
-		{
-			return null;
+			string passage = m_expression.Evaluate(state).AsString(state);
+			return state.Script.GetPassage(passage).Compile(state);
 		}
 		
 		protected override string ToDebugString()
 		{
-			return m_expression.ToString();
+			string str = "display ";
+			str += m_expression.ToString();
+			return str;
 		}
 	}
 }

@@ -5,7 +5,11 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwineActionsMacro : TwineLine
+	/// <summary>
+	/// The Twine actions macro is a set of links that the player can choose
+	/// from. Each link can only be chosen once.
+	/// </summary>
+	public class TwineActionsMacro : TwineMacro
 	{
 		private Dictionary<string, bool> m_actions;
 
@@ -36,7 +40,7 @@ namespace DPek.Raconteur.Twine.Script
 		public override List<TwineLine> Compile(TwineState state)
 		{
 			var list = new List<TwineLine>();
-			list.Add(new TwineGroup(TwineGroup.GroupType.Actions, true));
+			list.Add(new TwineGroup(TwineGroup.GroupType.ACTIONS, true));
 
 			foreach (var kvp in m_actions)
 			{
@@ -46,30 +50,26 @@ namespace DPek.Raconteur.Twine.Script
 				list.Add(link);
 			}
 
-			list.Add(new TwineGroup(TwineGroup.GroupType.Actions, false));
+			list.Add(new TwineGroup(TwineGroup.GroupType.ACTIONS, false));
 			return list;
-		}
-
-		public override string Print()
-		{
-			return null;
 		}
 
 		protected override string ToDebugString()
 		{
-			string ret = null;
+			string str = "actions ";
+
+			bool first = true;
 			foreach (var kvp in m_actions)
 			{
-				if (ret == null)
+				if(!first)
 				{
-					ret = kvp.ToString();
+					str += ", ";
 				}
-				else
-				{
-					ret += "; " + kvp.ToString();
-				}
+
+				str += "[link=\"" + kvp.Key + "\" enabled=" + kvp.Value + "]";
+				first = false;
 			}
-			return ret;
+			return str;
 		}
 	}
 }

@@ -5,9 +5,20 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwineChoiceMacro : TwineLine
+	/// <summary>
+	/// The Twine actions macro is a set of links that the player can choose
+	/// from. Choosing one link will disable the other links.
+	/// </summary>
+	public class TwineChoiceMacro : TwineMacro
 	{
+		/// <summary>
+		/// The set of choices to choose from.
+		/// </summary>
 		private List<TwineLink> m_choices;
+
+		/// <summary>
+		/// Whether or not a choice has been chosen.
+		/// </summary>
 		public bool m_chosen;
 
 		public TwineChoiceMacro(ref Scanner tokens)
@@ -18,28 +29,23 @@ namespace DPek.Raconteur.Twine.Script
 			var ignore = new string[] { "<<", " ", "\n" };
 			while (tokens.PeekIgnore(ignore) == "choice")
 			{
-				ParseChoice(ref tokens);
+				tokens.Seek("<<");
+				tokens.Next();
+				tokens.Seek("choice");
+				tokens.Next();
+				
+				var link = new TwineLink(ref tokens);
+				m_choices.Add(link);
+				
+				tokens.Seek(">>");
+				tokens.Next();
 			}
-		}
-
-		private void ParseChoice(ref Scanner tokens)
-		{
-			tokens.Seek("<<");
-			tokens.Next();
-			tokens.Seek("choice");
-			tokens.Next();
-
-			var link = new TwineLink(ref tokens);
-			m_choices.Add(link);
-
-			tokens.Seek(">>");
-			tokens.Next();
 		}
 
 		public override List<TwineLine> Compile(TwineState state)
 		{
 			var list = new List<TwineLine>();
-			list.Add(new TwineGroup(TwineGroup.GroupType.Choices, true));
+			list.Add(new TwineGroup(TwineGroup.GroupType.CHOICES, true));
 
 			foreach (var choice in m_choices)
 			{
@@ -49,30 +55,27 @@ namespace DPek.Raconteur.Twine.Script
 				list.Add(link);
 			}
 
-			list.Add(new TwineGroup(TwineGroup.GroupType.Choices, false));
+			list.Add(new TwineGroup(TwineGroup.GroupType.CHOICES, false));
 			return list;
-		}
-
-		public override string Print()
-		{
-			return null;
 		}
 
 		protected override string ToDebugString()
 		{
-			string ret = null;
-			foreach (var choice in m_choices)
+			string str = "choices ";
+			str += "enabled=" + !m_chosen + " ";
+			
+			bool first = true;
+			foreach (var link in m_choices)
 			{
-				if (ret == null)
+				if(!first)
 				{
-					ret = choice.ToString();
+					str += ", ";
 				}
-				else
-				{
-					ret += "; " + choice.ToString();
-				}
+				
+				str += "[[" + link.Label + "|" + link.Target + "]]";
+				first = false;
 			}
-			return ret;
+			return str;
 		}
 	}
 }

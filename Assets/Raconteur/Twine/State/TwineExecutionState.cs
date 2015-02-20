@@ -42,8 +42,10 @@ namespace DPek.Raconteur.Twine.State
 
 		public void GoToPassage(string name)
 		{
+			Static.Log("<b>Starting compilation of \"" + name + "\"...</b>\n");
 			TwinePassage passage = m_state.Script.GetPassage(name);
 			m_currentPassage = passage.Compile(m_state);
+			Static.Log("<b>Finished compilation of \"" + name + "\"</b>\n");
 		}
 
 		/// <summary>

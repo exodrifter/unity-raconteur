@@ -5,8 +5,14 @@ using System.Collections.Generic;
 
 namespace DPek.Raconteur.Twine.Script
 {
-	public class TwineForgetMacro : TwineLine
+	/// <summary>
+	/// The Twine forget macro deletes a variable.
+	/// </summary>
+	public class TwineForgetMacro : TwineMacro
 	{
+		/// <summary>
+		/// The variable to delete.
+		/// </summary>
 		private string m_variable;
 		
 		public TwineForgetMacro(ref Scanner tokens)
@@ -26,18 +32,15 @@ namespace DPek.Raconteur.Twine.Script
 		
 		public override List<TwineLine> Compile(TwineState state)
 		{
-			state.SetVariable(m_variable, null);
+			state.DeleteVariable(m_variable);
 			return new List<TwineLine>();
-		}
-		
-		public override string Print()
-		{
-			return null;
 		}
 		
 		protected override string ToDebugString()
 		{
-			return m_variable;
+			string str = "forget ";
+			str += "$" + m_variable;
+			return str;
 		}
 	}
 }
