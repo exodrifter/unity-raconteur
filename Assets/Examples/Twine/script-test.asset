@@ -13,6 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: ':: Start [tag1 tag2]
 
+    All you possess is an Axe and a Backpack containing 1 Meal. <<nobr>>
+
+    <<set $meals to 1>>
+
+    <<set $weapon to "axe">>
+
+    <<endnobr>>
+
     <<actions "Passage" "Hello" "Silently">>
 
 

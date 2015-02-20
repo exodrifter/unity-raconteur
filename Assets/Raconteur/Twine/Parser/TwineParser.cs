@@ -98,7 +98,9 @@ namespace DPek.Raconteur.Twine.Parser
 						lines.Add(new TwineChoiceMacro(ref scanner));
 						break;
 					case "nobr":
-						throw new ParseException("nobr macro not supported");
+						var nobrMacro = new TwineNoBrMacro(ref scanner);
+						lines.AddRange(nobrMacro.Compile(null));
+						break;
 					case "textinput":
 						throw new ParseException("textinput macro not supported");
 					case "radio":
