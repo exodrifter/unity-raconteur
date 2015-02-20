@@ -13,14 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: ':: Start [tag1 tag2]
 
-    <<actions "Passage" "Hello" "Hi">>
+    <<actions "Passage" "Hello" "Silently">>
 
 
     <<choice [[Passage]]>>
 
     <<choice [[Hello]]>>
 
-    <<choice [[Hi]]>>
+    <<choice [[Silently]]>>
+
 
 
     :: Passage
@@ -39,9 +40,17 @@ MonoBehaviour:
 
 
 
-    :: Hi
+    :: Silently
 
-    Hi!
+    Silently doing things now...
+
+    <<silently>>
+
+    This should not be seen
+
+    <<set $foo to 3>>
+
+    <<endsilently>>
 
     <<display "Start">>
 

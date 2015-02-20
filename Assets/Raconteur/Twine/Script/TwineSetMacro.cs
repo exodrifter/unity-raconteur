@@ -39,7 +39,6 @@ namespace DPek.Raconteur.Twine.Script
 		{
 			foreach (Expression expression in m_expressions)
 			{
-				Static.Log (expression.ToString());
 				expression.Evaluate(state);
 			}
 			return new List<TwineLine>();
