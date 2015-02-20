@@ -67,11 +67,18 @@ namespace DPek.Raconteur.Util.Parser
 			LinkedListNode<string> node = m_node;
 			while (node != null) {
 				string str = node.Value;
-				foreach(var ignoredToken in ignoredTokens) {
+				bool matched = false;
+
+				foreach (var ignoredToken in ignoredTokens) {
 					if (str == ignoredToken) {
 						node = node.Next;
-						continue;
+						matched = true;
+						break;
 					}
+				}
+
+				if (matched) {
+					continue;
 				}
 				break;
 			}
