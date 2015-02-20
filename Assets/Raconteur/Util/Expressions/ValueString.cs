@@ -40,7 +40,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// </returns>
 		public override string ToString ()
 		{
-			return m_str;
+			return "str:" + m_str;
 		}
 	}
 }

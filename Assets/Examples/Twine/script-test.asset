@@ -13,24 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content: ':: Start [tag1 tag2]
 
-    <<set $num=6>>Your \
+    <<display "Passage">>
 
-    story will display this passage first. [[Click here.|Passage]] Edit it by double
-    clicking it.
-
-
-    The number is <<$num>><<print $num>><<print $num-=3>>!
-
-
-    <<set $hello to True>>
-
-    <<set $test to 1; $room to "start">>
+    <<Passage>>
 
 
     :: Passage
 
     Hello world!
-
 
 
     :: StoryTitle

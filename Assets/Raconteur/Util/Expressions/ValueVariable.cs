@@ -56,7 +56,7 @@
 		/// </returns>
 		public override string ToString ()
 		{
-			return m_variable;
+			return "var:" + m_variable;
 		}
 	}
 }

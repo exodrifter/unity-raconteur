@@ -40,7 +40,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// </returns>
 		public override string ToString ()
 		{
-			return m_value.ToString();
+			return "bool:" + m_value.ToString();
 		}
 	}
 }

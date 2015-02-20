@@ -71,7 +71,15 @@ namespace DPek.Raconteur.Twine.Script
 		/// <returns></returns>
 		public TwinePassage GetPassage(string passageTitle)
 		{
-			return m_passages[passageTitle];
+			if (m_passages.ContainsKey(passageTitle))
+			{
+				return m_passages[passageTitle];
+			}
+			else
+			{
+				throw new ArgumentException("Story does not contain a passage "
+					+ "with the title \"" + passageTitle + "\"");
+			}
 		}
 	}
 }
