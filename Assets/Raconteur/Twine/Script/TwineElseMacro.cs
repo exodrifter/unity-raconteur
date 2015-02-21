@@ -31,34 +31,61 @@ namespace DPek.Raconteur.Twine.Script
 			tokens.Next();
 			tokens.Seek("else");
 			tokens.Next();
-			if(tokens.PeekIgnore(new string[] {" "}) == "if")
+			if (tokens.PeekIgnore(new string[] { " " }) == "if")
 			{
 				tokens.Seek("if");
 				tokens.Next();
 				string expressionString = tokens.Seek(">>");
+
 				var parser = ExpressionParserFactory.GetRenPyParser();
 				m_expression = parser.ParseExpression(expressionString);
 			}
-			else
-			{
-				tokens.Seek(">>");
-			}
+			tokens.Seek(">>");
 			tokens.Next();
-			
+
 			// Find the endif or else macro
 			string content = "";
 			string macro = null;
+			int nestedIfs = 0;
 			do
 			{
 				content += tokens.Seek("<<");
-				macro = tokens.PeekIgnore(new string[] {"<<", " "});
-				if(macro != "endif" && macro != "else")
+				macro = tokens.PeekIgnore(new string[] { "<<", " " });
+
+				if (macro == "if")
+				{
+					content += tokens.Next();
+					nestedIfs++;
+				}
+				else if (macro == "endif")
+				{
+					if (nestedIfs > 0)
+					{
+						content += tokens.Seek(">>");
+						content += tokens.Next();
+					}
+					nestedIfs--;
+				}
+				else if (macro == "else")
+				{
+					if (nestedIfs > 0)
+					{
+						content += tokens.Seek(">>");
+						content += tokens.Next();
+					}
+					else
+					{
+						elseMacro = new TwineElseMacro(ref tokens);
+						nestedIfs--;
+					}
+				}
+				else
 				{
 					content += tokens.Next();
 				}
-			} while (macro != "endif" && macro != "else" && tokens.HasNext());
-			
-			if(macro == "endif")
+			} while (tokens.HasNext() && nestedIfs >= 0);
+
+			if (macro == "endif")
 			{
 				content += tokens.Seek("<<");
 				tokens.Next();
@@ -67,17 +94,23 @@ namespace DPek.Raconteur.Twine.Script
 				tokens.Seek(">>");
 				tokens.Next();
 			}
-			else if (macro == "else")
-			{
-				elseMacro = new TwineElseMacro(ref tokens);
-			}
 
-			UnityEngine.Debug.LogWarning(content);
 			lines = TwineParser.ParseLines(content);
 		}
 		
 		public override List<TwineLine> Compile(TwineState state)
 		{
+			if (m_expression == null)
+			{
+				Static.Log("else (no expression) evaluated to true");
+				var list = new List<TwineLine>();
+				foreach (var line in lines) {
+					Static.Log(line.ToString());
+					list.AddRange(line.Compile(state));
+				}
+				return list;
+			}
+
 			// If evaluation succeeds, return the nested lines
 			Value v = m_expression.Evaluate(state);
 			if (v is ValueBoolean && (bool) v.GetRawValue(state))
@@ -92,9 +125,8 @@ namespace DPek.Raconteur.Twine.Script
 				return list;
 			}
 
-			Static.Log("if " + m_expression + " evaluated to false");
-
 			// If evaluation fails, go to the else statement
+			Static.Log("if " + m_expression + " evaluated to false");
 			if (elseMacro != null)
 			{
 				return elseMacro.Compile(state);

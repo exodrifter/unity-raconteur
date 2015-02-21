@@ -28,7 +28,6 @@ namespace DPek.Raconteur.Twine.Script
 				tokens.Next();
 
 				string expression = tokens.Seek(new string[] { ">>", ";" });
-				UnityEngine.Debug.LogWarning(expression);
 				m_expressions.Add(parser.ParseExpression(expression));
 			} while (tokens.Peek() == ";");
 

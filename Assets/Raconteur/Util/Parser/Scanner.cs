@@ -138,16 +138,13 @@ namespace DPek.Raconteur.Util.Parser
 		/// </param>
 		/// <returns>
 		/// The tokens that are between the current token (inclusive) and the
-		/// token to point to (exclusive).
+		/// token to point to (exclusive). If the current token and the token to
+		/// point to are the same, this returns an empty string.
 		/// </returns>
 		public string Seek(string token)
 		{
-			string skipped = "";
-			while (m_node != null && m_node.Value != token) {
-				skipped += m_node.Value;
-				m_node = m_node.Next;
-			}
-			return skipped;
+			string temp;
+			return Seek(new string[] { token }, out temp);
 		}
 		
 		/// <summary>
@@ -163,7 +160,8 @@ namespace DPek.Raconteur.Util.Parser
 		/// </param>
 		/// <returns>
 		/// The tokens that are between the current token (inclusive) and the
-		/// token to point to (exclusive).
+		/// token to point to (exclusive). If the current token and the token to
+		/// point to are the same, this returns an empty string.
 		/// </returns>
 		public string Seek(string[] tokens)
 		{
@@ -187,7 +185,8 @@ namespace DPek.Raconteur.Util.Parser
 		/// </param>
 		/// <returns>
 		/// The tokens that are between the current token (inclusive) and the
-		/// token to point to (exclusive).
+		/// token to point to (exclusive). If the current token and the token to
+		/// point to are the same, this returns an empty string.
 		/// </returns>
 		public string Seek(string[] tokens, out string match)
 		{

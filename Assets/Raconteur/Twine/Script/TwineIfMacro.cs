@@ -36,7 +36,7 @@ namespace DPek.Raconteur.Twine.Script
 
 			var parser = ExpressionParserFactory.GetRenPyParser();
 			m_expression = parser.ParseExpression(expressionString);
-			
+
 			// Find the endif or else macro
 			string content = "";
 			string macro = null;
@@ -44,30 +44,42 @@ namespace DPek.Raconteur.Twine.Script
 			do
 			{
 				content += tokens.Seek("<<");
-				macro = tokens.PeekIgnore(new string[] {"<<", " "});
+				macro = tokens.PeekIgnore(new string[] { "<<", " " });
 
-				if(macro == "if")
+				if (macro == "if")
 				{
 					content += tokens.Next();
 					nestedIfs++;
 				}
-				else if(macro == "endif")
+				else if (macro == "endif")
 				{
-					if(nestedIfs > 0)
+					if (nestedIfs > 0)
 					{
 						content += tokens.Seek(">>");
 						content += tokens.Next();
 					}
 					nestedIfs--;
 				}
-				else if(macro != "endif" && macro != "else")
+				else if (macro == "else")
+				{
+					if (nestedIfs > 0)
+					{
+						content += tokens.Seek(">>");
+						content += tokens.Next();
+					}
+					else
+					{
+						elseMacro = new TwineElseMacro(ref tokens);
+						nestedIfs--;
+					}
+				}
+				else
 				{
 					content += tokens.Next();
 				}
-			} while (tokens.HasNext()
-			    && (nestedIfs >= 0 || (macro != "endif" && macro != "else")));
+			} while (tokens.HasNext() && nestedIfs >= 0);
 
-			if(macro == "endif")
+			if (macro == "endif")
 			{
 				content += tokens.Seek("<<");
 				tokens.Next();
@@ -75,10 +87,6 @@ namespace DPek.Raconteur.Twine.Script
 				tokens.Next();
 				tokens.Seek(">>");
 				tokens.Next();
-			}
-			else if (macro == "else")
-			{
-				elseMacro = new TwineElseMacro(ref tokens);
 			}
 
 			lines = TwineParser.ParseLines(content);
@@ -101,9 +109,8 @@ namespace DPek.Raconteur.Twine.Script
 				return list;
 			}
 
-			Static.Log("if " + m_expression + " evaluated to false");
-
 			// If evaluation fails, go to the else statement
+			Static.Log("if " + m_expression + " evaluated to false");
 			if (elseMacro != null)
 			{
 				return elseMacro.Compile(state);

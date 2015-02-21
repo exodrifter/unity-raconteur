@@ -1,12 +1,19 @@
 ﻿:: Start [tag1 tag2]
 All you possess is an Axe and a Backpack containing 1 Meal.<<nobr>>
-<<set $weapon to "axe">>
+<<set $weapon to "ball">>
 <<endnobr>>
 <<actions "Passage" "Hello" "Silently">>
 
 <<if weapon == "axe">>\
 The red button blinks <<if $earplugs>> and hisses<<endif>> at you.
-
+<<else if weapon == "ball">>\
+<<if weapon == "axe">>\
+You should not be able to see this.
+<<else>>\
+No one knew why he left that day.
+<<endif>>\
+<<else>>\
+There is nothing else to see here.
 <<endif>>\
 
 <<choice [[Passage]]>>
