@@ -192,7 +192,7 @@ namespace DPek.Raconteur.Util.Parser
 		public string Seek(string[] tokens, out string match)
 		{
 			string skipped = "";
-			while (HasNext()) {
+			while (m_node != null) {
 				foreach (string token in tokens) {
 					if (m_node.Value == token) {
 						match = token;

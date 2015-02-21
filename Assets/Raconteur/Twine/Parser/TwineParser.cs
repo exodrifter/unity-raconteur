@@ -68,11 +68,12 @@ namespace DPek.Raconteur.Twine.Parser
 					switch (type)
 					{
 					case "if":
-						throw new ParseException("if macro not supported");
+						lines.Add(new TwineIfMacro(ref scanner));
+						break;
 					case "else":
-						throw new ParseException("else macro not supported");
+						throw new ParseException("unexpected else macro");
 					case "endif":
-						throw new ParseException("endif macro not supported");
+						throw new ParseException("unexpected endif macro");
 					case "set":
 						lines.Add(new TwineSetMacro(ref scanner));
 						break;
@@ -98,8 +99,7 @@ namespace DPek.Raconteur.Twine.Parser
 						lines.Add(new TwineChoiceMacro(ref scanner));
 						break;
 					case "nobr":
-						var nobrMacro = new TwineNoBrMacro(ref scanner);
-						lines.AddRange(nobrMacro.Compile(null));
+						lines.Add(new TwineNoBrMacro(ref scanner));
 						break;
 					case "textinput":
 						throw new ParseException("textinput macro not supported");
@@ -110,8 +110,7 @@ namespace DPek.Raconteur.Twine.Parser
 					case "button":
 						throw new ParseException("button macro not supported");
 					case "silently":
-						var silentlyMacro = new TwineSilentlyMacro(ref scanner);
-						lines.AddRange(silentlyMacro.Compile(null));
+						lines.Add(new TwineSilentlyMacro(ref scanner));
 						break;
 					case "back":
 						throw new ParseException("back macro not supported");

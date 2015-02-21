@@ -51,10 +51,8 @@ namespace DPek.Raconteur.Twine.Script
 			
 			foreach (var line in lines)
 			{
-				if (line is TwineMacro)
-				{
-					list.Add (line);
-				}
+				Static.Log (line.ToString());
+				list.AddRange (line.Compile(state));
 			}
 			return list;
 		}

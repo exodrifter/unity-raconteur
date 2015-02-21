@@ -52,7 +52,8 @@ namespace DPek.Raconteur.Twine.Script
 			{
 				if (line is TwineMacro)
 				{
-					list.Add (line);
+					Static.Log (line.ToString());
+					list.AddRange (line.Compile(state));
 				}
 			}
 			return list;
