@@ -1,21 +1,21 @@
 ﻿:: Start
-<<nobr>>
+<<silently>>
 Welcome to Raconteur! This package is designed to integrate Twine version 1 support into Unity. To learn even more about Twine: twinery.org
 
-<<set $opened_bag to "no">>
-<<set $soldiers to "no">>
-<<set $stared_barkeep to "no">>
-<<set $tavern_action to "no">>
-The nobr macro allows you to write things and also set variables without displaying the containted text. Morevoer, it eliminates all line breaks between nobr and endnobr. 
-<<endnobr>>
+<<set $opened_bag = "no">>
+<<set $stared_barkeep = "no">>
+<<set $stormed_soldiers = "no">>
+<<set $tavern_action = "no">>
+The silently macro allows you to write things and also set variables without displaying the containted text. 
+<<endsilently>>
 
-Rain falls and thunder claps. Gallops echo in the distance as you run through the forest. Footsteps splash in the mud.The glow of a small inn draws nearer. 
+Rain falls and thunder claps. Gallops echo in the distance as you run through the forest. Footsteps splash in the mud. The glow of a small inn draws nearer. 
 
 Walk inside the [[Inn|Inn]]
 
 
 :: orb
-<<if $tavern_action is "no">>You take the orb. Its glow softly illuminates the room. 
+<<if $tavern_action eq "no">>You take the orb. Its glow softly illuminates the room. 
 
 You open the window, and hurl the orb into the darkness outside.
 
@@ -59,7 +59,7 @@ Thunder claps and rain begins to fall.
 
 
 :: dagger
-<<if $tavern_action is "no">>You draw your dagger and stand at the side of the door.
+<<if $tavern_action eq "no">>You draw your dagger and stand at the side of the door.
 
 SLAM! Your door flies open. Several soldiers are at the entrance.
 
@@ -103,8 +103,8 @@ A Thief
 
 
 :: bag
-<<set $opened_bag to "yes">>You open up a soggy leather bag. Inside rests a glowing orb, a dagger, and several golden coins.
-<<if $soldiers is "no">>
+<<set $opened_bag = "yes">>You open up a soggy leather bag. Inside rests a glowing orb, a dagger, and several golden coins.
+<<if $stormed_soldiers eq "no">>
 [[Close the bag|Inn]]
 <<else>>
 [[Grab the glowing orb|orb]]
@@ -129,13 +129,13 @@ SLAM! The music stops.
 
 Suddenly, the front door flings open. Soldiers storm the room.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+<<set $stormed_soldiers "yes">>"King's army! There's a thief afoot! Nobody move!"
 
 The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
 
 "It's for the common good."
 
-<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+<<set $tavern_action = "yes">>A soldier with a toothy grin looks at you.
 
 "Let's see what you've got."
 
@@ -150,7 +150,7 @@ Raconteur
 
 
 :: bar
-<<if $stared_barkeep is "no">>You pull up a stool at the bar, and lock eyes with the [[Barkeep|barkeep]]
+<<if $stared_barkeep eq "no">>You pull up a stool at the bar, and lock eyes with the [[Barkeep|barkeep]]
 
 <<nobr>>
 <<actions "Passage" "Hello" "Silently">>
@@ -187,13 +187,13 @@ SLAM! The music stops.
 
 Suddenly, the front door flings open. Soldiers storm the room.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+<<set $stormed_soldiers "yes">>"King's army! There's a thief afoot! Nobody move!"
 
 The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
 
 "It's for the common good."
 
-<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+<<set $tavern_action = "yes">>A soldier with a toothy grin looks at you.
 
 "Let's see what you've got."
 
@@ -203,7 +203,7 @@ Reach into your [[bag|bag]]
 
 
 :: Inn
-<<if $opened_bag is "no">>A tavern brimming with brew and patrons. The echos of gallops fade and sweet sound of strings fill the atmosphere. A few folks bat an eyebrow at your dripping personage, but attention quickly reverts to the bard strumming a lute. Your [[bag|bag]] is weighed down by the rainwater.<<else>>Mugs slam on wooden tables in unison - the night is in full swing. No one seems to notice you. Merriment abound.
+<<if $opened_bag eq "no">>A tavern brimming with brew and patrons. The echos of gallops fade and sweet sound of strings fill the atmosphere. A few folks bat an eyebrow at your dripping personage, but attention quickly reverts to the bard strumming a lute. Your [[bag|bag]] is weighed down by the rainwater.<<else>>Mugs slam on wooden tables in unison - the night is in full swing. No one seems to notice you. Merriment abound.
  
 
 Grab a seat at the [[bar|bar]]
@@ -221,13 +221,13 @@ SLAM! The bard's smooth demeanor flashes to panic.
 
 The front door flings open. Soldiers storm the room.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+<<set $stormed_soldiers "yes">>"King's army! There's a thief afoot! Nobody move!"
 
 The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
 
 "It's for the common good."
 
-<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+<<set $tavern_action = "yes">>A soldier with a toothy grin looks at you.
 
 "Let's see what you've got."
 
@@ -246,13 +246,13 @@ SLAM!The music stops.
 
 Suddenly, the front door flings open. Soldiers storm the room.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+<<set $stormed_soldiers "yes">>"King's army! There's a thief afoot! Nobody move!"
 
 The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
 
 "It's for the common good."
 
-<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+<<set $tavern_action = "yes">>A soldier with a toothy grin looks at you.
 
 "Let's see what you've got."
 
@@ -266,7 +266,7 @@ Ah, such a comfortable bed. Exhaustion grips you. Rain thuds on the window. So c
 
 A SLAM thunders from downstairs. Footsteps and shouting echo from below.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+<<set $stormed_soldiers = "yes">>"King's army! There's a thief afoot!" 
 
 Footsteps grow louder, approaching the room. The rain stops thudding on the window.
 
@@ -307,7 +307,7 @@ The journey has been long, but you're so close to the trading port. You didn't s
 
 A SLAM thunders from downstairs. Footsteps and shouting echo from below.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+<<set $stormed_soldiers = "yes">>"King's army! There's a thief afoot!" 
 
 Footsteps grow louder, approaching the room. The rain stops thudding on the window.
 
@@ -318,7 +318,7 @@ Footsteps grow louder, approaching the room. The rain stops thudding on the wind
 :: barrel
 You slip into the barrel. You've done this countless times. Nobody ever looks in a barrel.
 
-<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+<<set $stormed_soldiers = "yes">>"King's army! There's a thief afoot!" 
 
 Footsteps grow louder, approaching upstairs. The slam of a door and the sounds of alarmed guests become as regular as the ticks and tocks of a clock until the soldiers reach the end of the hallway. 
 
