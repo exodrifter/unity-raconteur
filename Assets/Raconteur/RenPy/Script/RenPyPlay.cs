@@ -31,7 +31,7 @@ namespace DPek.Raconteur.RenPy.Script
 			tokens.Next();
 
 			// Get channel and setup default looping behaviour
-			tokens.Seek(new string [] {"music", "sound"});
+			tokens.Seek(new string [] {"music", "sound", "voice"});
 			m_channel = tokens.Next();
 			m_loop = (m_channel == "music" ? true : false);
 
