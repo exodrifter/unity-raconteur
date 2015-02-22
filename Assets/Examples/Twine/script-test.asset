@@ -9,17 +9,93 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
-  m_Name: 
+  m_Name: script-test
   m_EditorClassIdentifier: 
-  content: ":: Start [tag1 tag2]\r\nAll you possess is an Axe and a Backpack containing
-    1 Meal.<<nobr>>\r\n<<set $weapon to \"ball\">>\r\n<<endnobr>>\r\n\r\n<<actions
-    \"Passage\" \"Hello\" \"Silently\">>\r\n\r\n<<if weapon == \"axe\">>\\\r\nThe
-    red button blinks <<if $earplugs>> and hisses<<endif>> at you.\r\n<<else if weapon
-    == \"ball\">>\\\r\n<<if weapon == \"axe\">>\\\r\nYou should not be able to see
-    this.\r\n<<else>>\\\r\nNo one knew why he left that day.\r\n<<endif>>\\\r\n<<else>>\\\r\nThere
-    is nothing else to see here.\r\n<<endif>>\\\r\n\r\n<<choice [[Passage]]>>\r\n<<choice
-    [[Hello]]>>\r\n<<choice [[Silently]]>>\r\n\r\n\r\n:: Passage\r\nPassage.\r\n<<display
-    \"Start\">>\r\n\r\n\r\n:: Hello\r\nHello world!\r\n<<Start>>\r\n\r\n\r\n:: Silently\r\nSilently
-    doing things now...\r\n<<silently>>\r\nThis should not be seen\r\n<<set $foo to
-    3>>\r\n<<endsilently>>\r\n<<display \"Start\">>\r\n\r\n\r\n:: StoryTitle\r\nUntitled
-    Story\r\n\r\n\r\n:: StoryAuthor\r\nAnonymous\r\n\r\n\r\n"
+  content: ':: Start [tag1 tag2]
+
+    All you possess is an Axe and a Backpack containing 1 Meal.<<nobr>>
+
+    <<set $weapon to "ball">>
+
+    <<endnobr>>
+
+
+    <<actions "Passage" "Hello" "Silently">>
+
+
+    <<if weapon == "axe">>\
+
+    The red button blinks <<if $earplugs>> and hisses<<endif>> at you.
+
+    <<else if weapon == "ball">>\
+
+    <<if weapon == "axe">>\
+
+    You should not be able to see this.
+
+    <<else>>\
+
+    No one knew why he left that day.
+
+    <<endif>>\
+
+    <<else>>\
+
+    There is nothing else to see here.
+
+    <<endif>>\
+
+
+    <<choice [[Passage]]>>
+
+    <<choice [[Hello]]>>
+
+    <<choice [[Silently]]>>
+
+
+
+    :: Passage
+
+    Passage.
+
+    <<display "Start">>
+
+
+
+    :: Hello
+
+    Hello world!
+
+    <<Start>>
+
+
+
+    :: Silently
+
+    Silently doing things now...
+
+    <<silently>>
+
+    This should not be seen
+
+    <<set $foo to 3>>
+
+    <<endsilently>>
+
+    <<display "Start">>
+
+
+
+    :: StoryTitle
+
+    Untitled Story
+
+
+
+    :: StoryAuthor
+
+    Anonymous
+
+
+
+'

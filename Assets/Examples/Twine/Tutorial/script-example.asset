@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15b34156b060db42b53211856560623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: ":: Start\r\n<<nobr>>\r\nWelcome to Raconteur! This package is designed
+    to integrate Twine version 1 support into Unity. To learn even more about Twine:
+    twinery.org\r\n\r\n<<set $opened_bag to \"no\">>\r\n<<set $soldiers to \"no\">>\r\n<<set
+    $stared_barkeep to \"no\">>\r\n<<set $tavern_action to \"no\">>\r\nThe nobr macro
+    allows you to write things and also set variables without displaying the containted
+    text. Morevoer, it eliminates all line breaks between nobr and endnobr. \r\n<<endnobr>>\r\n\r\nRain
+    falls and thunder claps. Gallops echo in the distance as you run through the forest.
+    Footsteps splash in the mud.The glow of a small inn draws nearer. \r\n\r\nWalk
+    inside the [[Inn|Inn]]\r\n\r\n\r\n:: orb\r\n<<if $tavern_action is \"no\">>You
+    take the orb. Its glow softly illuminates the room. \r\n\r\nYou open the window,
+    and hurl the orb into the darkness outside.\r\n\r\nAs you shut the window...\r\n\r\nSLAM!
+    Your door flies open. Several soldiers are at the entrance.\r\n\r\n\"Stop! There
+    is a thief among us. Let us see your bag, traveler!\"\r\n\r\nTwo soldiers advance
+    and seize your bag before you can move, dumping its contents on the ground. The
+    dagger and coins clink on the ground. \r\n\r\n\"Nothing sir.\"\r\n\r\n\"But that
+    is a pecuilar dagger, you must be from distant lands.\" \r\n\r\nThe soldier picks
+    up one of the coins and pockets it, flashing a toothy grin.\r\n\r\n\"For the common
+    good. Stay safe, outlander.\"\r\n\r\nThe soldiers leave and storm the next room,
+    causing a woman to scream. \r\n\r\nYou climb out the window, and find the faintly
+    glowing orb. It's only a matter of time before they get close again, but you're
+    so close to the port... \r\n\r\nThunder claps and rain begins to fall.\r\n<<else>>\r\nYou
+    take the orb. The soldier's face shines with glee as he draws his sword.\r\n\r\n\"I've
+    found-\"\r\n\r\nYou use the power of the orb to stop time. \r\n\r\nYou didn't
+    want to use its full power but there was no other choice. \r\n\r\nYou grab your
+    dagger and slit the throat of every guard in the building. The human body behaves
+    in such a bizaree manner when time stands still. On your way back out you release
+    the orb's power, and the thud of 30 bodies provide a soft boom in the forest.
+    Screams follow.\r\n\r\nThere won't be anyone following you, but too many people
+    saw you. Perhaps you should have killed them all. But killing the innocent weighs
+    on you. You continue through the forest, ever so close to the end of your journey.
+    \r\n\r\nThunder claps and rain begins to fall. \r\n<<endif>>\r\n\r\n\r\n\r\n::
+    dagger\r\n<<if $tavern_action is \"no\">>You draw your dagger and stand at the
+    side of the door.\r\n\r\nSLAM! Your door flies open. Several soldiers are at the
+    entrance.\r\n\r\n\"Sto-\"\r\n\r\nYou slice his throat before he can speak another
+    word. As one soldier falls, your blade is already in the heart of another. You
+    draw the second soldier's blade as he falls and slice the necks of the remaining
+    two soldier's at once. \r\n\r\n4 bodies are slumped on the floor, bleeding.\r\n\r\nAll
+    is quiet upstairs for a moment.\r\n\r\nYou open the window in the room and steal
+    off into the night. As you look back, you see several more soldiers enter your
+    room, peering out. Their voices carry across the forest.\r\n\r\n\"You can't run
+    forever!\"\r\n\r\nYou place your bloody dagger into the bag, no time to clean
+    it. The orb inside the bag glows faintly. This orb has drawn the wrath of an army.
+    It's only a matter of time before they get close again, but you're so close to
+    the port...\r\n\r\nThunder claps and rain begins to fall.\r\n<<else>>\r\nYou draw
+    your dagger and the soldier begins to swing at you with his sword. \r\n\r\nYou
+    slit his throat and swiftly move through the crowd. Another slice, another burst
+    of blood. A body hits the ground. You jump through a window, running full sprint
+    into the dark forest.\r\n\r\n\"Thief! You can't run forever!\"\r\n\r\nYou ascend
+    a tree with ease, hiding beyond the range of a torch.\r\n\r\nFootsteps and gallops
+    move throught the forest.\r\n\r\n\"The thief must have gotten back on the trade
+    road, it's the only way to the port!\"\r\n\r\nPerhaps you should have used the
+    orb's power. Perhaps you should have killed them all. At least the soldiers. Killing
+    the innocent weighs on you though. You are ever so close to the end of your journey,
+    but the soldiers will be waiting at the port.\r\n\r\nThunder claps and rain begins
+    to fall. \r\n<<endif>>\r\n\r\n\r\n\r\n:: StoryTitle\r\nA Thief\r\n\r\n\r\n:: bag\r\n<<set
+    $opened_bag to \"yes\">>You open up a soggy leather bag. Inside rests a glowing
+    orb, a dagger, and several golden coins.\r\n<<if $soldiers is \"no\">>\r\n[[Close
+    the bag|Inn]]\r\n<<else>>\r\n[[Grab the glowing orb|orb]]\r\n[[Draw your dagger|dagger]]\r\n<<endif>>\r\n\r\n\r\n::
+    barkeep\r\nA snaggletoothed old hag. She probably owns this inn. The boil on her
+    nose is very distracting...\r\n\r\n[[\"Ahem!\"|bar]]\r\n\r\n\r\n:: pint\r\n\"A
+    wise choice. It's an amber we brew - you won't find liquid gold like this anywhere
+    in the marsh.\"\r\n\r\nThe Barkeep fills a mug and slams it on the counter, splashing
+    foam in the air and on the wood.\r\n\r\n\"It's on the house tonight, traveler.\"\r\n\r\nSLAM!
+    The music stops.\r\n\r\nSuddenly, the front door flings open. Soldiers storm the
+    room.\r\n\r\n<<set $soldiers to \"yes\">>\"King's army! There's a thief afoot!
+    Nobody move!\"\r\n\r\nThe soldiers begin inspecting patrons one by one, emptying
+    their pockets and picking up gold pieces as they please. \r\n\r\n\"It's for the
+    common good.\"\r\n\r\n<<set $tavern_action to \"yes\">>A soldier with a toothy
+    grin looks at you.\r\n\r\n\"Let's see what you've got.\"\r\n\r\nReach into your
+    [[bag|bag]]\r\n\r\n\r\n\r\n\r\n:: StoryAuthor\r\nRaconteur\r\n\r\n\r\n\r\n:: bar\r\n<<if
+    $stared_barkeep is \"no\">>You pull up a stool at the bar, and lock eyes with
+    the [[Barkeep|barkeep]]\r\n\r\n<<nobr>>\r\n<<actions \"Passage\" \"Hello\" \"Silently\">>\r\nYou
+    can also use actions to define your player's choices. You define the actions as
+    we have above, before you list the actions.\r\nThe alternative way of writing
+    the choices below would have been to include the actions macro, with the choices:\r\nI'll
+    take a <<choice [[pint]]>>.\r\nGot any <<choice [[wine]]>>?\r\nJust some <<choice
+    [[water]]>>, please.\r\n<<endnobr>>\r\n\r\n\r\nThe Barkeep asks:\"Need a pint?
+    You look like you've had enough water today.\"<<else>>The Barkeep asks: \"You
+    gonna keep staring at me like a loon or get something to drink?\"\r\n\r\n[[I'll
+    take a pint.|pint]]\r\n[[Got any wine?|wine]]\r\n[[Just some water, please.|water]]\r\n<<endif>>\r\n\r\n\r\n\r\n::
+    wine\r\n\"Aye, we've got a fresh barrel of port. It'll cost you pretty though.\"\r\n\r\nYou
+    reach into your bag and place a golden coin on the oak counter.\r\nThe Barkeep's
+    eyes widen.\r\n\r\n\"That'll do. A flagon's worth.\"\r\n\r\nThe Barkeep fills
+    a large flagon and places it before you with an extra glass. \r\n\r\n\"Enjoy it,
+    kind sir.\"\r\n\r\nSLAM! The music stops.\r\n\r\nSuddenly, the front door flings
+    open. Soldiers storm the room.\r\n\r\n<<set $soldiers to \"yes\">>\"King's army!
+    There's a thief afoot! Nobody move!\"\r\n\r\nThe soldiers begin inspecting patrons
+    one by one, emptying their pockets and picking up gold pieces as they please.
+    \r\n\r\n\"It's for the common good.\"\r\n\r\n<<set $tavern_action to \"yes\">>A
+    soldier with a toothy grin looks at you.\r\n\r\n\"Let's see what you've got.\"\r\n\r\nReach
+    into your [[bag|bag]]\r\n\r\n\r\n\r\n\r\n:: Inn\r\n<<if $opened_bag is \"no\">>A
+    tavern brimming with brew and patrons. The echos of gallops fade and sweet sound
+    of strings fill the atmosphere. A few folks bat an eyebrow at your dripping personage,
+    but attention quickly reverts to the bard strumming a lute. Your [[bag|bag]] is
+    weighed down by the rainwater.<<else>>Mugs slam on wooden tables in unison - the
+    night is in full swing. No one seems to notice you. Merriment abound.\r\n \r\n\r\nGrab
+    a seat at the [[bar|bar]]\r\nSit close to the [[bard|bard]]\r\nGo [[upstairs|upstairs]]\r\n<<endif>>\r\n\r\n\r\n::
+    bard\r\nYou take an empty seat near the front. \r\n\r\nThe very attractive bard
+    winks at you without missing a beat.\r\n\r\nSLAM! The bard's smooth demeanor flashes
+    to panic.\r\n\r\nThe front door flings open. Soldiers storm the room.\r\n\r\n<<set
+    $soldiers to \"yes\">>\"King's army! There's a thief afoot! Nobody move!\"\r\n\r\nThe
+    soldiers begin inspecting patrons one by one, emptying their pockets and picking
+    up gold pieces as they please. \r\n\r\n\"It's for the common good.\"\r\n\r\n<<set
+    $tavern_action to \"yes\">>A soldier with a toothy grin looks at you.\r\n\r\n\"Let's
+    see what you've got.\"\r\n\r\nReach into your [[bag|bag]]\r\n\r\n\r\n\r\n:: water\r\n\"You
+    could just wring out your cloak if you wanted that.\" \r\n\r\nThe Barkeep fills
+    a mug with brackish water.\r\n\r\n\"Anyway, here's your water.\"\r\n\r\nSLAM!The
+    music stops.\r\n\r\nSuddenly, the front door flings open. Soldiers storm the room.\r\n\r\n<<set
+    $soldiers to \"yes\">>\"King's army! There's a thief afoot! Nobody move!\"\r\n\r\nThe
+    soldiers begin inspecting patrons one by one, emptying their pockets and picking
+    up gold pieces as they please. \r\n\r\n\"It's for the common good.\"\r\n\r\n<<set
+    $tavern_action to \"yes\">>A soldier with a toothy grin looks at you.\r\n\r\n\"Let's
+    see what you've got.\"\r\n\r\nReach into your [[bag|bag]]\r\n\r\n\r\n\r\n\r\n::
+    bed\r\nAh, such a comfortable bed. Exhaustion grips you. Rain thuds on the window.
+    So comfortable...\r\n\r\nA SLAM thunders from downstairs. Footsteps and shouting
+    echo from below.\r\n\r\n<<set $soldiers to \"yes\">>\"King's army! There's a thief
+    afoot!\" \r\n\r\nFootsteps grow louder, approaching the room. The rain stops thudding
+    on the window.\r\n\r\n[[Reach into your bag|bag]]\r\n[[Climb out the window|window]]\r\n\r\n\r\n::
+    window\r\nYou climb out the window into the quiet night. You look back at the
+    hotel, and hear soldiers storming the rooms. A few are stationed outside the inn,
+    but they don't see you.\r\n\r\nYou steal off into the night, carrying the orb
+    the soldiers desperately seek. It's only a matter of time before they get close
+    again, but you're so close to the port... \r\n\r\nThunder claps and rain begins
+    to fall.\r\n\r\n\r\n:: room\r\nYou close the door behind you.\r\n\r\nAn empty
+    room, save for a bed and chair.\r\n\r\nClimb into the [[bed|bed]]\r\nSit in the
+    [[chair|chair]]\r\n\r\n\r\n:: upstairs\r\nYou steal quietly upstairs, striding
+    past the music and excitement. The sound quickly fades into a muffled din with
+    the creaking floors dominating the atmosphere.\r\n\r\nMost doors are closed shut,
+    but an empty room lies to your right. A barrel sits underneath the window at the
+    end of the hallway. \r\n\r\nEnter the empty [[room|room]]\r\nHide in the [[barrel|barrel]]\r\n\r\n\r\n::
+    chair\r\nYou sit in the chair, thinking intently. Rain thuds on the window.\r\n\r\nThe
+    journey has been long, but you're so close to the trading port. You didn't start
+    out alone like this.\r\n\r\nA SLAM thunders from downstairs. Footsteps and shouting
+    echo from below.\r\n\r\n<<set $soldiers to \"yes\">>\"King's army! There's a thief
+    afoot!\" \r\n\r\nFootsteps grow louder, approaching the room. The rain stops thudding
+    on the window.\r\n\r\n[[Reach into your bag|bag]]\r\n[[Climb out the window|window]]\r\n\r\n\r\n::
+    barrel\r\nYou slip into the barrel. You've done this countless times. Nobody ever
+    looks in a barrel.\r\n\r\n<<set $soldiers to \"yes\">>\"King's army! There's a
+    thief afoot!\" \r\n\r\nFootsteps grow louder, approaching upstairs. The slam of
+    a door and the sounds of alarmed guests become as regular as the ticks and tocks
+    of a clock until the soldiers reach the end of the hallway. \r\n\r\n\"There's
+    nothing up here.\"\r\n\r\n\"Well we did manage to find some gold from these generous
+    travelers.\"\r\n\r\n\"Aye, the people are always kind to a man with a sword. We've
+    got to keep moving, the thief must have already left this place.\" \r\n\r\nThe
+    soldiers laugh and return downstairs.\r\n\r\nYou laugh to yourself. The precious
+    orb remains in your bag, it's glow softly radiates from the bag. After some time,
+    the music returns and the tavern enters full swing once again. You emerge from
+    the barrel, drink an entire flagon of port and enjoy the company of the talented
+    bard that night. The journey can continue come morrow.\r\n\r\nNobody ever looks
+    in a barrel.\r\n\r\n\r\n\r\n\r\n"

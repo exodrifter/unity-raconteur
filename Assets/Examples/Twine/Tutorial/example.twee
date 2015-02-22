@@ -1,0 +1,339 @@
+﻿:: Start
+<<nobr>>
+Welcome to Raconteur! This package is designed to integrate Twine version 1 support into Unity. To learn even more about Twine: twinery.org
+
+<<set $opened_bag to "no">>
+<<set $soldiers to "no">>
+<<set $stared_barkeep to "no">>
+<<set $tavern_action to "no">>
+The nobr macro allows you to write things and also set variables without displaying the containted text. Morevoer, it eliminates all line breaks between nobr and endnobr. 
+<<endnobr>>
+
+Rain falls and thunder claps. Gallops echo in the distance as you run through the forest. Footsteps splash in the mud.The glow of a small inn draws nearer. 
+
+Walk inside the [[Inn|Inn]]
+
+
+:: orb
+<<if $tavern_action is "no">>You take the orb. Its glow softly illuminates the room. 
+
+You open the window, and hurl the orb into the darkness outside.
+
+As you shut the window...
+
+SLAM! Your door flies open. Several soldiers are at the entrance.
+
+"Stop! There is a thief among us. Let us see your bag, traveler!"
+
+Two soldiers advance and seize your bag before you can move, dumping its contents on the ground. The dagger and coins clink on the ground. 
+
+"Nothing sir."
+
+"But that is a pecuilar dagger, you must be from distant lands." 
+
+The soldier picks up one of the coins and pockets it, flashing a toothy grin.
+
+"For the common good. Stay safe, outlander."
+
+The soldiers leave and storm the next room, causing a woman to scream. 
+
+You climb out the window, and find the faintly glowing orb. It's only a matter of time before they get close again, but you're so close to the port... 
+
+Thunder claps and rain begins to fall.
+<<else>>
+You take the orb. The soldier's face shines with glee as he draws his sword.
+
+"I've found-"
+
+You use the power of the orb to stop time. 
+
+You didn't want to use its full power but there was no other choice. 
+
+You grab your dagger and slit the throat of every guard in the building. The human body behaves in such a bizaree manner when time stands still. On your way back out you release the orb's power, and the thud of 30 bodies provide a soft boom in the forest. Screams follow.
+
+There won't be anyone following you, but too many people saw you. Perhaps you should have killed them all. But killing the innocent weighs on you. You continue through the forest, ever so close to the end of your journey. 
+
+Thunder claps and rain begins to fall. 
+<<endif>>
+
+
+
+:: dagger
+<<if $tavern_action is "no">>You draw your dagger and stand at the side of the door.
+
+SLAM! Your door flies open. Several soldiers are at the entrance.
+
+"Sto-"
+
+You slice his throat before he can speak another word. As one soldier falls, your blade is already in the heart of another. You draw the second soldier's blade as he falls and slice the necks of the remaining two soldier's at once. 
+
+4 bodies are slumped on the floor, bleeding.
+
+All is quiet upstairs for a moment.
+
+You open the window in the room and steal off into the night. As you look back, you see several more soldiers enter your room, peering out. Their voices carry across the forest.
+
+"You can't run forever!"
+
+You place your bloody dagger into the bag, no time to clean it. The orb inside the bag glows faintly. This orb has drawn the wrath of an army. It's only a matter of time before they get close again, but you're so close to the port...
+
+Thunder claps and rain begins to fall.
+<<else>>
+You draw your dagger and the soldier begins to swing at you with his sword. 
+
+You slit his throat and swiftly move through the crowd. Another slice, another burst of blood. A body hits the ground. You jump through a window, running full sprint into the dark forest.
+
+"Thief! You can't run forever!"
+
+You ascend a tree with ease, hiding beyond the range of a torch.
+
+Footsteps and gallops move throught the forest.
+
+"The thief must have gotten back on the trade road, it's the only way to the port!"
+
+Perhaps you should have used the orb's power. Perhaps you should have killed them all. At least the soldiers. Killing the innocent weighs on you though. You are ever so close to the end of your journey, but the soldiers will be waiting at the port.
+
+Thunder claps and rain begins to fall. 
+<<endif>>
+
+
+
+:: StoryTitle
+A Thief
+
+
+:: bag
+<<set $opened_bag to "yes">>You open up a soggy leather bag. Inside rests a glowing orb, a dagger, and several golden coins.
+<<if $soldiers is "no">>
+[[Close the bag|Inn]]
+<<else>>
+[[Grab the glowing orb|orb]]
+[[Draw your dagger|dagger]]
+<<endif>>
+
+
+:: barkeep
+A snaggletoothed old hag. She probably owns this inn. The boil on her nose is very distracting...
+
+[["Ahem!"|bar]]
+
+
+:: pint
+"A wise choice. It's an amber we brew - you won't find liquid gold like this anywhere in the marsh."
+
+The Barkeep fills a mug and slams it on the counter, splashing foam in the air and on the wood.
+
+"It's on the house tonight, traveler."
+
+SLAM! The music stops.
+
+Suddenly, the front door flings open. Soldiers storm the room.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+
+The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
+
+"It's for the common good."
+
+<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+
+"Let's see what you've got."
+
+Reach into your [[bag|bag]]
+
+
+
+
+:: StoryAuthor
+Raconteur
+
+
+
+:: bar
+<<if $stared_barkeep is "no">>You pull up a stool at the bar, and lock eyes with the [[Barkeep|barkeep]]
+
+<<nobr>>
+<<actions "Passage" "Hello" "Silently">>
+You can also use actions to define your player's choices. You define the actions as we have above, before you list the actions.
+The alternative way of writing the choices below would have been to include the actions macro, with the choices:
+I'll take a <<choice [[pint]]>>.
+Got any <<choice [[wine]]>>?
+Just some <<choice [[water]]>>, please.
+<<endnobr>>
+
+
+The Barkeep asks:"Need a pint? You look like you've had enough water today."<<else>>The Barkeep asks: "You gonna keep staring at me like a loon or get something to drink?"
+
+[[I'll take a pint.|pint]]
+[[Got any wine?|wine]]
+[[Just some water, please.|water]]
+<<endif>>
+
+
+
+:: wine
+"Aye, we've got a fresh barrel of port. It'll cost you pretty though."
+
+You reach into your bag and place a golden coin on the oak counter.
+The Barkeep's eyes widen.
+
+"That'll do. A flagon's worth."
+
+The Barkeep fills a large flagon and places it before you with an extra glass. 
+
+"Enjoy it, kind sir."
+
+SLAM! The music stops.
+
+Suddenly, the front door flings open. Soldiers storm the room.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+
+The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
+
+"It's for the common good."
+
+<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+
+"Let's see what you've got."
+
+Reach into your [[bag|bag]]
+
+
+
+
+:: Inn
+<<if $opened_bag is "no">>A tavern brimming with brew and patrons. The echos of gallops fade and sweet sound of strings fill the atmosphere. A few folks bat an eyebrow at your dripping personage, but attention quickly reverts to the bard strumming a lute. Your [[bag|bag]] is weighed down by the rainwater.<<else>>Mugs slam on wooden tables in unison - the night is in full swing. No one seems to notice you. Merriment abound.
+ 
+
+Grab a seat at the [[bar|bar]]
+Sit close to the [[bard|bard]]
+Go [[upstairs|upstairs]]
+<<endif>>
+
+
+:: bard
+You take an empty seat near the front. 
+
+The very attractive bard winks at you without missing a beat.
+
+SLAM! The bard's smooth demeanor flashes to panic.
+
+The front door flings open. Soldiers storm the room.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+
+The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
+
+"It's for the common good."
+
+<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+
+"Let's see what you've got."
+
+Reach into your [[bag|bag]]
+
+
+
+:: water
+"You could just wring out your cloak if you wanted that." 
+
+The Barkeep fills a mug with brackish water.
+
+"Anyway, here's your water."
+
+SLAM!The music stops.
+
+Suddenly, the front door flings open. Soldiers storm the room.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot! Nobody move!"
+
+The soldiers begin inspecting patrons one by one, emptying their pockets and picking up gold pieces as they please. 
+
+"It's for the common good."
+
+<<set $tavern_action to "yes">>A soldier with a toothy grin looks at you.
+
+"Let's see what you've got."
+
+Reach into your [[bag|bag]]
+
+
+
+
+:: bed
+Ah, such a comfortable bed. Exhaustion grips you. Rain thuds on the window. So comfortable...
+
+A SLAM thunders from downstairs. Footsteps and shouting echo from below.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+
+Footsteps grow louder, approaching the room. The rain stops thudding on the window.
+
+[[Reach into your bag|bag]]
+[[Climb out the window|window]]
+
+
+:: window
+You climb out the window into the quiet night. You look back at the hotel, and hear soldiers storming the rooms. A few are stationed outside the inn, but they don't see you.
+
+You steal off into the night, carrying the orb the soldiers desperately seek. It's only a matter of time before they get close again, but you're so close to the port... 
+
+Thunder claps and rain begins to fall.
+
+
+:: room
+You close the door behind you.
+
+An empty room, save for a bed and chair.
+
+Climb into the [[bed|bed]]
+Sit in the [[chair|chair]]
+
+
+:: upstairs
+You steal quietly upstairs, striding past the music and excitement. The sound quickly fades into a muffled din with the creaking floors dominating the atmosphere.
+
+Most doors are closed shut, but an empty room lies to your right. A barrel sits underneath the window at the end of the hallway. 
+
+Enter the empty [[room|room]]
+Hide in the [[barrel|barrel]]
+
+
+:: chair
+You sit in the chair, thinking intently. Rain thuds on the window.
+
+The journey has been long, but you're so close to the trading port. You didn't start out alone like this.
+
+A SLAM thunders from downstairs. Footsteps and shouting echo from below.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+
+Footsteps grow louder, approaching the room. The rain stops thudding on the window.
+
+[[Reach into your bag|bag]]
+[[Climb out the window|window]]
+
+
+:: barrel
+You slip into the barrel. You've done this countless times. Nobody ever looks in a barrel.
+
+<<set $soldiers to "yes">>"King's army! There's a thief afoot!" 
+
+Footsteps grow louder, approaching upstairs. The slam of a door and the sounds of alarmed guests become as regular as the ticks and tocks of a clock until the soldiers reach the end of the hallway. 
+
+"There's nothing up here."
+
+"Well we did manage to find some gold from these generous travelers."
+
+"Aye, the people are always kind to a man with a sword. We've got to keep moving, the thief must have already left this place." 
+
+The soldiers laugh and return downstairs.
+
+You laugh to yourself. The precious orb remains in your bag, it's glow softly radiates from the bag. After some time, the music returns and the tavern enters full swing once again. You emerge from the barrel, drink an entire flagon of port and enjoy the company of the talented bard that night. The journey can continue come morrow.
+
+Nobody ever looks in a barrel.
+
+
+
+
