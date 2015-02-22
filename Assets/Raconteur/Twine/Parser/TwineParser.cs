@@ -41,7 +41,6 @@ namespace DPek.Raconteur.Twine.Parser
 				else
 				{
 					var str = scanner.Seek("::");
-					Debug.LogWarning("LINES " + str);
 					var lines = ParseLines(str);
 					passage.Source.AddRange(lines);
 				}
