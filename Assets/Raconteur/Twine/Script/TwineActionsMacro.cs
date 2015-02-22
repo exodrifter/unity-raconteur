@@ -40,7 +40,7 @@ namespace DPek.Raconteur.Twine.Script
 		public override List<TwineLine> Compile(TwineState state)
 		{
 			var list = new List<TwineLine>();
-			list.Add(new TwineGroup(TwineGroup.GroupType.ACTIONS, true));
+			list.Add(new TwineGroup(TwineGroup.GroupType.ACTIONS, m_actions.Count));
 
 			foreach (var kvp in m_actions)
 			{
@@ -50,7 +50,6 @@ namespace DPek.Raconteur.Twine.Script
 				list.Add(link);
 			}
 
-			list.Add(new TwineGroup(TwineGroup.GroupType.ACTIONS, false));
 			return list;
 		}
 

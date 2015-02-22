@@ -2,6 +2,7 @@
 All you possess is an Axe and a Backpack containing 1 Meal.<<nobr>>
 <<set $weapon to "ball">>
 <<endnobr>>
+
 <<actions "Passage" "Hello" "Silently">>
 
 <<if weapon == "axe">>\

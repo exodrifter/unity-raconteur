@@ -24,23 +24,25 @@ namespace DPek.Raconteur.Twine.Parser
 			var scanner = new Scanner(ref tokens);
 
 			TwinePassage passage = null;
-			while (scanner.HasNext())
+			while (scanner.IsValid())
 			{
 				string token = scanner.Peek();
 				if (token == "::")
 				{
 					passage = new TwinePassage(ref scanner);
 					if (passage.Title == "StoryTitle") {
-						story.Title = scanner.Seek("::").TrimEnd();
+						story.Title = scanner.Seek("::").Trim();
 					} else if (passage.Title == "StoryAuthor") {
-						story.Author = scanner.Seek("::").TrimEnd();
+						story.Author = scanner.Seek("::").Trim();
 					} else {
 						story.AddPassage(passage);
 					}
 				}
 				else
 				{
-					var lines = ParseLines(scanner.Seek("::"));
+					var str = scanner.Seek("::");
+					Debug.LogWarning("LINES " + str);
+					var lines = ParseLines(str);
 					passage.Source.AddRange(lines);
 				}
 			}
@@ -55,7 +57,7 @@ namespace DPek.Raconteur.Twine.Parser
 			var tokens = TokenizeString(content);
 			var scanner = new Scanner(ref tokens);
 
-			while (scanner.HasNext())
+			while (scanner.IsValid())
 			{
 				string token = scanner.Peek();
 				if (token == "[[")
@@ -136,7 +138,7 @@ namespace DPek.Raconteur.Twine.Parser
 			string[] parseTokens;
 			parseTokens = "[[ ]] << >> // /% %/ | [ ] ( ) # \\\" \" ' , ; = + - * / \\ :: $".Split(' ');
 			tokenizer.SetupTokens(parseTokens);
-			
+
 			// Create the scanner
 			var tokens = new LinkedList<string>();
 			string[] arr = tokenizer.Tokenize(ref content);

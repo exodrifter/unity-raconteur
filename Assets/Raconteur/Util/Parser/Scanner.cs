@@ -30,6 +30,17 @@ namespace DPek.Raconteur.Util.Parser
 		}
 
 		/// <summary>
+		/// Determines whether this scanner is at a token.
+		/// </summary>
+		/// <returns>
+		/// <c>true</c> if this scanner is at a token; otherwise, <c>false</c>.
+		/// </returns>
+		public bool IsValid()
+		{
+			return m_node != null;
+		}
+
+		/// <summary>
 		/// Determines whether this scanner has another token after the current
 		/// token.
 		/// </summary>

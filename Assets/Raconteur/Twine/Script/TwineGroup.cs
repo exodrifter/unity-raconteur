@@ -17,16 +17,16 @@ namespace DPek.Raconteur.Twine.Script
 			get { return m_type; }
 		}
 
-		private bool m_start;
-		public bool Start
+		private int m_itemCount;
+		public int ItemCount
 		{
-			get { return m_start;  }
+			get { return m_itemCount; }
 		}
 
-		public TwineGroup(GroupType type, bool start)
+		public TwineGroup(GroupType type, int itemCount)
 		{
 			m_type = type;
-			m_start = start;
+			m_itemCount = itemCount;
 		}
 
 		public override List<TwineLine> Compile(TwineState state)
@@ -44,7 +44,7 @@ namespace DPek.Raconteur.Twine.Script
 		protected override string ToDebugString()
 		{
 			string str = "group ";
-			str += m_start ? "start " : "end ";
+			str += "itemCount=" + m_itemCount;
 			str += "type=" + m_type + " ";
 			return str;
 		}

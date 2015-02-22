@@ -45,7 +45,7 @@ namespace DPek.Raconteur.Twine.Script
 		public override List<TwineLine> Compile(TwineState state)
 		{
 			var list = new List<TwineLine>();
-			list.Add(new TwineGroup(TwineGroup.GroupType.CHOICES, true));
+			list.Add(new TwineGroup(TwineGroup.GroupType.CHOICES, m_choices.Count));
 
 			foreach (var choice in m_choices)
 			{
@@ -55,7 +55,6 @@ namespace DPek.Raconteur.Twine.Script
 				list.Add(link);
 			}
 
-			list.Add(new TwineGroup(TwineGroup.GroupType.CHOICES, false));
 			return list;
 		}
 

@@ -80,13 +80,14 @@ namespace DPek.Raconteur.Util.Parser
 		/// </returns>
 		public string[] Tokenize(ref string str)
 		{
+			str = str.Replace("\r\n", "\n");
+
 			List<string> tokens = new List<string>();
 			char[] chars = str.ToCharArray();
 			int index = -1;
 			int length = chars.Length;
 
 			string currentToken = "";
-			bool newlineAdded = false;
 
 			while (index < length - 1) {
 				// Get the next character
@@ -94,12 +95,10 @@ namespace DPek.Raconteur.Util.Parser
 				char ch = chars[index];
 
 				// Check for whitespace
-				if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r') {
+				if (ch == ' ' || ch == '\t' || ch == '\n') {
 
 					// Add the current token
-					if (AddToken(ref currentToken, ref tokens)) {
-						newlineAdded = false;
-					}
+					AddToken(ref currentToken, ref tokens);
 
 					// Treat whitespace as a token
 					if (ch == ' ') {
@@ -117,13 +116,12 @@ namespace DPek.Raconteur.Util.Parser
 						}
 					}
 
-					// Treat '\n' as a token, unless the last token was '\n'
-					else if ((ch == '\n' || ch == '\r') && !newlineAdded) {
+					// Treat '\n' as a token
+					else if ((ch == '\n')) {
 						if(!m_dropWhitespace)
 						{
 							tokens.Add("\n");
 						}
-						newlineAdded = true;
 					}
 
 					// Start the loop over
@@ -137,9 +135,7 @@ namespace DPek.Raconteur.Util.Parser
 					if (def.HasSequence(ref index, ref chars, out token)) {
 
 						// Add the current token
-						if (AddToken(ref currentToken, ref tokens)) {
-							newlineAdded = false;
-						}
+						AddToken(ref currentToken, ref tokens);
 
 						// Add the found token definition
 						tokens.Add(token);

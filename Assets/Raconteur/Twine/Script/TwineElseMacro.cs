@@ -104,7 +104,8 @@ namespace DPek.Raconteur.Twine.Script
 			{
 				Static.Log("else (no expression) evaluated to true");
 				var list = new List<TwineLine>();
-				foreach (var line in lines) {
+				foreach (var line in lines)
+				{
 					Static.Log(line.ToString());
 					list.AddRange(line.Compile(state));
 				}
