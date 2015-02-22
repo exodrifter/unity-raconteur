@@ -43,6 +43,11 @@ namespace DPek.Raconteur.RenPy.Display
 		}
 
 		/// <summary>
+		/// A reference to the helper parent.
+		/// </summary>
+		GameObject helperParent;
+
+		/// <summary>
 		/// A reference to the music channel. Will be deprecated.
 		/// </summary>
 		public RenPyAudioSource m_music;
@@ -73,7 +78,7 @@ namespace DPek.Raconteur.RenPy.Display
 				parent = parentTransform.gameObject;
 			}
 			var str = name + " Helpers";
-			GameObject helperParent = CreateChildGameObject(parent, str);
+			helperParent = CreateChildGameObject(parent, str);
 
 			if (m_music == null)
 			{
@@ -98,6 +103,11 @@ namespace DPek.Raconteur.RenPy.Display
 				m_voice.m_state = m_state;
 				m_voice.m_channel = "voice";
 			}
+		}
+
+		void OnDestroy()
+		{
+			GameObject.Destroy(helperParent);
 		}
 
 		/// <summary>
