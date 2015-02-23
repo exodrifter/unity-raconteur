@@ -37,7 +37,7 @@ namespace DPek.Raconteur.Twine.Script
 				tokens.Next();
 				string expressionString = tokens.Seek(">>");
 
-				var parser = ExpressionParserFactory.GetRenPyParser();
+				var parser = ExpressionParserFactory.GetTwineParser();
 				m_expression = parser.ParseExpression(expressionString);
 			}
 			tokens.Seek(">>");

@@ -34,7 +34,7 @@ namespace DPek.Raconteur.Twine.Script
 			string expressionString = tokens.Seek(">>");
 			tokens.Next();
 
-			var parser = ExpressionParserFactory.GetRenPyParser();
+			var parser = ExpressionParserFactory.GetTwineParser();
 			m_expression = parser.ParseExpression(expressionString);
 
 			// Find the endif or else macro
