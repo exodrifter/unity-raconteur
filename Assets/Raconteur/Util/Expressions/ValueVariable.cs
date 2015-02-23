@@ -13,7 +13,7 @@
 
 		public ValueVariable(string variable)
 		{
-			m_variable = variable;
+			m_variable = variable.Replace("$", "");
 		}
 
 		public override Value GetValue(StoryState state)
