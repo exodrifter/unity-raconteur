@@ -12,10 +12,11 @@ namespace DPek.Raconteur.RenPy.Parser
 	{
 		public static List<RenPyBlock> Parse(string[] lines)
 		{
-			var tokenizer = new Tokenizer(false);
+			var tokenizer = new Tokenizer();
 			string[] parseTokens;
 			parseTokens = "[ ] ( ) # \\\" \" ' , ; = + - * / \\ : $".Split(' ');
 			tokenizer.SetupTokens(parseTokens);
+			tokenizer.SetupTokens(new string[] { " ", "\t", "\n" });
 
 			// Create the scanner
 			var tokens = new LinkedList<string>();

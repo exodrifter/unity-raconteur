@@ -16,12 +16,6 @@ namespace DPek.Raconteur.Util.Parser
 		/// </summary>
 		private List<TokenDefinition> m_tokenDefinitions;
 
-		/// <summary>
-		/// Whether or not to remove whitespace from the list of returned
-		/// tokens.
-		/// </summary>
-		private bool m_dropWhitespace;
-
 		#endregion
 
 		#region Constructor
@@ -31,9 +25,8 @@ namespace DPek.Raconteur.Util.Parser
 		/// until it is set up with additional calls to methods that start with
 		/// the word "Setup".
 		/// </summary>
-		public Tokenizer(bool dropWhiteSpace)
+		public Tokenizer()
 		{
-			m_dropWhitespace = dropWhiteSpace;
 			m_tokenDefinitions = new List<TokenDefinition>();
 		}
 
@@ -93,40 +86,6 @@ namespace DPek.Raconteur.Util.Parser
 				// Get the next character
 				index++;
 				char ch = chars[index];
-
-				// Check for whitespace
-				if (ch == ' ' || ch == '\t' || ch == '\n') {
-
-					// Add the current token
-					AddToken(ref currentToken, ref tokens);
-
-					// Treat whitespace as a token
-					if (ch == ' ') {
-						if(!m_dropWhitespace)
-						{
-							tokens.Add(" ");
-						}
-					}
-
-					// Treat tabs as a token
-					else if (ch == '\t') {
-						if(!m_dropWhitespace)
-						{
-							tokens.Add("\t");
-						}
-					}
-
-					// Treat '\n' as a token
-					else if ((ch == '\n')) {
-						if(!m_dropWhitespace)
-						{
-							tokens.Add("\n");
-						}
-					}
-
-					// Start the loop over
-					continue;
-				}
 
 				// Check for token definitions
 				bool broke = false;

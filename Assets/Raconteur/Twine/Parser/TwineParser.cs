@@ -133,10 +133,11 @@ namespace DPek.Raconteur.Twine.Parser
 		private static LinkedList<string> TokenizeString(string content)
 		{
 			// Prepare the tokenizer
-			var tokenizer = new Tokenizer(false);
+			var tokenizer = new Tokenizer();
 			string[] parseTokens;
 			parseTokens = "[[ ]] << >> // /% %/ | [ ] ( ) # \\\" \" ' , ; = + - * / \\ :: $".Split(' ');
 			tokenizer.SetupTokens(parseTokens);
+			tokenizer.SetupTokens(new string[] { " ", "\t", "\n" });
 
 			// Create the scanner
 			var tokens = new LinkedList<string>();

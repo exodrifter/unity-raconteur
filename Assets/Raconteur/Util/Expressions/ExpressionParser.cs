@@ -30,7 +30,7 @@ namespace DPek.Raconteur.Util.Expressions
 		public ExpressionParser()
 		{
 			m_operators = new List<Operator>();
-			m_tokenizer = new Tokenizer(true);
+			m_tokenizer = new Tokenizer();
 		}
 
 		#region Setup
@@ -57,7 +57,30 @@ namespace DPek.Raconteur.Util.Expressions
 
 		public Expression ParseExpression(string str)
 		{
-			return ParseExpression(m_tokenizer.Tokenize(ref str));
+			var list = new List<string>();
+			list.AddRange(m_tokenizer.Tokenize(ref str));
+			list.RemoveAll(IsNullOrWhitespace);
+
+			// Remove whitespace from list items unless it matches an operator
+			for (int i = 0; i < list.Count; ++i)
+			{
+				bool isOperator = false;
+				foreach (Operator op in m_operators)
+				{
+					if (op.Symbol == list[i])
+					{
+						isOperator = true;
+						break;
+					}
+				}
+
+				if(!isOperator)
+				{
+					list[i] = list[i].Trim();
+				}
+			}
+
+			return ParseExpression(list.ToArray());
 		}
 		
 		// TODO: Parse parenthesis correctly
@@ -119,6 +142,12 @@ namespace DPek.Raconteur.Util.Expressions
 			}
 			
 			return right.ToArray();
+		}
+
+		private static bool IsNullOrWhitespace(String s)
+		{
+			s = s.Trim();
+			return string.IsNullOrEmpty(s);
 		}
 
 		#endregion

@@ -131,8 +131,8 @@ namespace DPek.Raconteur.Twine
 			float right, out float remaining)
 		{
 			var lines = new List<string>();
-			var tokenizer = new Tokenizer(false);
-			tokenizer.SetupTokens(new string[] {" ", "\n"});
+			var tokenizer = new Tokenizer();
+			tokenizer.SetupTokens(new string[] { " ", "\t", "\n" });
 			string[] tokens = tokenizer.Tokenize(ref text);
 			
 			remaining = right;
