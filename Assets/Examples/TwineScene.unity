@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fc866d75ee5426188e6678e8426676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_twineScriptAsset: {fileID: 11400000, guid: b7c052b0daba60c46b7ff890cc05b59f, type: 2}
+  m_twineScriptAsset: {fileID: 11400000, guid: ddc30cd01f29541cb8b22a1fd8d157eb, type: 2}
 --- !u!4 &317418918
 Transform:
   m_ObjectHideFlags: 0
