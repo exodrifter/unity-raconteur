@@ -70,6 +70,12 @@ namespace DPek.Raconteur.Twine
 						string str = wrapped[i];
 						var layout = GUILayout.ExpandWidth(false);
 						GUILayout.Label(str, style, layout);
+						if(str.EndsWith(" "))
+						{
+							// For some reason, calculating the width of a space
+							// returns zero
+							GUILayout.Space(style.CalcSize(new GUIContent(".")).x);
+						}
 						if (i < wrapped.Length - 1 || str.EndsWith("\n"))
 						{
 							GUILayout.EndHorizontal();
