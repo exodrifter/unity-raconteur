@@ -113,6 +113,14 @@ namespace DPek.Raconteur
 
 			EditorGUILayout.Space();
 
+			if (GUILayout.Button("Unit Tests"))
+			{
+				EditorWindow.GetWindow<DPek.Raconteur.Test.RaconteurTests>
+					("Raconteur Tests", true, typeof(Static));
+			}
+
+			EditorGUILayout.Space();
+
 			var boldtext = new GUIStyle(GUI.skin.label);
 			boldtext.fontStyle = FontStyle.Bold;
 			EditorGUILayout.LabelField("Variables", boldtext);
