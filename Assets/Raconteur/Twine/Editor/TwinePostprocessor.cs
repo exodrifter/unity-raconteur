@@ -92,6 +92,7 @@ namespace DPek.Raconteur.Twine.Editor
 
 			// Create the asset
 			var script = ScriptableObject.CreateInstance<TwineScriptAsset>();
+			script.name = Path.GetFileNameWithoutExtension(handle.AssetPath);
 			script.content = handle.Content;
 
 			// Update the asset on disk
