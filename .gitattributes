@@ -3,6 +3,6 @@
 *.js text
 *.shader text
 ProjectSettings/*.asset text eol=lf
-Assets/**/*.asset binary
+Assets/**/*.asset text eol=lf
 *.meta text eol=lf
 
