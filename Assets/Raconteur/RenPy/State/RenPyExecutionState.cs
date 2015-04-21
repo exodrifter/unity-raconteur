@@ -17,9 +17,7 @@ namespace DPek.Raconteur.RenPy.State
 		private readonly RenPyStackFrame m_initialStackFrame;
 		public RenPyStackFrame InitialStackFrame
 		{
-			get {
-				return m_initialStackFrame;
-			}
+			get { return m_initialStackFrame; }
 		}
 
 		/// <summary>
@@ -33,10 +31,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyStatement m_currentStatement;
 		public RenPyStatement CurrentStatement
 		{
-			get
-			{
-				return m_currentStatement;
-			}
+			get { return m_currentStatement; }
 		}
 
 		/// <summary>
@@ -46,10 +41,9 @@ namespace DPek.Raconteur.RenPy.State
 		/// <value>
 		/// <c>true</c> if running; otherwise, <c>false</c>.
 		/// </value>
-		public bool Running {
-			get {
-				return m_stack.Count > 0;
-			}
+		public bool Running
+		{
+			get { return m_stack.Count > 0; }
 		}
 
 		#endregion
@@ -77,7 +71,8 @@ namespace DPek.Raconteur.RenPy.State
 		/// </returns>
 		public RenPyStatement PreviousStatement()
 		{
-			if(m_stack.Count > 0) {
+			if (m_stack.Count > 0)
+			{
 				m_currentStatement = m_stack.Peek().PreviousStatement();
 				return m_currentStatement;
 			}
@@ -95,34 +90,46 @@ namespace DPek.Raconteur.RenPy.State
 		/// </returns>
 		public RenPyStatement NextStatement(RenPyState state)
 		{
-			if(m_stack.Count > 0) {
+			if (m_stack.Count > 0)
+			{
 				m_currentStatement = m_stack.Peek().NextStatement(state);
 			}
 
 			// If there are no more statements, dispose of that stack frame
-			while (m_currentStatement == null) {
-				if(m_stack.Count > 0) {
+			while (m_currentStatement == null)
+			{
+				if (m_stack.Count > 0)
+				{
 					m_stack.Pop();
-				} else {
+				}
+				else
+				{
 					break;
 				}
-				
+
 				// Check if there are any more frames
-				if(m_stack.Count > 0) {
+				if (m_stack.Count > 0)
+				{
 					m_currentStatement = m_stack.Peek().NextStatement(state);
-				} else {
+				}
+				else
+				{
 					break;
 				}
 			}
 
-			if (m_currentStatement != null) {
+			if (m_currentStatement != null)
+			{
 				Static.Log(m_currentStatement.ToString());
 
 				var type = m_currentStatement.Type;
-				if (type == RenPyStatementType.SAY && Static.SkipDialog) {
+				if (type == RenPyStatementType.SAY && Static.SkipDialog)
+				{
 					state.Execution.NextStatement(state);
 				}
-			} else {
+			}
+			else
+			{
 				Static.Log("Execution state reached end of script");
 			}
 			return m_currentStatement;
@@ -138,7 +145,7 @@ namespace DPek.Raconteur.RenPy.State
 			m_stack.Push(m_initialStackFrame);
 			m_currentStatement = null;
 		}
-		
+
 		/// <summary>
 		/// Goes to the specified label in the Ren'Py script.
 		/// </summary>
@@ -147,15 +154,18 @@ namespace DPek.Raconteur.RenPy.State
 		/// </param>
 		public void GoToLabel(string label)
 		{
-			if (m_stack.Count == 0) {
+			if (m_stack.Count == 0)
+			{
 				UnityEngine.Debug.LogError("There is no stack to search.");
 				return;
 			}
 
-			while (!m_stack.Peek().HasLabel(label)) {
+			while (!m_stack.Peek().HasLabel(label))
+			{
 				m_stack.Pop();
 
-				if (m_stack.Count == 0) {
+				if (m_stack.Count == 0)
+				{
 					UnityEngine.Debug.LogError("Label " + label + " could not be "
 						+ "found.");
 					return;
@@ -164,7 +174,7 @@ namespace DPek.Raconteur.RenPy.State
 
 			m_stack.Peek().GoToLabel(label);
 		}
-		
+
 		/// <summary>
 		/// Pushes a new stack frame onto the call stack with the passed list of
 		/// RenPyBlocks.
@@ -193,7 +203,8 @@ namespace DPek.Raconteur.RenPy.State
 		/// </returns>
 		public RenPyStatement GetPreviousStatement()
 		{
-			if (m_stack.Count > 0) {
+			if (m_stack.Count > 0)
+			{
 				return m_stack.Peek().GetPreviousStatement();
 			}
 			return null;

@@ -1,7 +1,8 @@
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns true if the two arguments are equal
+	/// Represents an operator that returns true if the left hand side is less
+	/// than the right hand side.
 	/// </summary>
 	public class OperatorLessThan : Operator
 	{
@@ -11,10 +12,10 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorLessThan(string symbol) : base(symbol) {}
+		public OperatorLessThan(string symbol) : base(symbol) { }
 
 		/// <summary>
-		/// Returns true if the left and right hand sides are equal
+		/// Returns true if the left hand side is less than the right hand side.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.

@@ -6,8 +6,7 @@ using DPek.Raconteur.RenPy.State;
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an expression, which is an operator that can be evaluated and
-	/// two objects that are used as arguments.
+	/// Represents an expression, which is an operator and one or two arguments.
 	/// </summary>
 	public sealed class Expression
 	{
@@ -17,14 +16,10 @@ namespace DPek.Raconteur.Util.Expressions
 		private Operator m_op;
 		public Operator Operator
 		{
-			get {
-				return m_op;
-			}
-			private set {
-				m_op = value;
-			}
+			get { return m_op; }
+			private set { m_op = value; }
 		}
-		
+
 		/// <summary>
 		/// The left hand side of this expression.
 		/// </summary>
@@ -32,24 +27,30 @@ namespace DPek.Raconteur.Util.Expressions
 		private Expression m_leftExpression;
 		public object Left
 		{
-			get {
-				if(m_leftExpression != null) {
+			get
+			{
+				if (m_leftExpression != null)
+				{
 					return m_leftExpression;
 				}
 				return m_leftStr;
 			}
-			private set {
-				if(value == null) {
+			private set
+			{
+				if (value == null)
+				{
 					m_leftStr = null;
 					m_leftExpression = null;
 					return;
 				}
-				if(value is string) {
+				if (value is string)
+				{
 					m_leftStr = value as string;
 					m_leftExpression = null;
 					return;
 				}
-				if(value is Expression) {
+				if (value is Expression)
+				{
 					m_leftStr = null;
 					m_leftExpression = value as Expression;
 					return;
@@ -58,7 +59,7 @@ namespace DPek.Raconteur.Util.Expressions
 				throw new InvalidOperationException(msg);
 			}
 		}
-		
+
 		/// <summary>
 		/// The right hand side of this expression.
 		/// </summary>
@@ -66,24 +67,30 @@ namespace DPek.Raconteur.Util.Expressions
 		private Expression m_rightExpression;
 		public object Right
 		{
-			get {
-				if(m_rightExpression != null) {
+			get
+			{
+				if (m_rightExpression != null)
+				{
 					return m_rightExpression;
 				}
 				return m_rightStr;
 			}
-			private set {
-				if(value == null) {
+			private set
+			{
+				if (value == null)
+				{
 					m_rightStr = null;
 					m_rightExpression = null;
 					return;
 				}
-				if(value is string) {
+				if (value is string)
+				{
 					m_leftStr = value as string;
 					m_leftExpression = null;
 					return;
 				}
-				if(value is Expression) {
+				if (value is Expression)
+				{
 					m_rightStr = null;
 					m_rightExpression = value as Expression;
 					return;
@@ -121,17 +128,22 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <returns>
 		/// A string that represents this object for debugging purposes.
 		/// </returns>
-		public override string ToString ()
+		public override string ToString()
 		{
-			if(m_op is OperatorNoOp) {
-				if(Left != null) {
+			if (m_op is OperatorNoOp)
+			{
+				if (Left != null)
+				{
 					return Left.ToString();
 				}
-				if(Right != null) {
+				if (Right != null)
+				{
 					return Right.ToString();
 				}
 				return "()";
-			} else {
+			}
+			else
+			{
 				return "(" + m_op + " " + Left + " " + Right + ")";
 			}
 		}

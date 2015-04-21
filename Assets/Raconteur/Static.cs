@@ -12,94 +12,88 @@ namespace DPek.Raconteur
 	public class Static : EditorWindow
 	{
 		#region Static Debug Variables
-		
-		private static bool m_debug;
-		private static bool m_skipDialog;
-		private static bool m_debugLines;
-		private static bool m_muteAudio;
-		
+
 		/// <summary>
 		/// Whether or not to show debugging information.
 		/// </summary>
+		private static bool m_debug;
 		public static bool DebugMode
 		{
-			get {
-				return m_debug;
-			}
+			get { return m_debug; }
 		}
-		
+
 		/// <summary>
 		/// Whether or not to skip the dialog and go straight to the choices.
 		/// </summary>
+		private static bool m_skipDialog;
 		public static bool SkipDialog
 		{
-			get {
-				return m_debug && m_skipDialog;
-			}
+			get { return m_debug && m_skipDialog; }
 		}
-		
+
 		/// <summary>
 		/// Whether or not to print debugging information for each line.
 		/// </summary>
+		private static bool m_debugLines;
 		private static bool DebugLines
 		{
-			get {
-				return m_debug && m_debugLines;
-			}
+			get { return m_debug && m_debugLines; }
 		}
-		
+
 		/// <summary>
 		/// Whether or not to mute audio.
 		/// </summary>
+		private static bool m_muteAudio;
 		public static bool MuteAudio
 		{
-			get {
-				return m_debug && m_muteAudio;
-			}
+			get { return m_debug && m_muteAudio; }
 		}
-		
+
 		#endregion
-		
+
 		#region Static Variables
-		
+
 		/// <summary>
 		/// The variables in the game.
 		/// </summary>
 		private static Dictionary<string, string> m_variables;
 		public static Dictionary<string, string> Vars
 		{
-			get {
+			get
+			{
 				m_variables = m_variables ?? new Dictionary<string, string>();
 				return m_variables;
 			}
 		}
+
+		#endregion
+
+		#region Unity UI
+
 		private static bool new_variable_time = false;
 		private static bool show_add_variable = true;
-		
+
 		private static string var_name = "";
 		private static string var_value = "";
-		
+
 		private static string atex = "Assets/Raconteur/Editor/add.png";
 		private static Texture addtext = Resources.LoadAssetAtPath(atex, typeof(Texture)) as Texture;
-		
+
 		private static string dtex = "Assets/Raconteur/Editor/delete.png";
 		private static Texture deltext = Resources.LoadAssetAtPath(dtex, typeof(Texture)) as Texture;
-		
+
 		private static GUIContent content = new GUIContent();
 		private static GUIStyle style;
 
 		private static int space = 18;
-		#endregion
-		
-		#region Unity UI
-		
+
 		[MenuItem("Window/Raconteur")]
 		public static void ShowWindow()
 		{
 			EditorWindow window = EditorWindow.GetWindow(typeof(Static));
 			window.title = "Raconteur";
 		}
-		
+
 		void OnGUI()
 		{
 			style = style ?? new GUIStyle();
@@ -116,64 +110,76 @@ namespace DPek.Raconteur
 			m_debugLines = EditorGUILayout.Toggle("Debug Lines", m_debugLines);
 			m_muteAudio = EditorGUILayout.Toggle("Mute Audio", m_muteAudio);
 			EditorGUILayout.EndToggleGroup();
-			
+
 			EditorGUILayout.Space();
-			
-			var boldtext = new GUIStyle (GUI.skin.label);
+
+			var boldtext = new GUIStyle(GUI.skin.label);
 			boldtext.fontStyle = FontStyle.Bold;
 			EditorGUILayout.LabelField("Variables", boldtext);
-			
-			if (!Application.isPlaying) {
+
+			if (!Application.isPlaying)
+			{
 				string msg = "Can only show variables in play mode.";
 				EditorGUILayout.HelpBox(msg, MessageType.Info, true);
-			} else if (Vars.Keys.Count == 0) {
+			}
+			else if (Vars.Keys.Count == 0)
+			{
 				string msg = "No variables.";
 				EditorGUILayout.HelpBox(msg, MessageType.Info, true);
-			} else {
+			}
+			else
+			{
 				var keys = new List<string>(Vars.Keys);
-				for (int i = 0; i < keys.Count; i++) {
+				for (int i = 0; i < keys.Count; i++)
+				{
 					GUILayout.BeginHorizontal();
 					var temp_key = GUILayout.TextField(keys[i]);
 					var temp_val = GUILayout.TextField(Vars[keys[i]]);
 					Vars.Remove(keys[i]);
 					keys[i] = temp_key;
 					Vars[keys[i]] = temp_val;
-					if (GUILayout.Button (deltext, style, GUILayout.Width(space), GUILayout.Height(space))) {
+					if (GUILayout.Button(deltext, style, GUILayout.Width(space), GUILayout.Height(space)))
+					{
 						Vars.Remove(keys[i]);
 					}
 					offset += space;
 					GUILayout.EndHorizontal();
 				}
 			}
-			
+
 			// Save if any options have changed
 			if (oldDebug != m_debug || oldSkip != m_skipDialog
-			    || oldLines != m_debugLines || oldMuteAudio != m_muteAudio) {
+				|| oldLines != m_debugLines || oldMuteAudio != m_muteAudio)
+			{
 				SaveEditorPrefs();
 			}
-			
+
 			// Begin add Button Code
 			content.image = addtext;
 			content.text = " Add Variable";
-			
-			if (show_add_variable && GUILayout.Button(content, GUILayout.Width(100), GUILayout.Height(30))) {
+
+			if (show_add_variable && GUILayout.Button(content, GUILayout.Width(100), GUILayout.Height(30)))
+			{
 				new_variable_time = !new_variable_time;
 				show_add_variable = !show_add_variable;
 			}
-			
-			if (new_variable_time) {
+
+			if (new_variable_time)
+			{
 				//GUI.Box(new Rect(0, 140 + offset, 300, 65), "");
-				var_name = EditorGUILayout.TextField ("Key", var_name);
-				var_value = EditorGUILayout.TextField ("Value", var_value);
+				var_name = EditorGUILayout.TextField("Key", var_name);
+				var_value = EditorGUILayout.TextField("Value", var_value);
 				GUILayout.BeginHorizontal();
-				if (GUILayout.Button ("Submit") && var_name != "") {
+				if (GUILayout.Button("Submit") && var_name != "")
+				{
 					Vars.Add(var_name, var_value);
 					show_add_variable = true;
 					new_variable_time = false;
 					var_name = "";
 					var_value = "";
 				}
-				if (GUILayout.Button ("Cancel")) {
+				if (GUILayout.Button("Cancel"))
+				{
 					show_add_variable = true;
 					new_variable_time = false;
 					var_name = "";
@@ -182,15 +188,15 @@ namespace DPek.Raconteur
 				GUILayout.EndHorizontal();
 			}
 			// End add Button Code
-			
+
 			// Update the GUI
 			this.Repaint();
 		}
-		
+
 		#endregion
-		
+
 		#region Unity Editor Prefs
-		
+
 		/// <summary>
 		/// Load this window's preferences when Unity is loaded.
 		/// </summary>
@@ -198,7 +204,7 @@ namespace DPek.Raconteur
 		{
 			LoadEditorPrefs();
 		}
-		
+
 		/// <summary>
 		/// Load this window's preferences when this window gains focus.
 		/// </summary>
@@ -206,7 +212,7 @@ namespace DPek.Raconteur
 		{
 			LoadEditorPrefs();
 		}
-		
+
 		/// <summary>
 		/// Loads this window's preferences by querying EditorPrefs.
 		/// </summary>
@@ -217,36 +223,48 @@ namespace DPek.Raconteur
 			m_debugLines = EditorPrefs.GetBool("raconteur-m_debugLines", false);
 			m_muteAudio = EditorPrefs.GetBool("raconteur-m_muteAudio", false);
 		}
-		
+
 		/// <summary>
 		/// Saves this window's preferences by using EditorPrefs.
 		/// </summary>
 		static void SaveEditorPrefs()
 		{
-			if (m_debug) {
+			if (m_debug)
+			{
 				EditorPrefs.SetBool("raconteur-m_debug", m_debug);
-			} else {
+			}
+			else
+			{
 				EditorPrefs.DeleteKey("raconteur-m_debug");
 			}
-			if (m_skipDialog) {
+			if (m_skipDialog)
+			{
 				EditorPrefs.SetBool("raconteur-m_skipDialog", m_skipDialog);
-			} else {
+			}
+			else
+			{
 				EditorPrefs.DeleteKey("raconteur-m_skipDialog");
 			}
-			if (m_debugLines) {
+			if (m_debugLines)
+			{
 				EditorPrefs.SetBool("raconteur-m_debugLines", m_debugLines);
-			} else {
+			}
+			else
+			{
 				EditorPrefs.DeleteKey("raconteur-m_debugLines");
 			}
-			if (m_muteAudio) {
+			if (m_muteAudio)
+			{
 				EditorPrefs.SetBool("raconteur-m_muteAudio", m_muteAudio);
-			} else {
+			}
+			else
+			{
 				EditorPrefs.DeleteKey("raconteur-m_muteAudio");
 			}
 		}
-		
+
 		#endregion
-		
+
 		/// <summary>
 		/// Logs a string using the debugger if DebugLines is true.
 		/// </summary>
@@ -255,7 +273,8 @@ namespace DPek.Raconteur
 		/// </param>
 		public static void Log(string str)
 		{
-			if (DebugLines) {
+			if (DebugLines)
+			{
 				Debug.Log(str);
 			}
 		}
@@ -268,38 +287,16 @@ namespace DPek.Raconteur
 {
 	public class Static
 	{
-		public static bool DebugMode
-		{
-			get {
-				return false;
-			}
-		}
-		
-		public static bool SkipDialog
-		{
-			get {
-				return false;
-			}
-		}
-		
-		public static bool DebugLines
-		{
-			get {
-				return false;
-			}
-		}
-		
-		public static bool MuteAudio
-		{
-			get {
-				return false;
-			}
-		}
+		public readonly static bool DebugMode = false;
+		public readonly static bool SkipDialog = false;
+		public readonly static bool DebugLines = false;
+		public readonly static bool MuteAudio = false;
 		
 		private static Dictionary<string, string> m_variables;
 		public static Dictionary<string, string> Vars
 		{
-			get {
+			get
+			{
 				m_variables = m_variables ?? new Dictionary<string, string>();
 				return m_variables;
 			}

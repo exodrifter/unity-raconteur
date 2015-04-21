@@ -22,11 +22,16 @@ namespace DPek.Raconteur.RenPy.State
 
 		public AudioChannel GetChannel(string index)
 		{
-			if (index == "music") {
+			if (index == "music")
+			{
 				return m_channels[6];
-			} else if (index == "sound") {
+			}
+			else if (index == "sound")
+			{
 				return m_channels[0];
-			} else if (index == "voice") {
+			}
+			else if (index == "voice")
+			{
 				return m_channels[1]; // TODO: What channel is voice?
 			}
 			return null;
@@ -35,7 +40,8 @@ namespace DPek.Raconteur.RenPy.State
 		public void Reset()
 		{
 			m_channels = new AudioChannel[7];
-			for (int i = 0; i < m_channels.Length; ++i) {
+			for (int i = 0; i < m_channels.Length; ++i)
+			{
 				m_channels[i] = new AudioChannel();
 			}
 		}
@@ -49,10 +55,9 @@ namespace DPek.Raconteur.RenPy.State
 		private AudioClip m_clip;
 		public AudioClip Clip
 		{
-			get {
-				return m_clip;
-			}
-			set {
+			get { return m_clip; }
+			set
+			{
 				m_clip = value;
 				m_audioChanged = true;
 				m_queueIndex = -1;
@@ -66,12 +71,8 @@ namespace DPek.Raconteur.RenPy.State
 		private float m_volume;
 		public float Volume
 		{
-			get {
-				return m_volume;
-			}
-			set {
-				m_volume = value;
-			}
+			get { return m_volume; }
+			set { m_volume = value; }
 		}
 
 		/// <summary>
@@ -80,12 +81,8 @@ namespace DPek.Raconteur.RenPy.State
 		private bool m_looping;
 		public bool Looping
 		{
-			get {
-				return m_looping;
-			}
-			set {
-				m_looping = value;
-			}
+			get { return m_looping; }
+			set { m_looping = value; }
 		}
 
 		/// <summary>
@@ -94,12 +91,8 @@ namespace DPek.Raconteur.RenPy.State
 		private AudioChannelTransition m_transition;
 		public AudioChannelTransition Transition
 		{
-			get {
-				return m_transition;
-			}
-			set {
-				m_transition = value;
-			}
+			get { return m_transition; }
+			set { m_transition = value; }
 		}
 
 		/// <summary>
@@ -108,10 +101,9 @@ namespace DPek.Raconteur.RenPy.State
 		private List<AudioClip> m_queue;
 		public List<AudioClip> Queue
 		{
-			get {
-				return m_queue;
-			}
-			set {
+			get { return m_queue; }
+			set
+			{
 				m_queue = value != null ? value : new List<AudioClip>();
 				m_queueIndex = -1;
 			}
@@ -137,19 +129,26 @@ namespace DPek.Raconteur.RenPy.State
 			m_queue = new List<AudioClip>();
 		}
 
-		public AudioClip NextClip() {
-			if(m_audioChanged) {
+		public AudioClip NextClip()
+		{
+			if (m_audioChanged)
+			{
 				m_audioChanged = false;
 				return Clip;
 			}
 
 			// Loop through the queue
-			if(Queue.Count > 0 && Queue.Count != m_queueIndex) {
+			if (Queue.Count > 0 && Queue.Count != m_queueIndex)
+			{
 				m_queueIndex++;
-				if(m_queueIndex >= Queue.Count) {
-					if(Looping) {
+				if (m_queueIndex >= Queue.Count)
+				{
+					if (Looping)
+					{
 						m_queueIndex = 0;
-					} else {
+					}
+					else
+					{
 						return null;
 					}
 				}
@@ -168,12 +167,8 @@ namespace DPek.Raconteur.RenPy.State
 		private AudioClip m_startAudio;
 		public AudioClip StartAudio
 		{
-			get {
-				return m_startAudio;
-			}
-			set {
-				m_startAudio = value;
-			}
+			get { return m_startAudio; }
+			set { m_startAudio = value; }
 		}
 
 		/// <summary>
@@ -182,12 +177,8 @@ namespace DPek.Raconteur.RenPy.State
 		private AudioClip m_endAudio;
 		public AudioClip EndAudio
 		{
-			get {
-				return m_endAudio;
-			}
-			set {
-				m_endAudio = value;
-			}
+			get { return m_endAudio; }
+			set { m_endAudio = value; }
 		}
 
 		/// <summary>
@@ -196,12 +187,8 @@ namespace DPek.Raconteur.RenPy.State
 		private AudioChannelTransition m_nextTransition;
 		public AudioChannelTransition NextTransition
 		{
-			get {
-				return m_nextTransition;
-			}
-			set {
-				m_nextTransition = value;
-			}
+			get { return m_nextTransition; }
+			set { m_nextTransition = value; }
 		}
 
 		/// <summary>
@@ -210,12 +197,8 @@ namespace DPek.Raconteur.RenPy.State
 		private float m_fadeTo;
 		public float FadeTo
 		{
-			get {
-				return m_fadeTo;
-			}
-			set {
-				m_fadeTo = value;
-			}
+			get { return m_fadeTo; }
+			set { m_fadeTo = value; }
 		}
 
 		/// <summary>
@@ -225,12 +208,8 @@ namespace DPek.Raconteur.RenPy.State
 		private bool m_loop;
 		public bool Loop
 		{
-			get {
-				return m_loop;
-			}
-			set {
-				m_loop = value;
-			}
+			get { return m_loop; }
+			set { m_loop = value; }
 		}
 
 		/// <summary>
@@ -240,12 +219,8 @@ namespace DPek.Raconteur.RenPy.State
 		private float m_transitionTime;
 		public float TransitionTime
 		{
-			get {
-				return m_transitionTime;
-			}
-			set {
-				m_transitionTime = value;
-			}
+			get { return m_transitionTime; }
+			set { m_transitionTime = value; }
 		}
 
 		/// <summary>
@@ -255,12 +230,8 @@ namespace DPek.Raconteur.RenPy.State
 		private float m_elapsedTime;
 		public float ElapsedTime
 		{
-			get {
-				return m_elapsedTime;
-			}
-			set {
-				m_elapsedTime = value;
-			}
+			get { return m_elapsedTime; }
+			set { m_elapsedTime = value; }
 		}
 
 		public AudioChannelTransition()

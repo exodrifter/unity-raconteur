@@ -16,9 +16,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyScriptAsset m_script;
 		public RenPyScriptAsset Script
 		{
-			get {
-				return m_script;
-			}
+			get { return m_script; }
 		}
 
 		/// <summary>
@@ -27,9 +25,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyExecutionState m_executionState;
 		public RenPyExecutionState Execution
 		{
-			get {
-				return m_executionState;
-			}
+			get { return m_executionState; }
 		}
 
 		/// <summary>
@@ -38,9 +34,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyVisualState m_visualState;
 		public RenPyVisualState Visual
 		{
-			get {
-				return m_visualState;
-			}
+			get { return m_visualState; }
 		}
 
 		/// <summary>
@@ -49,9 +43,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyAuralState m_auralState;
 		public RenPyAuralState Aural
 		{
-			get {
-				return m_auralState;
-			}
+			get { return m_auralState; }
 		}
 
 		/// <summary>
@@ -182,14 +174,7 @@ namespace DPek.Raconteur.RenPy.State
 		/// </param>
 		public override void SetVariable(string name, string value)
 		{
-			if (!Static.Vars.ContainsKey(name))
-			{
-				Static.Vars.Add(name, value);
-			}
-			else
-			{
-				Static.Vars[name] = value;
-			}
+			Static.Vars[name] = value;
 		}
 
 		/// <summary>

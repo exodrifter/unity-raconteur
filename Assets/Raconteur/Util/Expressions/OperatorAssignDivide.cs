@@ -12,7 +12,7 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAssignDivide(string symbol) : base(symbol) {}
+		public OperatorAssignDivide(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Divides the value of the left hand argument by the right hand

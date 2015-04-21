@@ -16,12 +16,8 @@ namespace DPek.Raconteur.RenPy.State
 		private bool m_windowRequested;
 		public bool WindowRequested
 		{
-			get {
-				return m_windowRequested;
-			}
-			set {
-				m_windowRequested = value;
-			}
+			get { return m_windowRequested; }
+			set { m_windowRequested = value; }
 		}
 
 		/// <summary>
@@ -30,9 +26,7 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyImageData m_bgImage;
 		public RenPyImageData BgImage
 		{
-			get {
-				return m_bgImage;
-			}
+			get { return m_bgImage; }
 		}
 
 		/// <summary>
@@ -134,14 +128,8 @@ namespace DPek.Raconteur.RenPy.State
 		private Texture2D m_texture;
 		public Texture2D Texture
 		{
-			get
-			{
-				return m_texture;
-			}
-			set
-			{
-				m_texture = value;
-			}
+			get { return m_texture; }
+			set { m_texture = value; }
 		}
 
 		/// <summary>
@@ -150,14 +138,8 @@ namespace DPek.Raconteur.RenPy.State
 		private RenPyAlignment m_alignment;
 		public RenPyAlignment Alignment
 		{
-			get
-			{
-				return m_alignment;
-			}
-			set
-			{
-				m_alignment = value;
-			}
+			get { return m_alignment; }
+			set { m_alignment = value; }
 		}
 
 		public RenPyImageData(ref Texture2D texture, RenPyAlignment alignment)

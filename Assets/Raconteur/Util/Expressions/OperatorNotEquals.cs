@@ -12,10 +12,10 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorNotEquals(string symbol) : base(symbol) {}
+		public OperatorNotEquals(string symbol) : base(symbol) { }
 
 		/// <summary>
-		/// Returns true if the left and right hand sides are equal
+		/// Returns true if the left and right hand sides are not equal.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.

@@ -11,8 +11,8 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorOr(string symbol) : base(symbol) {}
-		
+		public OperatorOr(string symbol) : base(symbol) { }
+
 		/// <summary>
 		/// Returns true if either the left or right hand side is true.
 		/// </summary>
@@ -29,7 +29,8 @@
 		{
 			bool leftVal;
 			bool success = bool.TryParse(left.AsString(state), out leftVal);
-			if(success && leftVal) {
+			if (success && leftVal)
+			{
 				return new ValueBoolean(true);
 			}
 

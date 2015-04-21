@@ -1,7 +1,7 @@
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns the argument it has.
+	/// Represents an operator that divides the left and right hand arguments.
 	/// </summary>
 	public class OperatorDivide : Operator
 	{
@@ -11,11 +11,10 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorDivide(string symbol) : base(symbol) {}
+		public OperatorDivide(string symbol) : base(symbol) { }
 
 		/// <summary>
-		/// Returns the left hand argument if it is non-null. If the left hand
-		/// argument is null, this returns the right hand argument.
+		/// Returns division of the left and right hand sides.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.

@@ -12,7 +12,7 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAssignMinus(string symbol) : base(symbol) {}
+		public OperatorAssignMinus(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Subtracts the value of the right hand argument from the left hand

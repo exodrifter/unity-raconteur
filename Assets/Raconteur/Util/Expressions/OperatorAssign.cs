@@ -12,7 +12,7 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAssign(string symbol) : base(symbol) {}
+		public OperatorAssign(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Assigns the right hand argument to the left hand argument and

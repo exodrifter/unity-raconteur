@@ -58,9 +58,9 @@ namespace DPek.Raconteur.Twine.State
 		/// </param>
 		public override string GetVariable(string name)
 		{
-			if(Static.Vars.ContainsKey(name))
+			if (Static.Vars.ContainsKey(name))
 			{
-				return Static.Vars[name]; 
+				return Static.Vars[name];
 			}
 			else
 			{
@@ -79,14 +79,7 @@ namespace DPek.Raconteur.Twine.State
 		/// </param>
 		public override void SetVariable(string name, string value)
 		{
-			if (!Static.Vars.ContainsKey(name))
-			{
-				Static.Vars.Add(name, value);
-			}
-			else
-			{
-				Static.Vars[name] = value;
-			}
+			Static.Vars[name] = value;
 		}
 
 		/// <summary>

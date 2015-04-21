@@ -1,7 +1,8 @@
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns true if the two arguments are equal
+	/// Represents an operator that returns true if the left hand side is
+	/// greater than the right hand.
 	/// </summary>
 	public class OperatorGreaterThan : Operator
 	{
@@ -14,7 +15,8 @@ namespace DPek.Raconteur.Util.Expressions
 		public OperatorGreaterThan(string symbol) : base(symbol) {}
 
 		/// <summary>
-		/// Returns true if the left and right hand sides are equal
+		/// Returns true if the left hand side is greater than the right hand.
+		/// side.
 		/// </summary>
 		/// <param name="state">
 		/// The state to evaluate this operator against.

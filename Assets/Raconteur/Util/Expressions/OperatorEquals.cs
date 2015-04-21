@@ -11,7 +11,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorEquals(string symbol) : base(symbol) {}
+		public OperatorEquals(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Returns true if the left and right hand sides are equal.

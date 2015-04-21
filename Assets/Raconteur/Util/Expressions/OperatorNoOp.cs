@@ -1,7 +1,7 @@
 namespace DPek.Raconteur.Util.Expressions
 {
 	/// <summary>
-	/// Represents an operator that returns the argument it has.
+	/// Represents an operator that performs no operation.
 	/// </summary>
 	public class OperatorNoOp : Operator
 	{
@@ -11,7 +11,7 @@ namespace DPek.Raconteur.Util.Expressions
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorNoOp(string symbol) : base(symbol) {}
+		public OperatorNoOp(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Returns the left hand argument if it is non-null. If the left hand

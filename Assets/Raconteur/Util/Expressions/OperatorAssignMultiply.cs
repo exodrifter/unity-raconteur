@@ -12,7 +12,7 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAssignMultiply(string symbol) : base(symbol) {}
+		public OperatorAssignMultiply(string symbol) : base(symbol) { }
 
 		/// <summary>
 		/// Multiplies the value of the right and left hand arguments, assigns

@@ -16,9 +16,7 @@ namespace DPek.Raconteur.RenPy.State
 		private readonly List<RenPyBlock> m_blocks;
 		public List<RenPyBlock> Blocks
 		{
-			get {
-				return m_blocks;
-			}
+			get { return m_blocks; }
 		}
 
 		/// <summary>
@@ -35,7 +33,7 @@ namespace DPek.Raconteur.RenPy.State
 		/// A dictionary of labels to the corresponding block and statement
 		/// indices.
 		/// </summary>
-		private Dictionary<string, Duple<int,int>> m_labelIndices;
+		private Dictionary<string, Duple<int, int>> m_labelIndices;
 
 		/// <summary>
 		/// Creates a new RenPyStackFrame with the passed list of RenPyBlocks.
@@ -47,10 +45,13 @@ namespace DPek.Raconteur.RenPy.State
 			m_statementIndex = -1;
 			m_blockIndex = 0;
 
-			m_labelIndices = new Dictionary<string, Duple<int,int>>();
-			for(int i = 0; i < m_blocks.Count; ++i) {
-				for(int j = 0; j < m_blocks[i].Statements.Count; ++j) {
-					if (m_blocks[i][j] is RenPyLabel) {
+			m_labelIndices = new Dictionary<string, Duple<int, int>>();
+			for (int i = 0; i < m_blocks.Count; ++i)
+			{
+				for (int j = 0; j < m_blocks[i].Statements.Count; ++j)
+				{
+					if (m_blocks[i][j] is RenPyLabel)
+					{
 						var name = (m_blocks[i][j] as RenPyLabel).Name;
 						var index = new Duple<int, int>(i, j);
 						m_labelIndices.Add(name, index);
@@ -76,12 +77,16 @@ namespace DPek.Raconteur.RenPy.State
 			--m_statementIndex;
 
 			// Check if we need to go to the previous block
-			if (m_statementIndex < 0) {
-				if(m_blockIndex > 0) {
+			if (m_statementIndex < 0)
+			{
+				if (m_blockIndex > 0)
+				{
 					m_blockIndex--;
 					int statements = m_blocks[m_blockIndex].Statements.Count;
 					m_statementIndex = statements - 1;
-				} else {
+				}
+				else
+				{
 					Reset();
 				}
 			}
@@ -103,18 +108,21 @@ namespace DPek.Raconteur.RenPy.State
 		public RenPyStatement NextStatement(RenPyState state)
 		{
 			++m_statementIndex;
-			if (m_blockIndex >= m_blocks.Count) {
+			if (m_blockIndex >= m_blocks.Count)
+			{
 				return null;
 			}
 
 			// Check if we need to go to the next block
-			if (m_statementIndex >= m_blocks[m_blockIndex].Statements.Count) {
+			if (m_statementIndex >= m_blocks[m_blockIndex].Statements.Count)
+			{
 				m_statementIndex = 0;
 				++m_blockIndex;
 			}
 
 			// Check if we are any more statements left
-			if (m_blockIndex >= m_blocks.Count) {
+			if (m_blockIndex >= m_blocks.Count)
+			{
 				return null;
 			}
 
@@ -162,12 +170,15 @@ namespace DPek.Raconteur.RenPy.State
 			int index = m_statementIndex - 1;
 
 			// Check if we need to go to the previous block
-			if (index < 0) {
-				if (m_blockIndex > 0) {
+			if (index < 0)
+			{
+				if (m_blockIndex > 0)
+				{
 					blockIndex--;
 					index = m_blocks[blockIndex].Statements.Count - 1;
 				}
-				else {
+				else
+				{
 					Reset();
 				}
 			}

@@ -11,8 +11,8 @@
 		/// <param name="symbol">
 		/// The symbol that represents this operator
 		/// </param>
-		public OperatorAnd(string symbol) : base(symbol) {}
-		
+		public OperatorAnd(string symbol) : base(symbol) { }
+
 		/// <summary>
 		/// Returns true if the left and right hand sides are both true.
 		/// </summary>
@@ -27,7 +27,7 @@
 		/// </param>
 		public override Value Eval(StoryState state, Value left, Value right)
 		{
-			bool leftVal, rightVal;
+			bool leftVal = false, rightVal = false;
 			bool success = bool.TryParse(left.AsString(state), out leftVal);
 			success = success && bool.TryParse(right.AsString(state), out rightVal);
 			return new ValueBoolean(success && leftVal && rightVal);
