@@ -1,0 +1,3 @@
+[submodule "Plugins/UnityPython"]
+	path = Plugins/UnityPython
+	url = git@github.com:exodrifter/unity-python.git

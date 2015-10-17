@@ -1,25 +1,19 @@
-﻿#if UNITY_EDITOR
-
-using DPek.Raconteur.RenPy.Parser;
-using DPek.Raconteur.RenPy.Script;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace DPek.Raconteur.RenPy.Editor
+namespace Exodrifter.Raconteur.RenPy
 {
 	/// <summary>
 	/// Processes and parses Ren'Py .rpy files during the asset post process
 	/// phase.
 	/// 
-	/// Besides parsing .rpy files at import time, this class is also required
-	/// to access the .rpy files in the first place. This is because trying to
-	/// access the files with Unity's TextAsset class will require the files to
-	/// have an extension that is not .rpy. To get around this, this class
-	/// accesses the file in the post process phase and saves it as a custom
-	/// unity asset for later access.
+	/// This class is required, because trying to access files with Unity's
+	/// TextAsset class will require the files to have an extension that is
+	/// not .rpy. To get around this, this class accesses the file in the
+	/// post process phase and saves it as a custom unity asset for later
+	/// access.
 	/// </summary>
 	public class RenPyPostprocessor : AssetPostprocessor
 	{
@@ -27,25 +21,21 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// Finds script.rpy files and saves data about them to custom asset
 		/// files.
 		/// </summary>
-		private static void OnPostprocessAllAssets(string[] importedAssets,
-		                                           string[] deletedAssets,
-		                                           string[] movedAssets,
-		                                           string[] movedFromPath)
+		private static void OnPostprocessAllAssets(string[] imported,
+			string[] deleted, string[] moved, string[] movedFrom)
 		{
-			foreach (string assetPath in importedAssets) {
-				CreateRenPyAsset(GetRenPyFileHandle(assetPath, true));
+			foreach (string path in imported) {
+				CreateRenPyAsset(GetHandle(path));
 			}
 
-			foreach (string assetPath in deletedAssets) {
-				RemoveRenPyAsset(GetRenPyFileHandle(assetPath, false));
+			foreach (string path in deleted) {
+				RemoveRenPyAsset(GetHandle(path));
 			}
 
-			foreach (string assetPath in movedAssets) {
-				CreateRenPyAsset(GetRenPyFileHandle(assetPath, true));
-			}
-
-			foreach (string assetPath in movedFromPath) {
-				RemoveRenPyAsset(GetRenPyFileHandle(assetPath, false));
+			for (int i = 0; i < moved.Length; ++i) {
+				string from = movedFrom[i];
+				string to = moved[i];
+				RenameRenPyAsset(GetHandle(from), GetHandle(to));
 			}
 		}
 
@@ -55,14 +45,10 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// <param name="assetPath">
 		/// The path of the asset to create a RenPyFile for.
 		/// </param>
-		/// <param name="getContents">
-		/// Whether or not to read the contents of the Ren'Py script.
-		/// </param>
 		/// <returns>
 		/// The RenPyFile for the passed asset path.
 		/// </returns>
-		private static RenPyFile GetRenPyFileHandle(string assetPath,
-		                                            bool getContents)
+		private static RenPyFile GetHandle(string assetPath)
 		{
 			// Check if the file is a Ren'Py script
 			string filename = Path.GetFileNameWithoutExtension(assetPath);
@@ -71,35 +57,20 @@ namespace DPek.Raconteur.RenPy.Editor
 				return null;
 			}
 
+			// Get the folder path
+			string folder = Path.GetDirectoryName(assetPath);
+
 			// Get the folder name
-			string foldername = Path.GetDirectoryName(assetPath);  // "game"
-			foldername = Path.GetDirectoryName(foldername);  // folder path
-			foldername = Path.GetFileName(foldername);
+			string name = Path.GetFileName(Path.GetDirectoryName(folder));
 
-			// Get the asset's path
-			string folderPath = Path.GetDirectoryName(assetPath);
-			string path = folderPath + Path.DirectorySeparatorChar;
-			path += "script-" + foldername.ToLower() + ".asset";
-
-			// Get the file's contents
-			var content = new List<string>();
-			if (getContents) {
-				StreamReader scanner = new StreamReader(assetPath);
-				while (scanner.Peek() > 0) {
-					string line = scanner.ReadLine();
-					content.Add(line);
-				}
-			}
-			string[] lines = content.Count != 0 ? content.ToArray() : null;
-
-			return new RenPyFile(foldername, path, folderPath, lines);
+			return new RenPyFile(name, folder);
 		}
 
 		/// <summary>
-		/// Creates a custom asset file with the passed RenPyFile.
+		/// Creates a custom asset file with the passed handle.
 		/// </summary>
 		/// <param name="handle">
-		/// The RenPyFile asset to create.
+		/// The handle of the asset to create.
 		/// </param>
 		private static void CreateRenPyAsset(RenPyFile handle)
 		{
@@ -107,59 +78,17 @@ namespace DPek.Raconteur.RenPy.Editor
 				return;
 			}
 
-			var script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
-			script.name = Path.GetFileNameWithoutExtension(handle.path);
-			script.Title = handle.name;
-			script.Lines = handle.lines;
-
-			// Construct the system path of the Ren'Py asset folder
-			string dataPath  = Application.dataPath;
-			string folderPath = dataPath.Substring(0, dataPath.Length - 6);
-			folderPath += handle.folder;
-
-			// Get system file paths of all files in the Ren'Py asset folder
-			string[] filePaths = Directory.GetFiles(folderPath);
-
-			// Find supported assets for the RenPyScriptAsset
-			List<string> audioKeys = new List<string>();
-			List<AudioClip> audioValues = new List<AudioClip>();
-			List<string> imageKeys = new List<string>();
-			List<Texture2D> imageValues = new List<Texture2D>();
-			foreach (string filePath in filePaths) {
-				string assetPath = filePath.Substring(dataPath.Length - 6);
-				string filename = Path.GetFileName(filePath);
-
-				System.Type objType = typeof(Object);
-				Object obj = AssetDatabase.LoadAssetAtPath(assetPath, objType);
-				if (obj == null) {
-					continue;
-				}
-
-				if (obj.GetType() == typeof(AudioClip)) {
-					audioKeys.Add(filename);
-					audioValues.Add(obj as AudioClip);
-				}
-
-				if (obj.GetType() == typeof(Texture2D)) {
-					imageKeys.Add(filename);
-					imageValues.Add(obj as Texture2D);
-				}
-			}
-
-			// Save assets to the RenPyScriptAsset
-			script.audioKeys = audioKeys.ToArray();
-			script.audioValues = audioValues.ToArray();
-			script.imageKeys = imageKeys.ToArray();
-			script.imageValues = imageValues.ToArray();
+			var script = CreateScript(handle);
 
 			// Create or update the RenPyScriptAsset
-			Object asset = AssetDatabase.LoadMainAssetAtPath(handle.path);
-			RenPyScriptAsset outputScript = asset as RenPyScriptAsset;
+			var asset = AssetDatabase.LoadMainAssetAtPath(handle.AssetPath);
+			var outputScript = asset as RenPyScriptAsset;
 			if (outputScript != null) {
 				EditorUtility.CopySerialized(script, outputScript);
-				ScriptableObject.DestroyImmediate(script, true);
-			} else {
-				AssetDatabase.CreateAsset(script, handle.path);
+				Object.DestroyImmediate(script, true);
+			}
+			else {
+				AssetDatabase.CreateAsset(script, handle.AssetPath);
 			}
 			AssetDatabase.SaveAssets();
 		}
@@ -168,15 +97,86 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// Removes the custom asset file with the passed RenPyFile.
 		/// </summary>
 		/// <param name="handle">
-		/// The RenPyFile asset to delete.
+		/// The handle of the asset to delete.
 		/// </param>
 		private static void RemoveRenPyAsset(RenPyFile handle)
 		{
 			if (handle != null) {
-				AssetDatabase.DeleteAsset(handle.path);
+				AssetDatabase.DeleteAsset(handle.AssetPath);
 			}
+		}
+
+		/// <summary>
+		/// Updates the custom asset file that has been moved from one path
+		/// to another.
+		/// </summary>
+		/// <param name="from">
+		/// The handle of the asset's old path.
+		/// </param>
+		/// <param name="to">
+		/// The handle of the asset to update.
+		/// </param>
+		private static void RenameRenPyAsset(RenPyFile from, RenPyFile to)
+		{
+			if (null == from || null == to) {
+				return;
+			}
+
+			var script = CreateScript(to);
+
+			// Modify the old path to match the new directory
+			var oldPath = to.folder + System.IO.Path.DirectorySeparatorChar
+				+ "script-" + from.name.ToLower() + ".asset";
+
+			var asset = AssetDatabase.LoadMainAssetAtPath(oldPath);
+			var outputScript = asset as RenPyScriptAsset;
+			if (outputScript != null) {
+				EditorUtility.CopySerialized(script, outputScript);
+				AssetDatabase.RenameAsset(oldPath, "script-" + to.name.ToLower());
+				Object.DestroyImmediate(script, true);
+			}
+			else {
+				AssetDatabase.CreateAsset(script, to.AssetPath);
+			}
+			AssetDatabase.SaveAssets();
+		}
+
+		private static RenPyScriptAsset CreateScript(RenPyFile handle)
+		{
+			var script = ScriptableObject.CreateInstance<RenPyScriptAsset>();
+			script.name = Path.GetFileNameWithoutExtension(handle.AssetPath);
+			script.Title = handle.name;
+			using (var scanner = new StreamReader(handle.ScriptPath)) {
+				script.Source = scanner.ReadToEnd().Replace("\r\n", "\n");
+			}
+			script.audio = new Dictionary<string, AudioClip>();
+			script.image = new Dictionary<string, Texture2D>();
+
+			// Construct the system path of the Ren'Py asset folder
+			string dataPath = Application.dataPath;
+			string folderPath = dataPath.Substring(0, dataPath.Length - 6);
+			folderPath += handle.folder;
+
+			// Find supported assets for the RenPyScriptAsset
+			foreach (string path in Directory.GetFiles(folderPath)) {
+				string assetPath = path.Substring(dataPath.Length - 6);
+				string filename = Path.GetFileName(path);
+
+				var obj = AssetDatabase.LoadAssetAtPath<Object>(assetPath);
+				if (obj == null) {
+					continue;
+				}
+
+				if (obj.GetType() == typeof(AudioClip)) {
+					script.audio.Add(filename, obj as AudioClip);
+				}
+
+				if (obj.GetType() == typeof(Texture2D)) {
+					script.image.Add(filename, obj as Texture2D);
+				}
+			}
+
+			return script;
 		}
 	}
 }
-
-#endif

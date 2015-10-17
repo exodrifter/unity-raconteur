@@ -1,6 +1,6 @@
-﻿#if UNITY_EDITOR
+﻿using System.IO;
 
-namespace DPek.Raconteur.RenPy.Editor
+namespace Exodrifter.Raconteur.RenPy
 {
 	/// <summary>
 	/// Class that stores information about a Ren'Py script file.
@@ -13,19 +13,33 @@ namespace DPek.Raconteur.RenPy.Editor
 		public readonly string name;
 
 		/// <summary>
-		/// The path to the Ren'Py script.
-		/// </summary>
-		public readonly string path;
-
-		/// <summary>
 		/// The path to the folder containing the Ren'Py script.
 		/// </summary>
 		public readonly string folder;
 
 		/// <summary>
-		/// The content of the Ren'Py script.
+		/// The path to the Raconteur asset.
 		/// </summary>
-		public readonly string[] lines;
+		public string AssetPath
+		{
+			get
+			{
+				return folder + System.IO.Path.DirectorySeparatorChar +
+					"script-" + name.ToLower() + ".asset";
+			}
+		}
+
+		/// <summary>
+		/// The path to the .rpy script.
+		/// </summary>
+		public string ScriptPath
+		{
+			get
+			{
+				return folder + System.IO.Path.DirectorySeparatorChar +
+					"script.rpy";
+			}
+		}
 
 		/// <summary>
 		/// Creates a new RenPyFileHandle with the passed information.
@@ -33,23 +47,13 @@ namespace DPek.Raconteur.RenPy.Editor
 		/// <param name="name">
 		/// The name of the Ren'Py script.
 		/// </param>
-		/// <param name="path">
-		/// The path to the Ren'Py script.
-		/// </param>
 		/// <param name="folder">
 		/// The path to the folder containing the Ren'Py script.
 		/// </param>
-		/// <param name="lines">
-		/// The content of the Ren'Py script.
-		/// </param>
-		public RenPyFile(string name, string path, string folder, string[] lines)
+		public RenPyFile(string name, string folder)
 		{
 			this.name = name;
-			this.path = path;
 			this.folder = folder;
-			this.lines = lines;
 		}
 	}
 }
-
-#endif

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb7ca91d56189d45a199111059afd6d, type: 3}
+  m_Name: script-example
+  m_EditorClassIdentifier: 
+  Title: Example
+  Source: "# Read the comments below to see what's possible with Ren'Py and Raconteur!\n\n#
+    Declare images\nimage bg cafe = \"cafe.jpg\"\nimage bg office = \"office.jpg\"\nimage
+    bg scenery = \"scenery.jpg\"\n\n# Define characters\ndefine m = Character('Me',
+    color='#f22')\ndefine c = Character('Cashier', color='#f90')\ndefine b = Character('Boss',
+    color='#596')\ndefine o = Character('Old Man', color='#ff4')\n\n# The game starts
+    here\nlabel start:\n\n    # Loop the background music\n    play music \"theme.ogg\"
+    loop\n\n    # This will be used to remember player decisions later on\n    $ curious
+    = False\n\n    scene bg cafe\n    with fade\n\n    m \"It's another brisk day,
+    but winter is fading.\"\n    # show o\n    m \"I walk into this cafe every morning,
+    and every morning, he's here.\"\n    m \"An older man with a leathery face. I
+    wonder how old he actually is.\"\n    m \"He's dressed neatly, but his eyes seem
+    tired. Always reading.\"\n    m \"I'm never here for long, just in for some coffee
+    and out again.\"\n    m \"There's always so much to do...\"\n\n    scene bg cafe\n
+    \   with fade\n\n    m \"It's nicer out than it was yesterday.\"\n    m \"He's
+    here again, shouldn't be surprised.\"\n    m \"The holidays are coming up soon.
+    I wonder where his family is.\"\n\n    # show cashier normal\n    # with dissolve\n\n
+    \   c \"That'll be two bucks for the coffee sir.\"\n    m \"Oh, I should pay more
+    attention.\"\n\n    menu:\n        \"Here you go.\":\n            jump intro_go\n
+    \       \"Here's the money. Do you know who that old man is?\":\n            jump
+    intro_who\n\nlabel intro_go:\n    scene bg cafe\n    with fade\n\n    # show cashier
+    normal\n    # with dissolve\n    c \"Here's your coffe. You know that guy? You
+    were staring at him pretty hard.\"\n    m \"Oh, no I don't. Thanks.\"\n    jump
+    intro_pass\n\nlabel intro_who:\n\n    # show cashier normal\n    # with dissolve\n
+    \   $ curious = True\n    c \"Not sure really to be honest. He's here every day
+    from open to close with the same book.\"\n    c \"You could go ask him yourself,
+    you know.\"\n    m \"Thanks.\"\n    jump intro_pass\n\nlabel intro_pass:\n    scene
+    bg cafe\n    # with fade\n\n    m \"I wonder if I should go talk to him. Today
+    isn't the best day though.\"\n    m \"I'm up for a promotion and I shouldn't be
+    late for work.\"\n    m \"There he is, his eyes are motionless. I wonder...\"\n\n
+    \   menu:\n        \"Talk to the old man.\":\n            jump intro_talk\n        \"Leave
+    cafe and go to work.\":\n            jump intro_work\n\nlabel intro_talk:\n    scene
+    bg cafe\n    #with fade\n\n    if curious:\n        \"My curiosity got the better
+    of me.\"\n    else:\n        \"I could have asked the cashier, but I'd rather
+    be direct.\"\n\n    m \"Hello. I've seen you every day since I started my new
+    job.\"\n    m \"Why do you spend so much time here?\"\n    # show oldman normal\n
+    \   # with dissolve\n    o \"I like to listen.\"\n    m \"What do you mean? You're
+    always reading that book.\"\n    o \"See the pages? They're blank.\"\n    m \"But
+    why read a blank book?\"\n    o \"I'm blind, and people are more comfortable with
+    me staring at a book than nothing at all.\"\n    o \"Let me tell you my story.\"\n
+    \   jump good_ending\n\nlabel intro_work:\n    scene bg cafe\n    # with fade\n\n
+    \   if curious:\n        \"Even though I was curious, I needed to get to work.\"\n
+    \   else:\n        \"I'm sure the cashier would have known who this man was. I
+    needed to get to work.\"\n\n    m \"And so I went to work instead.\"\n    scene
+    bg office\n    # with dissolve\n    m \"I got the promotion.\"\n    m \"I even
+    got a stake in the company\"\n    # show boss\n    # with dissolve\n    b \"Congratulations,
+    you're going to do great.\"\n\nlabel bad_ending:\n    scene bg cafe\n    # with
+    fade\n    m \"Now I own the company, and I still visit that cafe.\"\n    m \"But
+    I haven't seen the old man since that day.\"\n    m \"And every day, I wonder
+    what would have happened if I had talked to him.\"\n    \".:. Bad Ending.\"\n
+    \   jump end\n\nlabel good_ending:\n    scene bg scenery\n    # with fade\n    m
+    \"So the Old Man, Roy, told me his story. He was a mountaineer, the first to scale
+    many peaks.\"\n    m \"He never had a family growing up, and spent too much time
+    on adventures for one of his own.\"\n    m \"Now he sits and remembers his life,
+    while listening to the hustle and bustle inside the cafe.\"\n    m \"I've invited
+    him to my house for a holiday dinner. Who knows what other stories he has to tell.\"\n
+    \   \".:. Good Ending.\"\n    jump end\n\n\nlabel end:\n    stop music fadeout
+    2\n    return\n"
+  audioKeys:
+  - theme.ogg
+  audioValues:
+  - {fileID: 8300000, guid: 14795f6ecd9f6a7448e5e676f3b1670f, type: 3}
+  imageKeys:
+  - cafe.jpg
+  - office.jpg
+  - scenery.jpg
+  imageValues:
+  - {fileID: 2800000, guid: 9e0a23573e8d9ad42936f8b1b060ac19, type: 3}
+  - {fileID: 2800000, guid: fab80c1b9ba602b47b2429311c431342, type: 3}
+  - {fileID: 2800000, guid: 05121f43fea4e1e4c81da4303b294921, type: 3}
