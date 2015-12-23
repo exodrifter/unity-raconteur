@@ -77,10 +77,10 @@ namespace DPek.Raconteur
 		private static string var_value = "";
 
 		private static string atex = "Assets/Raconteur/Editor/add.png";
-		private static Texture addtext = Resources.LoadAssetAtPath(atex, typeof(Texture)) as Texture;
+		private static Texture addtext = AssetDatabase.LoadAssetAtPath(atex, typeof(Texture)) as Texture;
 
 		private static string dtex = "Assets/Raconteur/Editor/delete.png";
-		private static Texture deltext = Resources.LoadAssetAtPath(dtex, typeof(Texture)) as Texture;
+		private static Texture deltext = AssetDatabase.LoadAssetAtPath(dtex, typeof(Texture)) as Texture;
 
 		private static GUIContent content = new GUIContent();
 		private static GUIStyle style;
@@ -91,7 +91,7 @@ namespace DPek.Raconteur
 		public static void ShowWindow()
 		{
 			EditorWindow window = EditorWindow.GetWindow(typeof(Static));
-			window.title = "Raconteur";
+			window.titleContent = new GUIContent ("Raconteur");
 		}
 
 		void OnGUI()
