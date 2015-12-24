@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using Triple = Exodrifter.Raconteur.RenPy.Tuple<string, int, string>;
+using Exodrifter.Raconteur.RenPy.Util;
+
+using py = Exodrifter.Raconteur.RenPy.Util.Python;
+using re = Exodrifter.Raconteur.RenPy.Util.PythonRegex;
+using Triple = Exodrifter.Raconteur.RenPy.Util.Tuple<string, int, string>;
 
 namespace Exodrifter.Raconteur.RenPy
 {
 	/// <summary>
-	/// A C# translation of the Ren'Py parser.py file.
+	/// A C# translation of functions in the renpy/parser.py file. This file
+	/// does not contain the entire of parser.py translated in C#; instead, it
+	/// is a class that represents some of the many functions found in that
+	/// file.
 	/// 
 	/// This module contains the parser for the Ren'Py script language. It's
 	/// called when parsing is necessary, and creates an AST from the script.
@@ -35,29 +42,6 @@ namespace Exodrifter.Raconteur.RenPy
 
 		private static ParseTrie statements = new ParseTrie ();
 
-		#region Python
-
-		/// <summary>
-		/// Convert an integer number (of any size) to a lowercase hexadecimal
-		/// string prefixed with “0x”.
-		/// </summary>
-		/// <param name="i">The integer to convert.</param>
-		private static string hex (int i) {
-			return string.Format ("0x{0:X}", i);
-		}
-
-		/// <summary>
-		/// Converts a string of length one into an integer.
-		/// </summary>
-		/// <param name="str">The string to convert.</param>
-		private static int ord (string str) {
-			if (str.Length > 1)
-				throw new InvalidOperationException ("Invalid size");
-			return (int) str[0];
-		}
-
-		#endregion
-
 		#region Mangling
 
 		private static string munge_filename (string fn)
@@ -67,7 +51,7 @@ namespace Exodrifter.Raconteur.RenPy
 			rv = rv.Replace (' ', '_');
 
 			Func<Match, string> munge_char =
-				(Match m) => { return hex(ord(m.Value)); };
+				(Match m) => { return py.hex (py.ord (m.Value)); };
 
 			rv = re.sub ("[^a-zA-Z0-9_]", munge_char, rv);
 
@@ -106,7 +90,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// A list of (filename, line number, line text) triples.
 		/// </returns>
 		/// <param name="filename">
-		/// The path to the file relative to Application.dataPath.
+		/// The absolute path to the file.
 		/// </param>
 		/// <param name="filedata">
 		/// A unicode string giving the file contents.
@@ -120,7 +104,7 @@ namespace Exodrifter.Raconteur.RenPy
 
 			string data = filedata;
 			if (filedata == null) {
-				var path = UnityEngine.Application.dataPath + filename;
+				var path = filename;
 				data = File.ReadAllText (path, Encoding.UTF8);
 			}
 
@@ -478,7 +462,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// at the top level of the file.
 		/// </returns>
 		/// <param name="filename">
-		/// The path to the file relative to Application.dataPath.
+		/// The absolute path to the file.
 		/// </param>
 		/// <param name="filedata">
 		/// A unicode string giving the file contents.

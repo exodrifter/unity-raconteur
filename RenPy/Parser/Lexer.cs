@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Exodrifter.Raconteur.RenPy.Util;
+
+using re = Exodrifter.Raconteur.RenPy.Util.PythonRegex;
 
 namespace Exodrifter.Raconteur.RenPy
 {
@@ -80,9 +83,19 @@ namespace Exodrifter.Raconteur.RenPy
 			"\\bis\\b",
 		};
 
-		// TODO: this regexp is not complete
+		/// <summary>
+		/// Helper method for making the operator_regexp constant.
+		/// </summary>
+		private static string[] GetOperators ()
+		{
+			var ret = new List<string> (OPERATORS);
+			ret.ForEach ( (x) => { x = re.escape (x); } );
+			ret.AddRange (ESCAPED_OPERATORS);
+			return ret.ToArray ();
+		}
+
 		private static readonly string operator_regexp
-			= string.Join ("|", ESCAPED_OPERATORS.ToArray ());
+			= string.Join ("|", GetOperators ());
 
 		private static readonly string word_regexp
 			= "[a-zA-Z_\\u00a0-\\ufffd][0-9a-zA-Z_\\u00a0-\\ufffd]*";
@@ -105,6 +118,11 @@ namespace Exodrifter.Raconteur.RenPy
 		private int word_cache_newpos;
 		private string word_cache;
 
+		/// <summary>
+		/// The lexer that is used to lex script files. This works on the idea
+		/// that we want to lex each line in a block individually, and use
+		/// sub-lexers to lex sub-blocks.
+		/// </summary>
 		public Lexer (List<Line> block, bool init = false)
 		{
 			// Are we underneath an init block?
@@ -174,6 +192,7 @@ namespace Exodrifter.Raconteur.RenPy
 			if (m.Count == 0)
 				return null;
 
+			// TODO: Make sure this is the equivalent of self.pos = m.end()
 			pos += m[0].Length;
 
 			return m[0].Value;
@@ -273,8 +292,6 @@ namespace Exodrifter.Raconteur.RenPy
 		/// </summary>
 		private string @string ()
 		{
-			bool raw = false;
-
 			var s = match ("r?\"([^\\\\\"]|\\\\.)*\"");
 
 			if (s == null)
@@ -286,6 +303,7 @@ namespace Exodrifter.Raconteur.RenPy
 			if (s == null)
 				return null;
 
+			bool raw = false;
 			if (s[0] == 'r') {
 				raw = true;
 				s = s.Slice (1, null);
@@ -456,10 +474,10 @@ namespace Exodrifter.Raconteur.RenPy
 		}
 
 		/// <summary>
-		/// This matches python code up to, but not including, the non-whitespace
-		/// delimiter characters. Returns a string containing the matched code,
-		/// which may be empty if the first thing is the delimiter. Raises an
-		/// error if EOL is reached before the delimiter.
+		/// This matches python code up to, but not including, the
+		/// non-whitespace delimiter characters. Returns a string containing
+		/// the matched code, which may be empty if the first thing is the
+		/// delimiter. Raises an error if EOL is reached before the delimiter.
 		/// </summary>
 		private PyExpr delimited_python (params char[] delim)
 		{
@@ -470,7 +488,7 @@ namespace Exodrifter.Raconteur.RenPy
 				var c = text[pos];
 
 				if (c.In (delim)) {
-					return new PyExpr (text.Slice (start,pos), filename, number);
+					return new PyExpr (text.Slice (start, pos), filename, number);
 				}
 
 				if (c == '\"' || c == '\'') {
@@ -741,7 +759,7 @@ namespace Exodrifter.Raconteur.RenPy
 		private string python_block ()
 		{
 			var line = number;
-			var rv = process(subblock, "", ref line);
+			var rv = process (subblock, "", ref line);
 			return string.Join ("", rv.ToArray ());
 		}
 	}

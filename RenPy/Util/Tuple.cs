@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Exodrifter.Raconteur.RenPy
+namespace Exodrifter.Raconteur.RenPy.Util
 {
 	public class Tuple<T1, T2>
 	{

@@ -5,11 +5,9 @@ namespace Exodrifter.Raconteur.RenPy
 	public class ParseError : Exception
 	{
 		private string message;
-
-		public override string Message {
-			get {
-				return message;
-			}
+		public override string Message
+		{
+			get { return message; }
 		}
 
 		public ParseError (string filename, int number, string msg, string line = null, int? pos = null, bool first = false)
