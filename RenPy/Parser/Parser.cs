@@ -38,8 +38,6 @@ namespace Exodrifter.Raconteur.RenPy
 		/// </summary>
 		public static string original_filename;
 
-		private static Dictionary<int, LogicalLine> lines;
-
 		private static ParseTrie statements = new ParseTrie ();
 
 		#region Mangling
@@ -56,24 +54,6 @@ namespace Exodrifter.Raconteur.RenPy
 			rv = re.sub ("[^a-zA-Z0-9_]", munge_char, rv);
 
 			return "_m1_" + rv + "__";
-		}
-
-		/// <summary>
-		/// This function is a placeholder; the absolute path of the file
-		/// should already be known, so eliding is not needed.
-		/// </summary>
-		private static string elide_filename (string fn)
-		{
-			return fn;
-		}
-
-		/// <summary>
-		/// This function is a placeholder; the absolute path of the file
-		/// should already be known, so uneliding is not needed.
-		/// </summary>
-		private static string unelide_filename (string fn)
-		{
-			return fn;
 		}
 
 		#endregion
@@ -98,7 +78,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// <param name="linenumber">
 		/// If given, the parse starts at that line number.
 		/// </param>
-		private List<Triple> list_logical_lines (string filename, string filedata = null, int linenumber = 1)
+		private List<LogicalLine> list_logical_lines (string filename, string filedata = null, int linenumber = 1)
 		{
 			original_filename = filename;
 
@@ -108,14 +88,10 @@ namespace Exodrifter.Raconteur.RenPy
 				data = File.ReadAllText (path, Encoding.UTF8);
 			}
 
-			filename = elide_filename (filename);
 			var prefix = munge_filename (filename);
 
 			// Add some newlines, to fix lousy editors.
 			data += "\n\n";
-
-			// The result
-			var rv = new List<Triple> ();
 
 			// The line number in the physical file.
 			var number = linenumber;
@@ -128,7 +104,7 @@ namespace Exodrifter.Raconteur.RenPy
 				pos += 1;
 			}
 
-			lines = new Dictionary<int, LogicalLine> ();
+			var lines = new Dictionary<int, LogicalLine> ();
 			// TODO: What is init_phase?
 //			if renpy.game.context().init_phase:
 //				lines = renpy.scriptedit.lines
@@ -157,8 +133,8 @@ namespace Exodrifter.Raconteur.RenPy
 					char c = data[pos];
 
 					if (c == '\t') {
-						throw new ParseError (filename, number, "Tab characters "
-							+ "are not allowed in Ren'Py scripts.");
+						var msg = "Tab characters are not allowed in Ren'Py scripts.";
+						throw new ParseError (filename, number, msg);
 					}
 
 					if (c == '\n' && parendepth == 0)
@@ -167,7 +143,6 @@ namespace Exodrifter.Raconteur.RenPy
 						if (!re.match ("^\\s*$", line))
 						{
 							// Add to the results.
-							rv.Add (new Triple (filename, start_number, line));
 
 							if (endpos == null) {
 								endpos = pos;
@@ -297,8 +272,7 @@ namespace Exodrifter.Raconteur.RenPy
 
 					if (line.Length > 65536)
 					{
-						// TODO: The original source has more arguments
-						throw new ParseError (filename, start_number, "Overly long logical line. (Check strings and parenthesis.)");
+						throw new ParseError (filename, start_number, "Overly long logical line. (Check strings and parenthesis.)", line, null, true);
 					}
 
 					// TODO: What is end(int)?
@@ -307,11 +281,12 @@ namespace Exodrifter.Raconteur.RenPy
 			}
 
 			if (line != "") {
-				// TODO: The original source has more arguments
-				throw new ParseError (filename, start_number, "is not terminated with a newline. (Check strings and parenthesis.)");
+				throw new ParseError (filename, start_number, "is not terminated with a newline. (Check strings and parenthesis.)", line, null, true);
 			}
 
-			return rv;
+			var rv = new LogicalLine[lines.Values.Count];
+			lines.Values.CopyTo (rv, 0);
+			return new List<LogicalLine> (rv);
 		}
 
 		/// <summary>
@@ -345,19 +320,16 @@ namespace Exodrifter.Raconteur.RenPy
 			return new Tuple<int, string> (depth, l.Slice (index, null));
 		}
 
-		private Tuple<List<Block>, int> gll_core (int i, int min_depth)
+		private Tuple<List<Block>, int> gll_core (List<LogicalLine> lines, int i, int min_depth)
 		{
 			List<Block> rv = new List<Block> ();
 			int? depth = null;
 
-			int[] keys = new int[lines.Keys.Count];
-			lines.Keys.CopyTo (keys, 0);
-
-			while (i < keys.Length)
+			while (i < lines.Count)
 			{
-				string filename = lines[keys[i]].filename;
-				int number = lines[keys[i]].number;
-				string text = lines[keys[i]].text;
+				string filename = lines[i].filename;
+				int number = lines[i].number;
+				string text = lines[i].text;
 
 				var ds = depth_split (text);
 				var line_depth = ds.a;
@@ -380,7 +352,7 @@ namespace Exodrifter.Raconteur.RenPy
 				i += 1;
 
 				// Try parsing a block associated with this line.
-				var gll = gll_core (i, depth.Value + 1);
+				var gll = gll_core (lines, i, depth.Value + 1);
 				var block = gll.a;
 				i = gll.b;
 
@@ -398,9 +370,9 @@ namespace Exodrifter.Raconteur.RenPy
 		/// no block is associated with this line.)
 		/// </summary>
 		/// <param name="lines">The lines to group into blocks.</param>
-		private List<Block> group_logical_lines (List<Triple> lines)
+		private List<Block> group_logical_lines (List<LogicalLine> lines)
 		{
-			return gll_core (0, 0).a;
+			return gll_core (lines, 0, 0).a;
 		}
 
 		#region Parse // Functions called to parse things.
