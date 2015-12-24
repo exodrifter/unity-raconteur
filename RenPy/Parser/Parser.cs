@@ -345,9 +345,9 @@ namespace Exodrifter.Raconteur.RenPy
 			return new Tuple<int, string> (depth, l.Slice (index, null));
 		}
 
-		private Tuple<List<Line>, int> gll_core (int i, int min_depth)
+		private Tuple<List<Block>, int> gll_core (int i, int min_depth)
 		{
-			List<Line> rv = new List<Line> ();
+			List<Block> rv = new List<Block> ();
 			int? depth = null;
 
 			int[] keys = new int[lines.Keys.Count];
@@ -355,9 +355,9 @@ namespace Exodrifter.Raconteur.RenPy
 
 			while (i < keys.Length)
 			{
-				string filename = lines[i].filename;
-				int number = lines[i].number;
-				string text = lines[i].text;
+				string filename = lines[keys[i]].filename;
+				int number = lines[keys[i]].number;
+				string text = lines[keys[i]].text;
 
 				var ds = depth_split (text);
 				var line_depth = ds.a;
@@ -384,10 +384,10 @@ namespace Exodrifter.Raconteur.RenPy
 				var block = gll.a;
 				i = gll.b;
 
-				rv.Add(new Line (filename, number, rest, block));
+				rv.Add(new Block (filename, number, rest, block));
 			}
 
-			return new Tuple<List<Line>, int> (rv, i);
+			return new Tuple<List<Block>, int> (rv, i);
 		}
 
 		/// <summary>
@@ -398,7 +398,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// no block is associated with this line.)
 		/// </summary>
 		/// <param name="lines">The lines to group into blocks.</param>
-		private List<Line> group_logical_lines (List<Triple> lines)
+		private List<Block> group_logical_lines (List<Triple> lines)
 		{
 			return gll_core (0, 0).a;
 		}
@@ -473,7 +473,7 @@ namespace Exodrifter.Raconteur.RenPy
 		public List<AST> Parse (string filename, string filedata, int linenumber = 1)
 		{
 			var lines = list_logical_lines (filename, filedata, linenumber);
-			var nested = group_logical_lines(lines);
+			var nested = group_logical_lines (lines);
 
 			var l = new Lexer (nested);
 			var rv = parse_block (l);

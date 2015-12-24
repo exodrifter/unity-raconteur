@@ -104,7 +104,7 @@ namespace Exodrifter.Raconteur.RenPy
 
 		private bool init;
 
-		private List<Line> block;
+		private List<Block> block;
 		public bool eob { get; private set; }
 
 		private int line;
@@ -112,7 +112,7 @@ namespace Exodrifter.Raconteur.RenPy
 		private string filename;
 		private string text;
 		private int number;
-		private List<Line> subblock;
+		private List<Block> subblock;
 		private int pos;
 		private int word_cache_pos;
 		private int word_cache_newpos;
@@ -123,7 +123,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// that we want to lex each line in a block individually, and use
 		/// sub-lexers to lex sub-blocks.
 		/// </summary>
-		public Lexer (List<Line> block, bool init = false)
+		public Lexer (List<Block> block, bool init = false)
 		{
 			// Are we underneath an init block?
 			this.init = init;
@@ -137,7 +137,7 @@ namespace Exodrifter.Raconteur.RenPy
 			this.filename = "";
 			this.text = "";
 			this.number = 0;
-			this.subblock = new List<Line> ();
+			this.subblock = new List<Block> ();
 			this.pos = 0;
 			this.word_cache_pos = -1;
 			this.word_cache_newpos = -1;
@@ -164,7 +164,7 @@ namespace Exodrifter.Raconteur.RenPy
 			}
 
 			filename = block[line].filename;
-			number = block[line].number;
+			number = block[line].linenumber;
 			text = block[line].text;
 			subblock = block[line].block;
 			pos = 0;
@@ -636,17 +636,17 @@ namespace Exodrifter.Raconteur.RenPy
 			public string filename;
 			public int number;
 			public string text;
-			public List<Line> subblock;
+			public List<Block> subblock;
 			public int pos;
 
 			public LexerState (int line, string filename, int number,
-				string text, List<Line> subblock, int pos)
+				string text, List<Block> subblock, int pos)
 			{
 				this.line = line;
 				this.filename = filename;
 				this.number = number;
 				this.text = text;
-				this.subblock = new List<Line> (subblock);
+				this.subblock = new List<Block> (subblock);
 				this.pos = pos;
 			}
 		}
@@ -670,7 +670,7 @@ namespace Exodrifter.Raconteur.RenPy
 			filename = state.filename;
 			number = state.number;
 			text = state.text;
-			subblock = new List<Line> (subblock);
+			subblock = new List<Block> (subblock);
 			pos = state.pos;
 			word_cache_pos = -1;
 		}
@@ -727,13 +727,13 @@ namespace Exodrifter.Raconteur.RenPy
 			return new PyExpr (text.Slice (pos, null).Strip (), filename, number);
 		}
 
-		private List<string> process (List<Line> block, string indent, ref int line)
+		private List<string> process (List<Block> block, string indent, ref int line)
 		{
 			var rv = new List<string> ();
 
 			foreach (var l in block)
 			{
-				var ln = l.number;
+				var ln = l.linenumber;
 
 				while (line < ln) {
 					rv.Add (indent + '\n');
