@@ -38,7 +38,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// </summary>
 		public static string original_filename;
 
-		private static ParseTrie statements = new ParseTrie ();
+		private ParseTrie statements; // TODO: This is never initialized
 
 		#region Mangling
 
@@ -384,7 +384,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// statement, and will return an AST object representing this
 		/// statement, or a list of AST objects representing this statement.
 		/// </summary>
-		private AST parse_statement (Lexer l)
+		private Node parse_statement (Lexer l)
 		{
 			var loc = l.get_location ();
 
@@ -402,11 +402,11 @@ namespace Exodrifter.Raconteur.RenPy
 		/// statements contained within the block. l is a new Lexer object, for
 		/// this block.
 		/// </summary>
-		private List<AST> parse_block (Lexer l)
+		public List<Node> parse_block (Lexer l)
 		{
 			l.advance ();
 
-			var rv = new List<AST> ();
+			var rv = new List<Node> ();
 
 			while (!l.eob)
 			{
@@ -442,7 +442,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// <param name="linenumber">
 		/// If given, the parse starts at that line number.
 		/// </param>
-		public List<AST> Parse (string filename, string filedata, int linenumber = 1)
+		public List<Node> Parse (string filename, string filedata, int linenumber = 1)
 		{
 			var lines = list_logical_lines (filename, filedata, linenumber);
 			var nested = group_logical_lines (lines);

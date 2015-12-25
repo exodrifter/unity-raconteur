@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Exodrifter.Raconteur.RenPy.Util;
@@ -222,7 +223,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// that is surrounded by things that aren't words, like
 		/// whitespace. (This prevents a keyword from matching a prefix.)
 		/// </summary>
-		private string keyword (string word)
+		public string keyword (string word)
 		{
 			var oldpos = pos;
 			if (this.word () == word)
@@ -255,17 +256,31 @@ namespace Exodrifter.Raconteur.RenPy
 		/// <summary>
 		/// If we are not at the end of the line, raise an error.
 		/// </summary>
-		private void expect_eol ()
+		public void expect_eol ()
 		{
 			if (!eol())
 				error ("end of line expected.");
 		}
 
 		/// <summary>
+		/// Called to indicate this statement does not expect a block.
+		/// If a block is found, raises an error.
+		/// </summary>
+		public void expect_noblock (string stmt)
+		{
+			if (subblock.Count != 0)
+			{
+				var ll = subblock_lexer ();
+				ll.advance ();
+				error (string.Format ("Line is indented, but the preceding {0} statement does not expect a block. Please check this line's indentation.", stmt));
+			}
+		}
+
+		/// <summary>
 		/// Called to indicate that the statement requires that a non-empty
 		/// block is present.
 		/// </summary>
-		private void expect_noblock (string stmt)
+		public void expect_block (string stmt)
 		{
 			if (subblock.Count == 0)
 				error (string.Format ("{0} expects a non-empty block.", stmt));
@@ -275,7 +290,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// Returns a new lexer object, equiped to parse the block
 		/// associated with this line.
 		/// </summary>
-		private Lexer subblock_lexer (bool init)
+		public Lexer subblock_lexer (bool init = false)
 		{
 			init = this.init || init;
 
@@ -510,7 +525,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// Returns a python expression, which is arbitrary python code
 		/// extending to a colon.
 		/// </summary>
-		private PyExpr python_expression ()
+		public PyExpr python_expression ()
 		{
 			var pe = delimited_python (':');
 
@@ -691,7 +706,7 @@ namespace Exodrifter.Raconteur.RenPy
 		/// self.match(thing). Otherwise, thing must be a method on this lexer
 		/// object, which is called directly.
 		/// </summary>
-		private string require (string thing, string name = null)
+		public string require (string thing, string name = null)
 		{
 			name = name ?? thing;
 			var rv = match (thing);
@@ -702,15 +717,15 @@ namespace Exodrifter.Raconteur.RenPy
 			return rv;
 		}
 
-		private string require<T> (MethodInfo thing, string name = null)
+		public T require<T> (Func<T> thing, string name = null)
 		{
-			name = name ?? thing.Name;
-			var rv = thing.Invoke (this, null) as string;
+			name = name ?? thing.Method.Name;
+			T rv = thing ();
 
 			if (rv == null)
 				error (string.Format ("expected '{0}' not found.", name));
 
-			return rv;
+			return (T) rv;
 		}
 
 		/// <summary>
