@@ -1,16 +1,13 @@
 Raconteur
 =========
-Raconteur is a Unity3D library that provides support for narrative resources
-created in other tools.
+**This library is no longer in development or supported.**
+
+Raconteur is a Unity3D library that provides support for Ren'Py scripts.
 
 To set up Raconteur, please refer to the [Setup][setup] guide on the wiki.
-
-For now the library only supports Ren'Py. Twine support is planned for the
-future.
 
 Licensing
 ---------
 Please see the file named `LICENSE.md`.
 
-[setup]: https://github.com/dpek/unity-raconteur/wiki/Setup
-
+[setup]: https://github.com/exodrifter/unity-raconteur/wiki/Setup
